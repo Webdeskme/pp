@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "344f1b63eb276769aef61f066208780a"
+        "md5": "c938fcb1b4afffdb180b6bfb3286fdc8"
     },
     {
         "path": "assets",
@@ -107,17 +107,102 @@
     {
         "path": "/authors/gameswebdeskme/index.html",
         "type": "file",
-        "md5": "607e823f78b9ec42780458cc5b300092"
+        "md5": "44348e75f0a3e1e6aba6361f761e6c05"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "1480f400858ab801206b6b425ffbb4cb"
+        "md5": "1f433a290351a0782cc3863af48b11f6"
     },
     {
         "path": "into-to-cyber-security.html",
         "type": "file",
-        "md5": "efda8fdd0e10b9ab0c1e36587acd8ee4"
+        "md5": "252452e5485f29494d580402257c95d4"
+    },
+    {
+        "path": "media",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "media/website",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/website/bacdrop.png",
+        "type": "file",
+        "md5": "67b6e07d8d505fb54b2ff27ed64722b2"
+    },
+    {
+        "path": "/media/website/logo.png",
+        "type": "file",
+        "md5": "a11f15343d7fecc0a3670dfcc15a689e"
+    },
+    {
+        "path": "media/website/responsive",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/website/responsive/bacdrop-2xl.png",
+        "type": "file",
+        "md5": "3d326ae649236d72b906c6910b6ff8e8"
+    },
+    {
+        "path": "/media/website/responsive/bacdrop-lg.png",
+        "type": "file",
+        "md5": "2091c4afecf81967601092ed16676036"
+    },
+    {
+        "path": "/media/website/responsive/bacdrop-md.png",
+        "type": "file",
+        "md5": "17c9d4909328a2cc9c8877389876ce91"
+    },
+    {
+        "path": "/media/website/responsive/bacdrop-sm.png",
+        "type": "file",
+        "md5": "55a09efed9b7de3a7740d8ffe4c21a6c"
+    },
+    {
+        "path": "/media/website/responsive/bacdrop-xl.png",
+        "type": "file",
+        "md5": "5d4bf1e75cb0daf0454c87224a3703ed"
+    },
+    {
+        "path": "/media/website/responsive/bacdrop-xs.png",
+        "type": "file",
+        "md5": "65ddabec564833c7e91cd428f24fe712"
+    },
+    {
+        "path": "/media/website/responsive/logo-2xl.png",
+        "type": "file",
+        "md5": "bc8af7329b22da72a203b06c044d9ea9"
+    },
+    {
+        "path": "/media/website/responsive/logo-lg.png",
+        "type": "file",
+        "md5": "bc8af7329b22da72a203b06c044d9ea9"
+    },
+    {
+        "path": "/media/website/responsive/logo-md.png",
+        "type": "file",
+        "md5": "bc8af7329b22da72a203b06c044d9ea9"
+    },
+    {
+        "path": "/media/website/responsive/logo-sm.png",
+        "type": "file",
+        "md5": "bc8af7329b22da72a203b06c044d9ea9"
+    },
+    {
+        "path": "/media/website/responsive/logo-xl.png",
+        "type": "file",
+        "md5": "bc8af7329b22da72a203b06c044d9ea9"
+    },
+    {
+        "path": "/media/website/responsive/logo-xs.png",
+        "type": "file",
+        "md5": "ef78644d58887350397bfcb6b8670215"
     },
     {
         "path": "robots.txt",
@@ -127,7 +212,7 @@
     {
         "path": "search.html",
         "type": "file",
-        "md5": "8b2f75a8cdca268847fc74366ee88da3"
+        "md5": "3d3974fa401d6602173e692ce1664231"
     },
     {
         "path": "tags",
@@ -137,11 +222,11 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "08fc67cc7be115472c7a4ceb6d129fc5"
+        "md5": "ce97d89e8debdf0a3daa98f5a7e1be2f"
     },
     {
         "path": "welcome.html",
         "type": "file",
-        "md5": "b262e3a47c6d52a57cfb1351d8acba00"
+        "md5": "0821e0c4ceee4b45e6b6015fe08fd242"
     }
 ]
