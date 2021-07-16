@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "b0a11e29d8d698d4c987a15d984e7bed"
+        "md5": "1f9e3d209c77b78abee688a73b424e35"
     },
     {
         "path": "assets",
@@ -107,12 +107,12 @@
     {
         "path": "/authors/gameswebdeskme/index.html",
         "type": "file",
-        "md5": "3870640a1841ba3c1a41bc1976220358"
+        "md5": "98c37226fa4224e70e4f15914dc2d1d4"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "8d393a2df11d29d13417a1a1f2b1291d"
+        "md5": "61ea1b2edbc385423a6fafa225cde548"
     },
     {
         "path": "robots.txt",
@@ -122,7 +122,7 @@
     {
         "path": "search.html",
         "type": "file",
-        "md5": "8fe15e2978971c668ad364cc57ab9399"
+        "md5": "22487fd0a665914daab759daa1d7e92f"
     },
     {
         "path": "tags",
@@ -132,11 +132,11 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "3d257b358d5a069df259de5adfa8e249"
+        "md5": "c1e2ff05165958efea1a4a3311233951"
     },
     {
         "path": "welcome.html",
         "type": "file",
-        "md5": "9960397d552ecb7251a630b3caa901ca"
+        "md5": "23115e52cd75790c82e8756f3203087f"
     }
 ]
