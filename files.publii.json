@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "f3d887e8a50e262dc7ba6e0ca4830446"
+        "md5": "893136a563483f5fd80e276844b5d75b"
     },
     {
         "path": "assets",
@@ -107,17 +107,17 @@
     {
         "path": "/authors/gameswebdeskme/index.html",
         "type": "file",
-        "md5": "18f96c8fdaa1effb34df7159cb8d042a"
+        "md5": "96bcebdc6ca220238cf20f2d2e7ffc65"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "7a4f86b1a36275671ff0f78d62dfa915"
+        "md5": "2161ba31976378ab36e393e83e4a7dfd"
     },
     {
         "path": "into-to-cyber-security.html",
         "type": "file",
-        "md5": "9543095e5a8970f808b57f24a77cd969"
+        "md5": "5803f2f98b938b676332868450253919"
     },
     {
         "path": "media",
@@ -133,6 +133,11 @@
         "path": "/media/website/bacdrop.png",
         "type": "file",
         "md5": "67b6e07d8d505fb54b2ff27ed64722b2"
+    },
+    {
+        "path": "/media/website/favicon.ico",
+        "type": "file",
+        "md5": "d9ecc3bf861a033ad1f898841c1dd67b"
     },
     {
         "path": "/media/website/logo.png",
@@ -212,7 +217,7 @@
     {
         "path": "search.html",
         "type": "file",
-        "md5": "ee4d2e37dadae82294005939f9d46d29"
+        "md5": "7fe7e4fc85a06ebe19d9aca0d65e6709"
     },
     {
         "path": "tags",
@@ -222,11 +227,11 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "367655459b53390d466f5eeb1523c74a"
+        "md5": "af29bcdc86ab22e77f2bcc99ee729f84"
     },
     {
         "path": "welcome.html",
         "type": "file",
-        "md5": "c54c5014a7c9bf7e20f987f87d18821e"
+        "md5": "2f3c1e515bf098e29744e01c53aac2ef"
     }
 ]
