@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "893136a563483f5fd80e276844b5d75b"
+        "md5": "b13d58e5aeff9c964fb4d22f6787a655"
     },
     {
         "path": "assets",
@@ -107,17 +107,22 @@
     {
         "path": "/authors/gameswebdeskme/index.html",
         "type": "file",
-        "md5": "96bcebdc6ca220238cf20f2d2e7ffc65"
+        "md5": "be44e01233c5ee2d045206a889128dff"
+    },
+    {
+        "path": "downloads.html",
+        "type": "file",
+        "md5": "5a737ca3cfa46d8f9b265976964d171c"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "2161ba31976378ab36e393e83e4a7dfd"
+        "md5": "b12cb03b4097eef496f6100cdd954851"
     },
     {
         "path": "into-to-cyber-security.html",
         "type": "file",
-        "md5": "773dbe261d88e5197eb1d7947071edbc"
+        "md5": "963ca966ee11dc46e5b1133aa5de2564"
     },
     {
         "path": "media",
@@ -217,7 +222,7 @@
     {
         "path": "search.html",
         "type": "file",
-        "md5": "7fe7e4fc85a06ebe19d9aca0d65e6709"
+        "md5": "3c7dcbff05efae000d116684396815af"
     },
     {
         "path": "tags",
@@ -227,11 +232,11 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "af29bcdc86ab22e77f2bcc99ee729f84"
+        "md5": "bfec0aaee09fb4c64caf18ddf2954fba"
     },
     {
         "path": "welcome.html",
         "type": "file",
-        "md5": "2f3c1e515bf098e29744e01c53aac2ef"
+        "md5": "b7da9277121f84b78ab68bfd9e27a7ba"
     }
 ]
