@@ -248,9 +248,9 @@ var P1 = new Phaser.Class({
         }
         var skill = 0;
         var coin = 0;
-        var skillText = this.add.text(50, 35, 'Skill:0', { fontSize: '32px', fill: '#fff' });
-        var coinText = this.add.text(50, 60, 'Coin:0', { fontSize: '32px', fill: '#fff' });
-        var h = this.add.text(50, 15, 'Home', { fontSize: '32px', fill: '#fff' });
+        var skillText = this.add.text(15, 40, 'Skill:0', { fontSize: '32px', fill: '#fff' });
+        var coinText = this.add.text(15, 65, 'Coin:0', { fontSize: '32px', fill: '#fff' });
+        var h = this.add.text(15, 15, 'Home', { fontSize: '32px', fill: '#fff' });
         h.setInteractive();
         h.on('pointerdown', () => {
           this.sound.add('click').play();
