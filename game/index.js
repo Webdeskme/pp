@@ -231,6 +231,12 @@ var P1 = new Phaser.Class({
                 }
                 else{
                   c.clearTint();
+                  if(c["texture"]["key"] == "P1C"){
+                    coin -= 1;
+                  }
+                  else if (c["texture"]["key"] == "P1S") {
+                    skill -= 1;
+                  }
                 }
                 skillText.setText('Skill:' + skill);
                 coinText.setText('Coin:' + coin);
