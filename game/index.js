@@ -215,7 +215,12 @@ var P1 = new Phaser.Class({
           function bselect(c, th, im){
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
-                c.setTint(0x00ff00);
+                if(tintFill(true)){
+                  c.clearTint();
+                }
+                else{
+                  c.setTint(0x00ff00);
+                }
               }
             });
           }
