@@ -27,7 +27,7 @@ var Vide = new Phaser.Class({
 
     vid.on('pointerdown', () => {
       this.sound.add('click').play();
-      console.log('scene a');
+      console.log('Title');
       this.scene.start('titles');
     });
 
@@ -105,7 +105,7 @@ var TitleS = new Phaser.Class({
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
-          console.log('scene b');
+          console.log('Video');
           this.scene.start('vide');
         });
 
