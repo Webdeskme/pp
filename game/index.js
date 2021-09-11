@@ -191,9 +191,11 @@ var P1 = new Phaser.Class({
               big = null;
             });
           }
+          var red = "no";
           function select(c, th, im){
             c.on('pointerdown',function(pointer){
               if(c["texture"]["key"] != "EMP"){
+                red = "yes";
               console.log(c["texture"]["key"]);
                 console.log('down');
                 cc.clearTint();
@@ -210,6 +212,14 @@ var P1 = new Phaser.Class({
               }
             });
           }
+          function bselect(c, th, im){
+            c.on('pointerdown',function(pointer){
+              if(red == "yes"){
+                c.setTint(0000FF);
+              }
+            });
+          }
+            c.on('pointerdown',function(pointer){
         //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
         var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
@@ -273,15 +283,19 @@ var P1 = new Phaser.Class({
         var p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
         p0.setScale(1/8);
         hove(p0, this, p[0]);
+        bselect(p0, this, p[0]);
         var p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
         p1.setScale(1/8);
         hove(p1, this, p[1]);
+        bselect(p0, this, p[0]);
         var p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
         p2.setScale(1/8);
         hove(p2, this, p[2]);
+        bselect(p0, this, p[0]);
         var p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
         p3.setScale(1/8);
         hove(p3, this, p[3]);
+        bselect(p0, this, p[0]);
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
