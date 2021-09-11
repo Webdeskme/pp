@@ -219,8 +219,118 @@ var P1 = new Phaser.Class({
                 skillText.setText('Skill:' + skill);
                 coinText.setText('Coin:' + coin);
                 totalText.setText('Total:' + total);
+                if(c["texture"]["key"] == "IAM"){
+                  cost = 4;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "SRUM") {
+                  cost = 1;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "Browser") {
+                  cost = 2;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "Malware") {
+                  cost = 8;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "PrivilegeEsc") {
+                  cost = 10;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "Driver") {
+                  cost = 4;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "Service") {
+                  cost = 5;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "CloudStorage") {
+                  cost = 3;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "IMDS") {
+                  cost = 10;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "MFA") {
+                  cost = 6;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "User") {
+                  cost = 4;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "CloudAccount") {
+                  cost = 8;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "CredStuffing") {
+                  cost = 4;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "Kubelet") {
+                  cost = 2;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "WateringHole") {
+                  cost = 8;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "WebShell") {
+                  cost = 1;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "FakeInstaller") {
+                  cost = 4;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "OfficeMacro") {
+                  cost = 1;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "ShadowCopy") {
+                  cost = 5;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "Sysmon") {
+                  cost = 4;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "Behavior") {
+                  cost = 5;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "DPAT") {
+                  cost = 4;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "Endpoint") {
+                  cost = 3;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "SIEM") {
+                  cost = 1;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "Sinkhole") {
+                  cost = 2;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "ZeroTrust") {
+                  cost = 6;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "MFAB") {
+                  cost = 10;
+                  type = "total";
+                }
               }
             });
+            console.log("cost: " + cost);
+            console.log("type: " + type);
           }
           function bselect(c, th, im){
             c.on('pointerdown',function(pointer){
@@ -248,6 +358,21 @@ var P1 = new Phaser.Class({
                 coinText.setText('Coin:' + coin);
                 total = skill + coin;
                 totalText.setText('Total:' + total);
+                if(type == "skill"){
+                  if(skill >= cost){
+                    console.log("Aquire");
+                  }
+                }
+                else if (type == "coin") {
+                  if(coin >= cost){
+                    console.log("Aquire");
+                  }
+                }
+                else if (type == "total") {
+                  if(total >= cost){
+                    console.log("Aquire");
+                  }
+                }
               }
             });
             return skill;
@@ -274,6 +399,8 @@ var P1 = new Phaser.Class({
         skill = 0;
         coin = 0;
         total = 0;
+        cost = 0;
+        type = 0;
         var skillText = this.add.text(15, 65, 'Skill:0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coin:0', { fontSize: '32px', fill: '#fff' });
         var totalText = this.add.text(15, 115, 'Total:0', { fontSize: '32px', fill: '#fff' });
