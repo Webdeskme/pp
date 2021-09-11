@@ -121,7 +121,7 @@ var config = {
     width: 800,
     height: 600,
     backgroundColor: '#000000',
-    scene: [ Vide, TitleS, P1 ],
+    scene: [ Vide, TitleS, P1 ]
 };
 
 var game = new Phaser.Game(config);
