@@ -194,7 +194,7 @@ var P1 = new Phaser.Class({
           function select(c, th, im){
             c.on('pointerdown',function(pointer){
               //if(){
-              console.log(c);
+              console.log(c["texture"]["key"]);
                 console.log('down');
                 cc.clearTint();
                 ce.clearTint();
