@@ -185,7 +185,7 @@ var P1 = new Phaser.Class({
         this.add.image(400, 300, 'back');
         var i;
         for (i = 6; i < cards.length; i++) {
-          var c = this.add.image(40, 300, cards[i]).setInteractive({ useHandCursor: true  } );
+          var c = this.add.image(125, 300, cards[i]).setInteractive({ useHandCursor: true  } );
           c.setScale(1/8);
           //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
@@ -194,27 +194,27 @@ var P1 = new Phaser.Class({
 
           });
         }
-        var c = this.add.image(40, 300, 'cb');
+        var c = this.add.image(125, 300, 'cb');
         c.setScale(1/8);
-        var c = this.add.image(150, 300, cards[0]);
+        var c = this.add.image(250, 300, cards[0]);
         c.setScale(1/8);
-        var c = this.add.image(275, 300, cards[1]);
+        var c = this.add.image(375, 300, cards[1]);
         c.setScale(1/8);
-        var c = this.add.image(400, 300, cards[2]);
+        var c = this.add.image(500, 300, cards[2]);
         c.setScale(1/8);
-        var c = this.add.image(525, 300, cards[3]);
+        var c = this.add.image(625, 300, cards[3]);
         c.setScale(1/8);
-        var c = this.add.image(650, 300, cards[4]);
+        var c = this.add.image(750, 300, cards[4]);
         c.setScale(1/8);
-        var c = this.add.image(775, 300, cards[5]);
+        var c = this.add.image(875, 300, cards[5]);
         c.setScale(1/8);
-        var c = this.add.image(150, 150, "COM");
+        var c = this.add.image(250, 150, "COM");
         c.setScale(1/8);
-        var c = this.add.image(275, 150, "ENGINES");
+        var c = this.add.image(375, 150, "ENGINES");
         c.setScale(1/8);
-        var c = this.add.image(400, 150, "PORT");
+        var c = this.add.image(500, 150, "PORT");
         c.setScale(1/8);
-        var c = this.add.image(525, 150, "Guns");
+        var c = this.add.image(625, 150, "Guns");
         c.setScale(1/8);
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
@@ -248,8 +248,8 @@ var config = {
       width: 1024,
       height: 640
     },
-    width: 800,
-    height: 600,
+    width: 1024,
+    height: 640,
     backgroundColor: '#000000',
     scene: [ Vide, TitleS, P1 ]
 };
