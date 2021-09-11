@@ -216,7 +216,7 @@ var P1 = new Phaser.Class({
               }
             });
           }
-          function bselect(c, th, im, coin, skill){
+          function bselect(c, th, im){
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
@@ -257,8 +257,8 @@ var P1 = new Phaser.Class({
 
           });
         }
-        var skill = 0;
-        var coin = 0;
+        skill = 0;
+        coin = 0;
         var skillText = this.add.text(15, 65, 'Skill:0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coin:0', { fontSize: '32px', fill: '#fff' });
         var h = this.add.text(15, 15, 'Home', { fontSize: '32px', fill: '#fff' });
@@ -314,19 +314,19 @@ var P1 = new Phaser.Class({
         var p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
         p0.setScale(1/8);
         hove(p0, this, p[0]);
-        bselect(p0, this, p[0], coin, skill);
+        bselect(p0, this, p[0]);
         var p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
         p1.setScale(1/8);
         hove(p1, this, p[1]);
-        bselect(p1, this, p[1], coin, skill);
+        bselect(p1, this, p[1]);
         var p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
         p2.setScale(1/8);
         hove(p2, this, p[2]);
-        bselect(p2, this, p[2], coin, skill);
+        bselect(p2, this, p[2]);
         var p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
         p3.setScale(1/8);
         hove(p3, this, p[3]);
-        bselect(p3, this, p[3], coin, skill);
+        bselect(p3, this, p[3]);
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
