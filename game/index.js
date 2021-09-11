@@ -220,6 +220,7 @@ var P1 = new Phaser.Class({
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
+                  console.log(c["texture"]["key"]);
                   c.setTint(0x00ff00);
                 }
                 else{
