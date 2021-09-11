@@ -98,7 +98,7 @@ var TitleS = new Phaser.Class({
           c.setScale(1/2);
           //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
-
+              this.sound.add('click').play();
               gameObject.destroy();
 
           });
@@ -143,7 +143,7 @@ var P1 = new Phaser.Class({
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
         //this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
-        this.load.image('title', 'assets/Text/text.png');
+        //this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -180,11 +180,9 @@ var P1 = new Phaser.Class({
         shuffle(cards);
         this.add.image(400, 300, 'back');
         var i;
-        var c = this.add.image(250, 300, 'cb');
-        c.setScale(1/2);
-        for (i = 0; i < cards.length; i++) {
+        for (i = 6; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } );
-          c.setScale(1/2);
+          c.setScale(1/8);
           //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
 
@@ -192,6 +190,9 @@ var P1 = new Phaser.Class({
 
           });
         }
+        var c = this.add.image(250, 300, 'cb');
+        c.setScale(1/8);
+        
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
