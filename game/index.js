@@ -287,15 +287,15 @@ var P1 = new Phaser.Class({
         var p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
         p1.setScale(1/8);
         hove(p1, this, p[1]);
-        bselect(p0, this, p[0]);
+        bselect(p1, this, p[0]);
         var p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
         p2.setScale(1/8);
         hove(p2, this, p[2]);
-        bselect(p0, this, p[0]);
+        bselect(p2, this, p[0]);
         var p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
         p3.setScale(1/8);
         hove(p3, this, p[3]);
-        bselect(p0, this, p[0]);
+        bselect(p3, this, p[0]);
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
