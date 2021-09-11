@@ -340,18 +340,22 @@ var P1 = new Phaser.Class({
                   c.setTint(0x00ff00);
                   if(c["texture"]["key"] == "P1C"){
                     coin += 1;
+                    cards += 1;
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill += 1;
+                    cards += 1;
                   }
                 }
                 else{
                   c.clearTint();
                   if(c["texture"]["key"] == "P1C"){
                     coin -= 1;
+                    cards -= 1;
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill -= 1;
+                    cards -= 1;
                   }
                 }
                 skillText.setText('Skill:' + skill);
@@ -369,6 +373,11 @@ var P1 = new Phaser.Class({
                   }
                 }
                 else if (type == "total") {
+                  if(total >= cost){
+                    console.log("Aquire");
+                  }
+                }
+                else if (type == "cards") {
                   if(total >= cost){
                     console.log("Aquire");
                   }
@@ -399,11 +408,13 @@ var P1 = new Phaser.Class({
         skill = 0;
         coin = 0;
         total = 0;
+        cards = 0;
         cost = 0;
         type = 0;
         var skillText = this.add.text(15, 65, 'Skill:0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coin:0', { fontSize: '32px', fill: '#fff' });
         var totalText = this.add.text(15, 115, 'Total:0', { fontSize: '32px', fill: '#fff' });
+        var cardsText = this.add.text(15, 140, 'Cards:0', { fontSize: '32px', fill: '#fff' });
         var h = this.add.text(15, 15, 'Home', { fontSize: '32px', fill: '#fff' });
         h.setInteractive();
         h.on('pointerdown', () => {
