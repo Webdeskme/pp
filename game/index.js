@@ -129,8 +129,12 @@ var TitleS = new Phaser.Class({
 });
 var config = {
     type: Phaser.AUTO,
-    mode: Phaser.Scale.FIT,
-    parent: "app",
+    scale: {
+      mode: Phaser.Scale.FIT,
+      parent: "app",
+      width: 1024,
+      height: 640
+    },
     width: 800,
     height: 600,
     backgroundColor: '#000000',
