@@ -94,7 +94,7 @@ var TitleS = new Phaser.Class({
           c.setScale(1/8);
           this.input.setDraggable(c);
         }
-        var d = this.add.image(800, 100, 'title');
+        var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         d.on('pointerover',function(pointer){
