@@ -318,7 +318,7 @@ var P1 = new Phaser.Class({
       gameObject.y = dragY;
 
     });
-  });
+    }
 });
 /*
 scale: {
