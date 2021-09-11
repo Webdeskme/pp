@@ -1,4 +1,4 @@
-var Title = new Phaser.Class({
+var Vide = new Phaser.Class({
 
     Extends: Phaser.Scene,
 
