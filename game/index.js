@@ -208,6 +208,10 @@ var P1 = new Phaser.Class({
                 c3.clearTint();
                 c4.clearTint();
                 c5.clearTint();
+                p0.clearTint();
+                p1.clearTint();
+                p2.clearTint();
+                p3.clearTint();
                 c.setTint(0xff0000);
               }
             });
