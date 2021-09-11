@@ -216,10 +216,11 @@ var P1 = new Phaser.Class({
                 skill = 0;
                 coin = 0;
                 total = 0;
+                card = 0;
                 skillText.setText('Skill:' + skill);
                 coinText.setText('Coin:' + coin);
                 totalText.setText('Total:' + total);
-                cardsText.setText('Cards:' + cards);
+                cardText.setText('Cards:' + card);
                 if(c["texture"]["key"] == "IAM"){
                   cost = 4;
                   type = "coin";
@@ -341,29 +342,29 @@ var P1 = new Phaser.Class({
                   c.setTint(0x00ff00);
                   if(c["texture"]["key"] == "P1C"){
                     coin += 1;
-                    cards += 1;
+                    card += 1;
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill += 1;
-                    cards += 1;
+                    card += 1;
                   }
                 }
                 else{
                   c.clearTint();
                   if(c["texture"]["key"] == "P1C"){
                     coin -= 1;
-                    cards -= 1;
+                    card -= 1;
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill -= 1;
-                    cards -= 1;
+                    card -= 1;
                   }
                 }
                 skillText.setText('Skill:' + skill);
                 coinText.setText('Coin:' + coin);
                 total = skill + coin;
                 totalText.setText('Total:' + total);
-                cardsText.setText('Cards:' + cards);
+                cardText.setText('Cards:' + card);
                 if(type == "skill"){
                   if(skill >= cost){
                     console.log("Aquire");
@@ -410,13 +411,13 @@ var P1 = new Phaser.Class({
         skill = 0;
         coin = 0;
         total = 0;
-        cards = 0;
+        card = 0;
         cost = 0;
         type = 0;
         var skillText = this.add.text(15, 65, 'Skill:0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coin:0', { fontSize: '32px', fill: '#fff' });
         var totalText = this.add.text(15, 115, 'Total:0', { fontSize: '32px', fill: '#fff' });
-        var cardsText = this.add.text(15, 140, 'Cards:0', { fontSize: '32px', fill: '#fff' });
+        var cardText = this.add.text(15, 140, 'Cards:0', { fontSize: '32px', fill: '#fff' });
         var h = this.add.text(15, 15, 'Home', { fontSize: '32px', fill: '#fff' });
         h.setInteractive();
         h.on('pointerdown', () => {
