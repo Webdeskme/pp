@@ -38,7 +38,7 @@ var Vide = new Phaser.Class({
     }, 41000);
   }
 });
-var SceneA = new Phaser.Class({
+var TitleS = new Phaser.Class({
 
     Extends: Phaser.Scene,
 
@@ -106,7 +106,7 @@ var SceneA = new Phaser.Class({
         d.on('pointerdown', () => {
           this.sound.add('click').play();
           console.log('scene b');
-          this.scene.start('p1');
+          this.scene.start('vide');
         });
 
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
@@ -121,7 +121,7 @@ var config = {
     width: 800,
     height: 600,
     backgroundColor: '#000000',
-    scene: [ Vide, TitleS, P1 ]
+    scene: [ Vide, TitleS ]
 };
 
 var game = new Phaser.Game(config);
