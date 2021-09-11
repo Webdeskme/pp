@@ -216,16 +216,24 @@ var P1 = new Phaser.Class({
               }
             });
           }
-          function bselect(c, th, im){
+          function bselect(c, th, im, coin, skill){
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
                   console.log(c["texture"]["key"]);
                   c.setTint(0x00ff00);
+                  if(c["texture"]["key"] == "P1C"){
+                    coin += 1;
+                  }
+                  else if (c["texture"]["key"] == "P1S") {
+                    skill += 1;
+                  }
                 }
                 else{
                   c.clearTint();
                 }
+                skillText.setText('Skill:' + skill);
+                coinText.setText('Coin:' + coin);
               }
             });
           }
@@ -255,7 +263,7 @@ var P1 = new Phaser.Class({
         h.setInteractive();
         h.on('pointerdown', () => {
           this.sound.add('click').play();
-          this.scene.start('sceneB');
+          this.scene.start('titles');
           //music.destroy();
         });
         var cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
