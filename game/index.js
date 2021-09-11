@@ -145,6 +145,10 @@ var P1 = new Phaser.Class({
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         //this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
+        this.load.image('COM', 'assets/out/COM.png');
+        this.load.image('ENGINES', 'assets/out/ENGINES.png');
+        this.load.image('PORT', 'assets/out/PORT.png');
+        this.load.image('Guns', 'assets/out/Guns.png');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -190,9 +194,27 @@ var P1 = new Phaser.Class({
 
           });
         }
-        var c = this.add.image(100, 300, 'cb');
+        var c = this.add.image(25, 300, 'cb');
         c.setScale(1/8);
-        var c = this.add.image(200, 300, cards[0]);
+        var c = this.add.image(150, 300, cards[0]);
+        c.setScale(1/8);
+        var c = this.add.image(275, 300, cards[1]);
+        c.setScale(1/8);
+        var c = this.add.image(400, 300, cards[2]);
+        c.setScale(1/8);
+        var c = this.add.image(525, 300, cards[3]);
+        c.setScale(1/8);
+        var c = this.add.image(650, 300, cards[4]);
+        c.setScale(1/8);
+        var c = this.add.image(775, 300, cards[5]);
+        c.setScale(1/8);
+        var c = this.add.image(150, 150, "COM");
+        c.setScale(1/8);
+        var c = this.add.image(275, 150, "ENGINES");
+        c.setScale(1/8);
+        var c = this.add.image(400, 150, "PORT");
+        c.setScale(1/8);
+        var c = this.add.image(525, 150, "Guns");
         c.setScale(1/8);
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
