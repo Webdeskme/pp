@@ -55,6 +55,7 @@ var TitleS = new Phaser.Class({
         //this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
+        this.load.image('cb', 'assets/out/back.png');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -90,6 +91,8 @@ var TitleS = new Phaser.Class({
         shuffle(cards);
         this.add.image(400, 300, 'back');
         var i;
+        var c = this.add.image(250, 300, cb);
+        c.setScale(1/2);
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } );
           c.setScale(1/2);
