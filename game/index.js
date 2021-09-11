@@ -191,6 +191,17 @@ var P1 = new Phaser.Class({
               big = null;
             });
           }
+          var skill = 0;
+          var coin = 0;
+          var skillText = this.add.text(20, 35, 'Skill:0', { fontSize: '32px', fill: '#fff' });
+          var coinText = this.add.text(20, 60, 'Coin:0', { fontSize: '32px', fill: '#fff' });
+          var h = this.add.text(20, 15, 'Home', { fontSize: '32px', fill: '#fff' });
+          h.setInteractive();
+          h.on('pointerdown', () => {
+            this.sound.add('click').play();
+            this.scene.start('sceneB');
+            //music.destroy();
+          });
           var red = "no";
           function select(c, th, im){
             c.on('pointerdown',function(pointer){
