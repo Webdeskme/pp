@@ -219,6 +219,7 @@ var P1 = new Phaser.Class({
                 skillText.setText('Skill:' + skill);
                 coinText.setText('Coin:' + coin);
                 totalText.setText('Total:' + total);
+                cardsText.setText('Cards:' + cards);
                 if(c["texture"]["key"] == "IAM"){
                   cost = 4;
                   type = "coin";
@@ -362,6 +363,7 @@ var P1 = new Phaser.Class({
                 coinText.setText('Coin:' + coin);
                 total = skill + coin;
                 totalText.setText('Total:' + total);
+                cardsText.setText('Cards:' + cards);
                 if(type == "skill"){
                   if(skill >= cost){
                     console.log("Aquire");
