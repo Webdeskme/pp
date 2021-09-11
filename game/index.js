@@ -65,7 +65,7 @@ var TitleS = new Phaser.Class({
 
     create: function ()
     {
-      game.scale.startFullscreen();
+      this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
 
