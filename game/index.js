@@ -179,6 +179,18 @@ var P1 = new Phaser.Class({
 
           return array;
           }
+          function hove(c, th, im){
+            c.on('pointerover',function(pointer){
+              console.log('hover');
+              big = th.add.image(400, 300, im).setInteractive();
+              big.setScale(1/3);
+            });
+            c.on('pointerout',function(pointer){
+              console.log('out');
+              big.destroy();
+              big = null;
+            });
+          }
         //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
         shuffle(cards);
@@ -196,26 +208,27 @@ var P1 = new Phaser.Class({
         }
         var c = this.add.image(125, 300, 'cb');
         c.setScale(1/8);
-        var c = this.add.image(250, 300, cards[0]);
+        var c0 = this.add.image(250, 300, cards[0]);
         c.setScale(1/8);
-        var c = this.add.image(375, 300, cards[1]);
+        var c1 = this.add.image(375, 300, cards[1]);
         c.setScale(1/8);
-        var c = this.add.image(500, 300, cards[2]);
+        var c2 = this.add.image(500, 300, cards[2]);
         c.setScale(1/8);
-        var c = this.add.image(625, 300, cards[3]);
+        var c3 = this.add.image(625, 300, cards[3]);
         c.setScale(1/8);
-        var c = this.add.image(750, 300, cards[4]);
+        var c4 = this.add.image(750, 300, cards[4]);
         c.setScale(1/8);
-        var c = this.add.image(875, 300, cards[5]);
+        var c5 = this.add.image(875, 300, cards[5]);
         c.setScale(1/8);
-        var c = this.add.image(250, 150, "COM");
+        var cc = this.add.image(250, 150, "COM");
         c.setScale(1/8);
-        var c = this.add.image(375, 150, "ENGINES");
+        var ce = this.add.image(375, 150, "ENGINES");
         c.setScale(1/8);
-        var c = this.add.image(500, 150, "PORT");
+        var cp = this.add.image(500, 150, "PORT");
         c.setScale(1/8);
-        var c = this.add.image(625, 150, "Guns");
+        var cg = this.add.image(625, 150, "Guns");
         c.setScale(1/8);
+        hove(cg, this, "Guns");
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
