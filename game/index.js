@@ -240,14 +240,16 @@ var P1 = new Phaser.Class({
     });
     }
 });
+/*
+scale: {
+  mode: Phaser.Scale.FIT,
+  parent: "app",
+  width: 1024,
+  height: 640
+},
+*/
 var config = {
     type: Phaser.AUTO,
-    scale: {
-      mode: Phaser.Scale.FIT,
-      parent: "app",
-      width: 1024,
-      height: 640
-    },
     width: 1024,
     height: 640,
     backgroundColor: '#000000',
