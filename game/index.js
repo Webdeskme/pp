@@ -185,7 +185,7 @@ var P1 = new Phaser.Class({
         this.add.image(400, 300, 'back');
         var i;
         for (i = 6; i < cards.length; i++) {
-          var c = this.add.image(100, 300, cards[i]).setInteractive({ useHandCursor: true  } );
+          var c = this.add.image(40, 300, cards[i]).setInteractive({ useHandCursor: true  } );
           c.setScale(1/8);
           //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
@@ -194,7 +194,7 @@ var P1 = new Phaser.Class({
 
           });
         }
-        var c = this.add.image(25, 300, 'cb');
+        var c = this.add.image(40, 300, 'cb');
         c.setScale(1/8);
         var c = this.add.image(150, 300, cards[0]);
         c.setScale(1/8);
