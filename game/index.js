@@ -92,7 +92,7 @@ var TitleS = new Phaser.Class({
         var i;
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(200, 150, cards[i]).setInteractive({ useHandCursor: true  } );
-          c.setScale(1/4);
+          c.setScale(1/8);
           this.input.setDraggable(c);
         }
         var d = this.add.image(700, 100, 'title');
