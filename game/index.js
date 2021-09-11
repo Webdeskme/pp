@@ -194,7 +194,7 @@ var P1 = new Phaser.Class({
           function select(c, th, im){
             c.on('pointerdown',function(pointer){
               console.log('down');
-              image.setTint(0xff0000);
+              c.setTint(0xff0000);
             });
           }
         //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
