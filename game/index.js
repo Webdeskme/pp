@@ -194,6 +194,10 @@ var P1 = new Phaser.Class({
           function select(c, th, im){
             c.on('pointerdown',function(pointer){
               console.log('down');
+              cc.clearTint();
+              ce.clearTint();
+              cp.clearTint();
+              cg.clearTint();
               c.setTint(0xff0000);
             });
           }
