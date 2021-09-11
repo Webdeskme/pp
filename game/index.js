@@ -98,7 +98,7 @@ var TitleS = new Phaser.Class({
           c.setScale(1/2);
           //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
-              this.sound.add('click').play();
+              //this.sound.add('click').play();
               gameObject.destroy();
 
           });
