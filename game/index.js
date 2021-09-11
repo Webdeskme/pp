@@ -140,7 +140,7 @@ var P1 = new Phaser.Class({
 
     preload: function ()
     {
-        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
+        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C"];
         //this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         //this.load.image('title', 'assets/Text/text.png');
@@ -193,7 +193,9 @@ var P1 = new Phaser.Class({
           }
         //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
+        var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
         shuffle(cards);
+        shuffle(p);
         this.add.image(512, 320, 'back');
         var i;
         for (i = 6; i < cards.length; i++) {
@@ -239,6 +241,18 @@ var P1 = new Phaser.Class({
         var cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         cg.setScale(1/8);
         hove(cg, this, 'Guns');
+        var p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
+        p0.setScale(1/8);
+        hove(p0, this, p[0]);
+        var p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
+        p1.setScale(1/8);
+        hove(p1, this, p[1]);
+        var p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
+        p2.setScale(1/8);
+        hove(p2, this, p[2]);
+        var p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p3.setScale(1/8);
+        hove(p3, this, p[3]);
         /*var d = this.add.image(700, 100, 'title');
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
