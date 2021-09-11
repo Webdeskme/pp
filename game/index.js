@@ -213,6 +213,12 @@ var P1 = new Phaser.Class({
                 p2.clearTint();
                 p3.clearTint();
                 c.setTint(0xff0000);
+                skill = 0;
+                coin = 0;
+                total = 0;
+                skillText.setText('Skill:' + skill);
+                coinText.setText('Coin:' + coin);
+                totalText.setText('Total:' + total);
               }
             });
           }
