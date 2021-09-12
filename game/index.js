@@ -329,6 +329,22 @@ var P1 = new Phaser.Class({
                   cost = 10;
                   type = "total";
                 }
+                else if (c["texture"]["key"] == "COM") {
+                  cost = 6;
+                  type = "skill";
+                }
+                else if (c["texture"]["key"] == "ENGINES") {
+                  cost = 6;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "PORT") {
+                  cost = 7;
+                  type = "card";
+                }
+                else if (c["texture"]["key"] == "Guns") {
+                  cost = 12;
+                  type = "total";
+                }
               }
             });
             console.log("cost: " + cost);
@@ -368,21 +384,45 @@ var P1 = new Phaser.Class({
                 if(type == "skill"){
                   if(skill >= cost){
                     console.log("Aquire");
+                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+
+                    }
+                    else{
+
+                    }
                   }
                 }
                 else if (type == "coin") {
                   if(coin >= cost){
                     console.log("Aquire");
+                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+
+                    }
+                    else{
+
+                    }
                   }
                 }
                 else if (type == "total") {
                   if(total >= cost){
                     console.log("Aquire");
+                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+
+                    }
+                    else{
+
+                    }
                   }
                 }
-                else if (type == "cards") {
+                else if (type == "card") {
                   if(total >= cost){
                     console.log("Aquire");
+                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+
+                    }
+                    else{
+
+                    }
                   }
                 }
               }
@@ -415,6 +455,7 @@ var P1 = new Phaser.Class({
         cost = 0;
         type = 0;
         health = 50;
+        temp = [];
         var healthText = this.add.text(250, 65, 'Health: 50', { fontSize: '64px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
