@@ -27,7 +27,7 @@ var Vide = new Phaser.Class({
 
     vid.on('pointerdown', () => {
       this.sound.add('click').play();
-      console.log('Title');
+      //console.log('Title');
       this.scene.start('titles');
     });
 
@@ -107,16 +107,16 @@ var TitleS = new Phaser.Class({
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         d.on('pointerover',function(pointer){
-          console.log('hover');
+          //console.log('hover');
           d.setScale(1/3);
         });
         d.on('pointerout',function(pointer){
-          console.log('out');
+          //console.log('out');
           d.setScale(1/4);
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
-          console.log('Video');
+          //console.log('Video');
           this.scene.start('p1');
         });
 
@@ -181,12 +181,12 @@ var P1 = new Phaser.Class({
           }
           function hove(c, th, im){
             c.on('pointerover',function(pointer){
-              console.log('hover');
+              //console.log('hover');
               big = th.add.image(865, 160, im).setInteractive();
               big.setScale(1/3);
             });
             c.on('pointerout',function(pointer){
-              console.log('out');
+              //console.log('out');
               big.destroy();
               big = null;
             });
@@ -196,8 +196,8 @@ var P1 = new Phaser.Class({
             c.on('pointerdown',function(pointer){
               if(c["texture"]["key"] != "EMP"){
                 red = "yes";
-              console.log(c["texture"]["key"]);
-                console.log('down');
+              //console.log(c["texture"]["key"]);
+                //console.log('down');
                 cc.clearTint();
                 ce.clearTint();
                 cp.clearTint();
@@ -347,22 +347,26 @@ var P1 = new Phaser.Class({
                 }
               }
             });
-            console.log("cost: " + cost);
-            console.log("type: " + type);
+            //console.log("cost: " + cost);
+            //console.log("type: " + type);
           }
           function bselect(c, th, im){
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
-                  console.log(c["texture"]["key"]);
+                  //console.log(c["texture"]["key"]);
                   c.setTint(0x00ff00);
                   if(c["texture"]["key"] == "P1C"){
                     coin += 1;
                     card += 1;
+                    temp[temp.length + 1] = c["texture"]["key"];
+                    console.log(temp);
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill += 1;
                     card += 1;
+                    temp[temp.length + 1] = c["texture"]["key"];
+                    console.log(temp);
                   }
                 }
                 else{
@@ -370,10 +374,18 @@ var P1 = new Phaser.Class({
                   if(c["texture"]["key"] == "P1C"){
                     coin -= 1;
                     card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    console.log(temp);
+                    console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill -= 1;
                     card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    console.log(temp);
+                    console.log("t: " + t);
                   }
                 }
                 skillText.setText('Skill:' + skill);
