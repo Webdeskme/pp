@@ -958,7 +958,7 @@ var P1 = new Phaser.Class({
           console.log(dis);
           console.log("Hand");
           console.log(hand);
-          if (1 < hand) {
+          if (0 < hand) {
             var t = p.indexOf(p0["texture"]["key"]);
             pdis.push(p0["texture"]["key"]);
             p.splice(t, 1);
@@ -967,7 +967,7 @@ var P1 = new Phaser.Class({
           else {
             console.log("no 4");
           }
-          if (2 < hand) {
+          if (1 < hand) {
             var t = p.indexOf(p1["texture"]["key"]);
             pdis.push(p1["texture"]["key"]);
             p.splice(t, 1);
@@ -976,7 +976,7 @@ var P1 = new Phaser.Class({
           else {
             console.log("no 2");
           }
-          if (3 < hand) {
+          if (2 < hand) {
             var t = p.indexOf(p2["texture"]["key"]);
             pdis.push(p2["texture"]["key"]);
             p.splice(t, 1);
@@ -985,7 +985,7 @@ var P1 = new Phaser.Class({
           else {
             console.log("no 3");
           }
-          if (4 < hand) {
+          if (3 < hand) {
             var t = p.indexOf(p3["texture"]["key"]);
             pdis.push(p3["texture"]["key"]);
             p.splice(t, 1);
