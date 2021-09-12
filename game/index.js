@@ -830,8 +830,8 @@ var P1 = new Phaser.Class({
         tend.setScale(1/3);
         tend.on('pointerdown', () => {
           this.sound.add('click').play();
-          console.log("Disp");
-          console.log(disp);
+          console.log("PDis");
+          console.log(pdis);
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
