@@ -408,6 +408,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      console.log("cards");
                       console.log(cards);
                     }
 
@@ -422,6 +423,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      console.log("cards");
                       console.log(cards);
                     }
                   }
@@ -435,6 +437,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      console.log("cards");
                       console.log(cards);
                     }
                   }
@@ -448,6 +451,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      console.log("cards");
                       console.log(cards);
                     }
                   }
