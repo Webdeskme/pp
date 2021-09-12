@@ -994,6 +994,10 @@ var P1 = new Phaser.Class({
           else {
             console.log("no 4");
           }
+          if (typeof p[3] == 'undefined') {
+            p = p.concat(pdis);
+            pdis = [];
+          }
           p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
           p0.setScale(1/8);
           hove(p0, this, p[0]);
