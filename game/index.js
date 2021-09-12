@@ -502,8 +502,9 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      console.log("cards");
-                      console.log(cards);
+                      pdis.push(temp2);
+                      console.log("pdis");
+                      console.log(pdis);
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
