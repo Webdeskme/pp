@@ -956,7 +956,9 @@ var P1 = new Phaser.Class({
           select(c0, this, cards[0]);
           console.log("Dis");
           console.log(dis);
-          if (typeof p0 !== 'undefined') {
+          console.log("Hand");
+          console.log(hand);
+          /*if (typeof p0 !== 'undefined') {
             var t = p.indexOf(p0["texture"]["key"]);
             pdis.push(p0["texture"]["key"]);
             p.splice(t, 1);
@@ -991,7 +993,7 @@ var P1 = new Phaser.Class({
           }
           else {
             console.log("no 4");
-          }
+          }*/
           p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
           p0.setScale(1/8);
           hove(p0, this, p[0]);
