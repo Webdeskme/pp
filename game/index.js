@@ -798,11 +798,6 @@ var P1 = new Phaser.Class({
 
           });
         }
-        tend.on('pointerdown', () => {
-          this.sound.add('click').play();
-          console.log("Disp");
-          console.log(disp);
-        });
         skill = 0;
         coin = 0;
         total = 0;
@@ -830,9 +825,14 @@ var P1 = new Phaser.Class({
         });
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
         cb.setScale(1/8);
+        hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
         tend.setScale(1/3);
-        hove(cb, this, 'cb');
+        tend.on('pointerdown', () => {
+          this.sound.add('click').play();
+          console.log("Disp");
+          console.log(disp);
+        });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
         hove(c5, this, cards[5]);
