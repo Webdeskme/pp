@@ -414,12 +414,13 @@ var P1 = new Phaser.Class({
         card = 0;
         cost = 0;
         type = 0;
-        var skillText = this.add.text(800, 65, 'Health: 0', { fontSize: '32px', fill: '#fff' });
-        var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
+        health = 50;
+        var skillText = this.add.text(700, 65, 'Health: 50', { fontSize: '32px', fill: '#fff' });
+        var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '64px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coin: 0', { fontSize: '32px', fill: '#fff' });
         var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
         var cardText = this.add.text(15, 140, 'Cards: 0', { fontSize: '32px', fill: '#fff' });
-        var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
+        var r = this.add.text(700, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
         var h = this.add.text(15, 15, 'Home', { fontSize: '32px', fill: '#fff' });
         h.setInteractive();
         h.on('pointerdown', () => {
