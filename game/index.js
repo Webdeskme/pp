@@ -408,6 +408,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
                       var c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
@@ -447,6 +448,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
                       var c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
@@ -485,6 +487,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
                       var c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
@@ -523,6 +526,7 @@ var P1 = new Phaser.Class({
                     else{
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
+                      cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
                       var c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
