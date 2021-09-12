@@ -217,7 +217,8 @@ var P1 = new Phaser.Class({
                 skill = 0;
                 coin = 0;
                 total = 0;
-                card = 0;
+                card = 0
+                temp = [];
                 skillText.setText('Skill:' + skill);
                 coinText.setText('Coins:' + coin);
                 totalText.setText('Total:' + total);
