@@ -411,12 +411,6 @@ var P1 = new Phaser.Class({
                       cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
-                      /*c5.destroy();
-                      c4.destroy();
-                      c3.destroy();
-                      c2.destroy();
-                      c1.destroy();
-                      c0.destroy();*/
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
@@ -457,12 +451,6 @@ var P1 = new Phaser.Class({
                       cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
-                      /*c5.destroy();
-                      c4.destroy();
-                      c3.destroy();
-                      c2.destroy();
-                      c1.destroy();
-                      c0.destroy();*/
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
@@ -502,12 +490,6 @@ var P1 = new Phaser.Class({
                       cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
-                      /*c5.destroy();
-                      c4.destroy();
-                      c3.destroy();
-                      c2.destroy();
-                      c1.destroy();
-                      c0.destroy();*/
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
@@ -547,12 +529,6 @@ var P1 = new Phaser.Class({
                       cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
-                      /*c5.destroy();
-                      c4.destroy();
-                      c3.destroy();
-                      c2.destroy();
-                      c1.destroy();
-                      c0.destroy();*/
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
