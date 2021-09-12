@@ -435,6 +435,57 @@ var P1 = new Phaser.Class({
                       c0.setScale(1/8);
                       hove(c0, th, cards[0]);
                       select(c0, th, cards[0]);
+                      var l = hand - card;
+                      for (i = 0; i < temp.length; i++) {
+                        var t = p.indexOf(temp[i]);
+                        p.splice(t, 1);
+                        p.filter(val => val);
+                        if (typeof p0 !== 'undefined') {
+                          p0.destry()l
+                        }
+                        if (typeof p1 !== 'undefined') {
+                          p1.destry()l
+                        }
+                        if (typeof p2 !== 'undefined') {
+                          p2.destry()l
+                        }
+                        if (typeof p3 !== 'undefined') {
+                          p3.destry()l
+                        }
+                        if(l == 0){
+
+                        }
+                        else if (l == 1) {
+                          p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
+                          p0.setScale(1/8);
+                          hove(p0, th, p[0]);
+                          bselect(p0, th, p[0]);
+                        }
+                        else if (l == 2) {
+                          p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
+                          p0.setScale(1/8);
+                          hove(p0, th, p[0]);
+                          bselect(p0, th, p[0]);
+                          p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
+                          p1.setScale(1/8);
+                          hove(p1, th, p[1]);
+                          bselect(p1, th, p[1]);
+                        }
+                        else if (l == 3) {
+                          p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
+                          p0.setScale(1/8);
+                          hove(p0, th, p[0]);
+                          bselect(p0, th, p[0]);
+                          p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
+                          p1.setScale(1/8);
+                          hove(p1, th, p[1]);
+                          bselect(p1, th, p[1]);
+                          p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
+                          p2.setScale(1/8);
+                          hove(p2, th, p[2]);
+                          bselect(p2, th, p[2]);
+                        }
+                      }
                     }
 
                   }
