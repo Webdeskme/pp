@@ -222,10 +222,10 @@ var P1 = new Phaser.Class({
                 totalText.setText('Total:' + total);
                 cardText.setText('Cards:' + card);
                 if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-                  temp = [];
+                  temp2 = "";
                 }
                 else{
-                  temp = [c["texture"]["key"]];
+                  temp2 = c["texture"]["key"];
                 }
                 if(c["texture"]["key"] == "IAM"){
                   cost = 4;
@@ -406,7 +406,9 @@ var P1 = new Phaser.Class({
 
                     }
                     else{
-
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      console.log(cards);
                     }
 
                   }
@@ -418,7 +420,9 @@ var P1 = new Phaser.Class({
 
                     }
                     else{
-
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      console.log(cards);
                     }
                   }
                 }
@@ -429,7 +433,9 @@ var P1 = new Phaser.Class({
 
                     }
                     else{
-
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      console.log(cards);
                     }
                   }
                 }
@@ -440,7 +446,9 @@ var P1 = new Phaser.Class({
 
                     }
                     else{
-
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      console.log(cards);
                     }
                   }
                 }
@@ -475,6 +483,7 @@ var P1 = new Phaser.Class({
         type = 0;
         health = 50;
         temp = [];
+        temp2 = "";
         var healthText = this.add.text(250, 65, 'Health: 50', { fontSize: '64px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
