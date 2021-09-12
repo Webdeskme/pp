@@ -825,8 +825,8 @@ var P1 = new Phaser.Class({
         });
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
         cb.setScale(1/8);
-        var tend = this.add.image(50, 200, 'END').setInteractive({ useHandCursor: true  } );
-        tend.setScale(1/4);
+        var tend = this.add.image(100, 200, 'END').setInteractive({ useHandCursor: true  } );
+        tend.setScale(1/3);
         hove(cb, this, 'cb');
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
