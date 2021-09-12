@@ -962,11 +962,17 @@ var P1 = new Phaser.Class({
             p.splice(t, 1);
             p.filter(val => val);
           }
+          else {
+            console.log("no 4");
+          }
           if (typeof p1 !== 'undefined') {
             var t = p.indexOf(p1["texture"]["key"]);
             pdis.push(p1["texture"]["key"]);
             p.splice(t, 1);
             p.filter(val => val);
+          }
+          else {
+            console.log("no 2");
           }
           if (typeof p2 !== 'undefined') {
             var t = p.indexOf(p2["texture"]["key"]);
@@ -974,11 +980,17 @@ var P1 = new Phaser.Class({
             p.splice(t, 1);
             p.filter(val => val);
           }
+          else {
+            console.log("no 3");
+          }
           if (typeof p3 !== 'undefined') {
             var t = p.indexOf(p3["texture"]["key"]);
             pdis.push(p3["texture"]["key"]);
             p.splice(t, 1);
             p.filter(val => val);
+          }
+          else {
+            console.log("no 4");
           }
           p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
           p0.setScale(1/8);
