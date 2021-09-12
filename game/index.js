@@ -441,16 +441,16 @@ var P1 = new Phaser.Class({
                         p.splice(t, 1);
                         p.filter(val => val);
                         if (typeof p0 !== 'undefined') {
-                          p0.destry()l
+                          p0.destry();
                         }
                         if (typeof p1 !== 'undefined') {
-                          p1.destry()l
+                          p1.destry();
                         }
                         if (typeof p2 !== 'undefined') {
-                          p2.destry()l
+                          p2.destry();
                         }
                         if (typeof p3 !== 'undefined') {
-                          p3.destry()l
+                          p3.destry();
                         }
                         if(l == 0){
 
