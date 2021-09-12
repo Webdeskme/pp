@@ -840,6 +840,7 @@ var P1 = new Phaser.Class({
           this.sound.add('click').play();
           console.log("PDis");
           console.log(pdis);
+          console.log(c0["texture"]["key"]);
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
