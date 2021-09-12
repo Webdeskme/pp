@@ -196,7 +196,7 @@ var P1 = new Phaser.Class({
             c.on('pointerdown',function(pointer){
               if(c["texture"]["key"] != "EMP"){
                 red = "yes";
-              //console.log(c["texture"]["key"]);
+              console.log(c);
                 //console.log('down');
                 cc.clearTint();
                 ce.clearTint();
@@ -360,7 +360,7 @@ var P1 = new Phaser.Class({
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
-                  //console.log(c["texture"]["key"]);
+                  console.log(c);
                   c.setTint(0x00ff00);
                   if(c["texture"]["key"] == "P1C"){
                     coin += 1;
@@ -408,6 +408,7 @@ var P1 = new Phaser.Class({
                     else{
 
                     }
+
                   }
                 }
                 else if (type == "coin") {
