@@ -359,13 +359,13 @@ var P1 = new Phaser.Class({
                   if(c["texture"]["key"] == "P1C"){
                     coin += 1;
                     card += 1;
-                    temp[temp.length + 1] = c["texture"]["key"];
+                    temp.push(c["texture"]["key"]);
                     console.log(temp);
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill += 1;
                     card += 1;
-                    temp[temp.length + 1] = c["texture"]["key"];
+                    temp.push(c["texture"]["key"]);
                     console.log(temp);
                   }
                 }
