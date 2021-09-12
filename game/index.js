@@ -956,6 +956,46 @@ var P1 = new Phaser.Class({
           select(c0, this, cards[0]);
           console.log("Dis");
           console.log(dis);
+          if (typeof p0 !== 'undefined') {
+            var t = p.indexOf(p0["texture"]["key"]);
+            pdis.push(p0["texture"]["key"]);
+            p.splice(t, 1);
+            p.filter(val => val);
+          }
+          if (typeof p1 !== 'undefined') {
+            var t = p.indexOf(p1["texture"]["key"]);
+            pdis.push(p1["texture"]["key"]);
+            p.splice(t, 1);
+            p.filter(val => val);
+          }
+          if (typeof p2 !== 'undefined') {
+            var t = p.indexOf(p2["texture"]["key"]);
+            pdis.push(p2["texture"]["key"]);
+            p.splice(t, 1);
+            p.filter(val => val);
+          }
+          if (typeof p3 !== 'undefined') {
+            var t = p.indexOf(p3["texture"]["key"]);
+            pdis.push(p3["texture"]["key"]);
+            p.splice(t, 1);
+            p.filter(val => val);
+          }
+          p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
+          p0.setScale(1/8);
+          hove(p0, this, p[0]);
+          bselect(p0, this, p[0]);
+          p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
+          p1.setScale(1/8);
+          hove(p1, this, p[1]);
+          bselect(p1, this, p[1]);
+          p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
+          p2.setScale(1/8);
+          hove(p2, this, p[2]);
+          bselect(p2, this, p[2]);
+          p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
+          p3.setScale(1/8);
+          hove(p3, this, p[3]);
+          bselect(p3, this, p[3]);
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
