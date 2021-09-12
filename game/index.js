@@ -149,6 +149,7 @@ var P1 = new Phaser.Class({
         this.load.image('ENGINES', 'assets/out/ENGINES.png');
         this.load.image('PORT', 'assets/out/PORT.png');
         this.load.image('Guns', 'assets/out/Guns.png');
+        this.load.image('END', 'assets/text/end.png');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -822,8 +823,10 @@ var P1 = new Phaser.Class({
           this.scene.start('titles');
           //music.destroy();
         });
-        var cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
+        cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
         cb.setScale(1/8);
+        var tend = this.add.image(15, 200, 'END').setInteractive({ useHandCursor: true  } );
+        tend.setScale(1/8);
         hove(cb, this, 'cb');
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
