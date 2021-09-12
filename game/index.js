@@ -221,6 +221,7 @@ var P1 = new Phaser.Class({
                 coinText.setText('Coins:' + coin);
                 totalText.setText('Total:' + total);
                 cardText.setText('Cards:' + card);
+                temp.push(c["texture"]["key"]);
                 if(c["texture"]["key"] == "IAM"){
                   cost = 4;
                   type = "coin";
