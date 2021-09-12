@@ -841,6 +841,91 @@ var P1 = new Phaser.Class({
           console.log("PDis");
           console.log(pdis);
           console.log(c0["texture"]["key"]);
+          if(c0["texture"]["key"] == "Browser"){
+            health -= 5;
+          }
+          else if (c0["texture"]["key"] == "Malware") {
+            health -= 2;
+          }
+          else if (c0["texture"]["key"] == "PrivilegeEsc") {
+            health -= 2;
+          }
+          else if (c0["texture"]["key"] == "Driver") {
+            health -= 3;
+          }
+          else if (c0["texture"]["key"] == "Service") {
+            health -= 4;
+          }
+          else if (c0["texture"]["key"] == "CloudStorage") {
+            health -= 4;
+          }
+          else if (c0["texture"]["key"] == "IMDS") {
+            health -= 1;
+          }
+          else if (c0["texture"]["key"] == "MFA") {
+            health -= 2;
+          }
+          else if (c0["texture"]["key"] == "User") {
+            health -= 4;
+          }
+          else if (c0["texture"]["key"] == "CloudAccount") {
+            health -= 2;
+          }
+          else if (c0["texture"]["key"] == "CredStuffing") {
+            health -= 4;
+          }
+          else if (c0["texture"]["key"] == "Kubelet") {
+            health -= 5;
+          }
+          else if (c0["texture"]["key"] == "WateringHole") {
+            health -= 3;
+          }
+          else if (c0["texture"]["key"] == "WebShell") {
+            health -= 5;
+          }
+          else if (c0["texture"]["key"] == "FakeInstaller") {
+            health -= 4;
+          }
+          else if (c0["texture"]["key"] == "OfficeMacro") {
+            health -= 6;
+          }
+          else if (c0["texture"]["key"] == "ShadowCopy") {
+            health -= 3;
+          }
+          else if (c0["texture"]["key"] == "Sysmon") {
+            health -= 3;
+          }
+          else if (c0["texture"]["key"] == "Behavior") {
+            health -= 3;
+          }
+          else if (c0["texture"]["key"] == "DPAT") {
+            health -= 3;
+          }
+          else if (c0["texture"]["key"] == "Endpoint") {
+            health -= 4;
+          }
+          else if (c0["texture"]["key"] == "SIEM") {
+            health -= 5;
+          }
+          else if (c0["texture"]["key"] == "Sinkhole") {
+            health -= 5;
+          }
+          else if (c0["texture"]["key"] == "ZeroTrust") {
+            health -= 2;
+          }
+          else if (c0["texture"]["key"] == "EMP") {
+            health -= 10;
+          }
+          else if (c0["texture"]["key"] == "IAM") {
+            health -= 3;
+          }
+          else if (c0["texture"]["key"] == "SRUM") {
+            health -= 5;
+          }
+          else if (c0["texture"]["key"] == "MFAB") {
+            health -= 1;
+          }
+          healthText.setText('Health:' + health);
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
