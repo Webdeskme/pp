@@ -440,6 +440,8 @@ var P1 = new Phaser.Class({
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
+                        pdis.push(temp[i]);
+                        console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -531,6 +533,8 @@ var P1 = new Phaser.Class({
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
+                        pdis.push(temp[i]);
+                        console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -621,6 +625,8 @@ var P1 = new Phaser.Class({
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
+                        pdis.push(temp[i]);
+                        console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -682,10 +688,15 @@ var P1 = new Phaser.Class({
                       cards.filter(val => val);
                       console.log("cards");
                       console.log(cards);
-                      c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                      c5.setScale(1/8);
-                      hove(c5, th, cards[5]);
-                      select(c5, th, cards[5]);
+                      if (typeof cards[5] !== 'undefined') {
+                        c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+                        c5.setScale(1/8);
+                        hove(c5, th, cards[5]);
+                        select(c5, th, cards[5]);
+                      }
+                      else {
+                        console.log("shuffle");
+                      }
                       c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
                       c4.setScale(1/8);
                       hove(c4, th, cards[4]);
@@ -711,6 +722,8 @@ var P1 = new Phaser.Class({
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
+                        pdis.push(temp[i]);
+                        console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
