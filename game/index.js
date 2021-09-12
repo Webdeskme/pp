@@ -356,7 +356,7 @@ var P1 = new Phaser.Class({
             //console.log("cost: " + cost);
             //console.log("type: " + type);
           }
-          function bselect(c, this, im,){
+          function bselect(c, th, im,){
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
@@ -417,30 +417,30 @@ var P1 = new Phaser.Class({
                       c2.destroy();
                       c1.destroy();
                       c0.destroy();*/
-                      c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+                      c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
-                      hove(c5, this, cards[5]);
-                      select(c5, this, cards[5]);
-                      c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
+                      hove(c5, th, cards[5]);
+                      select(c5, th, cards[5]);
+                      c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
                       c4.setScale(1/8);
-                      hove(c4, this, cards[4]);
-                      select(c4, this, cards[4]);
-                      c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
+                      hove(c4, th, cards[4]);
+                      select(c4, th, cards[4]);
+                      c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
                       c3.setScale(1/8);
-                      hove(c3, this, cards[3]);
-                      select(c3, this, cards[3]);
-                      c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
+                      hove(c3, th, cards[3]);
+                      select(c3, th, cards[3]);
+                      c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
                       c2.setScale(1/8);
-                      hove(c2, this, cards[2]);
-                      select(c2, this, cards[2]);
-                      c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
+                      hove(c2, th, cards[2]);
+                      select(c2, th, cards[2]);
+                      c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
                       c1.setScale(1/8);
-                      hove(c1, this, cards[1]);
-                      select(c1, this, cards[1]);
-                      c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
+                      hove(c1, th, cards[1]);
+                      select(c1, th, cards[1]);
+                      c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
                       c0.setScale(1/8);
-                      hove(c0, this, cards[0]);
-                      select(c0, this, cards[0]);
+                      hove(c0, th, cards[0]);
+                      select(c0, th, cards[0]);
                     }
 
                   }
@@ -463,30 +463,30 @@ var P1 = new Phaser.Class({
                       c2.destroy();
                       c1.destroy();
                       c0.destroy();*/
-                      c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+                      c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
-                      hove(c5, this, cards[5]);
-                      select(c5, this, cards[5]);
-                      c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
+                      hove(c5, th, cards[5]);
+                      select(c5, th, cards[5]);
+                      c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
                       c4.setScale(1/8);
-                      hove(c4, this, cards[4]);
-                      select(c4, this, cards[4]);
-                      c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
+                      hove(c4, th, cards[4]);
+                      select(c4, th, cards[4]);
+                      c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
                       c3.setScale(1/8);
-                      hove(c3, this, cards[3]);
-                      select(c3, this, cards[3]);
-                      c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
+                      hove(c3, th, cards[3]);
+                      select(c3, th, cards[3]);
+                      c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
                       c2.setScale(1/8);
-                      hove(c2, this, cards[2]);
-                      select(c2, this, cards[2]);
-                      c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
+                      hove(c2, th, cards[2]);
+                      select(c2, th, cards[2]);
+                      c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
                       c1.setScale(1/8);
-                      hove(c1, this, cards[1]);
-                      select(c1, this, cards[1]);
-                      c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
+                      hove(c1, th, cards[1]);
+                      select(c1, th, cards[1]);
+                      c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
                       c0.setScale(1/8);
-                      hove(c0, this, cards[0]);
-                      select(c0, this, cards[0]);
+                      hove(c0, th, cards[0]);
+                      select(c0, th, cards[0]);
                     }
                   }
                 }
@@ -508,30 +508,30 @@ var P1 = new Phaser.Class({
                       c2.destroy();
                       c1.destroy();
                       c0.destroy();*/
-                      c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+                      c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
-                      hove(c5, this, cards[5]);
-                      select(c5, this, cards[5]);
-                      c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
+                      hove(c5, th, cards[5]);
+                      select(c5, th, cards[5]);
+                      c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
                       c4.setScale(1/8);
-                      hove(c4, this, cards[4]);
-                      select(c4, this, cards[4]);
-                      c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
+                      hove(c4, th, cards[4]);
+                      select(c4, th, cards[4]);
+                      c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
                       c3.setScale(1/8);
-                      hove(c3, this, cards[3]);
-                      select(c3, this, cards[3]);
-                      c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
+                      hove(c3, th, cards[3]);
+                      select(c3, th, cards[3]);
+                      c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
                       c2.setScale(1/8);
-                      hove(c2, this, cards[2]);
-                      select(c2, this, cards[2]);
-                      c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
+                      hove(c2, th, cards[2]);
+                      select(c2, th, cards[2]);
+                      c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
                       c1.setScale(1/8);
-                      hove(c1, this, cards[1]);
-                      select(c1, this, cards[1]);
-                      c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
+                      hove(c1, th, cards[1]);
+                      select(c1, th, cards[1]);
+                      c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
                       c0.setScale(1/8);
-                      hove(c0, this, cards[0]);
-                      select(c0, this, cards[0]);
+                      hove(c0, th, cards[0]);
+                      select(c0, th, cards[0]);
                     }
                   }
                 }
@@ -553,30 +553,30 @@ var P1 = new Phaser.Class({
                       c2.destroy();
                       c1.destroy();
                       c0.destroy();*/
-                      c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+                      c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
-                      hove(c5, this, cards[5]);
-                      select(c5, this, cards[5]);
-                      c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
+                      hove(c5, th, cards[5]);
+                      select(c5, th, cards[5]);
+                      c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
                       c4.setScale(1/8);
-                      hove(c4, this, cards[4]);
-                      select(c4, this, cards[4]);
-                      c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
+                      hove(c4, th, cards[4]);
+                      select(c4, th, cards[4]);
+                      c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
                       c3.setScale(1/8);
-                      hove(c3, this, cards[3]);
-                      select(c3, this, cards[3]);
-                      c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
+                      hove(c3, th, cards[3]);
+                      select(c3, th, cards[3]);
+                      c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
                       c2.setScale(1/8);
-                      hove(c2, this, cards[2]);
-                      select(c2, this, cards[2]);
-                      c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
+                      hove(c2, th, cards[2]);
+                      select(c2, th, cards[2]);
+                      c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
                       c1.setScale(1/8);
-                      hove(c1, this, cards[1]);
-                      select(c1, this, cards[1]);
-                      c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
+                      hove(c1, th, cards[1]);
+                      select(c1, th, cards[1]);
+                      c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
                       c0.setScale(1/8);
-                      hove(c0, this, cards[0]);
-                      select(c0, this, cards[0]);
+                      hove(c0, th, cards[0]);
+                      select(c0, th, cards[0]);
                     }
                   }
                 }
