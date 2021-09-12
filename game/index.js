@@ -225,7 +225,7 @@ var P1 = new Phaser.Class({
                   temp = [];
                 }
                 else{
-                  temp = c["texture"]["key"];
+                  temp = [c["texture"]["key"]];
                 }
                 if(c["texture"]["key"] == "IAM"){
                   cost = 4;
