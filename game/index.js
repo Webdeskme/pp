@@ -996,6 +996,8 @@ var P1 = new Phaser.Class({
           p3.setScale(1/8);
           hove(p3, this, p[3]);
           bselect(p3, this, p[3]);
+          console.log("P");
+          console.log(p);
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
