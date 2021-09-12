@@ -958,7 +958,7 @@ var P1 = new Phaser.Class({
           console.log(dis);
           console.log("Hand");
           console.log(hand);
-          /*if (typeof p0 !== 'undefined') {
+          if (1 < hand) {
             var t = p.indexOf(p0["texture"]["key"]);
             pdis.push(p0["texture"]["key"]);
             p.splice(t, 1);
@@ -967,7 +967,7 @@ var P1 = new Phaser.Class({
           else {
             console.log("no 4");
           }
-          if (typeof p1 !== 'undefined') {
+          if (2 < hand) {
             var t = p.indexOf(p1["texture"]["key"]);
             pdis.push(p1["texture"]["key"]);
             p.splice(t, 1);
@@ -976,7 +976,7 @@ var P1 = new Phaser.Class({
           else {
             console.log("no 2");
           }
-          if (typeof p2 !== 'undefined') {
+          if (3 < hand) {
             var t = p.indexOf(p2["texture"]["key"]);
             pdis.push(p2["texture"]["key"]);
             p.splice(t, 1);
@@ -985,7 +985,7 @@ var P1 = new Phaser.Class({
           else {
             console.log("no 3");
           }
-          if (typeof p3 !== 'undefined') {
+          if (4 < hand) {
             var t = p.indexOf(p3["texture"]["key"]);
             pdis.push(p3["texture"]["key"]);
             p.splice(t, 1);
@@ -993,7 +993,7 @@ var P1 = new Phaser.Class({
           }
           else {
             console.log("no 4");
-          }*/
+          }
           p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
           p0.setScale(1/8);
           hove(p0, this, p[0]);
