@@ -197,7 +197,7 @@ var P1 = new Phaser.Class({
             c.on('pointerdown',function(pointer){
               if(c["texture"]["key"] != "EMP"){
                 red = "yes";
-              console.log(c);
+              //console.log(c);
                 //console.log('down');
                 cc.clearTint();
                 ce.clearTint();
@@ -361,19 +361,19 @@ var P1 = new Phaser.Class({
             c.on('pointerdown',function(pointer){
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
-                  console.log(c);
+                  //console.log(c);
                   c.setTint(0x00ff00);
                   if(c["texture"]["key"] == "P1C"){
                     coin += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    console.log(temp);
+                    //console.log(temp);
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    console.log(temp);
+                    //console.log(temp);
                   }
                 }
                 else{
@@ -383,16 +383,16 @@ var P1 = new Phaser.Class({
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    console.log(temp);
-                    console.log("t: " + t);
+                    //console.log(temp);
+                    //console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill -= 1;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    console.log(temp);
-                    console.log("t: " + t);
+                    //console.log(temp);
+                    //console.log("t: " + t);
                   }
                 }
                 skillText.setText('Skill:' + skill);
@@ -410,8 +410,8 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      console.log("cards");
-                      console.log(cards);
+                      //console.log("cards");
+                      //console.log(cards);
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
@@ -442,7 +442,7 @@ var P1 = new Phaser.Class({
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        console.log(pdis);
+                        //console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -504,8 +504,8 @@ var P1 = new Phaser.Class({
                       cards.splice(t, 1);
                       cards.filter(val => val);
                       pdis.push(temp2);
-                      console.log("pdis");
-                      console.log(pdis);
+                      //console.log("pdis");
+                      //console.log(pdis);
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
@@ -536,7 +536,7 @@ var P1 = new Phaser.Class({
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        console.log(pdis);
+                        //console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -596,8 +596,8 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      console.log("cards");
-                      console.log(cards);
+                      //console.log("cards");
+                      //console.log(cards);
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                       c5.setScale(1/8);
                       hove(c5, th, cards[5]);
@@ -628,7 +628,7 @@ var P1 = new Phaser.Class({
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        console.log(pdis);
+                        //console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -688,8 +688,8 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      console.log("cards");
-                      console.log(cards);
+                      //console.log("cards");
+                      //console.log(cards);
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -725,7 +725,7 @@ var P1 = new Phaser.Class({
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        console.log(pdis);
+                        //console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -798,6 +798,11 @@ var P1 = new Phaser.Class({
 
           });
         }
+        tend.on('pointerdown', () => {
+          this.sound.add('click').play();
+          console.log("Disp");
+          console.log(disp);
+        });
         skill = 0;
         coin = 0;
         total = 0;
