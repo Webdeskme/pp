@@ -1362,10 +1362,10 @@ var P1 = new Phaser.Class({
           cards.filter(val => val);
           dis.push(c0["texture"]["key"]);
           if (typeof cards[5] !== 'undefined') {
-            c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+            c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
             c5.setScale(1/8);
-            hove(c5, th, cards[5]);
-            select(c5, th, cards[5]);
+            hove(c5, this, cards[5]);
+            select(c5, this, cards[5]);
           }
           else {
             shuffle(dis);
