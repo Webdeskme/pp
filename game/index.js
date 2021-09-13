@@ -1103,7 +1103,8 @@ var P1 = new Phaser.Class({
                       }
                       else {
                         shuffle(dis);
-                        cards.concat(dis);
+                        cards = cards.concat(dis);
+                        dis = []
                         console.log("shuffle");
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1375,7 +1376,8 @@ var P1 = new Phaser.Class({
           }
           else {
             shuffle(dis);
-            cards.concat(dis);
+            cards = cards.concat(dis);
+            dis = []
             console.log("shuffle");
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
             c5.setScale(1/8);
