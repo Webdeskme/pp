@@ -1094,6 +1094,7 @@ var P1 = new Phaser.Class({
                       pdis.push(temp2);
                       //console.log("cards");
                       //console.log(cards);
+                      console.log("Cards 5" + cards[5]);
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1365,7 +1366,7 @@ var P1 = new Phaser.Class({
           cards.splice(t, 1);
           cards.filter(val => val);
           dis.push(c0["texture"]["key"]);
-          console.log(cards[5]);
+          console.log("Cards 5" + cards[5]);
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
             c5.setScale(1/8);
