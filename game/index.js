@@ -1009,24 +1009,29 @@ var P1 = new Phaser.Class({
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
+                          console.log("p0 destroy");
                         }
                         if (typeof p1 !== 'undefined') {
                           p1.destroy();
+                          console.log("p1 destroy");
                         }
                         if (typeof p2 !== 'undefined') {
                           p2.destroy();
+                          console.log("p2 destroy");
                         }
                         if (typeof p3 !== 'undefined') {
                           p3.destroy();
+                          console.log("p3 destroy");
                         }
                         if(l == 0){
-
+                          console.log("0 Left");
                         }
                         else if (l == 1) {
                           p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
                           p0.setScale(1/8);
                           hove(p0, th, p[0]);
                           bselect(p0, th, p[0]);
+                          console.log("1 left");
                         }
                         else if (l == 2) {
                           p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
@@ -1037,6 +1042,7 @@ var P1 = new Phaser.Class({
                           p1.setScale(1/8);
                           hove(p1, th, p[1]);
                           bselect(p1, th, p[1]);
+                          console.log("2 left");
                         }
                         else if (l == 3) {
                           p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
@@ -1051,6 +1057,26 @@ var P1 = new Phaser.Class({
                           p2.setScale(1/8);
                           hove(p2, th, p[2]);
                           bselect(p2, th, p[2]);
+                          console.log("3 left");
+                        }
+                        else if (l == 4) {
+                          p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
+                          p0.setScale(1/8);
+                          hove(p0, th, p[0]);
+                          bselect(p0, th, p[0]);
+                          p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
+                          p1.setScale(1/8);
+                          hove(p1, th, p[1]);
+                          bselect(p1, th, p[1]);
+                          p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
+                          p2.setScale(1/8);
+                          hove(p2, th, p[2]);
+                          bselect(p2, th, p[2]);
+                          p3 = th.add.image(500, 550, p[3]).setInteractive({ useHandCursor: true  } );
+                          p3.setScale(1/8);
+                          hove(p3, th, p[3]);
+                          bselect(p3, th, p[3]);
+                          console.log("4 left");
                         }
                     }
                   }
