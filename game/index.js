@@ -1187,6 +1187,10 @@ var P1 = new Phaser.Class({
         pdis = [];
         dis = [];
         red = "No";
+        skillText.setText('Skill:' + skill);
+        coinText.setText('Coins:' + coin);
+        totalText.setText('Total:' + total);
+        cardText.setText('Cards:' + card);
         var healthText = this.add.text(250, 65, 'Health: 50', { fontSize: '64px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
