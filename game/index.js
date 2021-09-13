@@ -808,6 +808,7 @@ var P1 = new Phaser.Class({
                       select(c0, th, cards[0]);
                       var l = hand - card;
                       hand = l;
+                      console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
@@ -903,6 +904,7 @@ var P1 = new Phaser.Class({
                       select(c0, th, cards[0]);
                       var l = hand - card;
                       hand = l;
+                      console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
@@ -997,6 +999,7 @@ var P1 = new Phaser.Class({
                       select(c0, th, cards[0]);
                       var l = hand - card;
                       hand = l;
+                      console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
@@ -1096,6 +1099,7 @@ var P1 = new Phaser.Class({
                       select(c0, th, cards[0]);
                       var l = hand - card;
                       hand = l;
+                      console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
