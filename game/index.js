@@ -1266,9 +1266,6 @@ var P1 = new Phaser.Class({
             p3.destroy();
             console.log("p3 destroy");
           }
-          if(l == 0){
-            console.log("0 Left");
-          }
           skillText.setText('Skill:' + skill);
           coinText.setText('Coins:' + coin);
           totalText.setText('Total:' + total);
