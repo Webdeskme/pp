@@ -1186,6 +1186,7 @@ var P1 = new Phaser.Class({
         hand = 4;
         pdis = [];
         dis = [];
+        red = "No";
         var healthText = this.add.text(250, 65, 'Health: 50', { fontSize: '64px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
@@ -1209,6 +1210,16 @@ var P1 = new Phaser.Class({
           console.log("PDis");
           console.log(pdis);
           console.log(c0["texture"]["key"]);
+          skill = 0;
+          coin = 0;
+          total = 0;
+          card = 0;
+          cost = 0;
+          type = 0;
+          temp = [];
+          temp2 = "";
+          hand = 4;
+          red = "No";
           if(c0["texture"]["key"] == "Browser"){
             health -= 5;
           }
