@@ -1250,6 +1250,25 @@ var P1 = new Phaser.Class({
           temp2 = "";
           hand = 4;
           red = "No";
+          if (typeof p0 !== 'undefined') {
+            p0.destroy();
+            console.log("p0 destroy");
+          }
+          if (typeof p1 !== 'undefined') {
+            p1.destroy();
+            console.log("p1 destroy");
+          }
+          if (typeof p2 !== 'undefined') {
+            p2.destroy();
+            console.log("p2 destroy");
+          }
+          if (typeof p3 !== 'undefined') {
+            p3.destroy();
+            console.log("p3 destroy");
+          }
+          if(l == 0){
+            console.log("0 Left");
+          }
           skillText.setText('Skill:' + skill);
           coinText.setText('Coins:' + coin);
           totalText.setText('Total:' + total);
