@@ -376,6 +376,163 @@ var P1 = new Phaser.Class({
                     temp.push(c["texture"]["key"]);
                     //console.log(temp);
                   }
+                  else if (c["texture"]["key"] == "Browser") {
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Malware") {
+                    skill += 5;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "PrivilegeEsc") {
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Driver") {
+                    skill += 1;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Service") {
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "CloudStorage") {
+                    skill += 2;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "IMDS") {
+                    skill += 6;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "MFA") {
+                    coin += 5;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "User") {
+                    skill += 1;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "CloudAccount") {
+                    coin += 5;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "CredStuffing") {
+                    coin += 3;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Kubelet") {
+                    coin += 1;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "WateringHole") {
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "WebShell") {
+                    coin += 2;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "FakeInstaller") {
+                    skill += 3;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "OfficeMacro") {
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "ShadowCopy") {
+                    coin += 4;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Sysmon") {
+                    skill += 2;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Behavior") {
+                    skill += 4;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "DPAT") {
+                    coin += 1;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Endpoint") {
+                    coin += 2;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "SIEM") {
+                    skill += 2;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "Sinkhole") {
+                    skill += 1;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "ZeroTrust") {
+                    skill += 5;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "IAM") {
+                    coin += 2;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "SRUM") {
+                    coin += 2;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
+                  else if (c["texture"]["key"] == "MFAB") {
+                    coin += 6;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                    //console.log(temp);
+                  }
                 }
                 else{
                   c.clearTint();
@@ -389,6 +546,217 @@ var P1 = new Phaser.Class({
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Browser") {
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Malware") {
+                    skill -= 5;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "PrivilegeEsc") {
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Driver") {
+                    skill -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Service") {
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "CloudStorage") {
+                    skill -= 2;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "IMDS") {
+                    skill -= 6;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "MFA") {
+                    coin -= 5;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "User") {
+                    skill -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "CloudAccount") {
+                    coin -= 5;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "CredStuffing") {
+                    coin -= 3;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Kubelet") {
+                    coin -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "WateringHole") {
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "WebShell") {
+                    coin -= 2;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "FakeInstaller") {
+                    skill -= 3;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "OfficeMacro") {
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "ShadowCopy") {
+                    coin -= 4;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Sysmon") {
+                    skill -= 2;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Behavior") {
+                    skill -= 4;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "DPAT") {
+                    coin -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Endpoint") {
+                    coin -= 2;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "SIEM") {
+                    skill -= 2;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "Sinkhole") {
+                    skill -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "ZeroTrust") {
+                    skill -= 5;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "IAM") {
+                    coin -= 2;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "SRUM") {
+                    coin -= 2;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                    //console.log(temp);
+                    //console.log("t: " + t);
+                  }
+                  else if (c["texture"]["key"] == "MFAB") {
+                    coin -= 6;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
@@ -995,6 +1363,7 @@ var P1 = new Phaser.Class({
             console.log("no 4");
           }
           if (typeof p[3] == 'undefined') {
+            shuffle(pdis);
             p = p.concat(pdis);
             pdis = [];
           }
