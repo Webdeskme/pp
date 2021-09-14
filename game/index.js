@@ -789,6 +789,7 @@ var P1 = new Phaser.Class({
                       }
                     }
                     else{
+                      console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
