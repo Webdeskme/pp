@@ -897,23 +897,25 @@ var P1 = new Phaser.Class({
                 else if (type == "coin") {
                   if(coin >= cost){
                     console.log("Aquire");
-                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-                      game += 1;
-                      console.log("Game: " + game);
-                      if(c["texture"]["key"] == "COM"){
-                        cc.destroy();
-                      }
-                      else if (c["texture"]["key"] == "ENGINES") {
-                        ce.destroy();
-                      }
-                      else if (c["texture"]["key"] == "PORT") {
-                        cp.destroy();
-                      }
-                      else if (c["texture"]["key"] == "Guns") {
-                        cg.destroy();
-                      }
+                    if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
+                    game += 1;
+                    console.log("Game: " + game);
+                    if(temp2 == "COM"){
+                      cc.destroy();
                     }
-                    else{
+                    else if (temp2 == "ENGINES") {
+                      ce.destroy();
+                    }
+                    else if (temp2 == "PORT") {
+                      cp.destroy();
+                    }
+                    else if (temp2 == "Guns") {
+                      cg.destroy();
+                    }
+                    temp2 = "";
+                  }
+                  else{
+                    console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
@@ -1017,23 +1019,25 @@ var P1 = new Phaser.Class({
                 else if (type == "total") {
                   if(total >= cost){
                     console.log("Aquire");
-                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-                      game += 1;
-                      console.log("Game: " + game);
-                      if(c["texture"]["key"] == "COM"){
-                        cc.destroy();
-                      }
-                      else if (c["texture"]["key"] == "ENGINES") {
-                        ce.destroy();
-                      }
-                      else if (c["texture"]["key"] == "PORT") {
-                        cp.destroy();
-                      }
-                      else if (c["texture"]["key"] == "Guns") {
-                        cg.destroy();
-                      }
+                    if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
+                    game += 1;
+                    console.log("Game: " + game);
+                    if(temp2 == "COM"){
+                      cc.destroy();
                     }
-                    else{
+                    else if (temp2 == "ENGINES") {
+                      ce.destroy();
+                    }
+                    else if (temp2 == "PORT") {
+                      cp.destroy();
+                    }
+                    else if (temp2 == "Guns") {
+                      cg.destroy();
+                    }
+                    temp2 = "";
+                  }
+                  else{
+                    console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
@@ -1163,23 +1167,25 @@ var P1 = new Phaser.Class({
                 else if (type == "card") {
                   if(total >= cost){
                     console.log("Aquire");
-                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-                      game += 1;
-                      console.log("Game: " + game);
-                      if(c["texture"]["key"] == "COM"){
-                        cc.destroy();
-                      }
-                      else if (c["texture"]["key"] == "ENGINES") {
-                        ce.destroy();
-                      }
-                      else if (c["texture"]["key"] == "PORT") {
-                        cp.destroy();
-                      }
-                      else if (c["texture"]["key"] == "Guns") {
-                        cg.destroy();
-                      }
+                    if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
+                    game += 1;
+                    console.log("Game: " + game);
+                    if(temp2 == "COM"){
+                      cc.destroy();
                     }
-                    else{
+                    else if (temp2 == "ENGINES") {
+                      ce.destroy();
+                    }
+                    else if (temp2 == "PORT") {
+                      cp.destroy();
+                    }
+                    else if (temp2 == "Guns") {
+                      cg.destroy();
+                    }
+                    temp2 = "";
+                  }
+                  else{
+                    console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
