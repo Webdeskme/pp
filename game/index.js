@@ -1467,7 +1467,7 @@ var P1 = new Phaser.Class({
           }
           if(health < 1){
               this.sound.add('click').play();
-              this.scene.start('loseText');
+              this.scene.start('Lose');
           }
           healthText.setText('Health:' + health);
           var t = cards.indexOf(c0["texture"]["key"]);
