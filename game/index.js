@@ -1535,6 +1535,299 @@ var P1 = new Phaser.Class({
           console.log(dis);
           console.log("Hand");
           console.log(hand);
+          for (i = 0; i < 17; i++) {
+            console.log(i);
+          }
+          if(hand == 17){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 16){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 15){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 14){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 13){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 12){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 11){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 10){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 9){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 8){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 7){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 6){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
+          if(hand == 5){
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+            pdis.push(p[0]);
+            p.shift();
+            p.filter(val => val);
+          }
           if(hand == 4){
             pdis.push(p[0]);
             p.shift();
