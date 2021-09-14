@@ -772,21 +772,24 @@ var P1 = new Phaser.Class({
                 if(type == "skill"){
                   if(skill >= cost){
                     console.log("Aquire");
-                    if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+
+                    //if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+                      if(temp2 = "COM" || temp2 = "ENGINES" || temp2 = "PORT" || temp2 = "Guns"){
                       game += 1;
                       console.log("Game: " + game);
-                      if(c["texture"]["key"] == "COM"){
+                      if(temp2 == "COM"){
                         cc.destroy();
                       }
-                      else if (c["texture"]["key"] == "ENGINES") {
+                      else if (temp2] == "ENGINES") {
                         ce.destroy();
                       }
-                      else if (c["texture"]["key"] == "PORT") {
+                      else if (temp2 == "PORT") {
                         cp.destroy();
                       }
-                      else if (c["texture"]["key"] == "Guns") {
+                      else if (temp2 == "Guns") {
                         cg.destroy();
                       }
+                      temp2 = "";
                     }
                     else{
                       console.log("no game");
