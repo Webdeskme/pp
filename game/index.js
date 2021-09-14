@@ -780,7 +780,7 @@ var P1 = new Phaser.Class({
                       if(temp2 == "COM"){
                         cc.destroy();
                       }
-                      else if (temp2] == "ENGINES") {
+                      else if (temp2 == "ENGINES") {
                         ce.destroy();
                       }
                       else if (temp2 == "PORT") {
