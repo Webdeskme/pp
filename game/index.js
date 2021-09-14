@@ -776,6 +776,10 @@ var P1 = new Phaser.Class({
                     //if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
                       if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                       game += 1;
+                      if(game > 3){
+                          this.sound.add('click').play();
+                          this.scene.start('win');
+                      }
                       console.log("Game: " + game);
                       if(temp2 == "COM"){
                         cc.destroy();
@@ -900,6 +904,10 @@ var P1 = new Phaser.Class({
                     console.log("Aquire");
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
+                    if(game > 3){
+                        this.sound.add('click').play();
+                        this.scene.start('win');
+                    }
                     console.log("Game: " + game);
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1023,6 +1031,10 @@ var P1 = new Phaser.Class({
                     console.log("Aquire");
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
+                    if(game > 3){
+                        this.sound.add('click').play();
+                        this.scene.start('win');
+                    }
                     console.log("Game: " + game);
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1172,6 +1184,10 @@ var P1 = new Phaser.Class({
                     console.log("Aquire");
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
+                    if(game > 3){
+                        this.sound.add('click').play();
+                        this.scene.start('win');
+                    }
                     console.log("Game: " + game);
                     if(temp2 == "COM"){
                       cc.destroy();
