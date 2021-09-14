@@ -773,7 +773,20 @@ var P1 = new Phaser.Class({
                   if(skill >= cost){
                     console.log("Aquire");
                     if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-
+                      game += 1;
+                      console.log("Game: " + game);
+                      if(c["texture"]["key"] == "COM"){
+                        cc.destroy();
+                      }
+                      else if (c["texture"]["key"] == "ENGINES") {
+                        ce.destroy();
+                      }
+                      else if (c["texture"]["key"] == "PORT") {
+                        cp.destroy();
+                      }
+                      else if (c["texture"]["key"] == "Guns") {
+                        cg.destroy();
+                      }
                     }
                     else{
                       var t = cards.indexOf(temp2);
@@ -881,7 +894,20 @@ var P1 = new Phaser.Class({
                   if(coin >= cost){
                     console.log("Aquire");
                     if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-
+                      game += 1;
+                      console.log("Game: " + game);
+                      if(c["texture"]["key"] == "COM"){
+                        cc.destroy();
+                      }
+                      else if (c["texture"]["key"] == "ENGINES") {
+                        ce.destroy();
+                      }
+                      else if (c["texture"]["key"] == "PORT") {
+                        cp.destroy();
+                      }
+                      else if (c["texture"]["key"] == "Guns") {
+                        cg.destroy();
+                      }
                     }
                     else{
                       var t = cards.indexOf(temp2);
@@ -988,7 +1014,20 @@ var P1 = new Phaser.Class({
                   if(total >= cost){
                     console.log("Aquire");
                     if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-
+                      game += 1;
+                      console.log("Game: " + game);
+                      if(c["texture"]["key"] == "COM"){
+                        cc.destroy();
+                      }
+                      else if (c["texture"]["key"] == "ENGINES") {
+                        ce.destroy();
+                      }
+                      else if (c["texture"]["key"] == "PORT") {
+                        cp.destroy();
+                      }
+                      else if (c["texture"]["key"] == "Guns") {
+                        cg.destroy();
+                      }
                     }
                     else{
                       var t = cards.indexOf(temp2);
@@ -1121,7 +1160,20 @@ var P1 = new Phaser.Class({
                   if(total >= cost){
                     console.log("Aquire");
                     if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-
+                      game += 1;
+                      console.log("Game: " + game);
+                      if(c["texture"]["key"] == "COM"){
+                        cc.destroy();
+                      }
+                      else if (c["texture"]["key"] == "ENGINES") {
+                        ce.destroy();
+                      }
+                      else if (c["texture"]["key"] == "PORT") {
+                        cp.destroy();
+                      }
+                      else if (c["texture"]["key"] == "Guns") {
+                        cg.destroy();
+                      }
                     }
                     else{
                       var t = cards.indexOf(temp2);
@@ -1261,6 +1313,7 @@ var P1 = new Phaser.Class({
         pdis = [];
         dis = [];
         red = "No";
+        game = 0;
         var healthText = this.add.text(250, 65, 'Health: 50', { fontSize: '64px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
