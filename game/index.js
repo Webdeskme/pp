@@ -371,7 +371,7 @@ var P1 = new Phaser.Class({
                     //console.log(temp);
                   }
                   else if (c["texture"]["key"] == "P1S") {
-                    skill += 1;
+                    skill += 6;
                     card += 1;
                     temp.push(c["texture"]["key"]);
                     //console.log(temp);
