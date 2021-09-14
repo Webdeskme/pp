@@ -1755,7 +1755,7 @@ var Lose = new Phaser.Class({
         var i;
         var c = this.add.image(250, 300, 'cb');
         c.setScale(1/2);
-        var loseText = this.add.text(15, 65, 'Defeat!', { fontSize: '64px', fill: '#fff' });
+        var loseText = this.add.text(700, 300, 'Defeat!', { fontSize: '64px', fill: '#fff' });
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } );
           c.setScale(1/2);
@@ -1845,7 +1845,7 @@ var Win = new Phaser.Class({
         var i;
         var c = this.add.image(250, 300, 'cb');
         c.setScale(1/2);
-        var winText = this.add.text(15, 65, 'Victory!', { fontSize: '64px', fill: '#fff' });
+        var winText = this.add.text(700, 300, 'Victory!', { fontSize: '64px', fill: '#fff' });
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } );
           c.setScale(1/2);
