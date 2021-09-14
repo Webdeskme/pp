@@ -835,6 +835,7 @@ var P1 = new Phaser.Class({
                       c0.setScale(1/8);
                       hove(c0, th, cards[0]);
                       select(c0, th, cards[0]);
+                    }
                       var l = hand - card;
                       hand = l;
                       console.log("Hand: " + hand);
@@ -890,7 +891,7 @@ var P1 = new Phaser.Class({
                           hove(p2, th, p[2]);
                           bselect(p2, th, p[2]);
                         }
-                    }
+                    //}
 
                   }
                 }
@@ -958,6 +959,7 @@ var P1 = new Phaser.Class({
                       c0.setScale(1/8);
                       hove(c0, th, cards[0]);
                       select(c0, th, cards[0]);
+                    }
                       var l = hand - card;
                       hand = l;
                       console.log("Hand: " + hand);
@@ -1013,7 +1015,7 @@ var P1 = new Phaser.Class({
                           hove(p2, th, p[2]);
                           bselect(p2, th, p[2]);
                         }
-                    }
+                    //}
                   }
                 }
                 else if (type == "total") {
@@ -1080,6 +1082,7 @@ var P1 = new Phaser.Class({
                       c0.setScale(1/8);
                       hove(c0, th, cards[0]);
                       select(c0, th, cards[0]);
+                    }
                       var l = hand - card;
                       hand = l;
                       console.log("Hand: " + hand);
@@ -1161,7 +1164,7 @@ var P1 = new Phaser.Class({
                           bselect(p3, th, p[3]);
                           console.log("4 left");
                         }
-                    }
+                    //}
                   }
                 }
                 else if (type == "card") {
@@ -1229,6 +1232,7 @@ var P1 = new Phaser.Class({
                       c0.setScale(1/8);
                       hove(c0, th, cards[0]);
                       select(c0, th, cards[0]);
+                    }
                       var l = hand - card;
                       hand = l;
                       console.log("Hand: " + hand);
@@ -1284,7 +1288,7 @@ var P1 = new Phaser.Class({
                           hove(p2, th, p[2]);
                           bselect(p2, th, p[2]);
                         }
-                    }
+                    //}
                   }
                 }
               }
