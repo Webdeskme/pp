@@ -1535,10 +1535,18 @@ var P1 = new Phaser.Class({
           console.log(dis);
           console.log("Hand");
           console.log(hand);
-          for (i = 0; i < 17; i++) {
-            console.log(i);
+          for (i = 1; i < 18; i++) {
+            console.log("i: " + i);
+            if(hand == i){
+              for (x = 0; x < i; x++) {
+                console.log("x: " + x);
+                pdis.push(p[0]);
+                p.shift();
+                p.filter(val => val);
+              }
+            }
           }
-          if(hand == 17){
+          /*if(hand == 17){
             pdis.push(p[0]);
             p.shift();
             p.filter(val => val);
@@ -1865,7 +1873,7 @@ var P1 = new Phaser.Class({
             pdis.push(p[0]);
             p.shift();
             p.filter(val => val);
-          }
+          }*/
           /*if (0 < hand) {
             var t = p.indexOf(p0["texture"]["key"]);
             pdis.push(p0["texture"]["key"]);
