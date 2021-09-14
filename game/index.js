@@ -1367,6 +1367,18 @@ var P1 = new Phaser.Class({
           console.log("PDis");
           console.log(pdis);
           console.log(c0["texture"]["key"]);
+          console.log(hand);
+          for (i = 1; i < 18; i++) {
+            console.log("i: " + i);
+            if(hand == i){
+              for (x = 0; x < i; x++) {
+                console.log("x: " + x);
+                pdis.push(p[0]);
+                p.shift();
+                p.filter(val => val);
+              }
+            }
+          }
           skill = 0;
           coin = 0;
           total = 0;
@@ -1534,7 +1546,7 @@ var P1 = new Phaser.Class({
           console.log("Dis");
           console.log(dis);
           console.log("Hand");
-          console.log(hand);
+          /*console.log(hand);
           for (i = 1; i < 18; i++) {
             console.log("i: " + i);
             if(hand == i){
@@ -1545,7 +1557,7 @@ var P1 = new Phaser.Class({
                 p.filter(val => val);
               }
             }
-          }
+          }*/
           /*if(hand == 17){
             pdis.push(p[0]);
             p.shift();
