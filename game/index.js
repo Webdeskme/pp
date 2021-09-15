@@ -1984,10 +1984,11 @@ var P1 = new Phaser.Class({
           function draw(start, num){
             var y = 0;
             for (var i = start; i < num; i++) {
+              console.log("Check: " + p[i]);
               if(p[i] == "Browser" || p[i] == "Driver" || p[i] == "CloudStorage" || p[i] == "IMDS" || p[i] == "User" || p[i] == "FakeInstaller" || p[i] == "OfficeMacro" || p[i] == "Sysmon" || p[i] == "DPAT" || p[i] == "Endpoint" || p[i] == "Sinkhole" || p[i] == "IAM" || p[i] == "MFAB"){
                 hand += 1;
                 y += 1;
-                //console.log("Hand: " + hand);
+                console.log("Draw: " + p[i]);
               }
             }
             if(y > 0){
