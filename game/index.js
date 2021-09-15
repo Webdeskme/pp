@@ -1986,10 +1986,16 @@ var P1 = new Phaser.Class({
             p = p.concat(pdis);
             pdis = [];
           }
+          /// Possible bug when a player
           console.log("before hand: " + hand);
           function draw(start, num){
             var y = 0;
             for (var i = start; i < num; i++) {
+              if(typeof p[i] == "undefined"){
+                shuffle(pdis);
+                p = p.concat(pdis);
+                pdis = [];
+              }
               console.log("Check: " + p[i]);
               if(p[i] == "Browser" || p[i] == "Driver" || p[i] == "CloudStorage" || p[i] == "IMDS" || p[i] == "User" || p[i] == "FakeInstaller" || p[i] == "OfficeMacro" || p[i] == "Sysmon" || p[i] == "DPAT" || p[i] == "Endpoint" || p[i] == "Sinkhole" || p[i] == "IAM" || p[i] == "MFAB"){
                 hand += 1;
