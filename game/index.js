@@ -212,7 +212,20 @@ var P1 = new Phaser.Class({
                 p0.clearTint();
                 p1.clearTint();
                 p2.clearTint();
-                p3.clearTint();
+                p4.clearTint();
+                p5.clearTint();
+                p6.clearTint();
+                p7.clearTint();
+                p8.clearTint();
+                p9.clearTint();
+                p10.clearTint();
+                p11.clearTint();
+                p12.clearTint();
+                p13.clearTint();
+                p14.clearTint();
+                p15.clearTint();
+                p16.clearTint();
+
                 c.setTint(0xff0000);
                 skill = 0;
                 coin = 0;
