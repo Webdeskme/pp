@@ -1367,6 +1367,10 @@ var P1 = new Phaser.Class({
           console.log("PDis");
           console.log(pdis);
           console.log(c0["texture"]["key"]);
+          console.log("Hand");
+          pdis = pdis.filter(function( element ) {
+             return element !== undefined;
+          });
           console.log(hand);
           for (i = 1; i < 18; i++) {
             console.log("i: " + i);
@@ -1519,10 +1523,6 @@ var P1 = new Phaser.Class({
             hove(c5, this, cards[5]);
             select(c5, this, cards[5]);
           }
-          /*c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-          c5.setScale(1/8);
-          hove(c5, this, cards[5]);
-          select(c5, this, cards[5]);*/
           c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
           c4.setScale(1/8);
           hove(c4, this, cards[4]);
@@ -1545,391 +1545,12 @@ var P1 = new Phaser.Class({
           select(c0, this, cards[0]);
           console.log("Dis");
           console.log(dis);
-          console.log("Hand");
-          /*console.log(hand);
-          for (i = 1; i < 18; i++) {
-            console.log("i: " + i);
-            if(hand == i){
-              for (x = 0; x < i; x++) {
-                console.log("x: " + x);
-                pdis.push(p[0]);
-                p.shift();
-                p.filter(val => val);
-              }
-            }
-          }*/
-          /*if(hand == 17){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 16){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 15){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 14){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 13){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 12){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 11){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 10){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 9){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 8){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 7){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 6){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 5){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          if(hand == 4){
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          else if (hand == 3) {
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          else if (hand == 2) {
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }
-          else if (hand == 1) {
-            pdis.push(p[0]);
-            p.shift();
-            p.filter(val => val);
-          }*/
-          /*if (0 < hand) {
-            var t = p.indexOf(p0["texture"]["key"]);
-            pdis.push(p0["texture"]["key"]);
-            p.splice(t, 1);
-            p.filter(val => val);
-          }
-          else {
-            console.log("no 4");
-          }
-          if (1 < hand) {
-            var t = p.indexOf(p1["texture"]["key"]);
-            pdis.push(p1["texture"]["key"]);
-            p.splice(t, 1);
-            p.filter(val => val);
-          }
-          else {
-            console.log("no 2");
-          }
-          if (2 < hand) {
-            var t = p.indexOf(p2["texture"]["key"]);
-            pdis.push(p2["texture"]["key"]);
-            p.splice(t, 1);
-            p.filter(val => val);
-          }
-          else {
-            console.log("no 3");
-          }
-          if (3 < hand) {
-            var t = p.indexOf(p3["texture"]["key"]);
-            pdis.push(p3["texture"]["key"]);
-            p.splice(t, 1);
-            p.filter(val => val);
-          }
-          else {
-            console.log("no 4");
-          }*/
-          pdis = pdis.filter(function( element ) {
-             return element !== undefined;
-          });
           if (typeof p[3] == 'undefined') {
             shuffle(pdis);
             p = p.concat(pdis);
             pdis = [];
           }
+
           p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
           p0.setScale(1/8);
           hove(p0, this, p[0]);
@@ -1946,6 +1567,12 @@ var P1 = new Phaser.Class({
           p3.setScale(1/8);
           hove(p3, this, p[3]);
           bselect(p3, this, p[3]);
+          function draw(nhand){
+            //p[0]
+            if(p0["texture"]["key"] == "Browser" || p0["texture"]["key"] == "Driver" || p0["texture"]["key"] == "CloudStorage" || p0["texture"]["key"] == "IMDS" || p0["texture"]["key"] == "User" || p0["texture"]["key"] == "FakeInstaller" || p0["texture"]["key"] == "OfficeMacro" || p0["texture"]["key"] == "Sysmon" || p0["texture"]["key"] == "DPAT" || p0["texture"]["key"] == "Endpoint" || p0["texture"]["key"] == "Sinkhole" || p0["texture"]["key"] == "IAM" || p0["texture"]["key"] == "MFAB"){
+
+            }
+          }
           console.log("P");
           console.log(p);
         });
@@ -2005,22 +1632,45 @@ var P1 = new Phaser.Class({
         p3.setScale(1/8);
         hove(p3, this, p[3]);
         bselect(p3, this, p[3]);
-        /*var d = this.add.image(700, 100, 'title');
-        d.setInteractive({ useHandCursor: true  } );
-        d.setScale(1/4);
-        d.on('pointerover',function(pointer){
-          console.log('hover');
-          d.setScale(1/3);
-        });
-        d.on('pointerout',function(pointer){
-          console.log('out');
-          d.setScale(1/4);
-        });
-        d.on('pointerdown', () => {
-          this.sound.add('click').play();
-          console.log('Video');
-          this.scene.start('vide');
-        });*/
+        p4 = this.add.image(750, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p4.setScale(1/8);
+        hove(p4, this, p[3]);
+        p5 = this.add.image(875, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p5.setScale(1/8);
+        hove(p5, this, p[3]);
+        p6 = this.add.image(1000, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p6.setScale(1/8);
+        hove(p6, this, p[3]);
+        p7 = this.add.image(125, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p7.setScale(1/8);
+        hove(p7, this, p[3]);
+        p8 = this.add.image(187, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p8.setScale(1/8);
+        hove(p8, this, p[3]);
+        p9 = this.add.image(312, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p9.setScale(1/8);
+        hove(p9, this, p[3]);
+        p10 = this.add.image(437, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p10.setScale(1/8);
+        hove(p10, this, p[3]);
+        p11 = this.add.image(562, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p11.setScale(1/8);
+        hove(p11, this, p[3]);
+        p12 = this.add.image(687, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p12.setScale(1/8);
+        hove(p12, this, p[3]);
+        p13 = this.add.image(812, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p13.setScale(1/8);
+        hove(p13, this, p[3]);
+        p14 = this.add.image(937, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p14.setScale(1/8);
+        hove(p14, this, p[3]);
+        p15 = this.add.image(63, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p15.setScale(1/8);
+        hove(p15, this, p[3]);
+        p16 = this.add.image(850, 550, p[3]).setInteractive({ useHandCursor: true  } );
+        p16.setScale(1/8);
+        hove(p16, this, p[3]);
 
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
