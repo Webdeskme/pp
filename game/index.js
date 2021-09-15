@@ -1980,6 +1980,12 @@ var P1 = new Phaser.Class({
           hove(c0, this, cards[0]);
           select(c0, this, cards[0]);
           //console.log("Dis");
+          var z = hand - 1;
+          if (typeof p[z] == 'undefined') {
+            shuffle(pdis);
+            p = p.concat(pdis);
+            pdis = [];
+          }
           console.log("before hand: " + hand);
           function draw(start, num){
             var y = 0;
@@ -1997,7 +2003,7 @@ var P1 = new Phaser.Class({
           }
           draw(0,4);
             console.log("after hand: " + hand);
-          var z = hand - 1;
+          z = hand - 1;
           if (typeof p[z] == 'undefined') {
             shuffle(pdis);
             p = p.concat(pdis);
