@@ -1845,6 +1845,62 @@ var P1 = new Phaser.Class({
             p3.destroy();
             //console.log("p3 destroy");
           }
+          if (typeof p4 !== 'undefined') {
+            p4.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p5 !== 'undefined') {
+            p5.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p6 !== 'undefined') {
+            p6.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p7 !== 'undefined') {
+            p7.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p8 !== 'undefined') {
+            p8.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p9 !== 'undefined') {
+            p9.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p10 !== 'undefined') {
+            p10.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p11 !== 'undefined') {
+            p11.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p12 !== 'undefined') {
+            p12.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p13 !== 'undefined') {
+            p13.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p14 !== 'undefined') {
+            p14.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p15 !== 'undefined') {
+            p15.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p16 !== 'undefined') {
+            p16.destroy();
+            //console.log("p3 destroy");
+          }
+          if (typeof p17 !== 'undefined') {
+            p17.destroy();
+            //console.log("p3 destroy");
+          }
           skillText.setText('Skill:' + skill);
           coinText.setText('Coins:' + coin);
           totalText.setText('Total:' + total);
