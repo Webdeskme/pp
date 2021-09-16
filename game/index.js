@@ -275,7 +275,17 @@ var P1 = new Phaser.Class({
                 if (typeof p16 !== 'undefined') {
                   p16.clearTint();
                 }
-                c.setTint(0xff0000);
+                if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+                  c.setTint(0xff0000);
+                }
+                else{
+                  if(checkScore == "yes"){
+                    c.setTint(0x0000ff);
+                  }
+                  else{
+                    c.setTint(0xff0000);
+                  }
+                }
                 skill = 0;
                 coin = 0;
                 total = 0;
@@ -1725,6 +1735,9 @@ var P1 = new Phaser.Class({
         var tscore = this.add.image(825, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
         tend.setScale(1/3);
         tscore.setScale(1/3);
+        tscore.on('pointerdown', () => {
+          checkScore = "yes";
+        });
         tend.on('pointerdown', () => {
           this.sound.add('click').play();
           pdis = pdis.filter(function( element ) {
