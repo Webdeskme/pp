@@ -1722,7 +1722,7 @@ var P1 = new Phaser.Class({
         cb.setScale(1/8);
         hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
-        var tscore = this.add.image(800, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
+        var tscore = this.add.image(825, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tend.on('pointerdown', () => {
