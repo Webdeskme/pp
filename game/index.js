@@ -52,7 +52,6 @@ var TitleS = new Phaser.Class({
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
-        //this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
@@ -86,7 +85,6 @@ var TitleS = new Phaser.Class({
 
           return array;
           }
-        //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         shuffle(cards);
         this.add.image(512, 320, 'back');
@@ -141,7 +139,6 @@ var P1 = new Phaser.Class({
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C"];
-        //this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         //this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
@@ -182,12 +179,10 @@ var P1 = new Phaser.Class({
           }
           function hove(c, th, im){
             c.on('pointerover',function(pointer){
-              ////console.log('hover');
               big = th.add.image(865, 160, im).setInteractive();
               big.setScale(1/3);
             });
             c.on('pointerout',function(pointer){
-              ////console.log('out');
               big.destroy();
               big = null;
             });
@@ -195,10 +190,9 @@ var P1 = new Phaser.Class({
           var red = "no";
           function select(c, th, im){
             c.on('pointerdown',function(pointer){
+              th.sound.add('click').play();
               if(c["texture"]["key"] != "EMP"){
                 red = "yes";
-              ////console.log(c);
-                ////console.log('down');
                 if (typeof cc !== 'undefined') {
                   cc.clearTint();
                 }
@@ -280,7 +274,6 @@ var P1 = new Phaser.Class({
                 if (typeof p16 !== 'undefined') {
                   p16.clearTint();
                 }
-
                 c.setTint(0xff0000);
                 skill = 0;
                 coin = 0;
@@ -423,183 +416,154 @@ var P1 = new Phaser.Class({
                 }
               }
             });
-            ////console.log("cost: " + cost);
-            ////console.log("type: " + type);
           }
           function bselect(c, th, im,){
             c.on('pointerdown',function(pointer){
+              th.sound.add('click').play();
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
-                  ////console.log(c);
                   c.setTint(0x00ff00);
                   if(c["texture"]["key"] == "P1C"){
                     coin += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Browser") {
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Malware") {
                     skill += 5;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "PrivilegeEsc") {
+                    skill += 5;
+                    coin += 6;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Driver") {
                     skill += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Service") {
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "CloudStorage") {
                     skill += 2;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "IMDS") {
                     skill += 6;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "MFA") {
                     coin += 5;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "User") {
                     skill += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "CloudAccount") {
                     coin += 5;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "CredStuffing") {
                     coin += 3;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Kubelet") {
                     coin += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "WateringHole") {
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "WebShell") {
                     coin += 2;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "FakeInstaller") {
                     skill += 3;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "OfficeMacro") {
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "ShadowCopy") {
                     coin += 4;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Sysmon") {
                     skill += 2;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Behavior") {
                     skill += 4;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "DPAT") {
                     coin += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Endpoint") {
                     coin += 2;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "SIEM") {
                     skill += 2;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "Sinkhole") {
                     skill += 1;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "ZeroTrust") {
                     skill += 5;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "IAM") {
                     coin += 2;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "SRUM") {
                     coin += 2;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                   else if (c["texture"]["key"] == "MFAB") {
                     coin += 6;
                     card += 1;
                     temp.push(c["texture"]["key"]);
-                    ////console.log(temp);
                   }
                 }
                 else{
@@ -609,227 +573,169 @@ var P1 = new Phaser.Class({
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "P1S") {
                     skill -= 1;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Browser") {
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Malware") {
                     skill -= 5;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "PrivilegeEsc") {
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Driver") {
                     skill -= 1;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Service") {
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "CloudStorage") {
                     skill -= 2;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "IMDS") {
                     skill -= 6;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "MFA") {
                     coin -= 5;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "User") {
                     skill -= 1;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "CloudAccount") {
                     coin -= 5;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "CredStuffing") {
                     coin -= 3;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Kubelet") {
                     coin -= 1;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "WateringHole") {
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "WebShell") {
                     coin -= 2;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "FakeInstaller") {
                     skill -= 3;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "OfficeMacro") {
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "ShadowCopy") {
                     coin -= 4;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Sysmon") {
                     skill -= 2;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Behavior") {
                     skill -= 4;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "DPAT") {
                     coin -= 1;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Endpoint") {
                     coin -= 2;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "SIEM") {
                     skill -= 2;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "Sinkhole") {
                     skill -= 1;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "ZeroTrust") {
                     skill -= 5;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "IAM") {
                     coin -= 2;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "SRUM") {
                     coin -= 2;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                   else if (c["texture"]["key"] == "MFAB") {
                     coin -= 6;
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
-                    ////console.log(temp);
-                    ////console.log("t: " + t);
                   }
                 }
                 skillText.setText('Skill:' + skill);
@@ -864,13 +770,10 @@ var P1 = new Phaser.Class({
                       temp2 = "";
                     }
                     else{
-                      //console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
                       pdis.push(temp2);
-                      ////console.log("cards");
-                      ////console.log(cards);
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -880,8 +783,7 @@ var P1 = new Phaser.Class({
                       else {
                         shuffle(dis);
                         cards = cards.concat(dis);
-                        dis = []
-                        //console.log("shuffle");
+                        dis = [];
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
                         hove(c5, th, cards[5]);
@@ -910,13 +812,11 @@ var P1 = new Phaser.Class({
                     }
                       var l = hand - card;
                       hand = l;
-                      //console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        ////console.log(pdis);
                       }
                         if (typeof p0 !== 'undefined') {
                           p0.destroy();
@@ -972,29 +872,6 @@ var P1 = new Phaser.Class({
                         if (typeof p16 !== 'undefined') {
                           p16.destroy();
                         }
-                        //////////////////////////
-                        /*
-                        if (l > 0) {
-                          p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-                          p0.setScale(1/8);
-                          hove(p0, th, p[0]);
-                          bselect(p0, th, p[0]);
-                        }
-                        if (l > 1) {
-                          p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-                          p1.setScale(1/8);
-                          hove(p1, th, p[1]);
-                          bselect(p1, th, p[1]);
-                        }
-                        if (l > 2) {
-                          p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-                          p2.setScale(1/8);
-                          hove(p2, th, p[2]);
-                          bselect(p2, th, p[2]);
-                        }
-                        */
-                        //////////////////////////////////////
-                    //}
                     if(l > 15){
                       p15 = th.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
                       p15.setScale(1/8);
@@ -1108,7 +985,6 @@ var P1 = new Phaser.Class({
                         this.sound.add('click').play();
                         this.scene.start('win');
                     }
-                    //console.log("Game: " + game);
                     if(temp2 == "COM"){
                       cc.destroy();
                     }
@@ -1124,13 +1000,10 @@ var P1 = new Phaser.Class({
                     temp2 = "";
                   }
                   else{
-                    //console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
                       pdis.push(temp2);
-                      ////console.log("pdis");
-                      ////console.log(pdis);
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1141,7 +1014,6 @@ var P1 = new Phaser.Class({
                         shuffle(dis);
                         cards = cards.concat(dis);
                         dis = []
-                        //console.log("shuffle");
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
                         hove(c5, th, cards[5]);
@@ -1170,13 +1042,11 @@ var P1 = new Phaser.Class({
                     }
                       var l = hand - card;
                       hand = l;
-                      //console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        ////console.log(pdis);
                       }
                       if (typeof p0 !== 'undefined') {
                         p0.destroy();
@@ -1345,7 +1215,6 @@ var P1 = new Phaser.Class({
                         this.sound.add('click').play();
                         this.scene.start('win');
                     }
-                    //console.log("Game: " + game);
                     if(temp2 == "COM"){
                       cc.destroy();
                     }
@@ -1361,13 +1230,10 @@ var P1 = new Phaser.Class({
                     temp2 = "";
                   }
                   else{
-                    //console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
                       pdis.push(temp2);
-                      ////console.log("cards");
-                      ////console.log(cards);
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1377,8 +1243,7 @@ var P1 = new Phaser.Class({
                       else {
                         shuffle(dis);
                         cards = cards.concat(dis);
-                        dis = []
-                        //console.log("shuffle");
+                        dis = [];
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
                         hove(c5, th, cards[5]);
@@ -1407,13 +1272,11 @@ var P1 = new Phaser.Class({
                     }
                       var l = hand - card;
                       hand = l;
-                      //console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        ////console.log(pdis);
                       }
                       if (typeof p0 !== 'undefined') {
                         p0.destroy();
@@ -1582,7 +1445,6 @@ var P1 = new Phaser.Class({
                         this.sound.add('click').play();
                         this.scene.start('win');
                     }
-                    //console.log("Game: " + game);
                     if(temp2 == "COM"){
                       cc.destroy();
                     }
@@ -1598,14 +1460,10 @@ var P1 = new Phaser.Class({
                     temp2 = "";
                   }
                   else{
-                    //console.log("no game");
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
                       pdis.push(temp2);
-                      ////console.log("cards");
-                      ////console.log(cards);
-                      //console.log("Cards 5" + cards[5]);
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1615,8 +1473,7 @@ var P1 = new Phaser.Class({
                       else {
                         shuffle(dis);
                         cards = cards.concat(dis);
-                        dis = []
-                        //console.log("shuffle");
+                        dis = [];
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
                         hove(c5, th, cards[5]);
@@ -1645,13 +1502,11 @@ var P1 = new Phaser.Class({
                     }
                       var l = hand - card;
                       hand = l;
-                      //console.log("Hand: " + hand);
                       for (i = 0; i < temp.length; i++) {
                         var t = p.indexOf(temp[i]);
                         p.splice(t, 1);
                         p.filter(val => val);
                         pdis.push(temp[i]);
-                        ////console.log(pdis);
                       }
                       if (typeof p0 !== 'undefined') {
                         p0.destroy();
@@ -1812,12 +1667,13 @@ var P1 = new Phaser.Class({
                   }
                 }
               }
+              else{
+                // add card description //bob
+              }
             });
             return skill;
             return coin;
           }
-            //c.on('pointerdown',function(pointer){
-        //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
         var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
         shuffle(cards);
@@ -1827,11 +1683,7 @@ var P1 = new Phaser.Class({
         for (i = 6; i < cards.length; i++) {
           var c = this.add.image(125, 400, cards[i]).setInteractive({ useHandCursor: true  } );
           c.setScale(1/8);
-          //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
-
-              //gameObject.destroy();
-
           });
         }
         skill = 0;
@@ -1868,19 +1720,12 @@ var P1 = new Phaser.Class({
         tend.setScale(1/3);
         tend.on('pointerdown', () => {
           this.sound.add('click').play();
-          //console.log("PDis");
-          //console.log(pdis);
-          //console.log(c0["texture"]["key"]);
-          //console.log("Hand");
           pdis = pdis.filter(function( element ) {
              return element !== undefined;
           });
-          //console.log(hand);
           for (i = 1; i < 18; i++) {
-            //console.log("i: " + i);
             if(hand == i){
               for (x = 0; x < i; x++) {
-                //console.log("x: " + x);
                 pdis.push(p[0]);
                 p.shift();
                 p.filter(val => val);
@@ -1899,75 +1744,57 @@ var P1 = new Phaser.Class({
           red = "No";
           if (typeof p0 !== 'undefined') {
             p0.destroy();
-            //console.log("p0 destroy");
           }
           if (typeof p1 !== 'undefined') {
             p1.destroy();
-            //console.log("p1 destroy");
           }
           if (typeof p2 !== 'undefined') {
             p2.destroy();
-            //console.log("p2 destroy");
           }
           if (typeof p3 !== 'undefined') {
             p3.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p4 !== 'undefined') {
             p4.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p5 !== 'undefined') {
             p5.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p6 !== 'undefined') {
             p6.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p7 !== 'undefined') {
             p7.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p8 !== 'undefined') {
             p8.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p9 !== 'undefined') {
             p9.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p10 !== 'undefined') {
             p10.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p11 !== 'undefined') {
             p11.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p12 !== 'undefined') {
             p12.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p13 !== 'undefined') {
             p13.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p14 !== 'undefined') {
             p14.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p15 !== 'undefined') {
             p15.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p16 !== 'undefined') {
             p16.destroy();
-            //console.log("p3 destroy");
           }
           if (typeof p17 !== 'undefined') {
             p17.destroy();
-            //console.log("p3 destroy");
           }
           skillText.setText('Skill:' + skill);
           coinText.setText('Coins:' + coin);
@@ -2066,7 +1893,6 @@ var P1 = new Phaser.Class({
           cards.splice(t, 1);
           cards.filter(val => val);
           dis.push(c0["texture"]["key"]);
-          //console.log("Cards 5" + cards[5]);
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
             c5.setScale(1/8);
@@ -2076,8 +1902,7 @@ var P1 = new Phaser.Class({
           else {
             shuffle(dis);
             cards = cards.concat(dis);
-            dis = []
-            //console.log("shuffle");
+            dis = [];
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
             c5.setScale(1/8);
             hove(c5, this, cards[5]);
@@ -2103,14 +1928,12 @@ var P1 = new Phaser.Class({
           c0.setScale(1/8);
           hove(c0, this, cards[0]);
           select(c0, this, cards[0]);
-          //console.log("Dis");
           var z = hand - 1;
           if (typeof p[z] == 'undefined') {
             shuffle(pdis);
             p = p.concat(pdis);
             pdis = [];
           }
-          /// Possible bug when a player
           console.log("before hand: " + hand);
           function draw(start, num){
             var y = 0;
@@ -2243,26 +2066,6 @@ var P1 = new Phaser.Class({
             hove(p6, this, p[6]);
             bselect(p6, this, p[6]);
           }
-          //////////////////////
-          /*p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-          p0.setScale(1/8);
-          hove(p0, this, p[0]);
-          bselect(p0, this, p[0]);
-          p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-          p1.setScale(1/8);
-          hove(p1, this, p[1]);
-          bselect(p1, this, p[1]);
-          p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-          p2.setScale(1/8);
-          hove(p2, this, p[2]);
-          bselect(p2, this, p[2]);
-          p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-          p3.setScale(1/8);
-          hove(p3, this, p[3]);
-          bselect(p3, this, p[3]);*/
-          /////////////////////////////////
-          ////console.log("P");
-          ////console.log(p);
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         c5.setScale(1/8);
@@ -2342,7 +2145,6 @@ var Lose = new Phaser.Class({
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
-        //this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
@@ -2398,16 +2200,13 @@ var Lose = new Phaser.Class({
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         d.on('pointerover',function(pointer){
-          ////console.log('hover');
           d.setScale(1/3);
         });
         d.on('pointerout',function(pointer){
-          ////console.log('out');
           d.setScale(1/4);
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
-          ////console.log('Video');
           this.scene.start('p1');
         });
 
@@ -2432,7 +2231,6 @@ var Win = new Phaser.Class({
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
-        //this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
@@ -2466,7 +2264,6 @@ var Win = new Phaser.Class({
 
           return array;
           }
-        //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         shuffle(cards);
         this.add.image(512, 320, 'back');
@@ -2488,16 +2285,13 @@ var Win = new Phaser.Class({
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         d.on('pointerover',function(pointer){
-          ////console.log('hover');
           d.setScale(1/3);
         });
         d.on('pointerout',function(pointer){
-          ////console.log('out');
           d.setScale(1/4);
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
-          ////console.log('Video');
           this.scene.start('p1');
         });
 
