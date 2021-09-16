@@ -1703,8 +1703,9 @@ var P1 = new Phaser.Class({
         game = 0;
         score = 30;
         cscore = 0;
-        var healthText = this.add.text(250, 40, 'Health: 50', { fontSize: '64px', fill: '#fff' });
-        var scoreText = this.add.text(250, 80, 'Score: 30', { fontSize: '64px', fill: '#fff' });
+        checkScore = "no";
+        var healthText = this.add.text(250, 30, 'Health: 50', { fontSize: '64px', fill: '#fff' });
+        var scoreText = this.add.text(250, 90, 'Score: 30', { fontSize: '64px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
         var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
@@ -1721,7 +1722,7 @@ var P1 = new Phaser.Class({
         cb.setScale(1/8);
         hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
-        var tscore = this.add.image(900, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
+        var tscore = this.add.image(850, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tend.on('pointerdown', () => {
