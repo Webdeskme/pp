@@ -1736,7 +1736,13 @@ var P1 = new Phaser.Class({
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tscore.on('pointerdown', () => {
-          checkScore = "yes";
+          this.sound.add('click').play();
+          if(checkScore == "yes"){
+            checkScore = "no";
+          }
+          else{
+            checkScore = "yes";
+          }
         });
         tend.on('pointerdown', () => {
           this.sound.add('click').play();
