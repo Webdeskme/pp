@@ -199,32 +199,87 @@ var P1 = new Phaser.Class({
                 red = "yes";
               ////console.log(c);
                 ////console.log('down');
-                cc.clearTint();
-                ce.clearTint();
-                cp.clearTint();
-                cg.clearTint();
-                c0.clearTint();
-                c1.clearTint();
-                c2.clearTint();
-                c3.clearTint();
-                c4.clearTint();
-                c5.clearTint();
-                p0.clearTint();
-                p1.clearTint();
-                p2.clearTint();
-                p4.clearTint();
-                p5.clearTint();
-                p6.clearTint();
-                p7.clearTint();
-                p8.clearTint();
-                p9.clearTint();
-                p10.clearTint();
-                p11.clearTint();
-                p12.clearTint();
-                p13.clearTint();
-                p14.clearTint();
-                p15.clearTint();
-                p16.clearTint();
+                if (typeof cc !== 'undefined') {
+                  cc.clearTint();
+                }
+                if (typeof ce !== 'undefined') {
+                  ce.clearTint();
+                }
+                if (typeof cp !== 'undefined') {
+                  cp.clearTint();
+                }
+                if (typeof cg !== 'undefined') {
+                  cg.clearTint();
+                }
+                if (typeof c0 !== 'undefined') {
+                  c0.clearTint();
+                }
+                if (typeof c1 !== 'undefined') {
+                  c1.clearTint();
+                }
+                if (typeof c2 !== 'undefined') {
+                  c2.clearTint();
+                }
+                if (typeof c3 !== 'undefined') {
+                  c3.clearTint();
+                }
+                if (typeof c4 !== 'undefined') {
+                  c4.clearTint();
+                }
+                if (typeof c5 !== 'undefined') {
+                  c5.clearTint();
+                }
+                if (typeof p0 !== 'undefined') {
+                  p0.clearTint();
+                }
+                if (typeof p1 !== 'undefined') {
+                  p1.clearTint();
+                }
+                if (typeof p2 !== 'undefined') {
+                  p2.clearTint();
+                }
+                if (typeof p3 !== 'undefined') {
+                  p3.clearTint();
+                }
+                if (typeof p4 !== 'undefined') {
+                  p4.clearTint();
+                }
+                if (typeof p5 !== 'undefined') {
+                  p5.clearTint();
+                }
+                if (typeof p6 !== 'undefined') {
+                  p6.clearTint();
+                }
+                if (typeof p7 !== 'undefined') {
+                  p7.clearTint();
+                }
+                if (typeof p8 !== 'undefined') {
+                  p8.clearTint();
+                }
+                if (typeof p9 !== 'undefined') {
+                  p9.clearTint();
+                }
+                if (typeof p10 !== 'undefined') {
+                  p10.clearTint();
+                }
+                if (typeof p11 !== 'undefined') {
+                  p11.clearTint();
+                }
+                if (typeof p12 !== 'undefined') {
+                  p12.clearTint();
+                }
+                if (typeof p13 !== 'undefined') {
+                  p13.clearTint();
+                }
+                if (typeof p14 !== 'undefined') {
+                  p14.clearTint();
+                }
+                if (typeof p15 !== 'undefined') {
+                  p15.clearTint();
+                }
+                if (typeof p16 !== 'undefined') {
+                  p16.clearTint();
+                }
 
                 c.setTint(0xff0000);
                 skill = 0;
