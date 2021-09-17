@@ -854,8 +854,8 @@ var P1 = new Phaser.Class({
                       if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                       game += 1;
                       if(game > 3){
-                          this.sound.add('click').play();
-                          this.scene.start('win');
+                          th.sound.add('click').play();
+                          th.scene.start('win');
                       }
                       if(temp2 == "COM"){
                         cc.destroy();
@@ -1179,8 +1179,8 @@ var P1 = new Phaser.Class({
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
-                        this.sound.add('click').play();
-                        this.scene.start('win');
+                        th.sound.add('click').play();
+                        th.scene.start('win');
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1504,8 +1504,8 @@ var P1 = new Phaser.Class({
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
-                        this.sound.add('click').play();
-                        this.scene.start('win');
+                        th.sound.add('click').play();
+                        th.scene.start('win');
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1829,8 +1829,8 @@ var P1 = new Phaser.Class({
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
-                        this.sound.add('click').play();
-                        this.scene.start('win');
+                        th.sound.add('click').play();
+                        th.scene.start('win');
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
