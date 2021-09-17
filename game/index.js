@@ -761,6 +761,8 @@ var P1 = new Phaser.Class({
                 if(type == "skill"){
                   if(skill >= cost){
                     //console.log("Aquire");
+                    big.destroy();
+                    big = null;
                     if(checkScore == "yes"){
                       checkScore = "no";
                       cscore += 1;
@@ -1086,6 +1088,8 @@ var P1 = new Phaser.Class({
                 else if (type == "coin") {
                   if(coin >= cost){
                     //console.log("Aquire");
+                    big.destroy();
+                    big = null;
                     if(checkScore == "yes"){
                       checkScore = "no";
                       cscore += 1;
@@ -1411,6 +1415,8 @@ var P1 = new Phaser.Class({
                 else if (type == "total") {
                   if(total >= cost){
                     //console.log("Aquire");
+                    big.destroy();
+                    big = null;
                     if(checkScore == "yes"){
                       checkScore = "no";
                       cscore += 1;
@@ -1736,6 +1742,8 @@ var P1 = new Phaser.Class({
                 else if (type == "card") {
                   if(total >= cost){
                     //console.log("Aquire");
+                    big.destroy();
+                    big = null;
                     if(checkScore == "yes"){
                       checkScore = "no";
                       cscore += 1;
