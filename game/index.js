@@ -1087,6 +1087,7 @@ var P1 = new Phaser.Class({
                   skill = 0;
                   total = 0;
                   card = 0;
+                  temp2 = "";
                   }
                 }
                 else if (type == "coin") {
@@ -1418,6 +1419,7 @@ var P1 = new Phaser.Class({
                       skill = 0;
                       total = 0;
                       card = 0;
+                      temp2 = "";
                   }
                 }
                 else if (type == "total") {
@@ -1749,6 +1751,7 @@ var P1 = new Phaser.Class({
                       skill = 0;
                       total = 0;
                       card = 0;
+                      temp2 = "";
                   }
                 }
                 else if (type == "card") {
@@ -2080,6 +2083,7 @@ var P1 = new Phaser.Class({
                       skill = 0;
                       total = 0;
                       card = 0;
+                      temp2 = "";
                   }
                 }
               }
