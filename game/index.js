@@ -2070,7 +2070,7 @@ var P1 = new Phaser.Class({
         var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
         shuffle(cards);
         shuffle(p);
-        this.add.image(512, 320, 'back');
+        back = this.add.image(512, 320, 'back');
         var i;
         for (i = 6; i < cards.length; i++) {
           var c = this.add.image(125, 400, cards[i]).setInteractive({ useHandCursor: true  } );
