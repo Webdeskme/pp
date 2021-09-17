@@ -1089,6 +1089,10 @@ var P1 = new Phaser.Class({
                   card = 0;
                   temp2 = "";
                   red = "no";
+                  skillText.setText('Skill:' + skill);
+                  coinText.setText('Coins:' + coin);
+                  totalText.setText('Total:' + total);
+                  cardText.setText('Cards:' + card);
                   }
                 }
                 else if (type == "coin") {
@@ -1422,6 +1426,10 @@ var P1 = new Phaser.Class({
                       card = 0;
                       temp2 = "";
                       red = "no";
+                      skillText.setText('Skill:' + skill);
+                      coinText.setText('Coins:' + coin);
+                      totalText.setText('Total:' + total);
+                      cardText.setText('Cards:' + card);
                   }
                 }
                 else if (type == "total") {
@@ -1755,6 +1763,10 @@ var P1 = new Phaser.Class({
                       card = 0;
                       temp2 = "";
                       red = "no";
+                      skillText.setText('Skill:' + skill);
+                      coinText.setText('Coins:' + coin);
+                      totalText.setText('Total:' + total);
+                      cardText.setText('Cards:' + card);
                   }
                 }
                 else if (type == "card") {
@@ -2088,6 +2100,10 @@ var P1 = new Phaser.Class({
                       card = 0;
                       temp2 = "";
                       red = "no";
+                      skillText.setText('Skill:' + skill);
+                      coinText.setText('Coins:' + coin);
+                      totalText.setText('Total:' + total);
+                      cardText.setText('Cards:' + card);
                   }
                 }
               }
