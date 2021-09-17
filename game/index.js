@@ -187,6 +187,10 @@ var P1 = new Phaser.Class({
               big.destroy();
               big = null;
             });
+            back.on('pointerover',function(pointer){
+              big.destroy();
+              big = null;
+            });
           }
           var red = "no";
           function select(c, th, im){
