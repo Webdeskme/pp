@@ -295,10 +295,10 @@ var P1 = new Phaser.Class({
                 total = 0;
                 card = 0
                 temp = [];
-                skillText.setText('Skill:' + skill);
-                coinText.setText('Coins:' + coin);
-                totalText.setText('Total:' + total);
-                cardText.setText('Cards:' + card);
+                skillText.setText('Skill: ' + skill);
+                coinText.setText('Coins: ' + coin);
+                totalText.setText('Total: ' + total);
+                cardText.setText('Cards: ' + card);
                 //if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
                 //  temp2 = "";
                 //}
@@ -753,11 +753,11 @@ var P1 = new Phaser.Class({
                     temp.splice(t, 1);
                   }
                 }
-                skillText.setText('Skill:' + skill);
-                coinText.setText('Coins:' + coin);
+                skillText.setText('Skill: ' + skill);
+                coinText.setText('Coins: ' + coin);
                 total = skill + coin;
-                totalText.setText('Total:' + total);
-                cardText.setText('Cards:' + card);
+                totalText.setText('Total: ' + total);
+                cardText.setText('Cards: ' + card);
                 if(type == "skill"){
                   if(skill >= cost){
                     //console.log("Aquire");
@@ -856,7 +856,6 @@ var P1 = new Phaser.Class({
                       }
                       scoreText.setText('Score:' + score);
                     }
-                    else{
                       if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                       game += 1;
                       if(game > 3){
@@ -881,7 +880,9 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      pdis.push(temp2);
+                      if(checkScore != "yes"){
+                        pdis.push(temp2);
+                      }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1082,17 +1083,16 @@ var P1 = new Phaser.Class({
                       hove(p6, th, p[6]);
                       bselect(p6, th, p[6]);
                     }
-                  }
                   coin = 0;
                   skill = 0;
                   total = 0;
                   card = 0;
                   temp2 = "";
                   red = "no";
-                  skillText.setText('Skill:' + skill);
-                  coinText.setText('Coins:' + coin);
-                  totalText.setText('Total:' + total);
-                  cardText.setText('Cards:' + card);
+                  skillText.setText('Skill: ' + skill);
+                  coinText.setText('Coins: ' + coin);
+                  totalText.setText('Total: ' + total);
+                  cardText.setText('Cards: ' + card);
                   }
                 }
                 else if (type == "coin") {
@@ -1193,7 +1193,6 @@ var P1 = new Phaser.Class({
                       }
                       scoreText.setText('Score:' + score);
                     }
-                    else{
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
@@ -1218,7 +1217,9 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      pdis.push(temp2);
+                      if(checkScore != "yes"){
+                        pdis.push(temp2);
+                      }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1419,17 +1420,16 @@ var P1 = new Phaser.Class({
                           hove(p6, th, p[6]);
                           bselect(p6, th, p[6]);
                         }
-                      }
                       coin = 0;
                       skill = 0;
                       total = 0;
                       card = 0;
                       temp2 = "";
                       red = "no";
-                      skillText.setText('Skill:' + skill);
-                      coinText.setText('Coins:' + coin);
-                      totalText.setText('Total:' + total);
-                      cardText.setText('Cards:' + card);
+                      skillText.setText('Skill: ' + skill);
+                      coinText.setText('Coins: ' + coin);
+                      totalText.setText('Total: ' + total);
+                      cardText.setText('Cards: ' + card);
                   }
                 }
                 else if (type == "total") {
@@ -1530,7 +1530,6 @@ var P1 = new Phaser.Class({
                       }
                       scoreText.setText('Score:' + score);
                     }
-                    else{
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
@@ -1555,7 +1554,9 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      pdis.push(temp2);
+                      if(checkScore != "yes"){
+                        pdis.push(temp2);
+                      }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -1756,17 +1757,16 @@ var P1 = new Phaser.Class({
                           hove(p6, th, p[6]);
                           bselect(p6, th, p[6]);
                         }
-                      }
                       coin = 0;
                       skill = 0;
                       total = 0;
                       card = 0;
                       temp2 = "";
                       red = "no";
-                      skillText.setText('Skill:' + skill);
-                      coinText.setText('Coins:' + coin);
-                      totalText.setText('Total:' + total);
-                      cardText.setText('Cards:' + card);
+                      skillText.setText('Skill: ' + skill);
+                      coinText.setText('Coins: ' + coin);
+                      totalText.setText('Total: ' + total);
+                      cardText.setText('Cards: ' + card);
                   }
                 }
                 else if (type == "card") {
@@ -1867,7 +1867,6 @@ var P1 = new Phaser.Class({
                       }
                       scoreText.setText('Score:' + score);
                     }
-                    else{
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
@@ -1892,7 +1891,9 @@ var P1 = new Phaser.Class({
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
                       cards.filter(val => val);
-                      pdis.push(temp2);
+                      if(checkScore != "yes"){
+                        pdis.push(temp2);
+                      }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
                         c5.setScale(1/8);
@@ -2093,17 +2094,16 @@ var P1 = new Phaser.Class({
                           hove(p6, th, p[6]);
                           bselect(p6, th, p[6]);
                         }
-                      }
                       coin = 0;
                       skill = 0;
                       total = 0;
                       card = 0;
                       temp2 = "";
                       red = "no";
-                      skillText.setText('Skill:' + skill);
-                      coinText.setText('Coins:' + coin);
-                      totalText.setText('Total:' + total);
-                      cardText.setText('Cards:' + card);
+                      skillText.setText('Skill: ' + skill);
+                      coinText.setText('Coins: ' + coin);
+                      totalText.setText('Total: ' + total);
+                      cardText.setText('Cards: ' + card);
                   }
                 }
               }
@@ -2251,10 +2251,10 @@ var P1 = new Phaser.Class({
           if (typeof p17 !== 'undefined') {
             p17.destroy();
           }
-          skillText.setText('Skill:' + skill);
-          coinText.setText('Coins:' + coin);
-          totalText.setText('Total:' + total);
-          cardText.setText('Cards:' + card);
+          skillText.setText('Skill: ' + skill);
+          coinText.setText('Coins: ' + coin);
+          totalText.setText('Total: ' + total);
+          cardText.setText('Cards: ' + card);
           if(c0["texture"]["key"] == "Browser"){
             health -= 5;
           }
