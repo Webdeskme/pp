@@ -757,15 +757,106 @@ var P1 = new Phaser.Class({
                 if(type == "skill"){
                   if(skill >= cost){
                     //console.log("Aquire");
-
-                    //if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
+                    if(checkScore == "yes";){
+                      checkScore = "no";
+                      cscore += 1;
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      cards.filter(val => val);
+                      score -= 10;
+                      if(cscore > 2){
+                        tscore.destroy();
+                      }
+                      if(temp2 == "Browser"){
+                        score += 5;
+                      }
+                      else if (temp2 == "Malware") {
+                        score += 2;
+                      }
+                      else if (temp2 == "PrivilegeEsc") {
+                        score += 2;
+                      }
+                      else if (temp2 == "Driver") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Service") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudStorage") {
+                        score += 4;
+                      }
+                      else if (temp2 == "IMDS") {
+                        score += 1;
+                      }
+                      else if (temp2 == "MFA") {
+                        score += 2;
+                      }
+                      else if (temp2 == "User") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudAccount") {
+                        score += 2;
+                      }
+                      else if (temp2 == "CredStuffing") {
+                        score += 4;
+                      }
+                      else if (temp2 == "Kubelet") {
+                        score += 5;
+                      }
+                      else if (temp2 == "WateringHole") {
+                        score += 3;
+                      }
+                      else if (temp2 == "WebShell") {
+                        score += 5;
+                      }
+                      else if (temp2 == "FakeInstaller") {
+                        score += 4;
+                      }
+                      else if (temp2 == "OfficeMacro") {
+                        score += 6;
+                      }
+                      else if (temp2 == "ShadowCopy") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Sysmon") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Behavior") {
+                        score += 3;
+                      }
+                      else if (temp2 == "DPAT") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Endpoint") {
+                        score += 4;
+                      }
+                      else if (temp2 == "SIEM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "Sinkhole") {
+                        score += 5;
+                      }
+                      else if (temp2 == "ZeroTrust") {
+                        score += 2;
+                      }
+                      else if (temp2 == "IAM") {
+                        score += 3;
+                      }
+                      else if (temp2 == "SRUM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "MFAB") {
+                        score += 1;
+                      }
+                      scoreText.setText('Score:' + score);
+                    }
+                    else{
                       if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                       game += 1;
                       if(game > 3){
                           this.sound.add('click').play();
                           this.scene.start('win');
                       }
-                      //console.log("Game: " + game);
                       if(temp2 == "COM"){
                         cc.destroy();
                       }
@@ -986,10 +1077,105 @@ var P1 = new Phaser.Class({
                       bselect(p6, th, p[6]);
                     }
                   }
+                  }
                 }
                 else if (type == "coin") {
                   if(coin >= cost){
                     //console.log("Aquire");
+                    if(checkScore == "yes";){
+                      checkScore = "no";
+                      cscore += 1;
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      cards.filter(val => val);
+                      score -= 10;
+                      if(cscore > 2){
+                        tscore.destroy();
+                      }
+                      if(temp2 == "Browser"){
+                        score += 5;
+                      }
+                      else if (temp2 == "Malware") {
+                        score += 2;
+                      }
+                      else if (temp2 == "PrivilegeEsc") {
+                        score += 2;
+                      }
+                      else if (temp2 == "Driver") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Service") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudStorage") {
+                        score += 4;
+                      }
+                      else if (temp2 == "IMDS") {
+                        score += 1;
+                      }
+                      else if (temp2 == "MFA") {
+                        score += 2;
+                      }
+                      else if (temp2 == "User") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudAccount") {
+                        score += 2;
+                      }
+                      else if (temp2 == "CredStuffing") {
+                        score += 4;
+                      }
+                      else if (temp2 == "Kubelet") {
+                        score += 5;
+                      }
+                      else if (temp2 == "WateringHole") {
+                        score += 3;
+                      }
+                      else if (temp2 == "WebShell") {
+                        score += 5;
+                      }
+                      else if (temp2 == "FakeInstaller") {
+                        score += 4;
+                      }
+                      else if (temp2 == "OfficeMacro") {
+                        score += 6;
+                      }
+                      else if (temp2 == "ShadowCopy") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Sysmon") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Behavior") {
+                        score += 3;
+                      }
+                      else if (temp2 == "DPAT") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Endpoint") {
+                        score += 4;
+                      }
+                      else if (temp2 == "SIEM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "Sinkhole") {
+                        score += 5;
+                      }
+                      else if (temp2 == "ZeroTrust") {
+                        score += 2;
+                      }
+                      else if (temp2 == "IAM") {
+                        score += 3;
+                      }
+                      else if (temp2 == "SRUM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "MFAB") {
+                        score += 1;
+                      }
+                      scoreText.setText('Score:' + score);
+                    }
+                    else{
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
@@ -1215,11 +1401,106 @@ var P1 = new Phaser.Class({
                           hove(p6, th, p[6]);
                           bselect(p6, th, p[6]);
                         }
+                      }
                   }
                 }
                 else if (type == "total") {
                   if(total >= cost){
                     //console.log("Aquire");
+                    if(checkScore == "yes";){
+                      checkScore = "no";
+                      cscore += 1;
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      cards.filter(val => val);
+                      score -= 10;
+                      if(cscore > 2){
+                        tscore.destroy();
+                      }
+                      if(temp2 == "Browser"){
+                        score += 5;
+                      }
+                      else if (temp2 == "Malware") {
+                        score += 2;
+                      }
+                      else if (temp2 == "PrivilegeEsc") {
+                        score += 2;
+                      }
+                      else if (temp2 == "Driver") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Service") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudStorage") {
+                        score += 4;
+                      }
+                      else if (temp2 == "IMDS") {
+                        score += 1;
+                      }
+                      else if (temp2 == "MFA") {
+                        score += 2;
+                      }
+                      else if (temp2 == "User") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudAccount") {
+                        score += 2;
+                      }
+                      else if (temp2 == "CredStuffing") {
+                        score += 4;
+                      }
+                      else if (temp2 == "Kubelet") {
+                        score += 5;
+                      }
+                      else if (temp2 == "WateringHole") {
+                        score += 3;
+                      }
+                      else if (temp2 == "WebShell") {
+                        score += 5;
+                      }
+                      else if (temp2 == "FakeInstaller") {
+                        score += 4;
+                      }
+                      else if (temp2 == "OfficeMacro") {
+                        score += 6;
+                      }
+                      else if (temp2 == "ShadowCopy") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Sysmon") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Behavior") {
+                        score += 3;
+                      }
+                      else if (temp2 == "DPAT") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Endpoint") {
+                        score += 4;
+                      }
+                      else if (temp2 == "SIEM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "Sinkhole") {
+                        score += 5;
+                      }
+                      else if (temp2 == "ZeroTrust") {
+                        score += 2;
+                      }
+                      else if (temp2 == "IAM") {
+                        score += 3;
+                      }
+                      else if (temp2 == "SRUM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "MFAB") {
+                        score += 1;
+                      }
+                      scoreText.setText('Score:' + score);
+                    }
+                    else{
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
@@ -1445,11 +1726,106 @@ var P1 = new Phaser.Class({
                           hove(p6, th, p[6]);
                           bselect(p6, th, p[6]);
                         }
+                      }
                   }
                 }
                 else if (type == "card") {
                   if(total >= cost){
                     //console.log("Aquire");
+                    if(checkScore == "yes";){
+                      checkScore = "no";
+                      cscore += 1;
+                      var t = cards.indexOf(temp2);
+                      cards.splice(t, 1);
+                      cards.filter(val => val);
+                      score -= 10;
+                      if(cscore > 2){
+                        tscore.destroy();
+                      }
+                      if(temp2 == "Browser"){
+                        score += 5;
+                      }
+                      else if (temp2 == "Malware") {
+                        score += 2;
+                      }
+                      else if (temp2 == "PrivilegeEsc") {
+                        score += 2;
+                      }
+                      else if (temp2 == "Driver") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Service") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudStorage") {
+                        score += 4;
+                      }
+                      else if (temp2 == "IMDS") {
+                        score += 1;
+                      }
+                      else if (temp2 == "MFA") {
+                        score += 2;
+                      }
+                      else if (temp2 == "User") {
+                        score += 4;
+                      }
+                      else if (temp2 == "CloudAccount") {
+                        score += 2;
+                      }
+                      else if (temp2 == "CredStuffing") {
+                        score += 4;
+                      }
+                      else if (temp2 == "Kubelet") {
+                        score += 5;
+                      }
+                      else if (temp2 == "WateringHole") {
+                        score += 3;
+                      }
+                      else if (temp2 == "WebShell") {
+                        score += 5;
+                      }
+                      else if (temp2 == "FakeInstaller") {
+                        score += 4;
+                      }
+                      else if (temp2 == "OfficeMacro") {
+                        score += 6;
+                      }
+                      else if (temp2 == "ShadowCopy") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Sysmon") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Behavior") {
+                        score += 3;
+                      }
+                      else if (temp2 == "DPAT") {
+                        score += 3;
+                      }
+                      else if (temp2 == "Endpoint") {
+                        score += 4;
+                      }
+                      else if (temp2 == "SIEM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "Sinkhole") {
+                        score += 5;
+                      }
+                      else if (temp2 == "ZeroTrust") {
+                        score += 2;
+                      }
+                      else if (temp2 == "IAM") {
+                        score += 3;
+                      }
+                      else if (temp2 == "SRUM") {
+                        score += 5;
+                      }
+                      else if (temp2 == "MFAB") {
+                        score += 1;
+                      }
+                      scoreText.setText('Score:' + score);
+                    }
+                    else{
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
@@ -1675,6 +2051,7 @@ var P1 = new Phaser.Class({
                           hove(p6, th, p[6]);
                           bselect(p6, th, p[6]);
                         }
+                      }
                   }
                 }
               }
