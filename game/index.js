@@ -1438,7 +1438,6 @@ var P1 = new Phaser.Class({
                     big.destroy();
                     big = null;
                     if(checkScore == "yes"){
-                      checkScore = "no";
                       cscore += 1;
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
