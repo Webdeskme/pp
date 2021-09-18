@@ -20,7 +20,7 @@ var Vide = new Phaser.Class({
 
     create: function ()
     {
-      game.scale.startFullscreen();
+      //game.scale.startFullscreen();
      var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
      vid.setScale(1/1);
 
