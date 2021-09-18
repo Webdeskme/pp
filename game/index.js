@@ -148,6 +148,8 @@ var P1 = new Phaser.Class({
         this.load.image('Guns', 'assets/out/Guns.png');
         this.load.image('END', 'assets/text/end.png');
         this.load.image('SCORE', 'assets/text/SCORE2.png');
+        this.load.image('musicOff', 'assets/icons/sound-off.png');
+        this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.text('rules', 'assets/text/rules.txt');
         this.load.video('intro', 'assets/Video/SenaryAdd.mp4', 'loadeddata', false, true);
         var i;
@@ -156,6 +158,9 @@ var P1 = new Phaser.Class({
         }
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
+        ]);
+        this.load.audio('music', [
+        "assets/Audio/MyVeryOwnDeadShip.ogg"
         ]);
     },
 
@@ -2170,13 +2175,17 @@ var P1 = new Phaser.Class({
         var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
         var cardText = this.add.text(15, 140, 'Cards: 0', { fontSize: '32px', fill: '#fff' });
         var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
+        var m = this.add.image(700, 15, 'musicOn').setInteractive({ useHandCursor: true  } );
+        m.on('pointerdown', () => {
+          this.sound.add('music').play();
+        });
         r.setInteractive();
         r.on('pointerdown', () => {
           this.sound.add('click').play();
           //console.log('scene d');
           //this.scene.start('sceneD');
           //music.destroy();
-          var rule = this.add.image(400, 300, 'back');
+          var rule = this.add.image(512, 320, 'back');
           //var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
           var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
           vid.setScale(1/1);
