@@ -161,6 +161,9 @@ var P1 = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
+        this.load.audio('mend', [
+        "assets/Audio/explosion.wav"
+        ]);
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
@@ -2271,7 +2274,7 @@ var P1 = new Phaser.Class({
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tscore.on('pointerdown', () => {
-          this.sound.add('click').play();
+          this.sound.add('mend').play();
           if(checkScore == "yes"){
             checkScore = "no";
           }
