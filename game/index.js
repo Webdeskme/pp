@@ -164,6 +164,12 @@ var P1 = new Phaser.Class({
         this.load.audio('mend', [
         "assets/Audio/explosion.wav"
         ]);
+        this.load.audio('aq', [
+        "assets/Audio/gmae.wav"
+        ]);
+        this.load.audio('sc', [
+        "assets/Audio/completetask_0.mp3"
+        ]);
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
@@ -782,6 +788,12 @@ var P1 = new Phaser.Class({
                     }
                     big = null;*/
                     if(checkScore == "yes"){
+                      th.sound.add('sc').play();
+                    }
+                    else{
+                      th.sound.add('aq').play();
+                    }
+                    if(checkScore == "yes"){
                       cscore += 1;
                       var t = cards.indexOf(temp2);
                       cards.splice(t, 1);
@@ -1116,6 +1128,12 @@ var P1 = new Phaser.Class({
                 else if (type == "coin") {
                   if(coin >= cost){
                     //console.log("Aquire");
+                    if(checkScore == "yes"){
+                      th.sound.add('sc').play();
+                    }
+                    else{
+                      th.sound.add('aq').play();
+                    }
                     /*if (typeof big != "undefined") {
                       big.destroy();
                     }
@@ -1455,6 +1473,12 @@ var P1 = new Phaser.Class({
                 else if (type == "total") {
                   if(total >= cost){
                     //console.log("Aquire");
+                    if(checkScore == "yes"){
+                      th.sound.add('sc').play();
+                    }
+                    else{
+                      th.sound.add('aq').play();
+                    }
                     /*if (typeof big != "undefined") {
                       big.destroy();
                     }
@@ -1794,6 +1818,12 @@ var P1 = new Phaser.Class({
                 else if (type == "card") {
                   if(total >= cost){
                     //console.log("Aquire");
+                    if(checkScore == "yes"){
+                      th.sound.add('sc').play();
+                    }
+                    else{
+                      th.sound.add('aq').play();
+                    }
                     /*if (typeof big != "undefined") {
                       big.destroy();
                     }
