@@ -121,12 +121,12 @@ var TitleS = new Phaser.Class({
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         if(localStorage.getItem(localStorageTemp) == null) {
-            score = 0;
+            score = 40;
         } else {
             score = localStorage.getItem(localStorageTemp);
         }
         if(localStorage.getItem(localStorageName) == null) {
-            highScore = 0;
+            highScore = 40;
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
@@ -917,7 +917,7 @@ var P1 = new Phaser.Class({
                           } else {
                               highScore = localStorage.getItem(localStorageName);
                           }
-                          if(score > highScore){
+                          if(score < highScore){
                             localStorage.setItem(localStorageName, score);
                           }
                           localStorage.setItem(localStorageTemp, score);
@@ -2876,17 +2876,17 @@ var Lose = new Phaser.Class({
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         if(localStorage.getItem(localStorageTemp) == null) {
-            score = 0;
+            score = 40;
         } else {
             score = localStorage.getItem(localStorageTemp);
         }
         if(localStorage.getItem(localStorageName) == null) {
-            highScore = 0;
+            highScore = 40;
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
-        var scoreText = this.add.text(700, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
-        var highscoreText = this.add.text(700, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
+        var scoreText = this.add.text(500, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
+        var highscoreText = this.add.text(500, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
@@ -2978,17 +2978,17 @@ var Win = new Phaser.Class({
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         if(localStorage.getItem(localStorageTemp) == null) {
-            score = 0;
+            score = 40;
         } else {
             score = localStorage.getItem(localStorageTemp);
         }
         if(localStorage.getItem(localStorageName) == null) {
-            highScore = 0;
+            highScore = 40;
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
-        var scoreText = this.add.text(700, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
-        var highscoreText = this.add.text(700, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
+        var scoreText = this.add.text(500, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
+        var highscoreText = this.add.text(500, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
