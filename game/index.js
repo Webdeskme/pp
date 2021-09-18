@@ -162,7 +162,7 @@ var P1 = new Phaser.Class({
         "assets/Audio/mouseclick.wav"
         ]);
         this.load.audio('music', [
-        "assets/Audio/MyVeryOwnDeadShip.ogg"
+        "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
     },
 
