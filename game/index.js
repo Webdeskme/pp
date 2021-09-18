@@ -150,6 +150,7 @@ var P1 = new Phaser.Class({
         this.load.image('SCORE', 'assets/text/SCORE2.png');
         this.load.image('musicOff', 'assets/icons/sound-off.png');
         this.load.image('musicOn', 'assets/icons/sound-on.png');
+        this.load.image('full', 'assets/icons/expand.png');
         this.load.text('rules', 'assets/text/rules.txt');
         this.load.video('intro', 'assets/Video/SenaryAdd.mp4', 'loadeddata', false, true);
         var i;
@@ -2177,9 +2178,25 @@ var P1 = new Phaser.Class({
         var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
         var mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
         var mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+        var fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
         var mu = this.sound.add('music');
         mf.setScale(1/8);
         mo.setScale(1/8);
+        fu.setScale(1/8);
+        fu.on('pointerdown', () => {
+          if (this.scale.isFullscreen)
+            {
+                //button.setFrame(0);
+
+                this.scale.stopFullscreen();
+            }
+            else
+            {
+                //button.setFrame(1);
+
+                this.scale.startFullscreen();
+            }
+        });
         mo.on('pointerdown', () => {
           mu.loop = true;
           mu.play();
