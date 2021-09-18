@@ -2175,12 +2175,23 @@ var P1 = new Phaser.Class({
         var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
         var cardText = this.add.text(15, 140, 'Cards: 0', { fontSize: '32px', fill: '#fff' });
         var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
-        var m = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
-        m.setScale(1/8);
-        m.on('pointerdown', () => {
-          mu = this.sound.add('music');
+        var mf = this.add.image(750, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
+        var mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+        var mu = this.sound.add('music');
+        mf.setScale(1/8);
+        mo.setScale(1/8);
+        mo.destroy();
+        mf.on('pointerdown', () => {
           mu.loop = true;
           mu.play();
+          mf.destroy();
+          mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+        });
+        mo.on('pointerdown', () => {
+          mu.loop = true;
+          mu.stop();
+          mo.destroy();
+          mf = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
         });
         r.setInteractive();
         r.on('pointerdown', () => {
