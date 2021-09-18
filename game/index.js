@@ -2158,10 +2158,10 @@ var P1 = new Phaser.Class({
           //console.log('scene d');
           //this.scene.start('sceneD');
           //music.destroy();
-          var rule = this.add.image(400, 300, 'back3');
+          var rule = this.add.image(400, 300, 'back');
           //var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
           var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
-          vid.setScale(1/2);
+          vid.setScale(1/1);
 
          vid.play(true);
 
@@ -2178,7 +2178,7 @@ var P1 = new Phaser.Class({
          }, 41000);
           var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
           hr.setInteractive({ useHandCursor: true  } );
-          hwnar.play();
+          //hwnar.play();
           hr.on('pointerdown', () => {
             //rules.destroy();
             //rules = null;
@@ -2186,7 +2186,7 @@ var P1 = new Phaser.Class({
             rule = null;
             hr.destroy();
             hr = null;
-            hwnar.stop();
+            //hwnar.stop();
             //hwnar.destroy();
             //hwnar = null;
           });
