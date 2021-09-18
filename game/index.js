@@ -2790,10 +2790,14 @@ var Lose = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
+        this.load.audio('mlose', [
+        "assets/Audio/MachinePowerOff.mp3"
+        ]);
     },
 
     create: function ()
     {
+      this.sound.add('mlose').play();
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
@@ -2876,10 +2880,14 @@ var Win = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
+        this.load.audio('mwin', [
+        "assets/Audio/WinSaw.wav"
+        ]);
     },
 
     create: function ()
     {
+      this.sound.add('mwin').play();
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
