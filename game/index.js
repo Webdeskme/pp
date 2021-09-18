@@ -2667,7 +2667,7 @@ var P1 = new Phaser.Class({
             );
 
             var graphics = this.add.graphics({ fillStyle: { color: 0xffffff } });
-            graphics.setAlpha((1 - point.z / 32));
+            graphics.setAlpha((1 - point.z / 64));
             graphics.fillCircleShape(circle);
             this.stars.add(graphics);
         }
