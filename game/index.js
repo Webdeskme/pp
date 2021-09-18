@@ -55,6 +55,7 @@ var TitleS = new Phaser.Class({
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
+        this.load.text('rules', 'assets/Text/rules.txt');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
