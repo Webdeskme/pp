@@ -2150,6 +2150,29 @@ var P1 = new Phaser.Class({
         var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
         var cardText = this.add.text(15, 140, 'Cards: 0', { fontSize: '32px', fill: '#fff' });
         var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
+        r.setInteractive();
+        r.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //console.log('scene d');
+          //this.scene.start('sceneD');
+          //music.destroy();
+          var rule = this.add.image(400, 300, 'back3');
+          var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
+          var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+          hr.setInteractive({ useHandCursor: true  } );
+          hwnar.play();
+          hr.on('pointerdown', () => {
+            rules.destroy();
+            rules = null;
+            rule.destroy();
+            rule = null;
+            hr.destroy();
+            hr = null;
+            hwnar.stop();
+            //hwnar.destroy();
+            //hwnar = null;
+          });
+        });
         var h = this.add.text(15, 15, 'Home', { fontSize: '32px', fill: '#fff' });
         h.setInteractive();
         h.on('pointerdown', () => {
