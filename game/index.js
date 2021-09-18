@@ -2230,7 +2230,11 @@ var P1 = new Phaser.Class({
               }
               else{
                 // add card description //bob
-                th.sound.add(c["texture"]["key"]).play();
+                setTimeout(function()
+                {
+                    th.sound.add(c["texture"]["key"]).play();
+
+                }, 1000);
               }
             });
             return skill;
@@ -2385,7 +2389,11 @@ var P1 = new Phaser.Class({
         });
         tend.on('pointerdown', () => {
           this.sound.add('mend').play();
-          this.sound.add(c["texture"]["key"]).play();
+          setTimeout(function()
+          {
+              this.sound.add(c["texture"]["key"]).play();
+
+          }, 2000);
           pdis = pdis.filter(function( element ) {
              return element !== undefined;
           });
