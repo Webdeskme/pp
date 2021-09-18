@@ -2888,8 +2888,14 @@ scale: {
 */
 var config = {
     type: Phaser.AUTO,
-    width: 1024,
-    height: 640,
+    scale: {
+      mode: Phaser.Scale.FIT,
+      parent: "app",
+      width: 1024,
+      height: 640
+    },
+    //width: 1024,
+    //height: 640,
     backgroundColor: '#000000',
     scene: [ Vide, TitleS, P1, Lose, Win ]
 };
