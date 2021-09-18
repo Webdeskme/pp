@@ -118,7 +118,20 @@ var TitleS = new Phaser.Class({
           ////console.log('Video');
           this.scene.start('p1');
         });
-
+        var localStorageName = "piratesPort";
+        var localStorageTemp = "piratesPort_temp";
+        if(localStorage.getItem(localStorageTemp) == null) {
+            score = 0;
+        } else {
+            score = localStorage.getItem(localStorageTemp);
+        }
+        if(localStorage.getItem(localStorageName) == null) {
+            highScore = 0;
+        } else {
+            highScore = localStorage.getItem(localStorageName);
+        }
+        var scoreText = this.add.text(700, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
+        var highscoreText = this.add.text(700, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
@@ -899,6 +912,15 @@ var P1 = new Phaser.Class({
                       if(game > 3){
                           th.sound.add('mwin').play();
                           th.scene.start('win');
+                          if(localStorage.getItem(localStorageName) == null) {
+                              highScore = 0;
+                          } else {
+                              highScore = localStorage.getItem(localStorageName);
+                          }
+                          if(score > highScore){
+                            localStorage.setItem(localStorageName, score);
+                          }
+                          localStorage.setItem(localStorageTemp, score);
                       }
                       if(temp2 == "COM"){
                         th.sound.add('comp').play();
@@ -2228,6 +2250,9 @@ var P1 = new Phaser.Class({
         score = 30;
         cscore = 0;
         checkScore = "no";
+        var localStorageName = "piratesPort";
+        var localStorageTemp = "piratesPort_temp";
+        var highScore;
         var healthText = this.add.text(250, 30, 'Health: 50', { fontSize: '64px', fill: '#fff' });
         var scoreText = this.add.text(250, 90, 'Score: 30', { fontSize: '64px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
@@ -2848,7 +2873,20 @@ var Lose = new Phaser.Class({
           this.sound.add('click').play();
           this.scene.start('p1');
         });
-
+        var localStorageName = "piratesPort";
+        var localStorageTemp = "piratesPort_temp";
+        if(localStorage.getItem(localStorageTemp) == null) {
+            score = 0;
+        } else {
+            score = localStorage.getItem(localStorageTemp);
+        }
+        if(localStorage.getItem(localStorageName) == null) {
+            highScore = 0;
+        } else {
+            highScore = localStorage.getItem(localStorageName);
+        }
+        var scoreText = this.add.text(700, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
+        var highscoreText = this.add.text(700, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
@@ -2937,7 +2975,20 @@ var Win = new Phaser.Class({
           this.sound.add('click').play();
           this.scene.start('p1');
         });
-
+        var localStorageName = "piratesPort";
+        var localStorageTemp = "piratesPort_temp";
+        if(localStorage.getItem(localStorageTemp) == null) {
+            score = 0;
+        } else {
+            score = localStorage.getItem(localStorageTemp);
+        }
+        if(localStorage.getItem(localStorageName) == null) {
+            highScore = 0;
+        } else {
+            highScore = localStorage.getItem(localStorageName);
+        }
+        var scoreText = this.add.text(700, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
+        var highscoreText = this.add.text(700, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
