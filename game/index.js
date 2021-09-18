@@ -2165,7 +2165,7 @@ var P1 = new Phaser.Class({
 
          vid.play(true);
 
-         vid.on('pointerdown', () => {
+         /*vid.on('pointerdown', () => {
            this.sound.add('click').play();
            ////console.log('Title');
            this.scene.start('titles');
@@ -2175,13 +2175,13 @@ var P1 = new Phaser.Class({
          vid.setPaused(false);
          setTimeout(() => {
            this.scene.start('titles');
-         }, 41000);
+         }, 41000);*/
           var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
           hr.setInteractive({ useHandCursor: true  } );
           //hwnar.play();
           hr.on('pointerdown', () => {
-            //rules.destroy();
-            //rules = null;
+            vid.destroy();
+            vid = null;
             rule.destroy();
             rule = null;
             hr.destroy();
