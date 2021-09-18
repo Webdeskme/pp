@@ -783,10 +783,10 @@ var P1 = new Phaser.Class({
                 if(type == "skill"){
                   if(skill >= cost){
                     //console.log("Aquire");
-                    /*if (typeof big != "undefined") {
+                    if (typeof big != "undefined" || big != null) {
                       big.destroy();
-                    }*/
-                    big = null;
+                      big = null;
+                    }
                     if(checkScore == "yes"){
                       th.sound.add('sc').play();
                     }
@@ -1134,10 +1134,10 @@ var P1 = new Phaser.Class({
                     else{
                       th.sound.add('aq').play();
                     }
-                    /*if (typeof big != "undefined") {
+                    if (typeof big != "undefined" || big != null) {
                       big.destroy();
-                    }*/
-                    big = null;
+                      big = null;
+                    }
                     if(checkScore == "yes"){
                       cscore += 1;
                       var t = cards.indexOf(temp2);
@@ -1479,10 +1479,10 @@ var P1 = new Phaser.Class({
                     else{
                       th.sound.add('aq').play();
                     }
-                    /*if (typeof big != "undefined") {
+                    if (typeof big != "undefined" || big != null) {
                       big.destroy();
-                    }*/
-                    big = null;
+                      big = null;
+                    }
                     if(checkScore == "yes"){
                       cscore += 1;
                       var t = cards.indexOf(temp2);
@@ -1824,10 +1824,10 @@ var P1 = new Phaser.Class({
                     else{
                       th.sound.add('aq').play();
                     }
-                    /*if (typeof big != "undefined") {
+                    if (typeof big != "undefined" || big != null) {
                       big.destroy();
-                    }*/
-                    big = null;
+                      big = null;
+                    }
                     if(checkScore == "yes"){
                       cscore += 1;
                       var t = cards.indexOf(temp2);
