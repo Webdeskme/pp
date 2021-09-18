@@ -2129,7 +2129,7 @@ var P1 = new Phaser.Class({
         this.stars = this.add.group();
         this.maxDepth = 32;
 
-        for (var i = 0; i < 2048; i++) {
+        for (var i = 0; i < 3060; i++) {
             this.points.push({
                 x: Phaser.Math.Between(-25, 25),
                 y: Phaser.Math.Between(-25, 25),
