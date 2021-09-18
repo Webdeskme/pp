@@ -167,8 +167,17 @@ var P1 = new Phaser.Class({
         this.load.audio('aq', [
         "assets/Audio/gmae.wav"
         ]);
+        this.load.audio('mwin', [
+        "assets/Audio/WinSaw.wav"
+        ]);
         this.load.audio('sc', [
         "assets/Audio/completetask_0.mp3"
+        ]);
+        this.load.audio('mlose', [
+        "assets/Audio/MachinePowerOff.mp3"
+        ]);
+        this.load.audio('comp', [
+        "assets/Audio/explosion5.mp3"
         ]);
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
@@ -888,19 +897,23 @@ var P1 = new Phaser.Class({
                       if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                       game += 1;
                       if(game > 3){
-                          th.sound.add('click').play();
+                          th.sound.add('mwin').play();
                           th.scene.start('win');
                       }
                       if(temp2 == "COM"){
+                        th.sound.add('comp').play();
                         cc.destroy();
                       }
                       else if (temp2 == "ENGINES") {
+                        th.sound.add('comp').play();
                         ce.destroy();
                       }
                       else if (temp2 == "PORT") {
+                        th.sound.add('comp').play();
                         cp.destroy();
                       }
                       else if (temp2 == "Guns") {
+                        th.sound.add('comp').play();
                         cg.destroy();
                       }
                       temp2 = "";
@@ -2479,7 +2492,7 @@ var P1 = new Phaser.Class({
             health -= 1;
           }
           if(health < 1){
-              this.sound.add('click').play();
+              this.sound.add('mlose').play();
               this.scene.start('lose');
           }
           healthText.setText('Health:' + health);
