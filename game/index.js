@@ -2185,7 +2185,6 @@ var P1 = new Phaser.Class({
           mu.play();
         });
         mf.on('pointerdown', () => {
-          mu.loop = true;
           mu.stop();
         });
         r.setInteractive();
