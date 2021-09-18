@@ -2389,8 +2389,9 @@ var P1 = new Phaser.Class({
         });
         tend.on('pointerdown', () => {
           this.sound.add('mend').play();
+          var zz = c0["texture"]["key"];
           setTimeout(() => {
-              this.sound.add(c0["texture"]["key"]).play();
+              this.sound.add(zz).play();
 
           }, 2000);
           pdis = pdis.filter(function( element ) {
