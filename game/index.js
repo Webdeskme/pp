@@ -783,7 +783,7 @@ var P1 = new Phaser.Class({
                 if(type == "skill"){
                   if(skill >= cost){
                     //console.log("Aquire");
-                    if (typeof big != "undefined" || big != null) {
+                    if (typeof big != "undefined" && big != null) {
                       big.destroy();
                       big = null;
                     }
@@ -1134,7 +1134,7 @@ var P1 = new Phaser.Class({
                     else{
                       th.sound.add('aq').play();
                     }
-                    if (typeof big != "undefined" || big != null) {
+                    if (typeof big != "undefined" && big != null) {
                       big.destroy();
                       big = null;
                     }
@@ -1479,7 +1479,7 @@ var P1 = new Phaser.Class({
                     else{
                       th.sound.add('aq').play();
                     }
-                    if (typeof big != "undefined" || big != null) {
+                    if (typeof big != "undefined" && big != null) {
                       big.destroy();
                       big = null;
                     }
@@ -1824,7 +1824,7 @@ var P1 = new Phaser.Class({
                     else{
                       th.sound.add('aq').play();
                     }
-                    if (typeof big != "undefined" || big != null) {
+                    if (typeof big != "undefined" && big != null) {
                       big.destroy();
                       big = null;
                     }
