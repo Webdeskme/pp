@@ -193,11 +193,15 @@ var P1 = new Phaser.Class({
               big.setScale(1/3);
             });
             c.on('pointerout',function(pointer){
-              big.destroy();
+              if (typeof big != "undefined") {
+                big.destroy();
+              }
               big = null;
             });
             back.on('pointerover',function(pointer){
-              big.destroy();
+              if (typeof big != "undefined") {
+                big.destroy();
+              }
               big = null;
             });
           }
@@ -770,7 +774,9 @@ var P1 = new Phaser.Class({
                 if(type == "skill"){
                   if(skill >= cost){
                     //console.log("Aquire");
-                    big.destroy();
+                    if (typeof big != "undefined") {
+                      big.destroy();
+                    }
                     big = null;
                     if(checkScore == "yes"){
                       cscore += 1;
@@ -1107,7 +1113,9 @@ var P1 = new Phaser.Class({
                 else if (type == "coin") {
                   if(coin >= cost){
                     //console.log("Aquire");
-                    big.destroy();
+                    if (typeof big != "undefined") {
+                      big.destroy();
+                    }
                     big = null;
                     if(checkScore == "yes"){
                       cscore += 1;
@@ -1444,7 +1452,9 @@ var P1 = new Phaser.Class({
                 else if (type == "total") {
                   if(total >= cost){
                     //console.log("Aquire");
-                    big.destroy();
+                    if (typeof big != "undefined") {
+                      big.destroy();
+                    }
                     big = null;
                     if(checkScore == "yes"){
                       cscore += 1;
@@ -1781,7 +1791,9 @@ var P1 = new Phaser.Class({
                 else if (type == "card") {
                   if(total >= cost){
                     //console.log("Aquire");
-                    big.destroy();
+                    if (typeof big != "undefined") {
+                      big.destroy();
+                    }
                     big = null;
                     if(checkScore == "yes"){
                       cscore += 1;
