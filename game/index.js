@@ -785,8 +785,8 @@ var P1 = new Phaser.Class({
                     //console.log("Aquire");
                     /*if (typeof big != "undefined") {
                       big.destroy();
-                    }
-                    big = null;*/
+                    }*/
+                    big = null;
                     if(checkScore == "yes"){
                       th.sound.add('sc').play();
                     }
@@ -1136,8 +1136,8 @@ var P1 = new Phaser.Class({
                     }
                     /*if (typeof big != "undefined") {
                       big.destroy();
-                    }
-                    big = null;*/
+                    }*/
+                    big = null;
                     if(checkScore == "yes"){
                       cscore += 1;
                       var t = cards.indexOf(temp2);
@@ -1481,8 +1481,8 @@ var P1 = new Phaser.Class({
                     }
                     /*if (typeof big != "undefined") {
                       big.destroy();
-                    }
-                    big = null;*/
+                    }*/
+                    big = null;
                     if(checkScore == "yes"){
                       cscore += 1;
                       var t = cards.indexOf(temp2);
@@ -1826,8 +1826,8 @@ var P1 = new Phaser.Class({
                     }
                     /*if (typeof big != "undefined") {
                       big.destroy();
-                    }
-                    big = null;*/
+                    }*/
+                    big = null;
                     if(checkScore == "yes"){
                       cscore += 1;
                       var t = cards.indexOf(temp2);
