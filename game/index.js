@@ -2187,13 +2187,13 @@ var P1 = new Phaser.Class({
           mf.destroy();
           mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
           mo.setScale(1/8);
-        });
-        mo.on('pointerdown', () => {
-          mu.loop = true;
-          mu.stop();
-          mo.destroy();
-          mf = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
-          mf.setScale(1/8);
+          mo.on('pointerdown', () => {
+            mu.loop = true;
+            mu.stop();
+            mo.destroy();
+            mf = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+            mf.setScale(1/8);
+          });
         });
         r.setInteractive();
         r.on('pointerdown', () => {
