@@ -21,7 +21,7 @@ var Vide = new Phaser.Class({
     create: function ()
     {
      var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
-     vid.setScale(1/2);
+     vid.setScale(1/1);
 
     vid.play(true);
 
