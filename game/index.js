@@ -20,7 +20,7 @@ var Vide = new Phaser.Class({
 
     create: function ()
     {
-     var vid = this.add.video(400, 300, 'intro').setInteractive({ useHandCursor: true  } );
+     var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
      vid.setScale(1/2);
 
     vid.play(true);
@@ -148,7 +148,8 @@ var P1 = new Phaser.Class({
         this.load.image('Guns', 'assets/out/Guns.png');
         this.load.image('END', 'assets/text/end.png');
         this.load.image('SCORE', 'assets/text/SCORE2.png');
-        this.load.text('rules', 'assets/Text/rules.txt');
+        this.load.text('rules', 'assets/text/rules.txt');
+        this.load.video('intro', 'assets/Video/SenaryAdd.mp4', 'loadeddata', false, true);
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -2158,13 +2159,29 @@ var P1 = new Phaser.Class({
           //this.scene.start('sceneD');
           //music.destroy();
           var rule = this.add.image(400, 300, 'back3');
-          var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
+          //var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
+          var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
+          vid.setScale(1/2);
+
+         vid.play(true);
+
+         vid.on('pointerdown', () => {
+           this.sound.add('click').play();
+           ////console.log('Title');
+           this.scene.start('titles');
+         });
+
+         // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
+         vid.setPaused(false);
+         setTimeout(() => {
+           this.scene.start('titles');
+         }, 41000);
           var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
           hr.setInteractive({ useHandCursor: true  } );
           hwnar.play();
           hr.on('pointerdown', () => {
-            rules.destroy();
-            rules = null;
+            //rules.destroy();
+            //rules = null;
             rule.destroy();
             rule = null;
             hr.destroy();
