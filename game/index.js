@@ -195,6 +195,11 @@ var P1 = new Phaser.Class({
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
+        for (i = 0; i < cards.length; i++) {
+          this.load.audio(cards[i], [
+          "assets/Audio/cards/" + cards[i] + ".mp3"
+          ]);
+        }
     },
 
     create: function ()
@@ -2225,6 +2230,7 @@ var P1 = new Phaser.Class({
               }
               else{
                 // add card description //bob
+                th.sound.add(c["texture"]["key"]).play();
               }
             });
             return skill;
@@ -2379,6 +2385,7 @@ var P1 = new Phaser.Class({
         });
         tend.on('pointerdown', () => {
           this.sound.add('mend').play();
+          this.sound.add(c["texture"]["key"]).play();
           pdis = pdis.filter(function( element ) {
              return element !== undefined;
           });
