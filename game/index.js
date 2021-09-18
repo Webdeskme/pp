@@ -2389,7 +2389,7 @@ var P1 = new Phaser.Class({
         });
         tend.on('pointerdown', () => {
           this.sound.add('mend').play();
-          setTimeout(function()
+          setTimeout(() => {
           {
               this.sound.add(c["texture"]["key"]).play();
 
