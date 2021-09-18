@@ -1268,8 +1268,17 @@ var P1 = new Phaser.Class({
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
-                        th.sound.add('click').play();
-                        th.scene.start('win');
+                      th.sound.add('mwin').play();
+                      th.scene.start('win');
+                      if(localStorage.getItem(localStorageName) == null) {
+                          highScore = 0;
+                      } else {
+                          highScore = localStorage.getItem(localStorageName);
+                      }
+                      if(score < highScore){
+                        localStorage.setItem(localStorageName, score);
+                      }
+                      localStorage.setItem(localStorageTemp, score);
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1613,8 +1622,17 @@ var P1 = new Phaser.Class({
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
-                        th.sound.add('click').play();
-                        th.scene.start('win');
+                      th.sound.add('mwin').play();
+                      th.scene.start('win');
+                      if(localStorage.getItem(localStorageName) == null) {
+                          highScore = 0;
+                      } else {
+                          highScore = localStorage.getItem(localStorageName);
+                      }
+                      if(score < highScore){
+                        localStorage.setItem(localStorageName, score);
+                      }
+                      localStorage.setItem(localStorageTemp, score);
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1958,8 +1976,17 @@ var P1 = new Phaser.Class({
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns"){
                     game += 1;
                     if(game > 3){
-                        th.sound.add('click').play();
-                        th.scene.start('win');
+                      th.sound.add('mwin').play();
+                      th.scene.start('win');
+                      if(localStorage.getItem(localStorageName) == null) {
+                          highScore = 0;
+                      } else {
+                          highScore = localStorage.getItem(localStorageName);
+                      }
+                      if(score < highScore){
+                        localStorage.setItem(localStorageName, score);
+                      }
+                      localStorage.setItem(localStorageTemp, score);
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
