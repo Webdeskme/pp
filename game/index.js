@@ -2176,6 +2176,7 @@ var P1 = new Phaser.Class({
         var cardText = this.add.text(15, 140, 'Cards: 0', { fontSize: '32px', fill: '#fff' });
         var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
         var m = this.add.image(700, 15, 'musicOn').setInteractive({ useHandCursor: true  } );
+        m.setScale(1/8);
         m.on('pointerdown', () => {
           this.sound.add('music').play();
         });
