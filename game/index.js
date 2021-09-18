@@ -912,7 +912,7 @@ var P1 = new Phaser.Class({
                       if(game > 3){
                           th.sound.add('mwin').play();
                           if(localStorage.getItem(localStorageName) == null) {
-                              highScore = 0;
+                              highScore = 40;
                           } else {
                               highScore = localStorage.getItem(localStorageName);
                           }
@@ -1270,7 +1270,7 @@ var P1 = new Phaser.Class({
                     if(game > 3){
                       th.sound.add('mwin').play();
                       if(localStorage.getItem(localStorageName) == null) {
-                          highScore = 0;
+                          highScore = 40;
                       } else {
                           highScore = localStorage.getItem(localStorageName);
                       }
@@ -1624,7 +1624,7 @@ var P1 = new Phaser.Class({
                     if(game > 3){
                       th.sound.add('mwin').play();
                       if(localStorage.getItem(localStorageName) == null) {
-                          highScore = 0;
+                          highScore = 40;
                       } else {
                           highScore = localStorage.getItem(localStorageName);
                       }
@@ -1978,7 +1978,7 @@ var P1 = new Phaser.Class({
                     if(game > 3){
                       th.sound.add('mwin').play();
                       if(localStorage.getItem(localStorageName) == null) {
-                          highScore = 0;
+                          highScore = 40;
                       } else {
                           highScore = localStorage.getItem(localStorageName);
                       }
