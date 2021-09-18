@@ -911,7 +911,6 @@ var P1 = new Phaser.Class({
                       game += 1;
                       if(game > 3){
                           th.sound.add('mwin').play();
-                          th.scene.start('win');
                           if(localStorage.getItem(localStorageName) == null) {
                               highScore = 0;
                           } else {
@@ -921,6 +920,7 @@ var P1 = new Phaser.Class({
                             localStorage.setItem(localStorageName, score);
                           }
                           localStorage.setItem(localStorageTemp, score);
+                          th.scene.start('win');
                       }
                       if(temp2 == "COM"){
                         th.sound.add('comp').play();
@@ -1269,7 +1269,6 @@ var P1 = new Phaser.Class({
                     game += 1;
                     if(game > 3){
                       th.sound.add('mwin').play();
-                      th.scene.start('win');
                       if(localStorage.getItem(localStorageName) == null) {
                           highScore = 0;
                       } else {
@@ -1279,6 +1278,7 @@ var P1 = new Phaser.Class({
                         localStorage.setItem(localStorageName, score);
                       }
                       localStorage.setItem(localStorageTemp, score);
+                      th.scene.start('win');
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1623,7 +1623,6 @@ var P1 = new Phaser.Class({
                     game += 1;
                     if(game > 3){
                       th.sound.add('mwin').play();
-                      th.scene.start('win');
                       if(localStorage.getItem(localStorageName) == null) {
                           highScore = 0;
                       } else {
@@ -1633,6 +1632,7 @@ var P1 = new Phaser.Class({
                         localStorage.setItem(localStorageName, score);
                       }
                       localStorage.setItem(localStorageTemp, score);
+                      th.scene.start('win');
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1869,7 +1869,7 @@ var P1 = new Phaser.Class({
                   }
                 }
                 else if (type == "card") {
-                  if(total >= cost){
+                  if(card >= cost){
                     //console.log("Aquire");
                     if(checkScore == "yes"){
                       th.sound.add('sc').play();
@@ -1977,7 +1977,6 @@ var P1 = new Phaser.Class({
                     game += 1;
                     if(game > 3){
                       th.sound.add('mwin').play();
-                      th.scene.start('win');
                       if(localStorage.getItem(localStorageName) == null) {
                           highScore = 0;
                       } else {
@@ -1987,6 +1986,7 @@ var P1 = new Phaser.Class({
                         localStorage.setItem(localStorageName, score);
                       }
                       localStorage.setItem(localStorageTemp, score);
+                      th.scene.start('win');
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
