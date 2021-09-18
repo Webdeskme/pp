@@ -2274,7 +2274,7 @@ var P1 = new Phaser.Class({
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tscore.on('pointerdown', () => {
-          this.sound.add('mend').play();
+          this.sound.add('click').play();
           if(checkScore == "yes"){
             checkScore = "no";
           }
@@ -2283,7 +2283,7 @@ var P1 = new Phaser.Class({
           }
         });
         tend.on('pointerdown', () => {
-          this.sound.add('click').play();
+          this.sound.add('mend').play();
           pdis = pdis.filter(function( element ) {
              return element !== undefined;
           });
