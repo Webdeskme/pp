@@ -83,7 +83,7 @@ function initTweens ()
     );
 }
       this.add.image(512, 320, 'back');
-      image = this.add.image(512, 320, 'sans');
+      image = this.add.image(512, 160, 'sans');
       image.setScale(1/2);
       fromColors = getRandomVertexColors();
 
