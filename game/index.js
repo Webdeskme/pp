@@ -98,7 +98,7 @@ function initTweens ()
       logo.on('pointerdown', () => {
         this.sound.add('click').play();
         var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
-        vid.setScale(1/1);
+        vid.setScale(1/2);
 
        vid.play(true);
 
@@ -112,7 +112,7 @@ function initTweens ()
        vid.setPaused(false);
        setTimeout(() => {
          this.scene.start('titles');
-       }, 41000);
+       }, 72000);
       });
       var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
       fromColors = getRandomVertexColors();
