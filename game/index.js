@@ -85,9 +85,14 @@ function initTweens ()
 }
       back = this.add.image(512, 320, 'back');
       image = this.add.image(512, 160, 'sans');
-      logo = this.add.image(700, 580, 'logo');
+      logo = this.add.image(700, 580, 'logo').setInteractive({ useHandCursor: true  } );
       image.setScale(1/2);
       logo.setScale(1/1);
+      logo.on('pointerdown', () => {
+        this.sound.add('click').play();
+        ////console.log('Video');
+        this.scene.start('vide');
+      });
       var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
       fromColors = getRandomVertexColors();
 
