@@ -29,7 +29,7 @@ var Intro = new Phaser.Class({
     {
       //m = this.sound.add('music');
       //m.loop = true;
-      m.play();
+      //m.play();
       var tween;
       var image;
       var fromColors;
