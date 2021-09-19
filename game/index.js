@@ -3316,7 +3316,7 @@ var Win = new Phaser.Class({
     cursors = this.input.keyboard.createCursorKeys();
     fire = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
-    this.add.sprite(4300, 3000).play('asteroid1-anim');
+    //this.add.sprite(4300, 3000).play('asteroid1-anim');
 
     this.tweens.add({
         targets: galaxy,
@@ -3389,10 +3389,8 @@ var Win = new Phaser.Class({
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
-        var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
-        scoreText.fixedToCamera = true;
-    scoreText.cameraOffset.setTo(475, 400);
-        var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
+        var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);;
+        var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);;
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
