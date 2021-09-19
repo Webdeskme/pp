@@ -98,6 +98,7 @@ function initTweens ()
     tintTween = tintTween.bind(this);
 
     initTweens();
+    this.cameras.main.fadeIn(6000);
     }
 });
 var Vide = new Phaser.Class({
