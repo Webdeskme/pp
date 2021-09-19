@@ -139,7 +139,9 @@ function initTweens ()
         light.y = pointer.y;
 
     });
-this.scale.startFullscreen();
+    if (game.scale.compatibility.supportsFullScreen) {
+      game.scale.startFullscreen();
+    }
     }
 });
 var Vide = new Phaser.Class({
