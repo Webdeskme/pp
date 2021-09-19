@@ -2823,7 +2823,7 @@ var P1 = new Phaser.Class({
           particles = this.add.particles('fire');
 
     particles.createEmitter({
-        alpha: { start: 1, end: 0 },
+        alpha: { start: 1, end: 3 },
         scale: { start: 0.5, end: 2.5 },
         //tint: { start: 0xff945e, end: 0xff945e },
         speed: 20,
