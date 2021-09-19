@@ -19,6 +19,9 @@ var Intro = new Phaser.Class({
       this.load.image('musicOffi', 'assets/icons/sound-off.png');
       this.load.image('musicOni', 'assets/icons/sound-on.png');
       this.load.image('fulli', 'assets/icons/expand.png');
+      this.load.audio('musici', [
+      "assets/Audio/MyVeryOwnDeadShip.mp3"
+      ]);
     },
 
     create: function ()
