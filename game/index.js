@@ -3459,11 +3459,12 @@ var config = {
     scale: {
       mode: Phaser.Scale.FIT,
       parent: "app",
-    physics: {
-        default: 'arcade',
-        arcade: {
-            debug: false
-        },
+      physics: {
+          default: 'arcade',
+          arcade: {
+              debug: false
+          }
+      },
       width: 1024,
       height: 640
     },
@@ -3471,6 +3472,6 @@ var config = {
     //height: 640,
     backgroundColor: '#000000',
     scene: [ Intro, Vide, TitleS, P1, Lose, Win ]
-}
+};
 
 var game = new Phaser.Game(config);
