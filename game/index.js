@@ -27,6 +27,7 @@ var Intro = new Phaser.Class({
 
     create: function ()
     {
+      this.game.sound.stopAll();
       //m = this.sound.add('music');
       //m.loop = true;
       //m.play();
@@ -217,6 +218,7 @@ var Vide = new Phaser.Class({
 
     create: function ()
     {
+      this.game.sound.stopAll();
       //game.scale.startFullscreen();
      var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
      vid.setScale(1/1);
@@ -276,6 +278,7 @@ var TitleS = new Phaser.Class({
 
     create: function ()
     {
+      this.game.sound.stopAll();
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
@@ -621,6 +624,7 @@ var P1 = new Phaser.Class({
 
     create: function ()
     {
+      this.game.sound.stopAll();
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
@@ -3294,6 +3298,7 @@ var Lose = new Phaser.Class({
 
     create: function ()
     {
+      this.game.sound.stopAll();
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
@@ -3613,6 +3618,7 @@ var Win = new Phaser.Class({
 
     create: function ()
     {
+      this.game.sound.stopAll();
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
