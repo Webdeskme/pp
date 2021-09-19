@@ -97,7 +97,7 @@ function initTweens ()
       logo.setScale(1/1);
       logo.on('pointerdown', () => {
         this.sound.add('click').play();
-        var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
+        var vid = this.add.video(487, 270, 'intro').setInteractive({ useHandCursor: true  } );
         vid.setScale(1/2);
 
        vid.play(true);
