@@ -139,7 +139,7 @@ function initTweens ()
         light.y = pointer.y;
 
     });
-
+this.scale.startFullscreen();
     }
 });
 var Vide = new Phaser.Class({
