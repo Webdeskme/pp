@@ -110,6 +110,11 @@ function initTweens ()
        vid.on('pointerdown', () => {
          this.sound.add('click').play();
          this.game.sound.stopAll();
+         var id = window.setTimeout(function() {}, 0);
+
+          while (id--) {
+              window.clearTimeout(id); // will do nothing if no timeout with id is present
+          }
          this.scene.start('titles');
        });
 
