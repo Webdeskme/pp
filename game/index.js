@@ -2823,7 +2823,7 @@ var P1 = new Phaser.Class({
           //particles = this.add.particles('fire');
           //https://phaser.io/examples/v3/view/game-objects/particle-emitter/fire-max-10-particles#
 
-    particles.createEmitter({
+    /*particles.createEmitter({
         alpha: { start: 1, end: 2 },
         scale: { start: 0.5, end: 1.5 },
         //tint: { start: 0xff945e, end: 0xff945e },
@@ -2837,7 +2837,7 @@ var P1 = new Phaser.Class({
         maxParticles: 10,
         x: 400,
         y: 300
-    });
+    });*/
           var zz = c0["texture"]["key"];
           setTimeout(() => {
               this.sound.add(zz).play();
