@@ -16,10 +16,10 @@ var Intro = new Phaser.Class({
       this.load.image('backint', 'assets/backgrounds/black.png');
       this.load.image('sans', 'assets/backgrounds/sans.png');
       this.load.image('logo', 'assets/Text/logo.png');
-      this.load.image('musicOffi', 'assets/icons/sound-off.png');
-      this.load.image('musicOni', 'assets/icons/sound-on.png');
-      this.load.image('fulli', 'assets/icons/expand.png');
-      this.load.audio('musici', [
+      this.load.image('musicOff', 'assets/icons/sound-off.png');
+      this.load.image('musicOn', 'assets/icons/sound-on.png');
+      this.load.image('full', 'assets/icons/expand.png');
+      this.load.audio('music', [
       "assets/Audio/MyVeryOwnDeadShip.mp3"
       ]);
     },
@@ -145,10 +145,10 @@ function initTweens ()
         light.y = pointer.y;
 
     });
-    var mfi = this.add.image(700, 25, 'musicOffi').setInteractive({ useHandCursor: true  } );
-    var moi = this.add.image(750, 25, 'musicOni').setInteractive({ useHandCursor: true  } );
-    var fui = this.add.image(1000, 25, 'fulli').setInteractive({ useHandCursor: true  } );
-    var mui = this.sound.add('musici');
+    var mfi = this.add.image(850, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
+    var moi = this.add.image(900, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+    var fui = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
+    var mui = this.sound.add('music');
     mfi.setScale(1/16);
     moi.setScale(1/16);
     fui.setScale(1/16);
