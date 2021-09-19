@@ -2823,14 +2823,14 @@ var P1 = new Phaser.Class({
           particles = this.add.particles('fire');
 
     particles.createEmitter({
-        alpha: { start: 1, end: 3 },
-        scale: { start: 0.5, end: 2.5 },
+        alpha: { start: 1, end: 2 },
+        scale: { start: 0.5, end: 1.5 },
         //tint: { start: 0xff945e, end: 0xff945e },
         speed: 20,
         accelerationY: -300,
         angle: { min: -85, max: -95 },
         rotate: { min: -180, max: 180 },
-        lifespan: { min: 1000, max: 1100 },
+        lifespan: { min: 500, max: 550 },
         blendMode: 'ADD',
         frequency: 110,
         maxParticles: 10,
