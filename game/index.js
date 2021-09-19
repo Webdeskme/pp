@@ -2712,6 +2712,8 @@ var P1 = new Phaser.Class({
         mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
         fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
         mu = this.sound.add('music');
+        mu.loop = true;
+        mu.play();
         mf.setScale(1/8);
         mo.setScale(1/8);
         fu.setScale(1/8);
