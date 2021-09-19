@@ -3304,7 +3304,7 @@ var Win = new Phaser.Class({
         runChildUpdate: true
     });
 
-    ship = this.physics.add.image(4000, 3000, 'space', 'ship').setDepth(2);
+    ship = this.physics.add.image(5000, 3000, 'space', 'ship').setDepth(2);
 
     ship.setDrag(300);
     ship.setAngularDrag(400);
@@ -3329,7 +3329,7 @@ var Win = new Phaser.Class({
 
       //////////////////////////////////////////////////////////////
       endm = this.sound.add('mwin');
-      endm.loop = true;
+      //endm.loop = true;
       endm.play();
       //this.scale.startFullscreen();
       function shuffle(array) {
