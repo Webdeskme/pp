@@ -100,6 +100,19 @@ function initTweens ()
 
     initTweens();
     this.cameras.main.fadeIn(6000);
+
+    // lighting
+    light = this.lights.addLight(400, 300, 200).setIntensity(2);
+
+    this.lights.enable().setAmbientColor(0x555555);
+
+    this.input.on('pointermove', function (pointer) {
+
+        light.x = pointer.x;
+        light.y = pointer.y;
+
+    });
+
     }
 });
 var Vide = new Phaser.Class({
