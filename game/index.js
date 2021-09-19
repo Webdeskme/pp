@@ -437,7 +437,7 @@ var TitleS = new Phaser.Class({
 
       //////////////////////////////////////////////////////////////
       this.sound.add('atitle').play();
-      endm = this.sound.add('mwin', {volume: 0.5});
+      endm = this.sound.add('mwin', {volume: 0.25});
       //endm.loop = true;
       endm.play();
       //this.scale.startFullscreen();
