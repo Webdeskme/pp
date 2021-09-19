@@ -3471,6 +3471,6 @@ var config = {
     //height: 640,
     backgroundColor: '#000000',
     scene: [ Intro, Vide, TitleS, P1, Lose, Win ]
-};
+}
 
 var game = new Phaser.Game(config);
