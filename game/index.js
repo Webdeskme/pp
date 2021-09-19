@@ -85,6 +85,7 @@ function initTweens ()
       this.add.image(512, 320, 'back');
       image = this.add.image(512, 160, 'sans');
       image.setScale(1/2);
+      var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
       fromColors = getRandomVertexColors();
 
     image.setTint(
