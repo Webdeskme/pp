@@ -3349,13 +3349,13 @@ var Win = new Phaser.Class({
           }
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         shuffle(cards);
-        this.add.image(512, 320, 'back');
+        //this.add.image(512, 320, 'back').setScrollFactor(0,0);
         var i;
-        var c = this.add.image(250, 300, 'cb');
+        var c = this.add.image(250, 300, 'cb').setScrollFactor(0,0);
         c.setScale(1/2);
-        var winText = this.add.text(700, 300, 'Victory!', { fontSize: '64px', fill: '#fff' });
+        var winText = this.add.text(700, 300, 'Victory!', { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         for (i = 0; i < cards.length; i++) {
-          var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } );
+          var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } ).setScrollFactor(0,0);
           c.setScale(1/2);
           //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
@@ -3364,7 +3364,7 @@ var Win = new Phaser.Class({
 
           });
         }
-        var d = this.add.image(700, 100, 'title');
+        var d = this.add.image(700, 100, 'title').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         d.on('pointerover',function(pointer){
@@ -3389,8 +3389,8 @@ var Win = new Phaser.Class({
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
-        var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);;
-        var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);;
+        var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
+        var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
