@@ -263,7 +263,7 @@ var TitleS = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
-        this.load.audio('atitle', [
+        this.load.audio('aatitle', [
         "assets/Audio/title.mp3"
         ]);
         this.load.audio('mwin', [
@@ -441,7 +441,7 @@ var TitleS = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
-      this.sound.add('atitle').play();
+      this.sound.add('aatitle').play();
       endm = this.sound.add('mwin', {volume: 0.25});
       //endm.loop = true;
       endm.play();
