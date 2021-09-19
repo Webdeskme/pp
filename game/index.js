@@ -590,6 +590,7 @@ var P1 = new Phaser.Class({
         this.load.image('musicOff', 'assets/icons/sound-off.png');
         this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.image('full', 'assets/icons/expand.png');
+        this.load.image('fire', 'assets/icons/muzzleflash3.png');
         this.load.text('rules', 'assets/text/rules.txt');
         this.load.video('intro', 'assets/Video/SenaryAdd.mp4', 'loadeddata', false, true);
         var i;
@@ -2819,6 +2820,23 @@ var P1 = new Phaser.Class({
         });
         tend.on('pointerdown', () => {
           this.sound.add('mend').play();
+          particles = this.add.particles('fire');
+
+    particles.createEmitter({
+        alpha: { start: 1, end: 0 },
+        scale: { start: 0.5, end: 2.5 },
+        //tint: { start: 0xff945e, end: 0xff945e },
+        speed: 20,
+        accelerationY: -300,
+        angle: { min: -85, max: -95 },
+        rotate: { min: -180, max: 180 },
+        lifespan: { min: 1000, max: 1100 },
+        blendMode: 'ADD',
+        frequency: 110,
+        maxParticles: 10,
+        x: 400,
+        y: 300
+    });
           var zz = c0["texture"]["key"];
           setTimeout(() => {
               this.sound.add(zz).play();
