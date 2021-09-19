@@ -3157,13 +3157,6 @@ var Win = new Phaser.Class({
         this.load.audio('mwin', [
         "assets/Audio/WinSaw.wav"
         ]);
-        bg;
-        stars;
-        ship;
-        bullets;
-        lastFired = 0;
-        cursors;
-        fire;
         this.load.image('background', 'assets/space/nebula.jpg');
         this.load.image('stars', 'assets/space/stars.png');
         this.load.atlas('space', 'assets/space/space.png', 'assets/space/space.json');
@@ -3172,6 +3165,13 @@ var Win = new Phaser.Class({
 
     create: function ()
     {
+      var bg;
+      var stars;
+      var ship;
+      var bullets;
+      var lastFired = 0;
+      var cursors;
+      var fire;
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
