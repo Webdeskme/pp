@@ -145,14 +145,14 @@ function initTweens ()
         light.y = pointer.y;
 
     });
-    var mfi = this.add.image(850, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
-    var moi = this.add.image(900, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
-    var fui = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
-    var mui = this.sound.add('music');
-    mfi.setScale(1/16);
-    moi.setScale(1/16);
-    fui.setScale(1/16);
-    fui.on('pointerdown', () => {
+    var mf = this.add.image(900, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
+    var mo = this.add.image(950, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+    var fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
+    var mu = this.sound.add('music');
+    mf.setScale(1/16);
+    mo.setScale(1/16);
+    fu.setScale(1/16);
+    fu.on('pointerdown', () => {
       if (this.scale.isFullscreen)
         {
             //button.setFrame(0);
@@ -166,12 +166,12 @@ function initTweens ()
             this.scale.startFullscreen();
         }
     });
-    moi.on('pointerdown', () => {
-      mui.loop = true;
-      mui.play();
+    mo.on('pointerdown', () => {
+      mu.loop = true;
+      mu.play();
     });
-    mfi.on('pointerdown', () => {
-      mui.stop();
+    mf.on('pointerdown', () => {
+      mu.stop();
     });
     }
 });
