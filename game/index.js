@@ -145,12 +145,12 @@ function initTweens ()
         light.y = pointer.y;
 
     });
-    mf = this.add.image(900, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
-    mo = this.add.image(950, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+    //mf = this.add.image(900, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
+    //mo = this.add.image(950, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
     fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
-    mu = this.sound.add('music');
-    mf.setScale(1/16);
-    mo.setScale(1/16);
+    //mu = this.sound.add('music');
+    //mf.setScale(1/16);
+    //mo.setScale(1/16);
     fu.setScale(1/16);
     fu.on('pointerdown', () => {
       if (this.scale.isFullscreen)
@@ -166,13 +166,13 @@ function initTweens ()
             this.scale.startFullscreen();
         }
     });
-    mo.on('pointerdown', () => {
+    /*mo.on('pointerdown', () => {
       mu.loop = true;
       mu.play();
     });
     mf.on('pointerdown', () => {
       mu.stop();
-    });
+    });*/
     }
 });
 var Vide = new Phaser.Class({
