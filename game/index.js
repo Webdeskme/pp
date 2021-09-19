@@ -3402,7 +3402,7 @@ var Win = new Phaser.Class({
 
     });*/
   },
-  function update (time, delta)
+  function: update (time, delta)
 {
     if (cursors.left.isDown)
     {
