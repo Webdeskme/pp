@@ -3452,14 +3452,14 @@ var config = {
     scale: {
       mode: Phaser.Scale.FIT,
       parent: "app",
-      physics: {
-          default: 'arcade',
-          arcade: {
-              debug: false
-          }
-      },
       width: 1024,
       height: 640
+    },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: false
+        }
     },
     //width: 1024,
     //height: 640,
