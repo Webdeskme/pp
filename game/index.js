@@ -483,7 +483,8 @@ var TitleS = new Phaser.Class({
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
-          endm.stop();
+          //endm.stop();
+          this.game.sound.stopAll();
           this.scene.start('p1');
         });
         var localStorageName = "piratesPort";
@@ -2733,7 +2734,8 @@ var P1 = new Phaser.Class({
           mu.play();
         });
         mf.on('pointerdown', () => {
-          mu.stop();
+          //mu.stop();
+          this.game.sound.stopAll();
         });
         r.setInteractive();
         r.on('pointerdown', () => {
@@ -3491,7 +3493,8 @@ var Lose = new Phaser.Class({
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
-          endm.stop();
+          //endm.stop();
+          this.game.sound.stopAll();
           this.scene.start('p1');
         });
         var localStorageName = "piratesPort";
@@ -3805,7 +3808,8 @@ var Win = new Phaser.Class({
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
-          endm.stop();
+          //endm.stop();
+          this.game.sound.stopAll();
           this.scene.start('p1');
         });
         var localStorageName = "piratesPort";
