@@ -85,7 +85,7 @@ function initTweens ()
 }
       back = this.add.image(512, 320, 'back');
       image = this.add.image(512, 160, 'sans');
-      logo = this.add.image(700, 480, 'logo');
+      logo = this.add.image(700, 580, 'logo');
       image.setScale(1/2);
       logo.setScale(1/1);
       var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
