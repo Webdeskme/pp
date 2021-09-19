@@ -27,8 +27,8 @@ var Intro = new Phaser.Class({
 
     create: function ()
     {
-      m = this.sound.add('music');
-      m.loop = true;
+      //m = this.sound.add('music');
+      //m.loop = true;
       m.play();
       var tween;
       var image;
@@ -99,7 +99,7 @@ function initTweens ()
       image.setScale(1/2);
       logo.setScale(1/1);
       logo.on('pointerdown', () => {
-        m.stop();
+        //m.stop();
         this.sound.add('click').play();
         var vid = this.add.video(487, 270, 'intro').setInteractive({ useHandCursor: true  } );
         vid.setScale(1/2);
