@@ -1,3 +1,29 @@
+var Intro = new Phaser.Class({
+
+    Extends: Phaser.Scene,
+
+    initialize:
+
+    function Intro ()
+    {
+        Phaser.Scene.call(this, { key: 'intro' });
+    },
+
+    preload: function ()
+    {
+      this.load.audio('click', [
+      "assets/Audio/mouseclick.wav"
+      ]);
+      this.load.image('back', 'assets/backgrounds/black.png');
+      this.load.image('sans', 'assets/backgrounds/sans.png');
+    },
+
+    create: function ()
+    {
+      this.add.image(512, 320, 'back');
+      this.add.image(512, 320, 'sans');
+    }
+});
 var Vide = new Phaser.Class({
 
     Extends: Phaser.Scene,
@@ -3057,7 +3083,7 @@ var config = {
     //width: 1024,
     //height: 640,
     backgroundColor: '#000000',
-    scene: [ Vide, TitleS, P1, Lose, Win ]
+    scene: [ Intro, Vide, TitleS, P1, Lose, Win ]
 };
 
 var game = new Phaser.Game(config);
