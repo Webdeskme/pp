@@ -259,6 +259,9 @@ var TitleS = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
+        this.load.audio('atitle', [
+        "assets/Audio/title.mp3"
+        ]);
         this.load.audio('mwin', [
         //"assets/Audio/WinSaw.wav" Knife-Party.mp3
         "assets/Audio/Space++_By_Alex_McCulloch.mp3"
@@ -433,7 +436,8 @@ var TitleS = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
-      endm = this.sound.add('mwin');
+      this.sound.add('atitle').play();
+      endm = this.sound.add('mwin', {volume: 0.5});
       //endm.loop = true;
       endm.play();
       //this.scale.startFullscreen();
