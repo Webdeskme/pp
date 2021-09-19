@@ -22,6 +22,7 @@ var Intro = new Phaser.Class({
       this.load.audio('music', [
       "assets/Audio/MyVeryOwnDeadShip.mp3"
       ]);
+      this.load.video('intro', 'assets/Video/PiratePortTrailer.mp4');
     },
 
     create: function ()
@@ -96,8 +97,22 @@ function initTweens ()
       logo.setScale(1/1);
       logo.on('pointerdown', () => {
         this.sound.add('click').play();
-        ////console.log('Video');
-        this.scene.start('vide');
+        var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
+        vid.setScale(1/1);
+
+       vid.play(true);
+
+       vid.on('pointerdown', () => {
+         this.sound.add('click').play();
+         ////console.log('Title');
+         this.scene.start('titles');
+       });
+
+       // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
+       vid.setPaused(false);
+       setTimeout(() => {
+         this.scene.start('titles');
+       }, 41000);
       });
       var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
       fromColors = getRandomVertexColors();
@@ -188,7 +203,7 @@ var Vide = new Phaser.Class({
 
     preload: function ()
     {
-      this.load.video('intro', 'assets/Video/PiratePortTrailer.mp4', 'loadeddata', false, true);
+      this.load.video('intro', 'assets/Video/PiratePortTrailer.mp4', 'loadeddata', false, false);
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
       ]);
