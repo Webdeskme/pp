@@ -3275,6 +3275,9 @@ var Lose = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
+        this.load.audio('click', [
+        "assets/Audio/end.mp3"
+        ]);
         this.load.audio('mwin', [
         //"assets/Audio/WinSaw.wav" Knife-Party.mp3
         "assets/Audio/Space++_By_Alex_McCulloch.mp3"
@@ -3449,6 +3452,7 @@ var Lose = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
+      this.sound.add('aend').play();
       endm = this.sound.add('mwin');
       //endm.loop = true;
       endm.play();
@@ -3589,6 +3593,9 @@ var Win = new Phaser.Class({
         }
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
+        ]);
+        this.load.audio('avic', [
+        "assets/Audio/vic.mp3"
         ]);
         this.load.audio('mwin', [
         //"assets/Audio/WinSaw.wav" Knife-Party.mp3
@@ -3764,6 +3771,7 @@ var Win = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
+      this.sound.add('avic').play();
       endm = this.sound.add('mwin');
       //endm.loop = true;
       endm.play();
