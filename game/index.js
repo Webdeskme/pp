@@ -145,10 +145,10 @@ function initTweens ()
         light.y = pointer.y;
 
     });
-    var mf = this.add.image(900, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
-    var mo = this.add.image(950, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
-    var fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
-    var mu = this.sound.add('music');
+    mf = this.add.image(900, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
+    mo = this.add.image(950, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+    fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
+    mu = this.sound.add('music');
     mf.setScale(1/16);
     mo.setScale(1/16);
     fu.setScale(1/16);
@@ -2474,10 +2474,10 @@ var P1 = new Phaser.Class({
         var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
         var cardText = this.add.text(15, 140, 'Cards: 0', { fontSize: '32px', fill: '#fff' });
         var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
-        var mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
-        var mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
-        var fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
-        var mu = this.sound.add('music');
+        mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
+        mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+        fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
+        mu = this.sound.add('music');
         mf.setScale(1/8);
         mo.setScale(1/8);
         fu.setScale(1/8);
