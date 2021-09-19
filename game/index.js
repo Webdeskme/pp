@@ -13,7 +13,7 @@ var Intro = new Phaser.Class({
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
       ]);
-      this.load.image('back', 'assets/backgrounds/black.png');
+      this.load.image('backint', 'assets/backgrounds/black.png');
       this.load.image('sans', 'assets/backgrounds/sans.png');
       this.load.image('logo', 'assets/Text/logo.png');
     },
@@ -83,7 +83,7 @@ function initTweens ()
         initTweens
     );
 }
-      back = this.add.image(512, 320, 'back');
+      backint = this.add.image(512, 320, 'backint');
       image = this.add.image(512, 160, 'sans');
       logo = this.add.image(700, 580, 'logo').setInteractive({ useHandCursor: true  } );
       image.setScale(1/2);
