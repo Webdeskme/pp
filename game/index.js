@@ -2820,7 +2820,8 @@ var P1 = new Phaser.Class({
         });
         tend.on('pointerdown', () => {
           this.sound.add('mend').play();
-          particles = this.add.particles('fire');
+          //particles = this.add.particles('fire');
+          //https://phaser.io/examples/v3/view/game-objects/particle-emitter/fire-max-10-particles#
 
     particles.createEmitter({
         alpha: { start: 1, end: 2 },
