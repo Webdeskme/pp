@@ -82,7 +82,7 @@ function initTweens ()
         initTweens
     );
 }
-      this.add.image(512, 320, 'back');
+      back = this.add.image(512, 320, 'back');
       image = this.add.image(512, 160, 'sans');
       image.setScale(1/2);
       var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
@@ -102,6 +102,9 @@ function initTweens ()
     this.cameras.main.fadeIn(6000);
 
     // lighting
+    back.setPipeline('Light2D');
+
+    var rt = this.add.renderTexture(0, 0, 800, 600).setPipeline('Light2D');
     light = this.lights.addLight(400, 300, 200).setIntensity(2);
 
     this.lights.enable().setAmbientColor(0x555555);
