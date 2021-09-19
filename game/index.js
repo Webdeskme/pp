@@ -108,13 +108,14 @@ function initTweens ()
 
        vid.on('pointerdown', () => {
          this.sound.add('click').play();
-         ////console.log('Title');
+         this.game.sound.stopAll();
          this.scene.start('titles');
        });
 
        // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
        vid.setPaused(false);
        setTimeout(() => {
+         this.game.sound.stopAll();
          this.scene.start('titles');
        }, 72000);
       });
@@ -224,13 +225,14 @@ var Vide = new Phaser.Class({
 
     vid.on('pointerdown', () => {
       this.sound.add('click').play();
-      ////console.log('Title');
+      this.game.sound.stopAll();
       this.scene.start('titles');
     });
 
     // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
     vid.setPaused(false);
     setTimeout(() => {
+      this.game.sound.stopAll();
       this.scene.start('titles');
     }, 41000);
   }
@@ -2786,6 +2788,7 @@ var P1 = new Phaser.Class({
         h.setInteractive();
         h.on('pointerdown', () => {
           this.sound.add('click').play();
+          this.game.sound.stopAll();
           this.scene.start('titles');
           //music.destroy();
         });
@@ -2978,6 +2981,7 @@ var P1 = new Phaser.Class({
           }
           if(health < 1){
               this.sound.add('mlose').play();
+              this.game.sound.stopAll();
               this.scene.start('lose');
           }
           healthText.setText('Health:' + health);
