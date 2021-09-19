@@ -2830,7 +2830,7 @@ var P1 = new Phaser.Class({
         accelerationY: -300,
         angle: { min: -85, max: -95 },
         rotate: { min: -180, max: 180 },
-        lifespan: { min: 500, max: 550 },
+        lifespan: { min: 50, max: 55 },
         blendMode: 'ADD',
         frequency: 110,
         maxParticles: 10,
