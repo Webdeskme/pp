@@ -3155,7 +3155,8 @@ var Win = new Phaser.Class({
         "assets/Audio/mouseclick.wav"
         ]);
         this.load.audio('mwin', [
-        "assets/Audio/WinSaw.wav"
+        //"assets/Audio/WinSaw.wav" Knife-Party.mp3
+        "assets/Audio/Knife-Party.mp3"
       ]);
         this.load.image('background', 'assets/space/nebula.jpg');
         this.load.image('stars', 'assets/space/stars.png');
@@ -3327,7 +3328,9 @@ var Win = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
-      this.sound.add('mwin').play();
+      endm = this.sound.add('mwin');
+      endm.loop = true;
+      endm.play();
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
@@ -3375,6 +3378,7 @@ var Win = new Phaser.Class({
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
+          endm.stop();
           this.scene.start('p1');
         });
         var localStorageName = "piratesPort";
