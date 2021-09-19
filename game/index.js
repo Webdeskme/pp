@@ -105,7 +105,8 @@ function initTweens ()
        vid.on('pointerdown', () => {
          this.sound.add('click').play();
          ////console.log('Title');
-         this.scene.start('titles');
+         //this.scene.start('titles');
+         this.scene.start('win');
        });
 
        // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
