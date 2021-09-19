@@ -3279,7 +3279,7 @@ var Lose = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
-        this.load.audio('click', [
+        this.load.audio('aend', [
         "assets/Audio/end.mp3"
         ]);
         this.load.audio('mwin', [
