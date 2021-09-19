@@ -16,9 +16,9 @@ var Intro = new Phaser.Class({
       this.load.image('backint', 'assets/backgrounds/black.png');
       this.load.image('sans', 'assets/backgrounds/sans.png');
       this.load.image('logo', 'assets/Text/logo.png');
-      this.load.image('musicOff', 'assets/icons/sound-off.png');
-      this.load.image('musicOn', 'assets/icons/sound-on.png');
-      this.load.image('full', 'assets/icons/expand.png');
+      this.load.image('musicOffi', 'assets/icons/sound-off.png');
+      this.load.image('musicOni', 'assets/icons/sound-on.png');
+      this.load.image('fulli', 'assets/icons/expand.png');
     },
 
     create: function ()
@@ -142,14 +142,14 @@ function initTweens ()
         light.y = pointer.y;
 
     });
-    var mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
-    var mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
-    var fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
-    var mu = this.sound.add('music');
-    mf.setScale(1/8);
-    mo.setScale(1/8);
-    fu.setScale(1/8);
-    fu.on('pointerdown', () => {
+    var mfi = this.add.image(700, 25, 'musicOffi').setInteractive({ useHandCursor: true  } );
+    var moi = this.add.image(750, 25, 'musicOni').setInteractive({ useHandCursor: true  } );
+    var fui = this.add.image(1000, 25, 'fulli').setInteractive({ useHandCursor: true  } );
+    var mui = this.sound.add('musici');
+    mfi.setScale(1/16);
+    moi.setScale(1/16);
+    fui.setScale(1/16);
+    fui.on('pointerdown', () => {
       if (this.scale.isFullscreen)
         {
             //button.setFrame(0);
@@ -163,12 +163,12 @@ function initTweens ()
             this.scale.startFullscreen();
         }
     });
-    mo.on('pointerdown', () => {
-      mu.loop = true;
-      mu.play();
+    moi.on('pointerdown', () => {
+      mui.loop = true;
+      mui.play();
     });
-    mf.on('pointerdown', () => {
-      mu.stop();
+    mfi.on('pointerdown', () => {
+      mui.stop();
     });
     }
 });
