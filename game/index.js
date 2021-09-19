@@ -3389,7 +3389,7 @@ var Win = new Phaser.Class({
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
-        var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
+        var scoreText = this.add.text(4000, 3000, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' });
         var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' });
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
