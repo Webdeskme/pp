@@ -3247,9 +3247,9 @@ var Win = new Phaser.Class({
     this.anims.create({ key: 'asteroid3-anim', frames: this.anims.generateFrameNumbers('asteroid3-sheet', { start: 0, end: 24 }), frameRate: 20, repeat: -1 });
     this.anims.create({ key: 'asteroid4-anim', frames: this.anims.generateFrameNumbers('asteroid4-sheet', { start: 0, end: 23 }), frameRate: 20, repeat: -1 });
 
-    //  World size is 8000 x 6000
+    //  World size is 8000 x 6000 width: 1024,height: 640
 
-    bg = this.add.tileSprite(400, 300, 800, 600, 'background').setScrollFactor(0);
+    bg = this.add.tileSprite(400, 300, 1024, 640, 'background').setScrollFactor(0);
 
     //  Add our planets, etc
 
