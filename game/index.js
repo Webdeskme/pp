@@ -409,7 +409,7 @@ var TitleS = new Phaser.Class({
         runChildUpdate: true
     });
 
-    ship = this.physics.add.image(5000, 3000, 'space', 'ship').setDepth(2);
+    ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
 
     ship.setDrag(300);
     ship.setAngularDrag(400);
@@ -3417,7 +3417,7 @@ var Lose = new Phaser.Class({
         runChildUpdate: true
     });
 
-    ship = this.physics.add.image(5000, 3000, 'space', 'ship').setDepth(2);
+    ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
 
     ship.setDrag(300);
     ship.setAngularDrag(400);
@@ -3731,7 +3731,7 @@ var Win = new Phaser.Class({
         runChildUpdate: true
     });
 
-    ship = this.physics.add.image(5000, 3000, 'space', 'ship').setDepth(2);
+    ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
 
     ship.setDrag(300);
     ship.setAngularDrag(400);
