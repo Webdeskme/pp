@@ -3143,7 +3143,7 @@ var Win = new Phaser.Class({
 
     preload: function ()
     {
-        /*var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
+        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         //this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
@@ -3156,7 +3156,7 @@ var Win = new Phaser.Class({
         ]);
         this.load.audio('mwin', [
         "assets/Audio/WinSaw.wav"
-      ]);*/
+      ]);
         this.load.image('background', 'assets/space/nebula.jpg');
         this.load.image('stars', 'assets/space/stars.png');
         this.load.atlas('space', 'assets/space/space.png', 'assets/space/space.json');
@@ -3327,7 +3327,7 @@ var Win = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
-      /*this.sound.add('mwin').play();
+      this.sound.add('mwin').play();
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
@@ -3395,7 +3395,7 @@ var Win = new Phaser.Class({
       gameObject.x = dragX;
       gameObject.y = dragY;
 
-    });*/
+    });
   },
   update: function (time, delta)
 {
