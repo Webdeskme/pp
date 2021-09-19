@@ -3156,7 +3156,7 @@ var Win = new Phaser.Class({
         ]);
         this.load.audio('mwin', [
         //"assets/Audio/WinSaw.wav" Knife-Party.mp3
-        "assets/Audio/Knife-Party.mp3"
+        "assets/Audio/catinspace_hq.mp3"
       ]);
         this.load.image('background', 'assets/space/nebula.jpg');
         this.load.image('stars', 'assets/space/stars.png');
