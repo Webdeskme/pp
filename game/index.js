@@ -53,7 +53,7 @@ function getTintColor (vertex)
     // in order to get the integer value of the tint color.
     return Phaser.Display.Color.ObjectToColor(tint).color;
 }
-unction tintTween (fromColors, toColors, callback)
+function tintTween (fromColors, toColors, callback)
 {
     tween = this.tweens.addCounter({
         from: 0,
