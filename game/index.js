@@ -3461,10 +3461,14 @@ var Lose = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
-      this.sound.add('aend').play();
-      endm = this.sound.add('mwin');
-      //endm.loop = true;
-      endm.play();
+      setTimeout(() => {
+        this.sound.add('aend').play();
+      }, 3000);
+      setTimeout(() => {
+        endm = this.sound.add('mwin');
+        //endm.loop = true;
+        endm.play();
+      }, 6000);
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
@@ -3781,10 +3785,14 @@ var Win = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
-      this.sound.add('avic').play();
-      endm = this.sound.add('mwin');
-      //endm.loop = true;
-      endm.play();
+      setTimeout(() => {
+        this.sound.add('avic').play();
+      }, 3000);
+      setTimeout(() => {
+        endm = this.sound.add('mwin');
+        //endm.loop = true;
+        endm.play();
+      }, 6000);
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
