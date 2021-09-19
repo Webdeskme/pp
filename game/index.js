@@ -105,16 +105,25 @@ function initTweens ()
     //back.setPipeline('Light2D');
 
     //var rt = this.add.renderTexture(0, 0, 800, 600).setPipeline('Light2D');
-    let radius = 128;
+    let colorIndex = 0;
+        const spectrum = Phaser.Display.Color.ColorSpectrum(128);
+
+        let radius = 128;
         let intensity = 1;
         let attenuation = 0.1;
-    light = this.add.pointlight(pointer.x, pointer.y, 0, radius, intensity);
 
-            light.attenuation = attenuation;
+        let light = this.add.pointlight(400, 300, 0, radius, intensity);
+
+        let color = spectrum[colorIndex];
+
+        light.color.setTo(color.r, color.g, color.b);
+    //light = this.add.pointlight(pointer.x, pointer.y, 0, radius, intensity);
+
+            //light.attenuation = attenuation;
             //light.color.setTo(color.r, color.g, color.b);
     //light = this.lights.addLight(400, 300, 200).setIntensity(2);
 
-    this.lights.enable().setAmbientColor(0x555555);
+    //this.lights.enable().setAmbientColor(0x555555);
 
     this.input.on('pointermove', function (pointer) {
 
