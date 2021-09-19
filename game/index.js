@@ -3249,7 +3249,7 @@ var Win = new Phaser.Class({
 
     //  World size is 8000 x 6000 width: 1024,height: 640
 
-    bg = this.add.tileSprite(400, 300, 1024, 640, 'background').setScrollFactor(0);
+    bg = this.add.tileSprite(400, 300, 1200, 800, 'background').setScrollFactor(0);
 
     //  Add our planets, etc
 
