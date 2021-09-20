@@ -244,6 +244,49 @@ var Vide = new Phaser.Class({
     }, 72000);
   }
 });
+var Cred = new Phaser.Class({
+
+    Extends: Phaser.Scene,
+
+    initialize:
+
+    function Cred ()
+    {
+        Phaser.Scene.call(this, { key: 'cred' });
+    },
+
+    preload: function ()
+    {
+      this.load.video('cr', 'assets/Video/PiratePortTrailer.mp4', 'loadeddata', false, false);
+      this.load.audio('click', [
+      "assets/Audio/mouseclick.wav"
+      ]);
+
+    },
+
+    create: function ()
+    {
+      this.game.sound.stopAll();
+      //game.scale.startFullscreen();
+     var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
+     vid.setScale(11/20);
+
+    vid.play(true);
+
+    vid.on('pointerdown', () => {
+      this.sound.add('click').play();
+      this.game.sound.stopAll();
+      this.scene.start('titles');
+    });
+
+    // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
+    vid.setPaused(false);
+    setTimeout(() => {
+      this.game.sound.stopAll();
+      this.scene.start('titles');
+    }, 72000);
+  }
+});
 var TitleS = new Phaser.Class({
 
     Extends: Phaser.Scene,
@@ -3979,14 +4022,6 @@ var Win = new Phaser.Class({
     stars.tilePositionY += ship.body.deltaY() * 2;
 }
 });
-/*
-scale: {
-  mode: Phaser.Scale.FIT,
-  parent: "app",
-  width: 1024,
-  height: 640
-},
-*/
 var config = {
     type: Phaser.AUTO,
     scale: {
@@ -4002,10 +4037,8 @@ var config = {
             debug: false
         }
     },
-    //width: 1024,
-    //height: 640,
     backgroundColor: '#000000',
-    scene: [ Intro, Vide, TitleS, P1, Lose, Win ]
+    scene: [ Intro, Vide, Cred, TitleS, P1, Lose, Win ]
 };
 
 var bg;
