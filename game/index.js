@@ -260,6 +260,9 @@ var TitleS = new Phaser.Class({
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         //this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
+        this.load.image('puzzle', 'assets/Text/puzzle.png');
+        this.load.image('videol', 'assets/Text/video.png');
+        this.load.image('story', 'assets/Text/story.png');
         this.load.image('cb', 'assets/out/back.png');
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -486,7 +489,10 @@ var TitleS = new Phaser.Class({
 
           });
         }
-        var d = this.add.image(700, 100, 'title').setScrollFactor(0,0);
+        var d = this.add.image(900, 100, 'title').setScrollFactor(0,0);
+        var e = this.add.image(900, 200, 'videol').setScrollFactor(0,0);
+        var f = this.add.image(900, 300, 'story').setScrollFactor(0,0);
+        var g = this.add.image(900, 400, 'puzzle').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         d.on('pointerover',function(pointer){
@@ -2667,7 +2673,7 @@ var P1 = new Phaser.Class({
             return skill;
             return coin;
           }
-          // "Service", "WateringHole", 
+          // "Service", "WateringHole",
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
         var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
         shuffle(cards);
