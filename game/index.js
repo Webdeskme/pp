@@ -494,7 +494,7 @@ var TitleS = new Phaser.Class({
         var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
         var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
         var g = this.add.image(900, 200, 'puzzle').setScrollFactor(0,0);
-        var h = this.add.image(900, 200, 'credits').setScrollFactor(0,0);
+        var h = this.add.image(900, 250, 'credits').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
