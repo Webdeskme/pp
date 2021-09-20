@@ -225,7 +225,7 @@ var Vide = new Phaser.Class({
     {
       this.game.sound.stopAll();
       //game.scale.startFullscreen();
-     var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
+     var vid = this.add.video(487, 270, 'intro').setInteractive({ useHandCursor: true  } );
      vid.setScale(1/1);
 
     vid.play(true);
