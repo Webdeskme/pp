@@ -494,7 +494,7 @@ var TitleS = new Phaser.Class({
         var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
         var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
         var g = this.add.image(900, 200, 'puzzle').setScrollFactor(0,0);
-        var g = this.add.image(900, 200, 'credits').setScrollFactor(0,0);
+        var h = this.add.image(900, 200, 'credits').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
@@ -503,6 +503,8 @@ var TitleS = new Phaser.Class({
         f.setScale(1/4);
         g.setInteractive({ useHandCursor: true  } );
         g.setScale(1/4);
+        h.setInteractive({ useHandCursor: true  } );
+        h.setScale(1/4);
         d.on('pointerover',function(pointer){
           d.setScale(1/3);
         });
@@ -526,6 +528,12 @@ var TitleS = new Phaser.Class({
         });
         g.on('pointerout',function(pointer){
           g.setScale(1/4);
+        });
+        h.on('pointerover',function(pointer){
+          h.setScale(1/3);
+        });
+        h.on('pointerout',function(pointer){
+          h.setScale(1/4);
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
