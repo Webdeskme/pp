@@ -263,6 +263,7 @@ var TitleS = new Phaser.Class({
         this.load.image('puzzle', 'assets/Text/puzzle.png');
         this.load.image('videol', 'assets/Text/video.png');
         this.load.image('story', 'assets/Text/story.png');
+        this.load.image('story', 'assets/Text/credits.png');
         this.load.image('cb', 'assets/out/back.png');
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -493,6 +494,7 @@ var TitleS = new Phaser.Class({
         var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
         var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
         var g = this.add.image(900, 200, 'puzzle').setScrollFactor(0,0);
+        var g = this.add.image(900, 200, 'credits').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
@@ -531,6 +533,13 @@ var TitleS = new Phaser.Class({
           this.game.sound.stopAll();
           this.scene.start('p1');
         });
+        e.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //endm.stop();
+          this.game.sound.stopAll();
+          this.scene.start('vide');
+        });
+
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         if(localStorage.getItem(localStorageTemp) == null) {
