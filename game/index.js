@@ -268,19 +268,19 @@ var Cred = new Phaser.Class({
     {
       this.game.sound.stopAll();
       //game.scale.startFullscreen();
-     var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
-     vid.setScale(11/20);
+     var vid1 = this.add.video(512, 320, 'cr').setInteractive({ useHandCursor: true  } );
+     vid1.setScale(11/20);
 
-    vid.play(true);
+    vid1.play(true);
 
-    vid.on('pointerdown', () => {
+    vid1.on('pointerdown', () => {
       this.sound.add('click').play();
       this.game.sound.stopAll();
       this.scene.start('titles');
     });
 
     // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
-    vid.setPaused(false);
+    vid1.setPaused(false);
     setTimeout(() => {
       this.game.sound.stopAll();
       this.scene.start('titles');
