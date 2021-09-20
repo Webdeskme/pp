@@ -489,10 +489,10 @@ var TitleS = new Phaser.Class({
 
           });
         }
-        var d = this.add.image(900, 100, 'title').setScrollFactor(0,0);
-        var e = this.add.image(900, 150, 'videol').setScrollFactor(0,0);
-        var f = this.add.image(900, 200, 'story').setScrollFactor(0,0);
-        var g = this.add.image(900, 250, 'puzzle').setScrollFactor(0,0);
+        var d = this.add.image(900, 50, 'title').setScrollFactor(0,0);
+        var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
+        var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
+        var g = this.add.image(900, 200, 'puzzle').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
