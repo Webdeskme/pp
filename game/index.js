@@ -495,11 +495,35 @@ var TitleS = new Phaser.Class({
         var g = this.add.image(900, 400, 'puzzle').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
+        e.setInteractive({ useHandCursor: true  } );
+        e.setScale(1/4);
+        f.setInteractive({ useHandCursor: true  } );
+        f.setScale(1/4);
+        g.setInteractive({ useHandCursor: true  } );
+        g.setScale(1/4);
         d.on('pointerover',function(pointer){
           d.setScale(1/3);
         });
         d.on('pointerout',function(pointer){
           d.setScale(1/4);
+        });
+        e.on('pointerover',function(pointer){
+          e.setScale(1/3);
+        });
+        e.on('pointerout',function(pointer){
+          e.setScale(1/4);
+        });
+        f.on('pointerover',function(pointer){
+          f.setScale(1/3);
+        });
+        f.on('pointerout',function(pointer){
+          f.setScale(1/4);
+        });
+        g.on('pointerover',function(pointer){
+          g.setScale(1/3);
+        });
+        g.on('pointerout',function(pointer){
+          g.setScale(1/4);
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
