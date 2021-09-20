@@ -3993,7 +3993,8 @@ var config = {
       mode: Phaser.Scale.FIT,
       parent: "app",
       width: 1024,
-      height: 640
+      height: 640,
+      autoCenter: Phaser.Scale.CENTER_BOTH
     },
     physics: {
         default: 'arcade',
