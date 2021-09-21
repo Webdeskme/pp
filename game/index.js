@@ -259,7 +259,7 @@ var Puzz = new Phaser.Class({
     {
       p = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
       for (let i = 0; i < p.length; i++) {
-        this.load.image(p[i], 'assets/puzzle/sans' + p[i] + '.png');
+        this.load.image(p[i], 'assets/puzzle/' + p[i] + '.png');
       }
       this.load.image('back', 'assets/backgrounds/star1.jpg');
       this.load.audio('click', [
