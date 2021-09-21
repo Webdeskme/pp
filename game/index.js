@@ -244,6 +244,66 @@ var Vide = new Phaser.Class({
     }, 72000);
   }
 });
+var Puzz = new Phaser.Class({
+
+    Extends: Phaser.Scene,
+
+    initialize:
+
+    function Puzz ()
+    {
+        Phaser.Scene.call(this, { key: 'puzz' });
+    },
+
+    preload: function ()
+    {
+      p = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
+      for (let i = 0; i < p.length; i++) {
+        this.load.image(p[i], 'assets/backgrounds/sans' + p[i] + '.png');
+      }
+      this.load.image('back', 'assets/backgrounds/star1.jpg');
+      this.load.audio('click', [
+      "assets/Audio/mouseclick.wav"
+      ]);
+
+    },
+
+    create: function ()
+    {
+      function shuffle(array) {
+          var currentIndex = array.length, temporaryValue, randomIndex;
+
+          // While there remain elements to shuffle...
+          while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+
+          return array;
+          }
+          shuffle(p);
+      this.game.sound.stopAll();
+      this.add.image(512, 320, 'back');
+      for (let i = 0; i < p.length; i++) {
+        c = this.add.image(512, 320, p[i]).setInteractive({ useHandCursor: true  } );
+        c.setScale(1/2);
+        this.input.setDraggable(c);
+      }
+      var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+      hr.setInteractive({ useHandCursor: true  } );
+      hr.on('pointerdown', () => {
+        this.game.sound.stopAll();
+        this.scene.start('titles');
+      });
+  }
+});
 var Cred = new Phaser.Class({
 
     Extends: Phaser.Scene,
@@ -4043,7 +4103,7 @@ var config = {
         }
     },
     backgroundColor: '#000000',
-    scene: [ Intro, Vide, Cred, TitleS, P1, Lose, Win ]
+    scene: [ Intro, Vide, Puzz, Cred, TitleS, P1, Lose, Win ]
 };
 
 var bg;
