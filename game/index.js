@@ -257,7 +257,7 @@ var Cred = new Phaser.Class({
 
     preload: function ()
     {
-      this.load.video('cr', 'assets/Video/PiratePortTrailer.mp4', 'loadeddata', false, false);
+      this.load.video('cr', 'assets/Video/credits.mp4', 'loadeddata', false, false);
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
       ]);
