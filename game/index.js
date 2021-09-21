@@ -257,9 +257,9 @@ var Puzz = new Phaser.Class({
 
     preload: function ()
     {
-      var p = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
-      for (let i = 0; i < p.length; i++) {
-        this.load.image(p[i], 'assets/puzzle/' + p[i] + '.png');
+      var pp = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
+      for (let i = 0; i < pp.length; i++) {
+        this.load.image(pp[i], 'assets/puzzle/' + pp[i] + '.png');
       }
       this.load.image('back', 'assets/backgrounds/star1.jpg');
       this.load.audio('click', [
@@ -290,12 +290,12 @@ var Puzz = new Phaser.Class({
           }
       this.game.sound.stopAll();
       this.add.image(512, 320, 'back');
-      var p = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
-      shuffle(p);
+      var pp = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
+      shuffle(pp);
       var i;
-      for (let i = 0; i < p.length; i++) {
-        var cc = this.add.image(512, 320, p[i]).setInteractive({ useHandCursor: true  } );
-        cc.setScale(1/2);
+      for (let i = 0; i < pp.length; i++) {
+        var cc = this.add.image(512, 320, pp[i]).setInteractive({ useHandCursor: true  } );
+        cc.setScale(1/1);
         this.input.setDraggable(cc);
       }
       var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
