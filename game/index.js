@@ -292,7 +292,7 @@ var Puzz = new Phaser.Class({
       this.game.sound.stopAll();
       this.add.image(512, 320, 'back');
       for (let i = 0; i < p.length; i++) {
-        c = this.add.image(512, 320, p[i]).setInteractive({ useHandCursor: true  } );
+        var c = this.add.image(512, 320, p[i]).setInteractive({ useHandCursor: true  } );
         c.setScale(1/2);
         this.input.setDraggable(c);
       }
