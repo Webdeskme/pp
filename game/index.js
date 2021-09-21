@@ -650,6 +650,12 @@ var TitleS = new Phaser.Class({
           this.game.sound.stopAll();
           this.scene.start('vide');
         });
+        g.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //endm.stop();
+          this.game.sound.stopAll();
+          this.scene.start('puzzle');
+        });
         h.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
