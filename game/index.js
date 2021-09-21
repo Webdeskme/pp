@@ -291,10 +291,11 @@ var Puzz = new Phaser.Class({
           shuffle(p);
       this.game.sound.stopAll();
       this.add.image(512, 320, 'back');
+      var i;
       for (let i = 0; i < p.length; i++) {
-        var c = this.add.image(512, 320, p[i]).setInteractive({ useHandCursor: true  } );
-        c.setScale(1/2);
-        this.input.setDraggable(c);
+        var cc = this.add.image(512, 320, p[i]).setInteractive({ useHandCursor: true  } );
+        cc.setScale(1/2);
+        this.input.setDraggable(cc);
       }
       var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
       hr.setInteractive({ useHandCursor: true  } );
