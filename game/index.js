@@ -594,7 +594,7 @@ var TitleS = new Phaser.Class({
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
-          this.scene.start('credits');
+          this.scene.start('cred');
         });
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
