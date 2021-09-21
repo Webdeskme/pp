@@ -294,7 +294,8 @@ var Puzz = new Phaser.Class({
       shuffle(pp);
       var i;
       //for (let i = 0; i < pp.length; i++) {
-        var cc = this.add.image(512, 320, 'sans1').setInteractive({ useHandCursor: true  } );
+        //var cc = this.add.image(512, 320, 'sans1').setInteractive({ useHandCursor: true  } );
+        var cc = this.add.image(512, 320, 'sans1').setInteractive({ draggable: true  } );
         cc.setScale(1/2);
         this.input.setDraggable(cc);
       //}
