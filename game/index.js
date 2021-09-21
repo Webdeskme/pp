@@ -299,6 +299,12 @@ var Puzz = new Phaser.Class({
         cc.setScale(1/2);
         this.input.setDraggable(cc);
       //}
+      this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
+
+        gameObject.x = dragX;
+        gameObject.y = dragY;
+
+    });
       var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
       hr.setInteractive({ useHandCursor: true  } );
       hr.on('pointerdown', () => {
