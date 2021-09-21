@@ -293,11 +293,11 @@ var Puzz = new Phaser.Class({
       var pp = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
       shuffle(pp);
       var i;
-      for (let i = 0; i < pp.length; i++) {
-        var cc = this.add.image(512, 320, pp[i]).setInteractive({ useHandCursor: true  } );
-        cc.setScale(1/1);
+      //for (let i = 0; i < pp.length; i++) {
+        var cc = this.add.image(512, 320, 'sans1').setInteractive({ useHandCursor: true  } );
+        cc.setScale(1/2);
         this.input.setDraggable(cc);
-      }
+      //}
       var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
       hr.setInteractive({ useHandCursor: true  } );
       hr.on('pointerdown', () => {
