@@ -284,7 +284,7 @@ var Cred = new Phaser.Class({
     setTimeout(() => {
       this.game.sound.stopAll();
       this.scene.start('titles');
-    }, 72000);
+    }, 190000);
   }
 });
 var TitleS = new Phaser.Class({
