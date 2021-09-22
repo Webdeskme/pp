@@ -285,12 +285,7 @@ var Ai = new Phaser.Class({
 
     function Ai ()
     {
-        Phaser.Scene.call(this, {
-        key: 'ai',
-        dom: {
-            createContainer: true
-        }
-      });
+        Phaser.Scene.call(this, {key: 'ai'});
     },
 
     preload: function ()
@@ -4252,6 +4247,10 @@ var config = {
       width: 1024,
       height: 640,
       autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    dom: {
+        createContainer: true,
+        behindCanvas: true
     },
     physics: {
         default: 'arcade',
