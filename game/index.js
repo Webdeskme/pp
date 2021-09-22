@@ -4254,11 +4254,11 @@ var config = {
             debug: false
         }
     },
+    backgroundColor: '#000000',
+    scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ],
     dom: {
         createContainer: true
-    },
-    backgroundColor: '#000000',
-    scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ]
+    }
 };
 
 var bg;
