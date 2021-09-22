@@ -4155,6 +4155,9 @@ var config = {
             debug: false
         }
     },
+    dom: {
+        createContainer: true
+    },
     backgroundColor: '#000000',
     scene: [ Intro, Vide, St, Puzz, Cred, TitleS, P1, Lose, Win ]
 };
