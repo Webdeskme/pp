@@ -4257,7 +4257,8 @@ var config = {
     backgroundColor: '#000000',
     scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ],
     dom: {
-        createContainer: true
+        createContainer: true,
+        behindCanvas: true
     }
 };
 
