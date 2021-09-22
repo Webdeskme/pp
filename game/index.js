@@ -285,7 +285,11 @@ var Ai = new Phaser.Class({
 
     function Ai ()
     {
-        Phaser.Scene.call(this, { key: 'ai' });
+        Phaser.Scene.call(this, { key: 'ai',
+        dom: {
+            createContainer: true
+        }
+      });
     },
 
     preload: function ()
@@ -4257,11 +4261,10 @@ var config = {
     backgroundColor: '#000000',
     scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ],
     dom: {
-        createContainer: true,
-        behindCanvas: true
+        createContainer: false
     }
 };
-
+//behindCanvas: false
 var bg;
 var stars;
 var ship;
