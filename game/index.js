@@ -754,6 +754,18 @@ var TitleS = new Phaser.Class({
         h.on('pointerout',function(pointer){
           h.setScale(1/4);
         });
+        j.on('pointerover',function(pointer){
+          j.setScale(1/3);
+        });
+        j.on('pointerout',function(pointer){
+          j.setScale(1/4);
+        });
+        k.on('pointerover',function(pointer){
+          k.setScale(1/3);
+        });
+        k.on('pointerout',function(pointer){
+          k.setScale(1/4);
+        });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
