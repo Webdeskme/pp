@@ -277,6 +277,72 @@ var St = new Phaser.Class({
       });
     }
 });
+var Ai = new Phaser.Class({
+
+    Extends: Phaser.Scene,
+
+    initialize:
+
+    function Ai ()
+    {
+        Phaser.Scene.call(this, { key: 'ai' });
+    },
+
+    preload: function ()
+    {
+      this.load.image('back', 'assets/backgrounds/star1.jpg');
+      this.load.audio('click', [
+      "assets/Audio/mouseclick.wav"
+      ]);
+
+    },
+
+    create: function ()
+    {
+      this.add.image(512, 320, 'back');
+      var sto = this.add.dom(512, 320).createFromHTML('<iframe width="560" height="315" src="https://pp.webdesk.me/escape_the_ai-pirates_port" frameborder="0"></iframe>');
+      sto.setScale(3/2);
+      var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+      hr.setInteractive({ useHandCursor: true  } );
+      hr.on('pointerdown', () => {
+        this.game.sound.stopAll();
+        this.scene.start('titles');
+      });
+    }
+});
+var San = new Phaser.Class({
+
+    Extends: Phaser.Scene,
+
+    initialize:
+
+    function San ()
+    {
+        Phaser.Scene.call(this, { key: 'san' });
+    },
+
+    preload: function ()
+    {
+      this.load.image('back', 'assets/backgrounds/star1.jpg');
+      this.load.audio('click', [
+      "assets/Audio/mouseclick.wav"
+      ]);
+
+    },
+
+    create: function ()
+    {
+      this.add.image(512, 320, 'back');
+      var sto = this.add.dom(512, 320).createFromHTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/h3uIYEYpw7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+      sto.setScale(3/2);
+      var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+      hr.setInteractive({ useHandCursor: true  } );
+      hr.on('pointerdown', () => {
+        this.game.sound.stopAll();
+        this.scene.start('titles');
+      });
+    }
+});
 var Puzz = new Phaser.Class({
 
     Extends: Phaser.Scene,
@@ -409,6 +475,8 @@ var TitleS = new Phaser.Class({
         this.load.image('videol', 'assets/Text/video.png');
         this.load.image('story', 'assets/Text/story.png');
         this.load.image('credits', 'assets/Text/credits.png');
+        this.load.image('sa', 'assets/Text/sans.png');
+        this.load.image('aii', 'assets/Text/ai.png');
         this.load.image('cb', 'assets/out/back.png');
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -640,6 +708,8 @@ var TitleS = new Phaser.Class({
         var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
         var g = this.add.image(900, 200, 'puzzle').setScrollFactor(0,0);
         var h = this.add.image(900, 250, 'credits').setScrollFactor(0,0);
+        var j = this.add.image(900, 250, 'aii').setScrollFactor(0,0);
+        var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
@@ -650,6 +720,10 @@ var TitleS = new Phaser.Class({
         g.setScale(1/4);
         h.setInteractive({ useHandCursor: true  } );
         h.setScale(1/4);
+        j.setInteractive({ useHandCursor: true  } );
+        j.setScale(1/4);
+        k.setInteractive({ useHandCursor: true  } );
+        k.setScale(1/4);
         d.on('pointerover',function(pointer){
           d.setScale(1/3);
         });
@@ -709,6 +783,18 @@ var TitleS = new Phaser.Class({
           //endm.stop();
           this.game.sound.stopAll();
           this.scene.start('cred');
+        });
+        j.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //endm.stop();
+          this.game.sound.stopAll();
+          this.scene.start('ai');
+        });
+        k.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //endm.stop();
+          this.game.sound.stopAll();
+          this.scene.start('san');
         });
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
@@ -4160,7 +4246,7 @@ var config = {
         createContainer: true
     },
     backgroundColor: '#000000',
-    scene: [ Intro, Vide, St, Puzz, Cred, TitleS, P1, Lose, Win ]
+    scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ]
 };
 
 var bg;
