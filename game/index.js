@@ -4241,9 +4241,6 @@ var Win = new Phaser.Class({
 });
 var config = {
     type: Phaser.AUTO,
-    dom: {
-        createContainer: true
-    },
     scale: {
       mode: Phaser.Scale.FIT,
       parent: "app",
@@ -4256,6 +4253,9 @@ var config = {
         arcade: {
             debug: false
         }
+    },
+    dom: {
+        createContainer: true
     },
     backgroundColor: '#000000',
     scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ]
