@@ -4241,6 +4241,9 @@ var Win = new Phaser.Class({
 });
 var config = {
     type: Phaser.AUTO,
+    dom: {
+        createContainer: true
+    },
     scale: {
       mode: Phaser.Scale.FIT,
       parent: "app",
