@@ -268,7 +268,7 @@ var St = new Phaser.Class({
     {
       this.add.image(512, 320, 'back');
       var sto = this.add.dom(512, 320).createFromHTML('<iframe width="560" height="315" src="https://pp.webdesk.me/story" frameborder="0"></iframe>');
-      sto.setScale(2);
+      sto.setScale(3/2);
       var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
       hr.setInteractive({ useHandCursor: true  } );
       hr.on('pointerdown', () => {
