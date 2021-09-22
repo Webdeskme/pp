@@ -4259,12 +4259,12 @@ var config = {
         }
     },
     backgroundColor: '#000000',
-    scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ],
-    dom: {
-        createContainer: false
-    }
+    scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ]
 };
 //behindCanvas: false
+/*dom: {
+    createContainer: false
+}*/
 var bg;
 var stars;
 var ship;
