@@ -285,7 +285,8 @@ var Ai = new Phaser.Class({
 
     function Ai ()
     {
-        Phaser.Scene.call(this, { key: 'ai',
+        Phaser.Scene.call(this, {
+        key: 'ai',
         dom: {
             createContainer: true
         }
