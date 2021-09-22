@@ -480,7 +480,8 @@ var TitleS = new Phaser.Class({
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
-          this.scene.start('st');
+          //this.scene.start('st');
+          window.location.href = "st.html";
         });
         g.on('pointerdown', () => {
           this.sound.add('click').play();
@@ -498,13 +499,15 @@ var TitleS = new Phaser.Class({
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
-          this.scene.start('ai');
+          //this.scene.start('ai');
+          window.location.href = "ai.html";
         });
         k.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
-          this.scene.start('san');
+          //this.scene.start('san');
+          window.location.href = "sans.html";
         });
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
@@ -3955,10 +3958,6 @@ var config = {
     backgroundColor: '#000000',
     scene: [ TitleS, Vide, Puzz, Cred, P1, Lose, Win ]
 };
-//behindCanvas: false
-/*dom: {
-    createContainer: false
-}*/
 var bg;
 var stars;
 var ship;
