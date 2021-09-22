@@ -116,7 +116,7 @@ function initTweens ()
               window.clearTimeout(id); // will do nothing if no timeout with id is present
           }
          //this.scene.start('titles');
-         window.location.href = "index.html";
+         window.location.href = "game.html";
        });
 
        // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
@@ -124,7 +124,7 @@ function initTweens ()
        setTimeout(() => {
          this.game.sound.stopAll();
          //this.scene.start('titles');
-         window.location.href = "index.html";
+         window.location.href = "game.html";
        }, 72000);
       });
       var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
