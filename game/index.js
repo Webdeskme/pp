@@ -710,7 +710,7 @@ var TitleS = new Phaser.Class({
         var h = this.add.image(900, 250, 'credits').setScrollFactor(0,0);
         var j = this.add.image(900, 300, 'aii').setScrollFactor(0,0);
         var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
-        d.setInteractive({ cursor: 'pointer'  } );
+        d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
         e.setScale(1/4);
@@ -4253,9 +4253,6 @@ var config = {
         arcade: {
             debug: false
         }
-    },
-    dom: {
-        createContainer: true
     },
     backgroundColor: '#000000',
     scene: [ Intro, Vide, St, Ai, San, Puzz, Cred, TitleS, P1, Lose, Win ]
