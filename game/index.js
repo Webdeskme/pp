@@ -244,6 +244,38 @@ var Vide = new Phaser.Class({
     }, 72000);
   }
 });
+var St = new Phaser.Class({
+
+    Extends: Phaser.Scene,
+
+    initialize:
+
+    function St ()
+    {
+        Phaser.Scene.call(this, { key: 'st' });
+    },
+
+    preload: function ()
+    {
+      this.load.image('back', 'assets/backgrounds/star1.jpg');
+      this.load.audio('click', [
+      "assets/Audio/mouseclick.wav"
+      ]);
+
+    },
+
+    create: function ()
+    {
+      this.add.image(512, 320, 'back');
+      this.add.dom(500, 300).createFromHTML('<iframe width="560" height="315" src="https://pp.webdesk.me/story" frameborder="0"></iframe>');
+      var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+      hr.setInteractive({ useHandCursor: true  } );
+      hr.on('pointerdown', () => {
+        this.game.sound.stopAll();
+        this.scene.start('titles');
+      });
+    }
+});
 var Puzz = new Phaser.Class({
 
     Extends: Phaser.Scene,
@@ -658,6 +690,12 @@ var TitleS = new Phaser.Class({
           //endm.stop();
           this.game.sound.stopAll();
           this.scene.start('vide');
+        });
+        f.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //endm.stop();
+          this.game.sound.stopAll();
+          this.scene.start('st');
         });
         g.on('pointerdown', () => {
           this.sound.add('click').play();
@@ -4118,7 +4156,7 @@ var config = {
         }
     },
     backgroundColor: '#000000',
-    scene: [ Intro, Vide, Puzz, Cred, TitleS, P1, Lose, Win ]
+    scene: [ Intro, Vide, St, Puzz, Cred, TitleS, P1, Lose, Win ]
 };
 
 var bg;
