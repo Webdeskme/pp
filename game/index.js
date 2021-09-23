@@ -108,13 +108,13 @@ function initTweens ()
       });
       logo.on('pointerdown', () => {
         //m.stop();
-        if(z == 'No'){
+        if(z == 'yes'){
           this.game.sound.stopAll();
           //this.scene.start('titles');
           window.location.href = "game.html";
         }
         else{
-        z = yes;
+        z = 'yes';
         this.sound.add('click').play();
         var vid = this.add.video(487, 270, 'intro').setInteractive({ useHandCursor: true  } );
         vid.setScale(1/2);
