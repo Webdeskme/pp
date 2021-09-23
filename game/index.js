@@ -99,6 +99,12 @@ function initTweens ()
       logo = this.add.image(700, 580, 'logo').setInteractive({ useHandCursor: true  } );
       image.setScale(1/2);
       logo.setScale(1/1);
+      logo.on('pointerover',function(pointer){
+        logo.setScale(3/2);
+      });
+      logo.on('pointerout',function(pointer){
+        logo.setScale(1/1);
+      });
       logo.on('pointerdown', () => {
         //m.stop();
         this.sound.add('click').play();
