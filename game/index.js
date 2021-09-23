@@ -27,6 +27,7 @@ var Intro = new Phaser.Class({
 
     create: function ()
     {
+      var z = "No";
       this.game.sound.stopAll();
       //m = this.sound.add('music');
       //m.loop = true;
@@ -107,6 +108,13 @@ function initTweens ()
       });
       logo.on('pointerdown', () => {
         //m.stop();
+        if(z == 'No'){
+          this.game.sound.stopAll();
+          //this.scene.start('titles');
+          window.location.href = "game.html";
+        }
+        else{
+        z = yes;
         this.sound.add('click').play();
         var vid = this.add.video(487, 270, 'intro').setInteractive({ useHandCursor: true  } );
         vid.setScale(1/2);
@@ -132,6 +140,7 @@ function initTweens ()
          //this.scene.start('titles');
          window.location.href = "game.html";
        }, 72000);
+     }
       });
       var pre = this.add.text(100, 400, 'presents', { fontSize: '64px', fill: '#fff' });
       fromColors = getRandomVertexColors();
