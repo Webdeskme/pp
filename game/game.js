@@ -2685,7 +2685,7 @@ var P1 = new Phaser.Class({
         ////////////////// Starfield ////////////////////////
 
 
-        this.points = [];
+        /*this.points = [];
         this.stars = this.add.group();
         this.maxDepth = 32;
 
@@ -2695,7 +2695,7 @@ var P1 = new Phaser.Class({
                 y: Phaser.Math.Between(-25, 25),
                 z: Phaser.Math.Between(1, this.maxDepth)
             });
-        }
+        }*/
 
 
         ////////////////// End Starfield /////////////////////
@@ -3264,7 +3264,7 @@ var P1 = new Phaser.Class({
     });
   },
   update() {
-        this.stars.clear(true, true);
+        /*this.stars.clear(true, true);
         for (var i = 0; i < this.points.length; i++) {
             var point = this.points[i];
 
@@ -3289,7 +3289,7 @@ var P1 = new Phaser.Class({
             graphics.setAlpha((1 - point.z / 8));
             graphics.fillCircleShape(circle);
             this.stars.add(graphics);
-        }
+        }*/
     }
 });
 var Lose = new Phaser.Class({
