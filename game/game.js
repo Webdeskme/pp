@@ -600,7 +600,7 @@ var P1 = new Phaser.Class({
         this.load.image('full', 'assets/icons/expand.png');
         this.load.image('fire', 'assets/icons/muzzleflash3.png');
         //this.load.text('rules', 'assets/text/rules.txt');
-        this.load.video('rules', 'assets/Video/Walkthrough.mp4', 'loadeddata', false, true);
+        this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, true);
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
