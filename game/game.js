@@ -481,7 +481,7 @@ var TitleS = new Phaser.Class({
           //endm.stop();
           this.game.sound.stopAll();
           //this.scene.start('st');
-          window.location.href = "st.html";
+          window.location.href = "story.html";
         });
         g.on('pointerdown', () => {
           this.sound.add('click').play();
