@@ -528,6 +528,7 @@ var TitleS = new Phaser.Class({
       gameObject.y = dragY;
 
     });
+    var highscoreText = this.add.text(50, 600, '[<- -> TURN] [^ Thrust] [Spacebar Fire]', { fontSize: '32px', fill: '#fff' }).setScrollFactor(0,0);
   },
   update: function (time, delta)
 {
