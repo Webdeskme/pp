@@ -599,8 +599,8 @@ var P1 = new Phaser.Class({
         this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.image('full', 'assets/icons/expand.png');
         this.load.image('fire', 'assets/icons/muzzleflash3.png');
-        this.load.text('rules', 'assets/text/rules.txt');
-        this.load.video('intro', 'assets/Video/SenaryAdd.mp4', 'loadeddata', false, true);
+        //this.load.text('rules', 'assets/text/rules.txt');
+        this.load.video('rules', 'assets/Video/Walkthrough.mp4', 'loadeddata', false, true);
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -2772,7 +2772,7 @@ var P1 = new Phaser.Class({
           //music.destroy();
           var rule = this.add.image(512, 320, 'back');
           //var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
-          var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
+          var vid = this.add.video(512, 320, 'rules').setInteractive({ useHandCursor: true  } );
           vid.setScale(1/1);
 
          vid.play(true);
