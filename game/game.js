@@ -150,7 +150,7 @@ var Cred = new Phaser.Class({
     setTimeout(() => {
       this.game.sound.stopAll();
       this.scene.start('titles');
-    }, 190000);
+    }, 183000);
   }
 });
 var TitleS = new Phaser.Class({
@@ -2727,8 +2727,8 @@ var P1 = new Phaser.Class({
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         var highScore;
-        var healthText = this.add.text(250, 30, 'Health: 50', { fontSize: '64px', fill: '#fff' });
-        var scoreText = this.add.text(250, 90, 'Score: 30', { fontSize: '64px', fill: '#fff' });
+        var healthText = this.add.text(250, 30, 'Health: 50', { fontSize: '48px', fill: '#fff' });
+        var scoreText = this.add.text(250, 90, 'Score: 30', { fontSize: '48px', fill: '#fff' });
         var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
         var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
         var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
