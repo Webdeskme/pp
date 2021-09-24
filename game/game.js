@@ -685,6 +685,7 @@ var P1 = new Phaser.Class({
               if(reds == c["texture"]["key"]){
                 c.clearTint();
                 reds = "";
+                red = "no";
               }
               else if(c["texture"]["key"] != "EMP"){
                 red = "yes";
