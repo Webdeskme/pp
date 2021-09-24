@@ -2781,7 +2781,7 @@ var P1 = new Phaser.Class({
           var rule = this.add.image(512, 320, 'back');
           //var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
           var vid = this.add.video(512, 320, 'rules').setInteractive({ useHandCursor: true  } );
-          vid.setScale(2/3);
+          vid.setScale(1/2);
 
          vid.play(true);
          /*vid.on('pointerdown', () => {
