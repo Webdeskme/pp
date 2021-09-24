@@ -684,6 +684,7 @@ var P1 = new Phaser.Class({
               th.sound.add('click').play();
               if(reds == c["texture"]["key"]){
                 c.clearTint();
+                reds = "";
               }
               else if(c["texture"]["key"] != "EMP"){
                 red = "yes";
