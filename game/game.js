@@ -678,11 +678,16 @@ var P1 = new Phaser.Class({
             });
           }
           var red = "no";
+          var reds = "";
           function select(c, th, im){
             c.on('pointerdown',function(pointer){
               th.sound.add('click').play();
-              if(c["texture"]["key"] != "EMP"){
+              if(reds == c["texture"]["key"]){
+                c.clearTint();
+              }
+              else if(c["texture"]["key"] != "EMP"){
                 red = "yes";
+                reds = c["texture"]["key"];
                 if (typeof cc !== 'undefined') {
                   cc.clearTint();
                 }
