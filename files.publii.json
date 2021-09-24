@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "4af3c9274938463295be3ef70aaa10c9"
+        "md5": "a3686c674150bd76c6ab29ee8299f108"
     },
     {
         "path": "amp",
@@ -197,7 +197,7 @@
     {
         "path": "/authors/gameswebdeskme/index.html",
         "type": "file",
-        "md5": "4fd1346b3d4ec83b36ffca6856d9a16f"
+        "md5": "7d204ca4a2c5096a6917cbd5855b7188"
     },
     {
         "path": "authors/gameswebdeskme/page",
@@ -212,22 +212,22 @@
     {
         "path": "/authors/gameswebdeskme/page/2/index.html",
         "type": "file",
-        "md5": "c55b9cbc5075dfa1efde153ab3ab4af4"
+        "md5": "02db7ebaef0863879bb38d71dec5aa1a"
     },
     {
         "path": "downloads.html",
         "type": "file",
-        "md5": "f12eb99cb28488d7439ac21f64937dbf"
+        "md5": "48f909ccb79ba8f924c59131f26beafb"
     },
     {
         "path": "index.html",
         "type": "file",
-        "md5": "5146a5bafcf3a46a05fc50c21f968f6a"
+        "md5": "7324a878a9ef8646d6944c65033d800c"
     },
     {
         "path": "into-to-cyber-security.html",
         "type": "file",
-        "md5": "dd575c9876f26960fdedea81e206f8a9"
+        "md5": "a95ac079d0355408b4de4d4e4b01caae"
     },
     {
         "path": "media",
@@ -245,9 +245,9 @@
         "md5": "67b6e07d8d505fb54b2ff27ed64722b2"
     },
     {
-        "path": "/media/website/favicon.ico",
+        "path": "/media/website/favicon.png",
         "type": "file",
-        "md5": "ab8f84bd5e551b29f75c1ffd1b0e7bdd"
+        "md5": "f13b69d7ce9cc904b4c3a0ea71a8f1ce"
     },
     {
         "path": "/media/website/logo-2.png",
@@ -298,6 +298,36 @@
         "path": "/media/website/responsive/bacdrop-xs.png",
         "type": "file",
         "md5": "65ddabec564833c7e91cd428f24fe712"
+    },
+    {
+        "path": "/media/website/responsive/favicon-2xl.png",
+        "type": "file",
+        "md5": "1b47e4129f890d5e2996115bf0862221"
+    },
+    {
+        "path": "/media/website/responsive/favicon-lg.png",
+        "type": "file",
+        "md5": "1b47e4129f890d5e2996115bf0862221"
+    },
+    {
+        "path": "/media/website/responsive/favicon-md.png",
+        "type": "file",
+        "md5": "1b47e4129f890d5e2996115bf0862221"
+    },
+    {
+        "path": "/media/website/responsive/favicon-sm.png",
+        "type": "file",
+        "md5": "1b47e4129f890d5e2996115bf0862221"
+    },
+    {
+        "path": "/media/website/responsive/favicon-xl.png",
+        "type": "file",
+        "md5": "1b47e4129f890d5e2996115bf0862221"
+    },
+    {
+        "path": "/media/website/responsive/favicon-xs.png",
+        "type": "file",
+        "md5": "1b47e4129f890d5e2996115bf0862221"
     },
     {
         "path": "/media/website/responsive/logo-2-2xl.png",
@@ -402,12 +432,12 @@
     {
         "path": "/page/2/index.html",
         "type": "file",
-        "md5": "a42bb36323778a7fe4ea4abd34ef35f7"
+        "md5": "9d28a0dff6964d687ba3573d23685c91"
     },
     {
         "path": "pnp.html",
         "type": "file",
-        "md5": "54a876114bb8235072191a79fed12150"
+        "md5": "6215dd8857788205c807f2b7249c4ec8"
     },
     {
         "path": "robots.txt",
@@ -417,12 +447,12 @@
     {
         "path": "rules.html",
         "type": "file",
-        "md5": "6a5d1c73a56c1b879e85215815733c84"
+        "md5": "e3065ca7f43f721dca2f91505a9b554a"
     },
     {
         "path": "search.html",
         "type": "file",
-        "md5": "93e1b7a7c2a9b6c77557ad301666165e"
+        "md5": "30f43e4079b8a01b942b82213086a8a8"
     },
     {
         "path": "tags",
@@ -432,21 +462,21 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "627a8c994e749f2abecca91cee6b4b3d"
+        "md5": "c1105bd23073c4cac11f59468a520b9b"
     },
     {
         "path": "trailer.html",
         "type": "file",
-        "md5": "3ca4dd7dc20b4dc68aebdbcf0c287262"
+        "md5": "c29357d36bf8a994c274a9163f188ffe"
     },
     {
         "path": "wallpaper.html",
         "type": "file",
-        "md5": "c27edd006821a7b1b6b796626bb2e090"
+        "md5": "ebf502c4ffcd85d243bae360893575b6"
     },
     {
         "path": "welcome.html",
         "type": "file",
-        "md5": "0ee2ceecc986829294897918d2ed49ab"
+        "md5": "deef282fa1ed4d921830cba8355f6952"
     }
 ]
