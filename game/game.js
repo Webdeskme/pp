@@ -365,6 +365,7 @@ var TitleS = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
+      var mobile = "yes";
       this.sound.add('aatitle').play();
       endm = this.sound.add('mwin', {volume: 0.25});
       //endm.loop = true;
@@ -543,10 +544,12 @@ var TitleS = new Phaser.Class({
     if (cursors.left.isDown)
     {
         ship.setAngularVelocity(-150);
+        mobile = "No";
     }
     else if (cursors.right.isDown)
     {
         ship.setAngularVelocity(150);
+        mobile = "No";
     }
     else
     {
@@ -556,11 +559,16 @@ var TitleS = new Phaser.Class({
     if (cursors.up.isDown)
     {
         this.physics.velocityFromRotation(ship.rotation, 600, ship.body.acceleration);
+        mobile = "No";
     }
     else
     {
-        ship.setAcceleration(0);
-        this.physics.velocityFromRotation(ship.rotation, 10, ship.body.acceleration);
+        if(mobile == "No"){
+          ship.setAcceleration(0);
+        }
+        else{
+          this.physics.velocityFromRotation(ship.rotation, 1, ship.body.acceleration);
+        }
     }
 
     if (fire.isDown && time > lastFired)
