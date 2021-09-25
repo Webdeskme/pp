@@ -1,167 +1,12 @@
-var Vide = new Phaser.Class({
+var Win = new Phaser.Class({
 
     Extends: Phaser.Scene,
 
     initialize:
 
-    function Vide ()
+    function Win ()
     {
-        Phaser.Scene.call(this, { key: 'vide' });
-    },
-
-    preload: function ()
-    {
-      this.load.video('intro', 'assets/Video/PiratePortTrailer.mp4', 'loadeddata', false, false);
-      this.load.audio('click', [
-      "assets/Audio/mouseclick.wav"
-      ]);
-
-    },
-
-    create: function ()
-    {
-      this.game.sound.stopAll();
-      //game.scale.startFullscreen();
-     var vid = this.add.video(512, 320, 'intro').setInteractive({ useHandCursor: true  } );
-     vid.setScale(11/20);
-
-    vid.play(true);
-
-    vid.on('pointerdown', () => {
-      this.sound.add('click').play();
-      this.game.sound.stopAll();
-      this.scene.start('titles');
-    });
-
-    // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
-    vid.setPaused(false);
-    setTimeout(() => {
-      this.game.sound.stopAll();
-      this.scene.start('titles');
-    }, 72000);
-  }
-});
-var Puzz = new Phaser.Class({
-
-    Extends: Phaser.Scene,
-
-    initialize:
-
-    function Puzz ()
-    {
-        Phaser.Scene.call(this, { key: 'puzz' });
-    },
-
-    preload: function ()
-    {
-      var pp = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
-      for (let i = 0; i < pp.length; i++) {
-        this.load.image(pp[i], 'assets/puzzle/' + pp[i] + '.png');
-      }
-      this.load.image('back', 'assets/backgrounds/star1.jpg');
-      this.load.audio('click', [
-      "assets/Audio/mouseclick.wav"
-      ]);
-
-    },
-
-    create: function ()
-    {
-      function shuffle(array) {
-          var currentIndex = array.length, temporaryValue, randomIndex;
-
-          // While there remain elements to shuffle...
-          while (0 !== currentIndex) {
-
-            // Pick a remaining element...
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-
-            // And swap it with the current element.
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
-          }
-
-          return array;
-          }
-      this.game.sound.stopAll();
-      this.add.image(512, 320, 'back');
-      var pp = ['sans1', 'sans2', 'sans3', 'sans4', 'sans5', 'sans6', 'sans7', 'sans8', 'sans9', 'sans10', 'sans11', 'sans12', 'sans13', 'sans14', 'sans15', 'sans16'];
-      shuffle(pp);
-      var i;
-      for (let i = 0; i < pp.length; i++) {
-        //var cc = this.add.image(512, 320, 'sans1').setInteractive({ useHandCursor: true  } );
-        var cc = this.add.image(512, 320, pp[i]).setInteractive({ draggable: true , useHandCursor: true } );
-        cc.setScale(1/2);
-        this.input.setDraggable(cc);
-      }
-      this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
-
-        gameObject.x = dragX;
-        gameObject.y = dragY;
-
-    });
-      var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
-      hr.setInteractive({ useHandCursor: true  } );
-      hr.on('pointerdown', () => {
-        this.game.sound.stopAll();
-        this.scene.start('titles');
-      });
-  }
-});
-var Cred = new Phaser.Class({
-
-    Extends: Phaser.Scene,
-
-    initialize:
-
-    function Cred ()
-    {
-        Phaser.Scene.call(this, { key: 'cred' });
-    },
-
-    preload: function ()
-    {
-      this.load.video('cr', 'assets/Video/credits.mp4', 'loadeddata', false, false);
-      this.load.audio('click', [
-      "assets/Audio/mouseclick.wav"
-      ]);
-
-    },
-
-    create: function ()
-    {
-      this.game.sound.stopAll();
-      //game.scale.startFullscreen();
-     var vid1 = this.add.video(512, 320, 'cr').setInteractive({ useHandCursor: true  } );
-     vid1.setScale(11/20);
-
-    vid1.play(true);
-
-    vid1.on('pointerdown', () => {
-      this.sound.add('click').play();
-      this.game.sound.stopAll();
-      this.scene.start('titles');
-    });
-
-    // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
-    vid1.setPaused(false);
-    setTimeout(() => {
-      this.game.sound.stopAll();
-      this.scene.start('titles');
-    }, 183000);
-  }
-});
-var TitleS = new Phaser.Class({
-
-    Extends: Phaser.Scene,
-
-    initialize:
-
-    function TitleS ()
-    {
-        Phaser.Scene.call(this, { key: 'titles' });
+        Phaser.Scene.call(this, { key: 'win' });
     },
 
     preload: function ()
@@ -169,12 +14,6 @@ var TitleS = new Phaser.Class({
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         //this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
-        this.load.image('puzzle', 'assets/Text/puzzle.png');
-        this.load.image('videol', 'assets/Text/video.png');
-        this.load.image('story', 'assets/Text/story.png');
-        this.load.image('credits', 'assets/Text/credits.png');
-        this.load.image('sa', 'assets/Text/sans.png');
-        this.load.image('aii', 'assets/Text/ai.png');
         this.load.image('cb', 'assets/out/back.png');
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -183,12 +22,12 @@ var TitleS = new Phaser.Class({
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
-        this.load.audio('aatitle', [
-        "assets/Audio/title.mp3"
+        this.load.audio('avic', [
+        "assets/Audio/vic.mp3"
         ]);
         this.load.audio('mwin', [
         //"assets/Audio/WinSaw.wav" Knife-Party.mp3
-        "assets/Audio/Space++_By_Alex_McCulloch.mp3"
+        "assets/Audio/catinspace_hq.mp3"
       ]);
         this.load.image('background', 'assets/space/nebula.jpg');
         this.load.image('stars', 'assets/space/stars.png');
@@ -361,10 +200,14 @@ var TitleS = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
-      this.sound.add('aatitle').play();
-      endm = this.sound.add('mwin', {volume: 0.25});
-      //endm.loop = true;
-      endm.play();
+      setTimeout(() => {
+        this.sound.add('avic').play();
+      }, 6000);
+      setTimeout(() => {
+        endm = this.sound.add('mwin');
+        //endm.loop = true;
+        endm.play();
+      }, 9000);
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
@@ -390,7 +233,7 @@ var TitleS = new Phaser.Class({
         var i;
         var c = this.add.image(250, 300, 'cb').setScrollFactor(0,0);
         c.setScale(1/2);
-        //var winText = this.add.text(700, 300, 'Defeat!', { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
+        var winText = this.add.text(700, 300, 'Victory!', { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } ).setScrollFactor(0,0);
           c.setScale(1/2);
@@ -401,114 +244,21 @@ var TitleS = new Phaser.Class({
 
           });
         }
-        var d = this.add.image(900, 50, 'title').setScrollFactor(0,0);
-        var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
-        var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
-        var g = this.add.image(900, 200, 'puzzle').setScrollFactor(0,0);
-        var h = this.add.image(900, 250, 'credits').setScrollFactor(0,0);
-        var j = this.add.image(900, 300, 'aii').setScrollFactor(0,0);
-        var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
+        var d = this.add.image(700, 100, 'title').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
-        e.setInteractive({ useHandCursor: true  } );
-        e.setScale(1/4);
-        f.setInteractive({ useHandCursor: true  } );
-        f.setScale(1/4);
-        g.setInteractive({ useHandCursor: true  } );
-        g.setScale(1/4);
-        h.setInteractive({ useHandCursor: true  } );
-        h.setScale(1/4);
-        j.setInteractive({ useHandCursor: true  } );
-        j.setScale(1/4);
-        k.setInteractive({ useHandCursor: true  } );
-        k.setScale(1/4);
         d.on('pointerover',function(pointer){
           d.setScale(1/3);
         });
         d.on('pointerout',function(pointer){
           d.setScale(1/4);
         });
-        e.on('pointerover',function(pointer){
-          e.setScale(1/3);
-        });
-        e.on('pointerout',function(pointer){
-          e.setScale(1/4);
-        });
-        f.on('pointerover',function(pointer){
-          f.setScale(1/3);
-        });
-        f.on('pointerout',function(pointer){
-          f.setScale(1/4);
-        });
-        g.on('pointerover',function(pointer){
-          g.setScale(1/3);
-        });
-        g.on('pointerout',function(pointer){
-          g.setScale(1/4);
-        });
-        h.on('pointerover',function(pointer){
-          h.setScale(1/3);
-        });
-        h.on('pointerout',function(pointer){
-          h.setScale(1/4);
-        });
-        j.on('pointerover',function(pointer){
-          j.setScale(1/3);
-        });
-        j.on('pointerout',function(pointer){
-          j.setScale(1/4);
-        });
-        k.on('pointerover',function(pointer){
-          k.setScale(1/3);
-        });
-        k.on('pointerout',function(pointer){
-          k.setScale(1/4);
-        });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
           //this.scene.start('p1');
-          window.location.href = "p1.html";
-        });
-        e.on('pointerdown', () => {
-          this.sound.add('click').play();
-          //endm.stop();
-          this.game.sound.stopAll();
-          this.scene.start('vide');
-        });
-        f.on('pointerdown', () => {
-          this.sound.add('click').play();
-          //endm.stop();
-          this.game.sound.stopAll();
-          //this.scene.start('st');
           window.location.href = "story.html";
-        });
-        g.on('pointerdown', () => {
-          this.sound.add('click').play();
-          //endm.stop();
-          this.game.sound.stopAll();
-          this.scene.start('puzz');
-        });
-        h.on('pointerdown', () => {
-          this.sound.add('click').play();
-          //endm.stop();
-          this.game.sound.stopAll();
-          this.scene.start('cred');
-        });
-        j.on('pointerdown', () => {
-          this.sound.add('click').play();
-          //endm.stop();
-          this.game.sound.stopAll();
-          //this.scene.start('ai');
-          window.location.href = "ai.html";
-        });
-        k.on('pointerdown', () => {
-          this.sound.add('click').play();
-          //endm.stop();
-          this.game.sound.stopAll();
-          //this.scene.start('san');
-          window.location.href = "sans.html";
         });
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
@@ -529,7 +279,6 @@ var TitleS = new Phaser.Class({
       gameObject.y = dragY;
 
     });
-    var highscoreText = this.add.text(50, 600, '[<- -> TURN] [^ Thrust] [Spacebar Fire]', { fontSize: '32px', fill: '#fff' }).setScrollFactor(0,0);
   },
   update: function (time, delta)
 {
@@ -590,7 +339,7 @@ var config = {
         }
     },
     backgroundColor: '#000000',
-    scene: [ TitleS, Vide, Puzz, Cred ]
+    scene: [ Win ]
 };
 var bg;
 var stars;
