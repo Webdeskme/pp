@@ -28,7 +28,7 @@ var P1 = new Phaser.Class({
         this.load.image('musicOff', 'assets/icons/sound-off.png');
         this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.image('full', 'assets/icons/expand.png');
-        this.load.image('fire', 'assets/icons/muzzleflash3.png');
+        //this.load.image('fire', 'assets/icons/muzzleflash3.png');
         //this.load.text('rules', 'assets/text/rules.txt');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
         //bill
