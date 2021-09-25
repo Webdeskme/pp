@@ -525,7 +525,8 @@ var TitleS = new Phaser.Class({
             highScore = localStorage.getItem(localStorageName);
         }
         //this.add.bitmapText(16, 0, 'fat-and-tiny', 'SCORE: 0', 32);
-        var scoreText = this.add.bitmapText(475, 400, 'shortStack', 'Last Score: ' + score, 64).setScrollFactor(0,0);
+        var tex = 'Last Score: ' + score;
+        var scoreText = this.add.bitmapText(475, 400, 'shortStack', tex, 64).setScrollFactor(0,0);
         //var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
