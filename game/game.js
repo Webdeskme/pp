@@ -604,7 +604,11 @@ var P1 = new Phaser.Class({
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
         var i;
         for (i = 0; i < cards.length; i++) {
-          this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
+          this.load.image(cards[i], 'assets/cards/' + cards[i] + '.png');
+        }
+        var i;
+        for (i = 0; i < cards.length; i++) {
+          this.load.image(cards[i] + cards[i], 'assets/out/' + cards[i] + '.png');
         }
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
