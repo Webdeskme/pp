@@ -589,11 +589,11 @@ var P1 = new Phaser.Class({
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C"];
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         //this.load.image('title', 'assets/Text/text.png');
-        this.load.image('cb', 'assets/out/back.png');
-        this.load.image('COM', 'assets/out/COM.png');
-        this.load.image('ENGINES', 'assets/out/ENGINES.png');
-        this.load.image('PORT', 'assets/out/PORT.png');
-        this.load.image('Guns', 'assets/out/Guns.png');
+        this.load.image('cb', 'assets/cards/back.png');
+        this.load.image('COM', 'assets/cards/COM.png');
+        this.load.image('ENGINES', 'assets/cards/ENGINES.png');
+        this.load.image('PORT', 'assets/cards/PORT.png');
+        this.load.image('Guns', 'assets/cards/Guns.png');
         this.load.image('END', 'assets/text/end.png');
         this.load.image('SCORE', 'assets/text/SCORE2.png');
         this.load.image('musicOff', 'assets/icons/sound-off.png');
@@ -608,7 +608,8 @@ var P1 = new Phaser.Class({
         }
         var i;
         for (i = 0; i < cards.length; i++) {
-          this.load.image(cards[i] + cards[i], 'assets/out/' + cards[i] + '.png');
+          var zzz = cards[i] + 'big'
+          this.load.image(zzz, 'assets/out/' + cards[i] + '.png');
         }
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
