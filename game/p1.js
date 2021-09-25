@@ -2146,13 +2146,13 @@ var P1 = new Phaser.Class({
 
 
         ////////////////// End Starfield /////////////////////
-        var i;
+        /*var i;
         for (i = 6; i < cards.length; i++) {
           var c = this.add.image(125, 400, cards[i]).setInteractive({ useHandCursor: true  } );
           //c.setScale(1/8);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
           });
-        }
+        }*/
         skill = 0;
         coin = 0;
         total = 0;
