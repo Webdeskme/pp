@@ -97,7 +97,7 @@ var P1 = new Phaser.Class({
           function hove(c, th, im){
             c.on('pointerover',function(pointer){
               big = th.add.image(865, 160, im).setInteractive();
-              big.setScale(1/3);
+              //big.setScale(1/3);
             });
             c.on('pointerout',function(pointer){
               if (typeof big != "undefined") {
