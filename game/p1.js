@@ -2251,7 +2251,7 @@ var P1 = new Phaser.Class({
             //hwnar = null;
           });
         });
-        var h = this.add.bitmapText(15, 15, 'topaz', 'Home', 32);
+        var h = this.add.bitmapText(15, 15, 'topaz', 'Home', 32).setInteractive({ useHandCursor: true  } );
         h.setInteractive();
         h.on('pointerdown', () => {
           this.sound.add('click').play();
