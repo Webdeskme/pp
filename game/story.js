@@ -11,7 +11,7 @@ var St = new Phaser.Class({
 
     preload: function ()
     {
-      this.load.bitmapFont('topaz', 'assets/fonts/topaz.png', 'assets/fonts/topaz.xml');
+      this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
       this.load.image('back', 'assets/backgrounds/star1.jpg');
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
