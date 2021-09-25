@@ -833,7 +833,7 @@ var P1 = new Phaser.Class({
                       }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
@@ -842,28 +842,28 @@ var P1 = new Phaser.Class({
                         cards = cards.concat(dis);
                         dis = [];
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
                       c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-                      c4.setScale(1/8);
+                      //c4.setScale(1/8);
                       hove(c4, th, cards[4] + 'big');
                       select(c4, th, cards[4]);
                       c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-                      c3.setScale(1/8);
+                      //c3.setScale(1/8);
                       hove(c3, th, cards[3] + 'big');
                       select(c3, th, cards[3]);
                       c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-                      c2.setScale(1/8);
+                      //c2.setScale(1/8);
                       hove(c2, th, cards[2] + 'big');
                       select(c2, th, cards[2]);
                       c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-                      c1.setScale(1/8);
+                      //c1.setScale(1/8);
                       hove(c1, th, cards[1] + 'big');
                       select(c1, th, cards[1]);
                       c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-                      c0.setScale(1/8);
+                      //c0.setScale(1/8);
                       hove(c0, th, cards[0] + 'big');
                       select(c0, th, cards[0]);
                     }
@@ -931,103 +931,103 @@ var P1 = new Phaser.Class({
                         }
                     if(l > 15){
                       p15 = th.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-                      p15.setScale(1/8);
+                      //p15.setScale(1/8);
                       hove(p15, th, p[15] + 'big');
                       bselect(p15, th, p[15] + 'big');
                     }
                     if(l > 7){
                       p7 = th.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-                      p7.setScale(1/8);
+                      //p7.setScale(1/8);
                       hove(p7, th, p[7] + 'big');
                       bselect(p7, th, p[7]);
                     }
                     if(l > 8){
                       p8 = th.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-                      p8.setScale(1/8);
+                      //p8.setScale(1/8);
                       hove(p8, th, p[8] + 'big');
                       bselect(p8, th, p[8]);
                     }
                     if(l > 0){
                       p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-                      p0.setScale(1/8);
+                      //p0.setScale(1/8);
                       hove(p0, th, p[0] + 'big');
                       bselect(p0, th, p[0]);
                     }
                     if(l > 9){
                       p9 = th.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-                      p9.setScale(1/8);
+                      //p9.setScale(1/8);
                       hove(p9, th, p[9] + 'big');
                       bselect(p9, th, p[9]);
                     }
                     if(l > 1){
                       p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-                      p1.setScale(1/8);
+                      //p1.setScale(1/8);
                       hove(p1, th, p[1] + 'big');
                       bselect(p1, th, p[1]);
                     }
                     if(l > 10){
                       p10 = th.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-                      p10.setScale(1/8);
+                      ////p10.setScale(1/8);
                       hove(p10, th, p[10] + 'big');
                       bselect(p10, th, p[10]);
                     }
                     if(l > 2){
                       p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-                      p2.setScale(1/8);
+                      //p2.setScale(1/8);
                       hove(p2, th, p[2] + 'big');
                       bselect(p2, th, p[2]);
                     }
                     if(l > 11){
                       p11 = th.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-                      p11.setScale(1/8);
+                      ////p11.setScale(1/8);
                       hove(p11, th, p[11] + 'big');
                       bselect(p11, th, p[11]);
                     }
                     if(l > 3){
                       p3 = th.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-                      p3.setScale(1/8);
+                      //p3.setScale(1/8);
                       hove(p3, th, p[3] + 'big');
                       bselect(p3, th, p[3]);
                     }
                     if(l > 12){
                       p12 = th.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-                      p12.setScale(1/8);
+                      ////p12.setScale(1/8);
                       hove(p12, th, p[12] + 'big');
                       bselect(p12, th, p[12]);
                     }
                     if(l > 4){
                       p4 = th.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-                      p4.setScale(1/8);
+                      //p4.setScale(1/8);
                       hove(p4, th, p[4] + 'big');
                       bselect(p4, th, p[4]);
                     }
                     if(l > 13){
                       p13 = th.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-                      p13.setScale(1/8);
+                      ////p13.setScale(1/8);
                       hove(p13, th, p[13] + 'big');
                       bselect(p13, th, p[13]);
                     }
                     if(l > 16){
                       p16 = th.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-                      p16.setScale(1/8);
+                      //p16.setScale(1/8);
                       hove(p16, th, p[16] + 'big');
                       bselect(p16, th, p[16]);
                     }
                     if(l > 5){
                       p5 = th.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-                      p5.setScale(1/8);
+                      //p5.setScale(1/8);
                       hove(p5, th, p[5] + 'big');
                       bselect(p5, th, p[5]);
                     }
                     if(l > 14){
                       p14 = th.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-                      p14.setScale(1/8);
+                      //p14.setScale(1/8);
                       hove(p14, th, p[14] + 'big');
                       bselect(p14, th, p[14]);
                     }
                     if(l > 6){
                       p6 = th.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-                      p6.setScale(1/8);
+                      //p6.setScale(1/8);
                       hove(p6, th, p[6] + 'big');
                       bselect(p6, th, p[6]);
                     }
@@ -1188,7 +1188,7 @@ var P1 = new Phaser.Class({
                       }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
@@ -1197,28 +1197,28 @@ var P1 = new Phaser.Class({
                         cards = cards.concat(dis);
                         dis = []
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
                       c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-                      c4.setScale(1/8);
+                      //c4.setScale(1/8);
                       hove(c4, th, cards[4] + 'big');
                       select(c4, th, cards[4]);
                       c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-                      c3.setScale(1/8);
+                      //c3.setScale(1/8);
                       hove(c3, th, cards[3] + 'big');
                       select(c3, th, cards[3]);
                       c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-                      c2.setScale(1/8);
+                      //c2.setScale(1/8);
                       hove(c2, th, cards[2] + 'big');
                       select(c2, th, cards[2]);
                       c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-                      c1.setScale(1/8);
+                      //c1.setScale(1/8);
                       hove(c1, th, cards[1] + 'big');
                       select(c1, th, cards[1]);
                       c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-                      c0.setScale(1/8);
+                      //c0.setScale(1/8);
                       hove(c0, th, cards[0] + 'big');
                       select(c0, th, cards[0]);
                     }
@@ -1286,103 +1286,103 @@ var P1 = new Phaser.Class({
                       }
                         if(l > 15){
                           p15 = th.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-                          p15.setScale(1/8);
+                          //p15.setScale(1/8);
                           hove(p15, th, p[15] + 'big');
                           bselect(p15, th, p[15]);
                         }
                         if(l > 7){
                           p7 = th.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-                          p7.setScale(1/8);
+                          //p7.setScale(1/8);
                           hove(p7, th, p[7] + 'big');
                           bselect(p7, th, p[7]);
                         }
                         if(l > 8){
                           p8 = th.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-                          p8.setScale(1/8);
+                          //p8.setScale(1/8);
                           hove(p8, th, p[8] + 'big');
                           bselect(p8, th, p[8]);
                         }
                         if(l > 0){
                           p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-                          p0.setScale(1/8);
+                          //p0.setScale(1/8);
                           hove(p0, th, p[0] + 'big');
                           bselect(p0, th, p[0]);
                         }
                         if(l > 9){
                           p9 = th.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-                          p9.setScale(1/8);
+                          //p9.setScale(1/8);
                           hove(p9, th, p[9] + 'big');
                           bselect(p9, th, p[9]);
                         }
                         if(l > 1){
                           p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-                          p1.setScale(1/8);
+                          //p1.setScale(1/8);
                           hove(p1, th, p[1] + 'big');
                           bselect(p1, th, p[1]);
                         }
                         if(l > 10){
                           p10 = th.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-                          p10.setScale(1/8);
+                          //p10.setScale(1/8);
                           hove(p10, th, p[10] + 'big');
                           bselect(p10, th, p[10]);
                         }
                         if(l > 2){
                           p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-                          p2.setScale(1/8);
+                          //p2.setScale(1/8);
                           hove(p2, th, p[2]) + 'big';
                           bselect(p2, th, p[2]);
                         }
                         if(l > 11){
                           p11 = th.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-                          p11.setScale(1/8);
+                          //p11.setScale(1/8);
                           hove(p11, th, p[11] + 'big');
                           bselect(p11, th, p[11]);
                         }
                         if(l > 3){
                           p3 = th.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-                          p3.setScale(1/8);
+                          //p3.setScale(1/8);
                           hove(p3, th, p[3] + 'big');
                           bselect(p3, th, p[3]);
                         }
                         if(l > 12){
                           p12 = th.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-                          p12.setScale(1/8);
+                          //p12.setScale(1/8);
                           hove(p12, th, p[12] + 'big');
                           bselect(p12, th, p[12]);
                         }
                         if(l > 4){
                           p4 = th.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-                          p4.setScale(1/8);
+                          //p4.setScale(1/8);
                           hove(p4, th, p[4] + 'big');
                           bselect(p4, th, p[4]);
                         }
                         if(l > 13){
                           p13 = th.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-                          p13.setScale(1/8);
+                          //p13.setScale(1/8);
                           hove(p13, th, p[13] + 'big');
                           bselect(p13, th, p[13]);
                         }
                         if(l > 16){
                           p16 = th.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-                          p16.setScale(1/8);
+                          //p16.setScale(1/8);
                           hove(p16, th, p[16] + 'big');
                           bselect(p16, th, p[16]);
                         }
                         if(l > 5){
                           p5 = th.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-                          p5.setScale(1/8);
+                          //p5.setScale(1/8);
                           hove(p5, th, p[5] + 'big');
                           bselect(p5, th, p[5]);
                         }
                         if(l > 14){
                           p14 = th.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-                          p14.setScale(1/8);
+                          //p15.setScale(1/8);
                           hove(p14, th, p[14] + 'big');
                           bselect(p14, th, p[14]);
                         }
                         if(l > 6){
                           p6 = th.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-                          p6.setScale(1/8);
+                          //p6.setScale(1/8);
                           hove(p6, th, p[6] + 'big');
                           bselect(p6, th, p[6]);
                         }
@@ -1543,7 +1543,7 @@ var P1 = new Phaser.Class({
                       }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
@@ -1552,28 +1552,28 @@ var P1 = new Phaser.Class({
                         cards = cards.concat(dis);
                         dis = [];
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
                       c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-                      c4.setScale(1/8);
+                      //c4.setScale(1/8);
                       hove(c4, th, cards[4] + 'big');
                       select(c4, th, cards[4]);
                       c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-                      c3.setScale(1/8);
+                      //c3.setScale(1/8);
                       hove(c3, th, cards[3] + 'big');
                       select(c3, th, cards[3]);
                       c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-                      c2.setScale(1/8);
+                      //c2.setScale(1/8);
                       hove(c2, th, cards[2] + 'big');
                       select(c2, th, cards[2]);
                       c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-                      c1.setScale(1/8);
+                      //c1.setScale(1/8);
                       hove(c1, th, cards[1] + 'big');
                       select(c1, th, cards[1]);
                       c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-                      c0.setScale(1/8);
+                      //c0.setScale(1/8);
                       hove(c0, th, cards[0] + 'big');
                       select(c0, th, cards[0]);
                     }
@@ -1641,103 +1641,103 @@ var P1 = new Phaser.Class({
                       }
                         if(l > 15){
                           p15 = th.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-                          p15.setScale(1/8);
+                          //p15.setScale(1/8);
                           hove(p15, th, p[15] + 'big');
                           bselect(p15, th, p[15]);
                         }
                         if(l > 7){
                           p7 = th.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-                          p7.setScale(1/8);
+                          //p7.setScale(1/8);
                           hove(p7, th, p[7] + 'big');
                           bselect(p7, th, p[7]);
                         }
                         if(l > 8){
                           p8 = th.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-                          p8.setScale(1/8);
+                          //p8.setScale(1/8);
                           hove(p8, th, p[8] + 'big');
                           bselect(p8, th, p[8]);
                         }
                         if(l > 0){
                           p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-                          p0.setScale(1/8);
+                          //p0.setScale(1/8);
                           hove(p0, th, p[0] + 'big');
                           bselect(p0, th, p[0]);
                         }
                         if(l > 9){
                           p9 = th.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-                          p9.setScale(1/8);
+                          //p9.setScale(1/8);
                           hove(p9, th, p[9] + 'big');
                           bselect(p9, th, p[9]);
                         }
                         if(l > 1){
                           p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-                          p1.setScale(1/8);
+                          //p1.setScale(1/8);
                           hove(p1, th, p[1] + 'big');
                           bselect(p1, th, p[1]);
                         }
                         if(l > 10){
                           p10 = th.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-                          p10.setScale(1/8);
+                          //p10.setScale(1/8);
                           hove(p10, th, p[10] + 'big');
                           bselect(p10, th, p[10]);
                         }
                         if(l > 2){
                           p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-                          p2.setScale(1/8);
+                          //p2.setScale(1/8);
                           hove(p2, th, p[2] + 'big');
                           bselect(p2, th, p[2]);
                         }
                         if(l > 11){
                           p11 = th.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-                          p11.setScale(1/8);
+                          //p11.setScale(1/8);
                           hove(p11, th, p[11] + 'big');
                           bselect(p11, th, p[11]);
                         }
                         if(l > 3){
                           p3 = th.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-                          p3.setScale(1/8);
+                          //p3.setScale(1/8);
                           hove(p3, th, p[3] + 'big');
                           bselect(p3, th, p[3]);
                         }
                         if(l > 12){
                           p12 = th.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-                          p12.setScale(1/8);
+                          //p12.setScale(1/8);
                           hove(p12, th, p[12] + 'big');
                           bselect(p12, th, p[12]);
                         }
                         if(l > 4){
                           p4 = th.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-                          p4.setScale(1/8);
+                          //p4.setScale(1/8);
                           hove(p4, th, p[4] + 'big');
                           bselect(p4, th, p[4]);
                         }
                         if(l > 13){
                           p13 = th.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-                          p13.setScale(1/8);
+                          //p13.setScale(1/8);
                           hove(p13, th, p[13] + 'big');
                           bselect(p13, th, p[13]);
                         }
                         if(l > 16){
                           p16 = th.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-                          p16.setScale(1/8);
+                          //p16.setScale(1/8);
                           hove(p16, th, p[16] + 'big');
                           bselect(p16, th, p[16]);
                         }
                         if(l > 5){
                           p5 = th.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-                          p5.setScale(1/8);
+                          //p5.setScale(1/8);
                           hove(p5, th, p[5] + 'big');
                           bselect(p5, th, p[5]);
                         }
                         if(l > 14){
                           p14 = th.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-                          p14.setScale(1/8);
+                          //p15.setScale(1/8);
                           hove(p14, th, p[14] + 'big');
                           bselect(p14, th, p[14]);
                         }
                         if(l > 6){
                           p6 = th.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-                          p6.setScale(1/8);
+                          //p6.setScale(1/8);
                           hove(p6, th, p[6] + 'big');
                           bselect(p6, th, p[6]);
                         }
@@ -1898,7 +1898,7 @@ var P1 = new Phaser.Class({
                       }
                       if (typeof cards[5] !== 'undefined') {
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
@@ -1907,28 +1907,28 @@ var P1 = new Phaser.Class({
                         cards = cards.concat(dis);
                         dis = [];
                         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                        c5.setScale(1/8);
+                        //c5.setScale(1/8);
                         hove(c5, th, cards[5] + 'big');
                         select(c5, th, cards[5]);
                       }
                       c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-                      c4.setScale(1/8);
+                      //c4.setScale(1/8);
                       hove(c4, th, cards[4] + 'big');
                       select(c4, th, cards[4]);
                       c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-                      c3.setScale(1/8);
+                      //c3.setScale(1/8);
                       hove(c3, th, cards[3] + 'big');
                       select(c3, th, cards[3]);
                       c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-                      c2.setScale(1/8);
+                      //c2.setScale(1/8);
                       hove(c2, th, cards[2] + 'big');
                       select(c2, th, cards[2]);
                       c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-                      c1.setScale(1/8);
+                      //c1.setScale(1/8);
                       hove(c1, th, cards[1] + 'big');
                       select(c1, th, cards[1]);
                       c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-                      c0.setScale(1/8);
+                      //c0.setScale(1/8);
                       hove(c0, th, cards[0] + 'big');
                       select(c0, th, cards[0]);
                     }
@@ -1996,103 +1996,103 @@ var P1 = new Phaser.Class({
                       }
                         if(l > 15){
                           p15 = th.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-                          p15.setScale(1/8);
+                          //p15.setScale(1/8);
                           hove(p15, th, p[15] + 'big');
                           bselect(p15, th, p[15]);
                         }
                         if(l > 7){
                           p7 = th.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-                          p7.setScale(1/8);
+                          //p7.setScale(1/8);
                           hove(p7, th, p[7] + 'big');
                           bselect(p7, th, p[7]);
                         }
                         if(l > 8){
                           p8 = th.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-                          p8.setScale(1/8);
+                          //p8.setScale(1/8);
                           hove(p8, th, p[8] + 'big');
                           bselect(p8, th, p[8]);
                         }
                         if(l > 0){
                           p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-                          p0.setScale(1/8);
+                          //p0.setScale(1/8);
                           hove(p0, th, p[0] + 'big');
                           bselect(p0, th, p[0]);
                         }
                         if(l > 9){
                           p9 = th.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-                          p9.setScale(1/8);
+                          //p9.setScale(1/8);
                           hove(p9, th, p[9] + 'big');
                           bselect(p9, th, p[9]);
                         }
                         if(l > 1){
                           p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-                          p1.setScale(1/8);
+                          //p1.setScale(1/8);
                           hove(p1, th, p[1] + 'big');
                           bselect(p1, th, p[1]);
                         }
                         if(l > 10){
                           p10 = th.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-                          p10.setScale(1/8);
+                          //p10.setScale(1/8);
                           hove(p10, th, p[10] + 'big');
                           bselect(p10, th, p[10]);
                         }
                         if(l > 2){
                           p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-                          p2.setScale(1/8);
+                          //p2.setScale(1/8);
                           hove(p2, th, p[2] + 'big');
                           bselect(p2, th, p[2]);
                         }
                         if(l > 11){
                           p11 = th.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-                          p11.setScale(1/8);
+                          //p11.setScale(1/8);
                           hove(p11, th, p[11] + 'big');
                           bselect(p11, th, p[11]);
                         }
                         if(l > 3){
                           p3 = th.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-                          p3.setScale(1/8);
+                          //p3.setScale(1/8);
                           hove(p3, th, p[3] + 'big');
                           bselect(p3, th, p[3]);
                         }
                         if(l > 12){
                           p12 = th.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-                          p12.setScale(1/8);
+                          //p12.setScale(1/8);
                           hove(p12, th, p[12] + 'big');
                           bselect(p12, th, p[12]);
                         }
                         if(l > 4){
                           p4 = th.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-                          p4.setScale(1/8);
+                          //p4.setScale(1/8);
                           hove(p4, th, p[4] + 'big');
                           bselect(p4, th, p[4]);
                         }
                         if(l > 13){
                           p13 = th.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-                          p13.setScale(1/8);
+                          //p13.setScale(1/8);
                           hove(p13, th, p[13] + 'big');
                           bselect(p13, th, p[13]);
                         }
                         if(l > 16){
                           p16 = th.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-                          p16.setScale(1/8);
+                          //p16.setScale(1/8);
                           hove(p16, th, p[16] + 'big');
                           bselect(p16, th, p[16]);
                         }
                         if(l > 5){
                           p5 = th.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-                          p5.setScale(1/8);
+                          //p5.setScale(1/8);
                           hove(p5, th, p[5] + 'big');
                           bselect(p5, th, p[5]);
                         }
                         if(l > 14){
                           p14 = th.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-                          p14.setScale(1/8);
+                          //p15.setScale(1/8);
                           hove(p14, th, p[14] + 'big');
                           bselect(p14, th, p[14]);
                         }
                         if(l > 6){
                           p6 = th.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-                          p6.setScale(1/8);
+                          //p6.setScale(1/8);
                           hove(p6, th, p[6]) + 'big';
                           bselect(p6, th, p[6]);
                         }
@@ -2149,7 +2149,7 @@ var P1 = new Phaser.Class({
         var i;
         for (i = 6; i < cards.length; i++) {
           var c = this.add.image(125, 400, cards[i]).setInteractive({ useHandCursor: true  } );
-          c.setScale(1/8);
+          //c.setScale(1/8);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
           });
         }
@@ -2260,7 +2260,7 @@ var P1 = new Phaser.Class({
           //music.destroy();
         });
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
-        cb.setScale(1/8);
+        //cb.setScale(1/8);
         hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
         var tscore = this.add.image(825, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
@@ -2477,7 +2477,7 @@ var P1 = new Phaser.Class({
           dis.push(c0["texture"]["key"]);
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-            c5.setScale(1/8);
+            //c5.setScale(1/8);
             hove(c5, this, cards[5] + 'big');
             select(c5, this, cards[5]);
           }
@@ -2486,28 +2486,28 @@ var P1 = new Phaser.Class({
             cards = cards.concat(dis);
             dis = [];
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-            c5.setScale(1/8);
+            //c5.setScale(1/8);
             hove(c5, this, cards[5] + 'big');
             select(c5, this, cards[5]);
           }
           c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-          c4.setScale(1/8);
+          //c4.setScale(1/8);
           hove(c4, this, cards[4] + 'big');
           select(c4, this, cards[4]);
           c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-          c3.setScale(1/8);
+          //c3.setScale(1/8);
           hove(c3, this, cards[3] + 'big');
           select(c3, this, cards[3]);
           c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-          c2.setScale(1/8);
+          //c2.setScale(1/8);
           hove(c2, this, cards[2] + 'big');
           select(c2, this, cards[2]);
           c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-          c1.setScale(1/8);
+          //c1.setScale(1/8);
           hove(c1, this, cards[1] + 'big');
           select(c1, this, cards[1]);
           c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-          c0.setScale(1/8);
+          //c0.setScale(1/8);
           hove(c0, this, cards[0] + 'big');
           select(c0, this, cards[0]);
           var z = hand - 1;
@@ -2548,161 +2548,161 @@ var P1 = new Phaser.Class({
           console.log(p);
           if(hand > 15 && typeof p[15] != 'undefined'){
             p15 = this.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-            p15.setScale(1/8);
+            //p15.setScale(1/8);
             hove(p15, this, p[15] + 'big');
             bselect(p15, this, p[15]);
           }
           if(hand > 7 && typeof p[7] != 'undefined'){
             p7 = this.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-            p7.setScale(1/8);
+            //p7.setScale(1/8);
             hove(p7, this, p[7] + 'big');
             bselect(p7, this, p[7]);
           }
           if(hand > 8 && typeof p[8] != 'undefined'){
             p8 = this.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-            p8.setScale(1/8);
+            //p8.setScale(1/8);
             hove(p8, this, p[8] + 'big');
             bselect(p8, this, p[8]);
           }
           if(hand > 0 && typeof p[0] != 'undefined'){
             p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-            p0.setScale(1/8);
+            //p0.setScale(1/8);
             hove(p0, this, p[0] + 'big');
             bselect(p0, this, p[0]);
           }
           if(hand > 9 && typeof p[9] != 'undefined'){
             p9 = this.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-            p9.setScale(1/8);
+            //p9.setScale(1/8);
             hove(p9, this, p[9] + 'big');
             bselect(p9, this, p[9]);
           }
           if(hand > 1 && typeof p[1] != 'undefined'){
             p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-            p1.setScale(1/8);
+            //p1.setScale(1/8);
             hove(p1, this, p[1] + 'big');
             bselect(p1, this, p[1]);
           }
           if(hand > 10 && typeof p[10] != 'undefined'){
             p10 = this.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-            p10.setScale(1/8);
+            //p10.setScale(1/8);
             hove(p10, this, p[10] + 'big');
             bselect(p10, this, p[10]);
           }
           if(hand > 2 && typeof p[2] != 'undefined'){
             p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-            p2.setScale(1/8);
+            //p2.setScale(1/8);
             hove(p2, this, p[2] + 'big');
             bselect(p2, this, p[2]);
           }
           if(hand > 11 && typeof p[11] != 'undefined'){
             p11 = this.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-            p11.setScale(1/8);
+            //p11.setScale(1/8);
             hove(p11, this, p[11] + 'big');
             bselect(p11, this, p[11]);
           }
           if(hand > 3 && typeof p[3] != 'undefined'){
             p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-            p3.setScale(1/8);
+            //p3.setScale(1/8);
             hove(p3, this, p[3] + 'big');
             bselect(p3, this, p[3]);
           }
           if(hand > 12 && typeof p[12] != 'undefined'){
             p12 = this.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-            p12.setScale(1/8);
+            //p12.setScale(1/8);
             hove(p12, this, p[12] + 'big');
             bselect(p12, this, p[12]);
           }
           if(hand > 4 && typeof p[4] != 'undefined'){
             p4 = this.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-            p4.setScale(1/8);
+            //p4.setScale(1/8);
             hove(p4, this, p[4] + 'big');
             bselect(p4, this, p[4]);
           }
           if(hand > 13 && typeof p[13] != 'undefined'){
             p13 = this.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-            p13.setScale(1/8);
+            //p13.setScale(1/8);
             hove(p13, this, p[13] + 'big');
             bselect(p13, this, p[13]);
           }
           if(hand > 16 && typeof p[16] != 'undefined'){
             p16 = this.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-            p16.setScale(1/8);
+            //p16.setScale(1/8);
             hove(p16, this, p[16] + 'big');
             bselect(p16, this, p[16]);
           }
           if(hand > 5 && typeof p[5] != 'undefined'){
             p5 = this.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-            p5.setScale(1/8);
+            //p5.setScale(1/8);
             hove(p5, this, p[5] + 'big');
             bselect(p5, this, p[5]);
           }
           if(hand > 14 && typeof p[14] != 'undefined'){
             p14 = this.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-            p14.setScale(1/8);
+            //p15.setScale(1/8);
             hove(p14, this, p[14] + 'big');
             bselect(p14, this, p[14]);
           }
           if(hand > 6 && typeof p[6] != 'undefined'){
             p6 = this.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-            p6.setScale(1/8);
+            //p6.setScale(1/8);
             hove(p6, this, p[6] + 'big');
             bselect(p6, this, p[6]);
           }
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-        c5.setScale(1/8);
+        //c5.setScale(1/8);
         hove(c5, this, cards[5] + 'big');
         select(c5, this, cards[5]);
         c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-        c4.setScale(1/8);
+        //c4.setScale(1/8);
         hove(c4, this, cards[4] + 'big');
         select(c4, this, cards[4]);
         c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-        c3.setScale(1/8);
+        //c3.setScale(1/8);
         hove(c3, this, cards[3] + 'big');
         select(c3, this, cards[3]);
         c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-        c2.setScale(1/8);
+        //c2.setScale(1/8);
         hove(c2, this, cards[2] + 'big');
         select(c2, this, cards[2]);
         c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-        c1.setScale(1/8);
+        //c1.setScale(1/8);
         hove(c1, this, cards[1] + 'big');
         select(c1, this, cards[1]);
         c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-        c0.setScale(1/8);
+        //c0.setScale(1/8);
         hove(c0, this, cards[0] + 'big');
         select(c0, this, cards[0]);
         cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
-        cc.setScale(1/8);
+        //cc.setScale(1/8);
         hove(cc, this, 'COMbig');
         select(cc, this, 'COM');
         ce = this.add.image(375, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
-        ce.setScale(1/8);
+        //ce.setScale(1/8);
         hove(ce, this, 'ENGINESbig');
         select(ce, this, 'ENGINES');
         cp = this.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
-        cp.setScale(1/8);
+        //cp.setScale(1/8);
         hove(cp, this, 'PORTbig');
         select(cp, this, 'PORT');
         cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
-        cg.setScale(1/8);
+        //cg.setScale(1/8);
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-        p0.setScale(1/8);
+        //p0.setScale(1/8);
         hove(p0, this, p[0] + 'big');
         bselect(p0, this, p[0]);
         p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-        p1.setScale(1/8);
+        //p1.setScale(1/8);
         hove(p1, this, p[1] + 'big');
         bselect(p1, this, p[1]);
         p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-        p2.setScale(1/8);
+        //p2.setScale(1/8);
         hove(p2, this, p[2] + 'big');
         bselect(p2, this, p[2]);
         p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-        p3.setScale(1/8);
+        //p3.setScale(1/8);
         hove(p3, this, p[3] + 'big');
         bselect(p3, this, p[3]);
 
