@@ -340,7 +340,7 @@ var TitleS = new Phaser.Class({
 
     ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
 
-    ship.setInteractive({ draggable: true , useHandCursor: true } )
+    //ship.setInteractive({ draggable: true , useHandCursor: true } )
     //this.input.setDraggable(ship);
 //bill
     ship.setDrag(300);
@@ -353,7 +353,7 @@ var TitleS = new Phaser.Class({
 
     cursors = this.input.keyboard.createCursorKeys();
     fire = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
-    cursors = this.input.setDraggable(ship);
+    //touch = this.input.setDraggable(ship);
 
     //this.add.sprite(4300, 3000).play('asteroid1-anim');
 
@@ -560,7 +560,7 @@ var TitleS = new Phaser.Class({
     }
     else
     {
-        ship.setAcceleration(0);
+        ship.setAcceleration(100);
     }
 
     if (fire.isDown && time > lastFired)
