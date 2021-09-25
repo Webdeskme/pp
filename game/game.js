@@ -102,7 +102,8 @@ var Puzz = new Phaser.Class({
         gameObject.y = dragY;
 
     });
-      var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+      //var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+      var hr = this.add.bitmapText(16, 16, 'topaz', 'Back', 32).setScrollFactor(0,0);
       hr.setInteractive({ useHandCursor: true  } );
       hr.on('pointerdown', () => {
         this.game.sound.stopAll();
