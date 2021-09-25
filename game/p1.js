@@ -12,6 +12,7 @@ var P1 = new Phaser.Class({
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C"];
+        this.load.bitmapFont('topaz', 'assets/fonts/topaz.png', 'assets/fonts/topaz.xml');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         //this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/cards/back.png');
@@ -31,7 +32,6 @@ var P1 = new Phaser.Class({
         //this.load.image('fire', 'assets/icons/muzzleflash3.png');
         //this.load.text('rules', 'assets/text/rules.txt');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
-        this.load.bitmapFont('topaz', 'assets/fonts/topaz.png', 'assets/fonts/topaz.xml');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/cards/' + cards[i] + '.png');

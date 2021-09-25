@@ -12,6 +12,7 @@ var Win = new Phaser.Class({
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
+        this.load.bitmapFont('topaz', 'assets/fonts/topaz.png', 'assets/fonts/topaz.xml');
         //this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/out/back.png');
@@ -233,7 +234,7 @@ var Win = new Phaser.Class({
         var i;
         var c = this.add.image(250, 300, 'cb').setScrollFactor(0,0);
         //c.setScale(1/2);
-        var winText = this.add.text(700, 300, 'Victory!', { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
+        var winText = this.add.bitmapText(700, 300, 'topaz', 'Victory!', 64).setScrollFactor(0,0);
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } ).setScrollFactor(0,0);
           //c.setScale(1/2);
@@ -272,8 +273,8 @@ var Win = new Phaser.Class({
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
-        var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
-        var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
+        var scoreText = this.add.bitmapText(475, 400, 'topaz', 'Last Score: ' + score, 64).setScrollFactor(0,0);
+        var highscoreText = this.add.bitmapText(475, 500, 'topaz', 'Best Score: ' + highScore, 64).setScrollFactor(0,0);
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
