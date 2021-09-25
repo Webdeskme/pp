@@ -32,11 +32,11 @@ var P1 = new Phaser.Class({
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/cards/' + cards[i] + '.png');
         }
-        /*var i;
+        var i;
         for (i = 0; i < cards.length; i++) {
           var zzz = cards[i] + 'big';
           this.load.image(zzz, 'assets/out/' + cards[i] + '.png');
-        }*/
+        }
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
@@ -799,7 +799,8 @@ var P1 = new Phaser.Class({
                             localStorage.setItem(localStorageName, score);
                           }
                           localStorage.setItem(localStorageTemp, score);
-                          th.scene.start('win');
+                          //th.scene.start('win');
+                          window.location.href = "win.html";
                       }
                       if(temp2 == "COM"){
                         th.sound.add('comp').play();
@@ -1157,7 +1158,8 @@ var P1 = new Phaser.Class({
                         localStorage.setItem(localStorageName, score);
                       }
                       localStorage.setItem(localStorageTemp, score);
-                      th.scene.start('win');
+                      //th.scene.start('win');
+                      window.location.href = "win.html";
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1511,7 +1513,8 @@ var P1 = new Phaser.Class({
                         localStorage.setItem(localStorageName, score);
                       }
                       localStorage.setItem(localStorageTemp, score);
-                      th.scene.start('win');
+                      //th.scene.start('win');
+                      window.location.href = "win.html";
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -1865,7 +1868,8 @@ var P1 = new Phaser.Class({
                         localStorage.setItem(localStorageName, score);
                       }
                       localStorage.setItem(localStorageTemp, score);
-                      th.scene.start('win');
+                      //th.scene.start('win');
+                      window.location.href = "win.html";
                     }
                     if(temp2 == "COM"){
                       cc.destroy();
@@ -2247,7 +2251,8 @@ var P1 = new Phaser.Class({
         h.on('pointerdown', () => {
           this.sound.add('click').play();
           this.game.sound.stopAll();
-          this.scene.start('titles');
+          //this.scene.start('titles');
+          window.location.href = "game.html";
           //music.destroy();
         });
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
@@ -2458,7 +2463,8 @@ var P1 = new Phaser.Class({
           if(health < 1){
               this.sound.add('mlose').play();
               this.game.sound.stopAll();
-              this.scene.start('lose');
+              //this.scene.start('lose');
+              window.location.href = "lose.html";
           }
           healthText.setText('Health:' + health);
           var t = cards.indexOf(c0["texture"]["key"]);
