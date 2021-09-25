@@ -93,7 +93,7 @@ var Puzz = new Phaser.Class({
       for (let i = 0; i < pp.length; i++) {
         //var cc = this.add.image(512, 320, 'sans1').setInteractive({ useHandCursor: true  } );
         var cc = this.add.image(512, 320, pp[i]).setInteractive({ draggable: true , useHandCursor: true } );
-        cc.setScale(1/2);
+        //cc.setScale(1/2);
         this.input.setDraggable(cc);
       }
       this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
