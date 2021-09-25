@@ -560,7 +560,7 @@ var TitleS = new Phaser.Class({
     else
     {
         //ship.setAcceleration(0);
-        this.physics.velocityFromRotation(ship.rotation, 100, ship.body.acceleration);
+        this.physics.velocityFromRotation(ship.rotation, 10, ship.body.acceleration);
     }
 
     if (fire.isDown && time > lastFired)
