@@ -15,10 +15,10 @@ var P1 = new Phaser.Class({
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         //this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/cards/back.png');
-        this.load.image('COM', 'assets/cards/COM.png');
+        /*this.load.image('COM', 'assets/cards/COM.png');
         this.load.image('ENGINES', 'assets/cards/ENGINES.png');
         this.load.image('PORT', 'assets/cards/PORT.png');
-        this.load.image('Guns', 'assets/cards/Guns.png');
+        this.load.image('Guns', 'assets/cards/Guns.png');*/
         this.load.image('END', 'assets/text/end.png');
         this.load.image('SCORE', 'assets/text/SCORE2.png');
         this.load.image('musicOff', 'assets/icons/sound-off.png');
