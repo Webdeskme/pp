@@ -189,7 +189,6 @@ var TitleS = new Phaser.Class({
         "assets/Audio/title.mp3"
         ]);
         this.load.audio('mwin', [
-        //"assets/Audio/WinSaw.wav" Knife-Party.mp3
         "assets/Audio/Space++_By_Alex_McCulloch.mp3"
       ]);
         this.load.image('background', 'assets/space/nebula.jpg');
@@ -340,6 +339,9 @@ var TitleS = new Phaser.Class({
     });
 
     ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
+
+    ship.setInteractive({ draggable: true , useHandCursor: true } )
+    this.input.setDraggable(ship);
 
     ship.setDrag(300);
     ship.setAngularDrag(400);
