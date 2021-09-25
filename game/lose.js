@@ -234,7 +234,7 @@ var Lose = new Phaser.Class({
         var i;
         var c = this.add.image(250, 300, 'cb').setScrollFactor(0,0);
         //c.setScale(1/2);
-        var winText = this.add.bitmapText(700, 300, 'topsz', 'Defeat!', 64).setScrollFactor(0,0);
+        var winText = this.add.bitmapText(700, 300, 'topaz', 'Defeat!', 64).setScrollFactor(0,0);
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } ).setScrollFactor(0,0);
           //c.setScale(1/2);

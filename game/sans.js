@@ -11,6 +11,7 @@ var San = new Phaser.Class({
 
     preload: function ()
     {
+      this.load.bitmapFont('topaz', 'assets/fonts/topaz.png', 'assets/fonts/topaz.xml');
       this.load.image('back', 'assets/backgrounds/star1.jpg');
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
@@ -23,7 +24,7 @@ var San = new Phaser.Class({
       this.add.image(512, 320, 'back');
       var sto = this.add.dom(512, 320).createFromHTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/h3uIYEYpw7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
       sto.setScale(3/2);
-      var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+      var hr = this.add.bitmapText(16, 16, 'topaz', 'Back', 32);
       hr.setInteractive({ useHandCursor: true  } );
       hr.on('pointerdown', () => {
         this.game.sound.stopAll();
