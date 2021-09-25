@@ -232,11 +232,11 @@ var Lose = new Phaser.Class({
         //this.add.image(512, 320, 'back').setScrollFactor(0,0);
         var i;
         var c = this.add.image(250, 300, 'cb').setScrollFactor(0,0);
-        c.setScale(1/2);
+        //c.setScale(1/2);
         var winText = this.add.text(700, 300, 'Defeat!', { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         for (i = 0; i < cards.length; i++) {
           var c = this.add.image(250, 300, cards[i]).setInteractive({ useHandCursor: true  } ).setScrollFactor(0,0);
-          c.setScale(1/2);
+          //c.setScale(1/2);
           //this.input.setDraggable(c);
           this.input.on('gameobjectdown', function (pointer, gameObject) {
               //this.sound.add('click').play();
