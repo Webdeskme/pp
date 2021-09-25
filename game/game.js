@@ -365,6 +365,7 @@ var TitleS = new Phaser.Class({
     });
 
       //////////////////////////////////////////////////////////////
+      mobile = "yes";
       this.sound.add('aatitle').play();
       endm = this.sound.add('mwin', {volume: 0.25});
       //endm.loop = true;
@@ -540,7 +541,6 @@ var TitleS = new Phaser.Class({
   },
   update: function (time, delta)
 {
-  var mobile = "yes";
     if (cursors.left.isDown)
     {
         ship.setAngularVelocity(-150);
