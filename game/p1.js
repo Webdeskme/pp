@@ -31,7 +31,7 @@ var P1 = new Phaser.Class({
         //this.load.image('fire', 'assets/icons/muzzleflash3.png');
         //this.load.text('rules', 'assets/text/rules.txt');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
-        //bill
+        this.load.bitmapFont('topaz', 'assets/fonts/topaz.png', 'assets/fonts/topaz.xml');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/cards/' + cards[i] + '.png');
@@ -2173,13 +2173,14 @@ var P1 = new Phaser.Class({
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         var highScore;
-        var healthText = this.add.text(250, 30, 'Health: 50', { fontSize: '48px', fill: '#fff' });
-        var scoreText = this.add.text(250, 90, 'Score: 30', { fontSize: '48px', fill: '#fff' });
-        var skillText = this.add.text(15, 65, 'Skill: 0', { fontSize: '32px', fill: '#fff' });
-        var coinText = this.add.text(15, 90, 'Coins: 0', { fontSize: '32px', fill: '#fff' });
-        var totalText = this.add.text(15, 115, 'Total: 0', { fontSize: '32px', fill: '#fff' });
-        var cardText = this.add.text(15, 140, 'Cards: 0', { fontSize: '32px', fill: '#fff' });
-        var r = this.add.text(800, 15, 'Rules', { fontSize: '32px', fill: '#fff' });
+        //var scoreText = this.add.bitmapText(475, 400, 'topaz', 'Last Score: ' + score, 64).setScrollFactor(0,0);
+        var healthText = this.add.bitmapText(250, 30, 'topaz', 'Health: 50', 48);
+        var scoreText = this.add.bitmapText(250, 90, 'topaz', 'Score: 30', 48);
+        var skillText = this.add.bitmapText(15, 65, 'topaz', 'Skill: 0', 32);
+        var coinText = this.add.bitmapText(15, 90, 'topaz', 'Coins: 0', 32);
+        var totalText = this.add.bitmapText(15, 115, 'topaz', 'Total: 0', 32);
+        var cardText = this.add.bitmapText(15, 140, 'topaz', 'Cards: 0', 32);
+        var r = this.add.bitmapText(800, 15, 'topaz', 'Rules', 32);
         mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
         mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
         fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
@@ -2235,7 +2236,7 @@ var P1 = new Phaser.Class({
            this.scene.start('titles');
          }, 41000);*/
          vid.setPaused(false);
-          var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+          var hr = this.add.bitmapText(16, 16, 'topaz', 'Back', 32);
           hr.setInteractive({ useHandCursor: true  } );
           //hwnar.play();
           hr.on('pointerdown', () => {
@@ -2250,7 +2251,7 @@ var P1 = new Phaser.Class({
             //hwnar = null;
           });
         });
-        var h = this.add.text(15, 15, 'Home', { fontSize: '32px', fill: '#fff' });
+        var h = this.add.bitmapText(15, 15, 'topaz', 'Home', 32);
         h.setInteractive();
         h.on('pointerdown', () => {
           this.sound.add('click').play();
