@@ -342,7 +342,6 @@ var TitleS = new Phaser.Class({
 
     //ship.setInteractive({ draggable: true , useHandCursor: true } )
     //this.input.setDraggable(ship);
-//bill
     ship.setDrag(300);
     ship.setAngularDrag(400);
     ship.setMaxVelocity(600);
@@ -560,7 +559,8 @@ var TitleS = new Phaser.Class({
     }
     else
     {
-        ship.setAcceleration(100);
+        //ship.setAcceleration(100);
+        this.physics.velocityFromRotation(ship.rotation, 100, ship.body.acceleration);
     }
 
     if (fire.isDown && time > lastFired)
