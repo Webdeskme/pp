@@ -41,14 +41,11 @@ var config = {
       height: 640,
       autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    physics: {
-        default: 'arcade',
-        arcade: {
-            debug: false
-        }
-    },
     dom: {
         createContainer: true
+    },
+    render: {
+      clearBeforeRender: false
     },
     enableDebug: false,
     backgroundColor: '#000000',
