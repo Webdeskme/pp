@@ -525,16 +525,16 @@ var TitleS = new Phaser.Class({
             highScore = localStorage.getItem(localStorageName);
         }
         //this.add.bitmapText(16, 0, 'fat-and-tiny', 'SCORE: 0', 32);
-        var tex = 'Last Score: ' + score;
-        var scoreText = this.add.bitmapText(475, 400, 'topaz-green', tex, 64).setScrollFactor(0,0);
+        var scoreText = this.add.bitmapText(475, 400, 'topaz-green', 'Last Score: ' + score, 64).setScrollFactor(0,0);
         //var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
-        var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
+        //var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
+        var highscoreText = this.add.bitmapText(475, 500, 'topaz-green', 'Best Score: ' + highScore, 64).setScrollFactor(0,0);
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
 
     });
-    var highscoreText = this.add.text(50, 600, '[<- -> TURN] [^ Thrust] [Spacebar Fire]', { fontSize: '32px', fill: '#fff' }).setScrollFactor(0,0);
+    this.add.bitmapText(50, 600, 'topaz-green', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
   },
   update: function (time, delta)
 {
