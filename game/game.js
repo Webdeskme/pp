@@ -167,6 +167,8 @@ var TitleS = new Phaser.Class({
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
+        this.load.bitmapFont('fat-and-tiny');
+        //this.load.bitmapFont('interfont');
         //this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('puzzle', 'assets/Text/puzzle.png');
@@ -522,7 +524,9 @@ var TitleS = new Phaser.Class({
         } else {
             highScore = localStorage.getItem(localStorageName);
         }
-        var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
+        //this.add.bitmapText(16, 0, 'fat-and-tiny', 'SCORE: 0', 32);
+        var scoreText = this.add.bitmapText(475, 400, 'fat-and-tiny', 'Last Score: ' + score, 64).setScrollFactor(0,0);
+        //var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
