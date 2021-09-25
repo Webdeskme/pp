@@ -589,6 +589,7 @@ var config = {
             debug: false
         }
     },
+    enableDebug: false,
     backgroundColor: '#000000',
     scene: [ TitleS, Vide, Puzz, Cred ]
 };

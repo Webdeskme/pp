@@ -338,6 +338,7 @@ var config = {
             debug: false
         }
     },
+    enableDebug: false,
     backgroundColor: '#000000',
     scene: [ Win ]
 };

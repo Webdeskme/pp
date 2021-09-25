@@ -2750,6 +2750,7 @@ var config = {
       height: 640,
       autoCenter: Phaser.Scale.CENTER_BOTH
     },
+     enableDebug: false,
     backgroundColor: '#000000',
     scene: [ P1 ]
 };

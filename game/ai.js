@@ -50,6 +50,7 @@ var config = {
     dom: {
         createContainer: true
     },
+    enableDebug: false,
     backgroundColor: '#000000',
     scene: [ Ai ]
 };
