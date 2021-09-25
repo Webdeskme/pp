@@ -559,7 +559,7 @@ var TitleS = new Phaser.Class({
     }
     else
     {
-        //ship.setAcceleration(0);
+        ship.setAcceleration(0);
         this.physics.velocityFromRotation(ship.rotation, 10, ship.body.acceleration);
     }
 
