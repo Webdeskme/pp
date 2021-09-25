@@ -11,14 +11,18 @@ var P1 = new Phaser.Class({
 
     preload: function ()
     {
-        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C", "COM", "Guns", "PORT", "ENGINES"];
+        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C"];
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         //this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/cards/back.png');
-        /*this.load.image('COM', 'assets/cards/COM.png');
+        this.load.image('COM', 'assets/cards/COM.png');
         this.load.image('ENGINES', 'assets/cards/ENGINES.png');
         this.load.image('PORT', 'assets/cards/PORT.png');
-        this.load.image('Guns', 'assets/cards/Guns.png');*/
+        this.load.image('Guns', 'assets/cards/Guns.png');
+        this.load.image('COMbig', 'assets/out/COM.png');
+        this.load.image('ENGINESbig', 'assets/out/ENGINES.png');
+        this.load.image('PORTbig', 'assets/out/PORT.png');
+        this.load.image('Gunsbig', 'assets/out/Guns.png');
         this.load.image('END', 'assets/text/end.png');
         this.load.image('SCORE', 'assets/text/SCORE2.png');
         this.load.image('musicOff', 'assets/icons/sound-off.png');
@@ -2671,15 +2675,15 @@ var P1 = new Phaser.Class({
         select(c0, this, cards[0]);
         cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
         cc.setScale(1/8);
-        hove(cc, this, 'COM' + 'big');
+        hove(cc, this, 'COMbig');
         select(cc, this, 'COM');
         ce = this.add.image(375, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
         ce.setScale(1/8);
-        hove(ce, this, 'ENGINES' + 'big');
+        hove(ce, this, 'ENGINESbig');
         select(ce, this, 'ENGINES');
         cp = this.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
         cp.setScale(1/8);
-        hove(cp, this, 'PORT' + 'big');
+        hove(cp, this, 'PORTbig');
         select(cp, this, 'PORT');
         cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         cg.setScale(1/8);
