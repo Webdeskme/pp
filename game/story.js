@@ -22,7 +22,7 @@ var St = new Phaser.Class({
     create: function ()
     {
       this.add.image(512, 320, 'back');
-      var sto = this.add.dom(512, 320).createFromHTML('<iframe width="560" height="315" src="https://pp.webdesk.me/story" frameborder="0"></iframe>');
+      var sto = this.add.dom(512, 320).createFromHTML('<iframe width="560" height="315" src="twine.html" frameborder="0"></iframe>');
       sto.setScale(3/2);
       var hr = this.add.bitmapText(16, 16, 'topaz', 'Back', 32);
       hr.setInteractive({ useHandCursor: true  } );
