@@ -22,7 +22,7 @@
     {
         "path": "/amp/authors/gameswebdeskme/index.html",
         "type": "file",
-        "md5": "fea667b8bdc86316a47ed045240f6e92"
+        "md5": "528ba2f57443d6a2af7c6ba2efd73aef"
     },
     {
         "path": "amp/authors/gameswebdeskme/page",
@@ -37,7 +37,7 @@
     {
         "path": "/amp/authors/gameswebdeskme/page/2/index.html",
         "type": "file",
-        "md5": "e883c7b27aeab078364cd15b3825a07c"
+        "md5": "b914ffb94b997e3a4a06c5067c2ca16d"
     },
     {
         "path": "/amp/downloads.html",
@@ -47,12 +47,17 @@
     {
         "path": "/amp/index.html",
         "type": "file",
-        "md5": "c45aa88e4cf6df39734fb28ab47cda2c"
+        "md5": "2f03c1f3cd54cc389bbffc6919d4ffed"
     },
     {
         "path": "/amp/into-to-cyber-security.html",
         "type": "file",
         "md5": "c2fea75c39b15e7aac9285479e519e34"
+    },
+    {
+        "path": "/amp/next-game-in-the-works.html",
+        "type": "file",
+        "md5": "b26d96174555ad28b441538ab977ba27"
     },
     {
         "path": "amp/page",
@@ -67,7 +72,7 @@
     {
         "path": "/amp/page/2/index.html",
         "type": "file",
-        "md5": "3ed86f60d78af1619d6053e5b76cdfbd"
+        "md5": "a283205b4d4b8ab831313f8ae8c15037"
     },
     {
         "path": "/amp/pnp.html",
@@ -82,7 +87,7 @@
     {
         "path": "/amp/trailer.html",
         "type": "file",
-        "md5": "1771f7b564a3b44b31a4a591656cb791"
+        "md5": "d898ad02f43bf22738bb6d13f93bb95c"
     },
     {
         "path": "/amp/wallpaper.html",
@@ -197,7 +202,7 @@
     {
         "path": "/authors/gameswebdeskme/index.html",
         "type": "file",
-        "md5": "bb17917d0d3473e534eedc5480201e9c"
+        "md5": "fcf399f8152469ea312ae55f23fdb436"
     },
     {
         "path": "authors/gameswebdeskme/page",
@@ -212,7 +217,7 @@
     {
         "path": "/authors/gameswebdeskme/page/2/index.html",
         "type": "file",
-        "md5": "2f3decfc15fe7819d0542c1fd8e56715"
+        "md5": "f1880a761923eb2b0796fef3edc5d4af"
     },
     {
         "path": "downloads.html",
@@ -222,7 +227,7 @@
     {
         "path": "index.html",
         "type": "file",
-        "md5": "46331d98258d5f589ecfb6b943370e52"
+        "md5": "ef71a8ecbdf34a785e0009a84aac5716"
     },
     {
         "path": "into-to-cyber-security.html",
@@ -420,6 +425,11 @@
         "md5": "ef78644d58887350397bfcb6b8670215"
     },
     {
+        "path": "next-game-in-the-works.html",
+        "type": "file",
+        "md5": "359df67fc3887ee89e92f3f4033fca6c"
+    },
+    {
         "path": "page",
         "type": "directory",
         "md5": false
@@ -432,7 +442,7 @@
     {
         "path": "/page/2/index.html",
         "type": "file",
-        "md5": "b11dc603cee8dd1f953b9cb750558ae6"
+        "md5": "5bb0a154d96147f801071db0c21a786a"
     },
     {
         "path": "pnp.html",
@@ -467,7 +477,7 @@
     {
         "path": "trailer.html",
         "type": "file",
-        "md5": "d190771fa099ec6b6e5c080ac5d69983"
+        "md5": "c433fe39f524502a08d87f1b1c17ee08"
     },
     {
         "path": "wallpaper.html",
