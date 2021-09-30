@@ -227,7 +227,7 @@ var SceneC = new Phaser.Class({
         function hov(th, fill, im) {
           fill.on('pointerover',function(pointer){
             console.log(th);
-            big = th.add.image(225, 200, im).setInteractive();
+            big = th.add.image(500, 200, im).setInteractive();
             big.setScale(1/3);
           });
           fill.on('pointerout',function(pointer){
@@ -242,7 +242,7 @@ var SceneC = new Phaser.Class({
           t.setScale(1/8);
           t.on('pointerover',function(pointer){
             console.log('hover');
-            big = th.add.image(225, 200, im).setInteractive();
+            big = th.add.image(500, 200, im).setInteractive();
             big.setScale(1/3);
           });
           t.on('pointerout',function(pointer){
@@ -283,7 +283,7 @@ var SceneC = new Phaser.Class({
           c.setScale(1/8);
           c.on('pointerover',function(pointer){
             //console.log(c);
-            big = th.add.image(225, 200, im).setInteractive();
+            big = th.add.image(500, 200, im).setInteractive();
             big.setScale(1/3);
           });
           c.on('pointerout',function(pointer){
@@ -485,7 +485,7 @@ var SceneC = new Phaser.Class({
         function hove(c, th, im){
           c.on('pointerover',function(pointer){
             console.log('hover');
-            big = th.add.image(225, 200, im).setInteractive();
+            big = th.add.image(500, 200, im).setInteractive();
             big.setScale(1/3);
           });
           c.on('pointerout',function(pointer){
