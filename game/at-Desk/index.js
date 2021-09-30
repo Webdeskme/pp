@@ -462,25 +462,25 @@ var SceneC = new Phaser.Class({
           return x;
         }
         var x = 1;
-        var c1 = this.add.image(50, 500, cards[0]).setInteractive({ useHandCursor: true  } );
+        var c1 = this.add.image(50, 550, cards[0]).setInteractive({ useHandCursor: true  } );
         playc(this, c1, cx, cards[0]);
-        var c2 = this.add.image(150, 500, cards[1]).setInteractive({ useHandCursor: true  } );
+        var c2 = this.add.image(150, 550, cards[1]).setInteractive({ useHandCursor: true  } );
         playc(this, c2, cx, cards[1]);
-        var c3 = this.add.image(250, 500, cards[2]).setInteractive({ useHandCursor: true  } );
+        var c3 = this.add.image(250, 550, cards[2]).setInteractive({ useHandCursor: true  } );
         playc(this, c3, cx, cards[2]);
-        var c4 = this.add.image(350, 500, cards[3]).setInteractive({ useHandCursor: true  } );
+        var c4 = this.add.image(350, 550, cards[3]).setInteractive({ useHandCursor: true  } );
         playc(this, c4, cx, cards[3]);
-        var c5 = this.add.image(450, 500, cards[4]).setInteractive({ useHandCursor: true  } );
+        var c5 = this.add.image(450, 550, cards[4]).setInteractive({ useHandCursor: true  } );
         playc(this, c5, cx, cards[4]);
-        var c6 = this.add.image(550, 500, cards[5]).setInteractive({ useHandCursor: true  } );
+        var c6 = this.add.image(550, 550, cards[5]).setInteractive({ useHandCursor: true  } );
         playc(this, c6, cx, cards[5]);
-        var c7 = this.add.image(650, 500, cards[6]).setInteractive({ useHandCursor: true  } );
+        var c7 = this.add.image(650, 550, cards[6]).setInteractive({ useHandCursor: true  } );
         playc(this, c7, cx, cards[6]);
-        var c8 = this.add.image(750, 500, cards[7]).setInteractive({ useHandCursor: true  } );
+        var c8 = this.add.image(750, 550, cards[7]).setInteractive({ useHandCursor: true  } );
         playc(this, c8, cx, cards[7]);
-        var c9 = this.add.image(850, 500, cards[8]).setInteractive({ useHandCursor: true  } );
+        var c9 = this.add.image(850, 550, cards[8]).setInteractive({ useHandCursor: true  } );
         playc(this, c9, cx, cards[8]);
-        var c10 = this.add.image(950, 500, cards[9]).setInteractive({ useHandCursor: true  } );
+        var c10 = this.add.image(950, 550, cards[9]).setInteractive({ useHandCursor: true  } );
         playc(this, c10, cx, cards[9]);
         function hove(c, th, im){
           c.on('pointerover',function(pointer){
