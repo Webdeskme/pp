@@ -180,6 +180,7 @@ var TitleS = new Phaser.Class({
         this.load.image('aii', 'assets/Text/ai.png');
         this.load.image('cb', 'assets/out/back.png');
         this.load.image('logo', 'assets/Text/logo.png');
+        this.load.image('ca', 'assets/Text/counter.png');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -416,6 +417,7 @@ var TitleS = new Phaser.Class({
         var j = this.add.image(900, 300, 'aii').setScrollFactor(0,0);
         var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
+        var m = this.add.image(650, 500, 'ca').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
@@ -432,6 +434,8 @@ var TitleS = new Phaser.Class({
         k.setScale(1/4);
         l.setInteractive({ useHandCursor: true  } );
         l.setScale(2/3);
+        m.setInteractive({ useHandCursor: true  } );
+        m.setScale(1/2);
         d.on('pointerover',function(pointer){
           d.setScale(1/3);
         });
@@ -479,6 +483,12 @@ var TitleS = new Phaser.Class({
         });
         l.on('pointerout',function(pointer){
           l.setScale(2/3);
+        });
+        l.on('pointerover',function(pointer){
+          l.setScale(1/1);
+        });
+        m.on('pointerout',function(pointer){
+          m.setScale(1/2);
         });
         d.on('pointerdown', () => {
           this.sound.add('click').play();
@@ -532,6 +542,13 @@ var TitleS = new Phaser.Class({
           this.game.sound.stopAll();
           //this.scene.start('san');
           window.location.href = "index.html";
+        });
+        m.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //endm.stop();
+          this.game.sound.stopAll();
+          //this.scene.start('san');
+          window.location.href = "at-Desk/index.html";
         });
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
