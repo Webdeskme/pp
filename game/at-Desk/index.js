@@ -743,8 +743,17 @@ var SceneE = new Phaser.Class({
 
 var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    scale: {
+      mode: Phaser.Scale.FIT,
+      parent: "app",
+      width: 1024,
+      height: 640,
+      autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    render: {
+      clearBeforeRender: false
+    },
+    enableDebug: false,
     backgroundColor: '#000000',
     scene: [ Scene0, SceneC, SceneD,  SceneE]
 };
