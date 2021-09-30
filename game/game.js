@@ -417,7 +417,7 @@ var TitleS = new Phaser.Class({
         var j = this.add.image(900, 300, 'aii').setScrollFactor(0,0);
         var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
-        var m = this.add.image(750, 650, 'ca').setScrollFactor(0,0);
+        var m = this.add.image(800, 600, 'ca').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
