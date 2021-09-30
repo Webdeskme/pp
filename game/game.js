@@ -417,7 +417,7 @@ var TitleS = new Phaser.Class({
         var j = this.add.image(900, 300, 'aii').setScrollFactor(0,0);
         var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
-        var m = this.add.image(650, 500, 'ca').setScrollFactor(0,0);
+        var m = this.add.image(750, 650, 'ca').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
@@ -484,8 +484,8 @@ var TitleS = new Phaser.Class({
         l.on('pointerout',function(pointer){
           l.setScale(2/3);
         });
-        l.on('pointerover',function(pointer){
-          l.setScale(1/1);
+        m.on('pointerover',function(pointer){
+          m.setScale(1/1);
         });
         m.on('pointerout',function(pointer){
           m.setScale(1/2);
