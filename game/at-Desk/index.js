@@ -212,7 +212,7 @@ var SceneC = new Phaser.Class({
         var s2 = this.add.image(850, 200, score[1]).setInteractive();
         s2.setScale(1/8);
         var s22 = 'yes';
-        var s3 = this.add.image(850, 250, score[2]).setInteractive();
+        var s3 = this.add.image(850, 350, score[2]).setInteractive();
         s3.setScale(1/8);
         var s33 = 'yes';
         var s4 = this.add.image(950, 50, score[3]).setInteractive();
@@ -221,7 +221,7 @@ var SceneC = new Phaser.Class({
         var s5 = this.add.image(950, 200, score[4]).setInteractive();
         s5.setScale(1/8);
         var s55 = 'yes';
-        var s6 = this.add.image(950, 250, score[5]).setInteractive();
+        var s6 = this.add.image(950, 350, score[5]).setInteractive();
         s6.setScale(1/8);
         var s66 = 'yes';
         function hov(th, fill, im) {
