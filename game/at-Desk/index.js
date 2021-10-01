@@ -206,22 +206,22 @@ var SceneC = new Phaser.Class({
         var cards = ["s11", "s12", "s13", "s14", "s15", "s16","s17", "s21", "s22", "s23", "s24", "s25", "s26","s27", "s31", "s32", "s33", "s34", "s35", "s36","s37", "s41", "s42", "s43", "s44", "s45", "s46","s47", "s51", "s52", "s53", "s54", "s55", "s56","s57", "s61", "s62", "s63", "s64", "s65", "s66","s67"];
         shuffle(cards);
         var score = ["s10", "s20", "s30", "s40", "s50", "s60"];
-        var s1 = this.add.image(850, 50, score[0]).setInteractive();
+        var s1 = this.add.image(850, 75, score[0]).setInteractive();
         s1.setScale(1/8);
         var s11 = 'yes';
-        var s2 = this.add.image(850, 200, score[1]).setInteractive();
+        var s2 = this.add.image(850, 225, score[1]).setInteractive();
         s2.setScale(1/8);
         var s22 = 'yes';
-        var s3 = this.add.image(850, 350, score[2]).setInteractive();
+        var s3 = this.add.image(850, 375, score[2]).setInteractive();
         s3.setScale(1/8);
         var s33 = 'yes';
-        var s4 = this.add.image(950, 50, score[3]).setInteractive();
+        var s4 = this.add.image(950, 75, score[3]).setInteractive();
         s4.setScale(1/8);
         var s44 = 'yes';
-        var s5 = this.add.image(950, 200, score[4]).setInteractive();
+        var s5 = this.add.image(950, 225, score[4]).setInteractive();
         s5.setScale(1/8);
         var s55 = 'yes';
-        var s6 = this.add.image(950, 350, score[5]).setInteractive();
+        var s6 = this.add.image(950, 375, score[5]).setInteractive();
         s6.setScale(1/8);
         var s66 = 'yes';
         function hov(th, fill, im) {
