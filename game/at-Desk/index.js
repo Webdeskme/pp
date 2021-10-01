@@ -649,7 +649,7 @@ var SceneC = new Phaser.Class({
           hove(c31, th, cards[30]);
           var cx = c31;
         }
-        fu = this.add.image(150, 25, 'full').setInteractive({ useHandCursor: true  } );
+        fu = this.add.image(125, 40, 'full').setInteractive({ useHandCursor: true  } );
         fu.setScale(1/16);
         fu.on('pointerdown', () => {
           if (this.scale.isFullscreen)
