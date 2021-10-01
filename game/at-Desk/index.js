@@ -59,6 +59,7 @@ var SceneC = new Phaser.Class({
       }
         this.load.image('back3', 'assets/backgrounds/black.png');
         this.load.image('back', 'assets/backgrounds/back1.jpg');
+        this.load.image('full', 'assets/icons/expand.png');
         this.load.image('sb', 'assets/cardback/sb.png');
         this.load.audio('theme', [
         "assets/Audio/I'm Misbehaving_0.wav"
@@ -648,6 +649,20 @@ var SceneC = new Phaser.Class({
           hove(c31, th, cards[30]);
           var cx = c31;
         }
+        fu = this.add.image(150, 25, 'full').setInteractive({ useHandCursor: true  } );
+        fu.setScale(1/16);
+        fu.on('pointerdown', () => {
+          if (this.scale.isFullscreen)
+            {
+
+                this.scale.stopFullscreen();
+            }
+            else
+            {
+
+                this.scale.startFullscreen();
+            }
+        });
     }
 });
 
