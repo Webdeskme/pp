@@ -206,22 +206,22 @@ var SceneC = new Phaser.Class({
         var cards = ["s11", "s12", "s13", "s14", "s15", "s16","s17", "s21", "s22", "s23", "s24", "s25", "s26","s27", "s31", "s32", "s33", "s34", "s35", "s36","s37", "s41", "s42", "s43", "s44", "s45", "s46","s47", "s51", "s52", "s53", "s54", "s55", "s56","s57", "s61", "s62", "s63", "s64", "s65", "s66","s67"];
         shuffle(cards);
         var score = ["s10", "s20", "s30", "s40", "s50", "s60"];
-        var s1 = this.add.image(850, 150, score[0]).setInteractive();
+        var s1 = this.add.image(850, 50, score[0]).setInteractive();
         s1.setScale(1/8);
         var s11 = 'yes';
-        var s2 = this.add.image(850, 300, score[1]).setInteractive();
+        var s2 = this.add.image(850, 200, score[1]).setInteractive();
         s2.setScale(1/8);
         var s22 = 'yes';
-        var s3 = this.add.image(850, 450, score[2]).setInteractive();
+        var s3 = this.add.image(850, 250, score[2]).setInteractive();
         s3.setScale(1/8);
         var s33 = 'yes';
-        var s4 = this.add.image(950, 150, score[3]).setInteractive();
+        var s4 = this.add.image(950, 50, score[3]).setInteractive();
         s4.setScale(1/8);
         var s44 = 'yes';
-        var s5 = this.add.image(950, 300, score[4]).setInteractive();
+        var s5 = this.add.image(950, 200, score[4]).setInteractive();
         s5.setScale(1/8);
         var s55 = 'yes';
-        var s6 = this.add.image(950, 450, score[5]).setInteractive();
+        var s6 = this.add.image(950, 250, score[5]).setInteractive();
         s6.setScale(1/8);
         var s66 = 'yes';
         function hov(th, fill, im) {
@@ -462,25 +462,25 @@ var SceneC = new Phaser.Class({
           return x;
         }
         var x = 1;
-        var c1 = this.add.image(50, 550, cards[0]).setInteractive({ useHandCursor: true  } );
+        var c1 = this.add.image(50, 575, cards[0]).setInteractive({ useHandCursor: true  } );
         playc(this, c1, cx, cards[0]);
-        var c2 = this.add.image(150, 550, cards[1]).setInteractive({ useHandCursor: true  } );
+        var c2 = this.add.image(150, 575, cards[1]).setInteractive({ useHandCursor: true  } );
         playc(this, c2, cx, cards[1]);
-        var c3 = this.add.image(250, 550, cards[2]).setInteractive({ useHandCursor: true  } );
+        var c3 = this.add.image(250, 575, cards[2]).setInteractive({ useHandCursor: true  } );
         playc(this, c3, cx, cards[2]);
-        var c4 = this.add.image(350, 550, cards[3]).setInteractive({ useHandCursor: true  } );
+        var c4 = this.add.image(350, 575, cards[3]).setInteractive({ useHandCursor: true  } );
         playc(this, c4, cx, cards[3]);
-        var c5 = this.add.image(450, 550, cards[4]).setInteractive({ useHandCursor: true  } );
+        var c5 = this.add.image(450, 575, cards[4]).setInteractive({ useHandCursor: true  } );
         playc(this, c5, cx, cards[4]);
-        var c6 = this.add.image(550, 550, cards[5]).setInteractive({ useHandCursor: true  } );
+        var c6 = this.add.image(550, 575, cards[5]).setInteractive({ useHandCursor: true  } );
         playc(this, c6, cx, cards[5]);
-        var c7 = this.add.image(650, 550, cards[6]).setInteractive({ useHandCursor: true  } );
+        var c7 = this.add.image(650, 575, cards[6]).setInteractive({ useHandCursor: true  } );
         playc(this, c7, cx, cards[6]);
-        var c8 = this.add.image(750, 550, cards[7]).setInteractive({ useHandCursor: true  } );
+        var c8 = this.add.image(750, 575, cards[7]).setInteractive({ useHandCursor: true  } );
         playc(this, c8, cx, cards[7]);
-        var c9 = this.add.image(850, 550, cards[8]).setInteractive({ useHandCursor: true  } );
+        var c9 = this.add.image(850, 575, cards[8]).setInteractive({ useHandCursor: true  } );
         playc(this, c9, cx, cards[8]);
-        var c10 = this.add.image(950, 550, cards[9]).setInteractive({ useHandCursor: true  } );
+        var c10 = this.add.image(950, 575, cards[9]).setInteractive({ useHandCursor: true  } );
         playc(this, c10, cx, cards[9]);
         function hove(c, th, im){
           c.on('pointerover',function(pointer){
