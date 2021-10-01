@@ -1,44 +1,3 @@
-var Scene0 = new Phaser.Class({
-
-    Extends: Phaser.Scene,
-
-    initialize:
-
-    function Scene0 ()
-    {
-        Phaser.Scene.call(this, { key: 'scene0' });
-    },
-
-    preload: function ()
-    {
-      this.load.video('intro', 'assets/Video/SenaryAdd.mp4', 'loadeddata', false, true);
-      this.load.audio('click', [
-      "assets/Audio/mouseclick.wav"
-      ]);
-
-    },
-
-    create: function ()
-    {
-     var vid = this.add.video(400, 300, 'intro').setInteractive({ useHandCursor: true  } );
-     vid.setScale(1/2);
-
-    vid.play(true);
-
-    vid.on('pointerdown', () => {
-      this.sound.add('click').play();
-      console.log('scene a');
-      this.scene.start('sceneC');
-    });
-
-    // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
-    vid.setPaused(false);
-    setTimeout(() => {
-      this.scene.start('sceneC');
-    }, 8000);
-  }
-});
-
 var SceneC = new Phaser.Class({
 
     Extends: Phaser.Scene,
@@ -770,7 +729,7 @@ var config = {
     },
     enableDebug: false,
     backgroundColor: '#000000',
-    scene: [ Scene0, SceneC, SceneD,  SceneE]
+    scene: [SceneC, SceneD,  SceneE]
 };
 
 var game = new Phaser.Game(config);
