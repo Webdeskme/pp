@@ -11,6 +11,7 @@ var SceneC = new Phaser.Class({
 
     preload: function ()
     {
+      this.load.bitmapFont('font', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
       var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
       var i;
       for (i = 0; i < cards.length; i++) {
@@ -45,9 +46,9 @@ var SceneC = new Phaser.Class({
       //music.play();
       var win = 0;
       var lose = 0;
-      var winText = this.add.text(16, 375, 'Wins:0', { fontSize: '32px', fill: '#fff' });
-      var loseText = this.add.text(200, 375, 'Losses:0', { fontSize: '32px', fill: '#fff' });
-      var h = this.add.text(16, 16, 'Home', { fontSize: '32px', fill: '#fff' });
+      var winText = this.add.bitmapText(16, 375, 'font', 'Wins:0', 32);
+      var loseText = this.add.bitmapText(200, 375, 'font', 'Losses:0', 32);
+      var h = this.add.bitmapText(16, 16, 'font', 'Home', 32);
       h.setInteractive();
       h.on('pointerdown', () => {
         this.sound.add('click').play();
@@ -55,7 +56,7 @@ var SceneC = new Phaser.Class({
         window.location.href = "../game.html";
         //music.destroy();
       });
-      var r = this.add.text(700, 16, 'Rules', { fontSize: '32px', fill: '#fff' });
+      var r = this.add.bitmapText(700, 16, 'font', 'Rules', 32);
       r.setInteractive();
       r.on('pointerdown', () => {
         this.sound.add('click').play();
@@ -64,7 +65,7 @@ var SceneC = new Phaser.Class({
         //music.destroy();
         var rule = this.add.image(400, 300, 'back3');
         var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
-        var hr = this.add.text(16, 16, 'Back', { fontSize: '32px', fill: '#fff' });
+        var hr = this.add.bitmapText(16, 16, 'font', 'Back', 32);
         hr.setInteractive({ useHandCursor: true  } );
         hwnar.play();
         hr.on('pointerdown', () => {
@@ -638,6 +639,7 @@ var SceneD = new Phaser.Class({
 
     preload: function ()
     {
+      this.load.bitmapFont('font', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
       this.load.image('back2', 'assets/backgrounds/black.png');
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
@@ -654,7 +656,7 @@ var SceneD = new Phaser.Class({
         console.log('scene c');
         this.scene.start('sceneC');
       });*/
-      var h = this.add.text(100, 300, 'Maybe Next Time', { fontSize: '64px', fill: '#fff' });
+      var h = this.add.bitmapText(100, 300, 'font', 'Maybe Next Time', 64);
       h.setInteractive({ useHandCursor: true  } );
       h.on('pointerdown', () => {
         this.sound.add('click').play();
@@ -662,7 +664,7 @@ var SceneD = new Phaser.Class({
         //this.scene.start('sceneA');
         window.location.href = "../game.html";
       });
-      var r = this.add.text(700, 16, 'Home', { fontSize: '32px', fill: '#fff' });
+      var r = this.add.bitmapText(700, 16, 'font', 'Home', 32);
       r.setInteractive({ useHandCursor: true  } );
       r.on('pointerdown', () => {
         this.sound.add('click').play();
@@ -686,6 +688,7 @@ var SceneE = new Phaser.Class({
 
     preload: function ()
     {
+      this.load.bitmapFont('font', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
       this.load.image('back2', 'assets/backgrounds/black.png');
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
@@ -695,7 +698,7 @@ var SceneE = new Phaser.Class({
     create: function ()
     {
       var rule = this.add.image(400, 300, 'back2');
-      var h = this.add.text(100, 300, 'You Win!', { fontSize: '64px', fill: '#fff' });
+      var h = this.add.bitmapText(100, 300, 'font', 'You Win!', 64);
       h.setInteractive({ useHandCursor: true  } );
       h.on('pointerdown', () => {
         this.sound.add('click').play();
@@ -703,7 +706,7 @@ var SceneE = new Phaser.Class({
         //this.scene.start('sceneA');
         window.location.href = "../game.html";
       });
-      var r = this.add.text(700, 16, 'Home', { fontSize: '32px', fill: '#fff' });
+      var r = this.add.bitmapText(700, 16, 'font', 'Home', 32);
       r.setInteractive({ useHandCursor: true  } );
       r.on('pointerdown', () => {
         this.sound.add('click').play();
