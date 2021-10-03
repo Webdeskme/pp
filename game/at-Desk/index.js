@@ -20,6 +20,8 @@ var SceneC = new Phaser.Class({
         this.load.image('back3', 'assets/backgrounds/black.png');
         this.load.image('back', 'assets/backgrounds/back1.jpg');
         this.load.image('full', 'assets/icons/expand.png');
+        this.load.image('mon', 'assets/icons/sound-on.png');
+        this.load.image('moff', 'assets/icons/sound-off.png');
         this.load.image('sb', 'assets/cardback/sb.png');
         this.load.audio('theme', [
         "assets/Audio/I'm Misbehaving_0.wav"
@@ -34,12 +36,16 @@ var SceneC = new Phaser.Class({
         "assets/Audio/hw-rules.mp3"
         ]);
         this.load.text('rules', 'assets/Text/rules.txt');
+        this.load.audio('mus', [
+        "assets/Audio/MyVeryOwnDeadShip.mp3"
+        ]);
     },
 
     create: function ()
     {
       //var cards = ["s10", "s11", "s12", "s13", "s14", "s15", "s16","s17","s18", "s20", "s21", "s22", "s23", "s24", "s25", "s26","s27","s28","s30", "s31", "s32", "s33", "s34", "s35", "s36","s37","s38", "s40", "s41", "s42", "s43", "s44", "s45", "s46","s47","s48","s50", "s51", "s52", "s53", "s54", "s55", "s56","s57","s58","s60", "s61", "s62", "s63", "s64", "s65", "s66","s67","s68"];
       w = 0;
+      this.sound.add('mus').play();
       this.add.image(400, 300, 'back');
       var music = this.sound.add('theme');
       var hwnar = this.sound.add('hw-nar');
@@ -610,7 +616,17 @@ var SceneC = new Phaser.Class({
           var cx = c31;
         }
         fu = this.add.image(125, 35, 'full').setInteractive({ useHandCursor: true  } );
+        mon = this.add.image(150, 35, 'mon').setInteractive({ useHandCursor: true  } );
+        moff = this.add.image(175, 35, 'moff').setInteractive({ useHandCursor: true  } );
         fu.setScale(1/16);
+        mon.setScale(1/16);
+        moff.setScale(1/16);
+        mon.on('pointerdown', () => {
+          this.sound.add('mus').play();
+        });
+        moff.on('pointerdown', () => {
+          this.sound.add('mus').stop();
+        });
         fu.on('pointerdown', () => {
           if (this.scale.isFullscreen)
             {
