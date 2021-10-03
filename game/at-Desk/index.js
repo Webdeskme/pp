@@ -616,8 +616,8 @@ var SceneC = new Phaser.Class({
           var cx = c31;
         }
         fu = this.add.image(125, 35, 'full').setInteractive({ useHandCursor: true  } );
-        mon = this.add.image(150, 35, 'mon').setInteractive({ useHandCursor: true  } );
-        moff = this.add.image(175, 35, 'moff').setInteractive({ useHandCursor: true  } );
+        mon = this.add.image(175, 35, 'mon').setInteractive({ useHandCursor: true  } );
+        moff = this.add.image(225, 35, 'moff').setInteractive({ useHandCursor: true  } );
         fu.setScale(1/16);
         mon.setScale(1/16);
         moff.setScale(1/16);
