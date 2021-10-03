@@ -625,7 +625,7 @@ var SceneC = new Phaser.Class({
           this.sound.add('mus').play();
         });
         moff.on('pointerdown', () => {
-          this.sound.add('mus').stop();
+          this.game.sound.stopAll();
         });
         fu.on('pointerdown', () => {
           if (this.scale.isFullscreen)
