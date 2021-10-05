@@ -752,7 +752,7 @@ var P1 = new Phaser.Class({
                 cardText.setText('Cards: ' + card);
                 if(type == "skill"){
                   if(skill >= cost){
-                    var aquire = "yes";
+                    aquire = "yes";
                   }
                 }
                 else if (type == "coin") {
