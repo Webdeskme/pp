@@ -375,7 +375,7 @@ var P1 = new Phaser.Class({
           }
           function bselect(c, th, im,){
             c.on('pointerdown',function(pointer){
-              var aquire = no;
+              var aquire = "no";
               th.sound.add('click').play();
               if(red == "yes"){
                 if(c.tintTopLeft !== 0x00ff00){
