@@ -7,7 +7,7 @@ var P1 = new Phaser.Class({
     },
     preload: function ()
     {
-        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C"];
+        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C", "P2S", "P2C"];
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
         this.load.image('cb', 'assets/cards/back.png');
@@ -1142,6 +1142,8 @@ var P1 = new Phaser.Class({
           // "Service", "WateringHole",
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
         var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
+        var p1 = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
+        var p2 = ["P2S", "P2S", "P2S", "P2S", "P2C", "P2C"];
         shuffle(cards);
         shuffle(p);
         back = this.add.image(512, 320, 'back');
@@ -1165,11 +1167,13 @@ var P1 = new Phaser.Class({
         score = 30;
         cscore = 0;
         checkScore = "no";
+        player = 1;
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         var highScore;
         var healthText = this.add.bitmapText(250, 30, 'topaz', 'Health: 50', 48);
         var scoreText = this.add.bitmapText(250, 90, 'topaz', 'Score: 30', 48);
+        var playerText = this.add.bitmapText(700, 90, 'topaz', 'Player: 1', 48);
         var skillText = this.add.bitmapText(15, 65, 'topaz', 'Skill: 0', 32);
         var coinText = this.add.bitmapText(15, 90, 'topaz', 'Coins: 0', 32);
         var totalText = this.add.bitmapText(15, 115, 'topaz', 'Total: 0', 32);
