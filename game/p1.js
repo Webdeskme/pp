@@ -794,8 +794,12 @@ var P1 = new Phaser.Class({
                 if( aquire == "yes"){
                   //console.log("Aquire");
                   aq += 1;
+                  console.log("por: " + por);
+                  console.log("aq: " + aq);
                   if(por == "PORT2"){
+                    console.log("in 1");
                     if(aq > 2){
+                      console.log("in 2");
                       cp.destroy();
                       game += 1;
                       por = "no";
