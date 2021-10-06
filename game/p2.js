@@ -1142,8 +1142,8 @@ var P1 = new Phaser.Class({
           // "Service", "WateringHole",
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
         var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
-        var p1 = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
-        var p2 = ["P2S", "P2S", "P2S", "P2S", "P2C", "P2C"];
+        var player1 = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
+        var player2 = ["P2S", "P2S", "P2S", "P2S", "P2C", "P2C"];
         shuffle(cards);
         shuffle(p);
         back = this.add.image(512, 320, 'back');
@@ -1161,6 +1161,8 @@ var P1 = new Phaser.Class({
         temp2 = "";
         hand = 4;
         pdis = [];
+        pdis1 = [];
+        pdis2 = [];
         dis = [];
         red = "No";
         game = 0;
@@ -1251,7 +1253,6 @@ var P1 = new Phaser.Class({
           var zz = c0["texture"]["key"];
           setTimeout(() => {
               this.sound.add(zz).play();
-
           }, 2000);
           pdis = pdis.filter(function( element ) {
              return element !== undefined;
@@ -1572,6 +1573,22 @@ var P1 = new Phaser.Class({
             p6 = this.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
             hove(p6, this, p[6] + 'big');
             bselect(p6, this, p[6]);
+          }
+          if(player == 1){
+            player1 = p;
+            p = player2;
+            pdis1 = pdis;
+            pdis = pdis2
+            player = 2;
+            playerText.setText('Player: 2');
+          }
+          else {
+            player2 = p;
+            p = player1;
+            pdis2 = pdis;
+            pdis = pdis1;
+            player = 1;
+            playerText.setText('Player: 1');
           }
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
