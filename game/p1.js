@@ -1460,7 +1460,6 @@ var P1 = new Phaser.Class({
             p = p.concat(pdis);
             pdis = [];
           }
-          console.log("before hand: " + hand);
           function draw(start, num){
             var y = 0;
             for (var i = start; i < num; i++) {
@@ -1469,11 +1468,9 @@ var P1 = new Phaser.Class({
                 p = p.concat(pdis);
                 pdis = [];
               }
-              console.log("Check: " + p[i]);
               if(p[i] == "Browser" || p[i] == "Driver" || p[i] == "CloudStorage" || p[i] == "IMDS" || p[i] == "User" || p[i] == "FakeInstaller" || p[i] == "OfficeMacro" || p[i] == "Sysmon" || p[i] == "DPAT" || p[i] == "Endpoint" || p[i] == "Sinkhole" || p[i] == "IAM" || p[i] == "MFAB"){
                 hand += 1;
                 y += 1;
-                console.log("Draw: " + p[i]);
               }
             }
             if(y > 0){
@@ -1481,15 +1478,12 @@ var P1 = new Phaser.Class({
             }
           }
           draw(0,4);
-            console.log("after hand: " + hand);
           z = hand - 1;
           if (typeof p[z] == 'undefined') {
             shuffle(pdis);
             p = p.concat(pdis);
             pdis = [];
           }
-          console.log("p");
-          console.log(p);
           if(hand > 15 && typeof p[15] != 'undefined'){
             p15 = this.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
             hove(p15, this, p[15] + 'big');
