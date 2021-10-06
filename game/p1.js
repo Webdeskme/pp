@@ -1763,7 +1763,7 @@ var P1 = new Phaser.Class({
         ma = ["PORT", "PORT2"];
         shuffle(ma);
         por = "PORT";
-        if(ma == "PORT2"){
+        if(ma[0] == "PORT2"){
           por = "PORT2";
         }
         cp = this.add.image(500, 250, ma[0]).setInteractive({ useHandCursor: true  } );
