@@ -778,7 +778,7 @@ var P1 = new Phaser.Class({
                       cp.destroy();
                       game += 1;
                       por = "no";
-                      if(game > 3){
+                      if(game > 2){
                         window.location.href = "win.html";
                       }
                     }
@@ -887,7 +887,7 @@ var P1 = new Phaser.Class({
                   }
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns" || temp2 == "COM2" || temp2 == "ENGINES2" || temp2 == "PORT2"){
                     game += 1;
-                    if(game > 3){
+                    if(game > 2){
                         th.sound.add('mwin').play();
                         if(localStorage.getItem(localStorageName) == null) {
                             highScore = 40;
@@ -1611,9 +1611,9 @@ var P1 = new Phaser.Class({
         cp = this.add.image(500, 250, ma[0]).setInteractive({ useHandCursor: true  } );
         hove(cp, this, ma[0] + 'big');
         select(cp, this, ma[0]);
-        cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
+        /*cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         hove(cg, this, 'Guns' + 'big');
-        select(cg, this, 'Guns');
+        select(cg, this, 'Guns');*/
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
         hove(p0, this, p[0] + 'big');
         bselect(p0, this, p[0]);
