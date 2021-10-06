@@ -1266,6 +1266,22 @@ var P1 = new Phaser.Class({
               }
             }
           }
+          if(player == 1){
+            player1 = p;
+            p = player2;
+            pdis1 = pdis;
+            pdis = pdis2
+            player = 2;
+            playerText.setText('Player: 2');
+          }
+          else {
+            player2 = p;
+            p = player1;
+            pdis2 = pdis;
+            pdis = pdis1;
+            player = 1;
+            playerText.setText('Player: 1');
+          }
           skill = 0;
           coin = 0;
           total = 0;
@@ -1573,22 +1589,6 @@ var P1 = new Phaser.Class({
             p6 = this.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
             hove(p6, this, p[6] + 'big');
             bselect(p6, this, p[6]);
-          }
-          if(player == 1){
-            player1 = p;
-            p = player2;
-            pdis1 = pdis;
-            pdis = pdis2
-            player = 2;
-            playerText.setText('Player: 2');
-          }
-          else {
-            player2 = p;
-            p = player1;
-            pdis2 = pdis;
-            pdis = pdis1;
-            player = 1;
-            playerText.setText('Player: 1');
           }
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
