@@ -1,20 +1,15 @@
 var P1 = new Phaser.Class({
-
     Extends: Phaser.Scene,
-
     initialize:
-
     function P1 ()
     {
         Phaser.Scene.call(this, { key: 'p1' });
     },
-
     preload: function ()
     {
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C"];
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
         this.load.image('back', 'assets/backgrounds/star1.jpg');
-        //this.load.image('title', 'assets/Text/text.png');
         this.load.image('cb', 'assets/cards/back.png');
         this.load.image('COM', 'assets/cards/COM.png');
         this.load.image('COM2', 'assets/cards/COM2.png');
@@ -35,8 +30,6 @@ var P1 = new Phaser.Class({
         this.load.image('musicOff', 'assets/icons/sound-off.png');
         this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.image('full', 'assets/icons/expand.png');
-        //this.load.image('fire', 'assets/icons/muzzleflash3.png');
-        //this.load.text('rules', 'assets/text/rules.txt');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -77,22 +70,14 @@ var P1 = new Phaser.Class({
           ]);
         }
     },
-
     create: function ()
     {
       this.game.sound.stopAll();
-      //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
-
-          // While there remain elements to shuffle...
           while (0 !== currentIndex) {
-
-            // Pick a remaining element...
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
-
-            // And swap it with the current element.
             temporaryValue = array[currentIndex];
             array[currentIndex] = array[randomIndex];
             array[randomIndex] = temporaryValue;
@@ -103,7 +88,6 @@ var P1 = new Phaser.Class({
           function hove(c, th, im){
             c.on('pointerover',function(pointer){
               big = th.add.image(865, 160, im).setInteractive();
-              //big.setScale(1/3);
             });
             c.on('pointerout',function(pointer){
               if (typeof big != "undefined") {
@@ -234,12 +218,7 @@ var P1 = new Phaser.Class({
                 coinText.setText('Coins: ' + coin);
                 totalText.setText('Total: ' + total);
                 cardText.setText('Cards: ' + card);
-                //if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns"){
-                //  temp2 = "";
-                //}
-                //else{
                   temp2 = c["texture"]["key"];
-                //}
                 if(c["texture"]["key"] == "IAM"){
                   cost = 4;
                   type = "coin";
@@ -792,7 +771,6 @@ var P1 = new Phaser.Class({
                   }
                 }
                 if( aquire == "yes"){
-                  //console.log("Aquire");
                   aq += 1;
                   if(por == "PORT2"){
                     if(aq > 2){
@@ -920,7 +898,6 @@ var P1 = new Phaser.Class({
                           localStorage.setItem(localStorageName, score);
                         }
                         localStorage.setItem(localStorageTemp, score);
-                        //th.scene.start('win');
                         window.location.href = "win.html";
                     }
                     if(temp2 == "COM"){
@@ -962,7 +939,6 @@ var P1 = new Phaser.Class({
                     }
                     if (typeof cards[5] !== 'undefined') {
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                      //c5.setScale(1/8);
                       hove(c5, th, cards[5] + 'big');
                       select(c5, th, cards[5]);
                     }
@@ -971,28 +947,22 @@ var P1 = new Phaser.Class({
                       cards = cards.concat(dis);
                       dis = [];
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-                      //c5.setScale(1/8);
                       hove(c5, th, cards[5] + 'big');
                       select(c5, th, cards[5]);
                     }
                     c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-                    //c4.setScale(1/8);
                     hove(c4, th, cards[4] + 'big');
                     select(c4, th, cards[4]);
                     c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-                    //c3.setScale(1/8);
                     hove(c3, th, cards[3] + 'big');
                     select(c3, th, cards[3]);
                     c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-                    //c2.setScale(1/8);
                     hove(c2, th, cards[2] + 'big');
                     select(c2, th, cards[2]);
                     c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-                    //c1.setScale(1/8);
                     hove(c1, th, cards[1] + 'big');
                     select(c1, th, cards[1]);
                     c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-                    //c0.setScale(1/8);
                     hove(c0, th, cards[0] + 'big');
                     select(c0, th, cards[0]);
                   }
@@ -1060,103 +1030,86 @@ var P1 = new Phaser.Class({
                       }
                   if(l > 15){
                     p15 = th.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-                    //p15.setScale(1/8);
                     hove(p15, th, p[15] + 'big');
                     bselect(p15, th, p[15] + 'big');
                   }
                   if(l > 7){
                     p7 = th.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-                    //p7.setScale(1/8);
                     hove(p7, th, p[7] + 'big');
                     bselect(p7, th, p[7]);
                   }
                   if(l > 8){
                     p8 = th.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-                    //p8.setScale(1/8);
                     hove(p8, th, p[8] + 'big');
                     bselect(p8, th, p[8]);
                   }
                   if(l > 0){
                     p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-                    //p0.setScale(1/8);
                     hove(p0, th, p[0] + 'big');
                     bselect(p0, th, p[0]);
                   }
                   if(l > 9){
                     p9 = th.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-                    //p9.setScale(1/8);
                     hove(p9, th, p[9] + 'big');
                     bselect(p9, th, p[9]);
                   }
                   if(l > 1){
                     p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-                    //p1.setScale(1/8);
                     hove(p1, th, p[1] + 'big');
                     bselect(p1, th, p[1]);
                   }
                   if(l > 10){
                     p10 = th.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-                    ////p10.setScale(1/8);
                     hove(p10, th, p[10] + 'big');
                     bselect(p10, th, p[10]);
                   }
                   if(l > 2){
                     p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-                    //p2.setScale(1/8);
                     hove(p2, th, p[2] + 'big');
                     bselect(p2, th, p[2]);
                   }
                   if(l > 11){
                     p11 = th.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-                    ////p11.setScale(1/8);
                     hove(p11, th, p[11] + 'big');
                     bselect(p11, th, p[11]);
                   }
                   if(l > 3){
                     p3 = th.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-                    //p3.setScale(1/8);
                     hove(p3, th, p[3] + 'big');
                     bselect(p3, th, p[3]);
                   }
                   if(l > 12){
                     p12 = th.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-                    ////p12.setScale(1/8);
                     hove(p12, th, p[12] + 'big');
                     bselect(p12, th, p[12]);
                   }
                   if(l > 4){
                     p4 = th.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-                    //p4.setScale(1/8);
                     hove(p4, th, p[4] + 'big');
                     bselect(p4, th, p[4]);
                   }
                   if(l > 13){
                     p13 = th.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-                    ////p13.setScale(1/8);
                     hove(p13, th, p[13] + 'big');
                     bselect(p13, th, p[13]);
                   }
                   if(l > 16){
                     p16 = th.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-                    //p16.setScale(1/8);
                     hove(p16, th, p[16] + 'big');
                     bselect(p16, th, p[16]);
                   }
                   if(l > 5){
                     p5 = th.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-                    //p5.setScale(1/8);
                     hove(p5, th, p[5] + 'big');
                     bselect(p5, th, p[5]);
                   }
                   if(l > 14){
                     p14 = th.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-                    //p14.setScale(1/8);
                     hove(p14, th, p[14] + 'big');
                     bselect(p14, th, p[14]);
                   }
                   if(l > 6){
                     p6 = th.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-                    //p6.setScale(1/8);
                     hove(p6, th, p[6] + 'big');
                     bselect(p6, th, p[6]);
                   }
@@ -1176,7 +1129,6 @@ var P1 = new Phaser.Class({
                 }
               }
               else{
-                // add card description //bob
                 setTimeout(function()
                 {
                     th.sound.add(c["texture"]["key"]).play();
@@ -1193,31 +1145,6 @@ var P1 = new Phaser.Class({
         shuffle(cards);
         shuffle(p);
         back = this.add.image(512, 320, 'back');
-
-        ////////////////// Starfield ////////////////////////
-
-
-        /*this.points = [];
-        this.stars = this.add.group();
-        this.maxDepth = 32;
-
-        for (var i = 0; i < 6120; i++) {
-            this.points.push({
-                x: Phaser.Math.Between(-25, 25),
-                y: Phaser.Math.Between(-25, 25),
-                z: Phaser.Math.Between(1, this.maxDepth)
-            });
-        }*/
-
-
-        ////////////////// End Starfield /////////////////////
-        /*var i;
-        for (i = 6; i < cards.length; i++) {
-          var c = this.add.image(125, 400, cards[i]).setInteractive({ useHandCursor: true  } );
-          //c.setScale(1/8);
-          this.input.on('gameobjectdown', function (pointer, gameObject) {
-          });
-        }*/
         skill = 0;
         coin = 0;
         total = 0;
@@ -1241,7 +1168,6 @@ var P1 = new Phaser.Class({
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         var highScore;
-        //var scoreText = this.add.bitmapText(475, 400, 'topaz', 'Last Score: ' + score, 64).setScrollFactor(0,0);
         var healthText = this.add.bitmapText(250, 30, 'topaz', 'Health: 50', 48);
         var scoreText = this.add.bitmapText(250, 90, 'topaz', 'Score: 30', 48);
         var skillText = this.add.bitmapText(15, 65, 'topaz', 'Skill: 0', 32);
@@ -1261,14 +1187,10 @@ var P1 = new Phaser.Class({
         fu.on('pointerdown', () => {
           if (this.scale.isFullscreen)
             {
-                //button.setFrame(0);
-
                 this.scale.stopFullscreen();
             }
             else
             {
-                //button.setFrame(1);
-
                 this.scale.startFullscreen();
             }
         });
@@ -1277,36 +1199,18 @@ var P1 = new Phaser.Class({
           mu.play();
         });
         mf.on('pointerdown', () => {
-          //mu.stop();
           this.game.sound.stopAll();
         });
         r.setInteractive();
         r.on('pointerdown', () => {
           this.sound.add('click').play();
-          //console.log('scene d');
-          //this.scene.start('sceneD');
-          //music.destroy();
           var rule = this.add.image(512, 320, 'back');
-          //var rules = this.add.text(0, 45, game.cache.text.get('rules'), { fontSize: '12px', fill: '#fff', wordWrap: { width: 800 } });
           var vid = this.add.video(512, 320, 'rules').setInteractive({ useHandCursor: true  } );
           vid.setScale(1/2);
-
          vid.play(true);
-         /*vid.on('pointerdown', () => {
-           this.sound.add('click').play();
-           ////console.log('Title');
-           this.scene.start('titles');
-         });
-
-         // Prevents video freeze when game is out of focus (i.e. user changes tab on the browser)
-         vid.setPaused(false);
-         setTimeout(() => {
-           this.scene.start('titles');
-         }, 41000);*/
          vid.setPaused(false);
           var hr = this.add.bitmapText(16, 16, 'topaz', 'Back', 32);
           hr.setInteractive({ useHandCursor: true  } );
-          //hwnar.play();
           hr.on('pointerdown', () => {
             vid.destroy();
             vid = null;
@@ -1314,9 +1218,6 @@ var P1 = new Phaser.Class({
             rule = null;
             hr.destroy();
             hr = null;
-            //hwnar.stop();
-            //hwnar.destroy();
-            //hwnar = null;
           });
         });
         var h = this.add.bitmapText(15, 15, 'topaz', 'Home', 32).setInteractive({ useHandCursor: true  } );
@@ -1324,12 +1225,9 @@ var P1 = new Phaser.Class({
         h.on('pointerdown', () => {
           this.sound.add('click').play();
           this.game.sound.stopAll();
-          //this.scene.start('titles');
           window.location.href = "game.html";
-          //music.destroy();
         });
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
-        //cb.setScale(1/8);
         hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
         var tscore = this.add.image(825, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
@@ -1346,24 +1244,6 @@ var P1 = new Phaser.Class({
         });
         tend.on('pointerdown', () => {
           this.sound.add('mend').play();
-          //particles = this.add.particles('fire');
-          //https://phaser.io/examples/v3/view/game-objects/particle-emitter/fire-max-10-particles#
-
-    /*particles.createEmitter({
-        alpha: { start: 1, end: 2 },
-        scale: { start: 0.5, end: 1.5 },
-        //tint: { start: 0xff945e, end: 0xff945e },
-        speed: 20,
-        accelerationY: -300,
-        angle: { min: -85, max: -95 },
-        rotate: { min: -180, max: 180 },
-        lifespan: { min: 50, max: 55 },
-        blendMode: 'ADD',
-        frequency: 110,
-        maxParticles: 10,
-        x: 400,
-        y: 300
-    });*/
           var zz = c0["texture"]["key"];
           setTimeout(() => {
               this.sound.add(zz).play();
@@ -1539,7 +1419,6 @@ var P1 = new Phaser.Class({
           if(health < 1){
               this.sound.add('mlose').play();
               this.game.sound.stopAll();
-              //this.scene.start('lose');
               window.location.href = "lose.html";
           }
           healthText.setText('Health:' + health);
@@ -1549,7 +1428,6 @@ var P1 = new Phaser.Class({
           dis.push(c0["texture"]["key"]);
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-            //c5.setScale(1/8);
             hove(c5, this, cards[5] + 'big');
             select(c5, this, cards[5]);
           }
@@ -1558,28 +1436,22 @@ var P1 = new Phaser.Class({
             cards = cards.concat(dis);
             dis = [];
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-            //c5.setScale(1/8);
             hove(c5, this, cards[5] + 'big');
             select(c5, this, cards[5]);
           }
           c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-          //c4.setScale(1/8);
           hove(c4, this, cards[4] + 'big');
           select(c4, this, cards[4]);
           c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-          //c3.setScale(1/8);
           hove(c3, this, cards[3] + 'big');
           select(c3, this, cards[3]);
           c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-          //c2.setScale(1/8);
           hove(c2, this, cards[2] + 'big');
           select(c2, this, cards[2]);
           c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-          //c1.setScale(1/8);
           hove(c1, this, cards[1] + 'big');
           select(c1, this, cards[1]);
           c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-          //c0.setScale(1/8);
           hove(c0, this, cards[0] + 'big');
           select(c0, this, cards[0]);
           var z = hand - 1;
@@ -1620,141 +1492,116 @@ var P1 = new Phaser.Class({
           console.log(p);
           if(hand > 15 && typeof p[15] != 'undefined'){
             p15 = this.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-            //p15.setScale(1/8);
             hove(p15, this, p[15] + 'big');
             bselect(p15, this, p[15]);
           }
           if(hand > 7 && typeof p[7] != 'undefined'){
             p7 = this.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-            //p7.setScale(1/8);
             hove(p7, this, p[7] + 'big');
             bselect(p7, this, p[7]);
           }
           if(hand > 8 && typeof p[8] != 'undefined'){
             p8 = this.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-            //p8.setScale(1/8);
             hove(p8, this, p[8] + 'big');
             bselect(p8, this, p[8]);
           }
           if(hand > 0 && typeof p[0] != 'undefined'){
             p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-            //p0.setScale(1/8);
             hove(p0, this, p[0] + 'big');
             bselect(p0, this, p[0]);
           }
           if(hand > 9 && typeof p[9] != 'undefined'){
             p9 = this.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-            //p9.setScale(1/8);
             hove(p9, this, p[9] + 'big');
             bselect(p9, this, p[9]);
           }
           if(hand > 1 && typeof p[1] != 'undefined'){
             p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-            //p1.setScale(1/8);
             hove(p1, this, p[1] + 'big');
             bselect(p1, this, p[1]);
           }
           if(hand > 10 && typeof p[10] != 'undefined'){
             p10 = this.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-            //p10.setScale(1/8);
             hove(p10, this, p[10] + 'big');
             bselect(p10, this, p[10]);
           }
           if(hand > 2 && typeof p[2] != 'undefined'){
             p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-            //p2.setScale(1/8);
             hove(p2, this, p[2] + 'big');
             bselect(p2, this, p[2]);
           }
           if(hand > 11 && typeof p[11] != 'undefined'){
             p11 = this.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-            //p11.setScale(1/8);
             hove(p11, this, p[11] + 'big');
             bselect(p11, this, p[11]);
           }
           if(hand > 3 && typeof p[3] != 'undefined'){
             p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-            //p3.setScale(1/8);
             hove(p3, this, p[3] + 'big');
             bselect(p3, this, p[3]);
           }
           if(hand > 12 && typeof p[12] != 'undefined'){
             p12 = this.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-            //p12.setScale(1/8);
             hove(p12, this, p[12] + 'big');
             bselect(p12, this, p[12]);
           }
           if(hand > 4 && typeof p[4] != 'undefined'){
             p4 = this.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-            //p4.setScale(1/8);
             hove(p4, this, p[4] + 'big');
             bselect(p4, this, p[4]);
           }
           if(hand > 13 && typeof p[13] != 'undefined'){
             p13 = this.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-            //p13.setScale(1/8);
             hove(p13, this, p[13] + 'big');
             bselect(p13, this, p[13]);
           }
           if(hand > 16 && typeof p[16] != 'undefined'){
             p16 = this.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-            //p16.setScale(1/8);
             hove(p16, this, p[16] + 'big');
             bselect(p16, this, p[16]);
           }
           if(hand > 5 && typeof p[5] != 'undefined'){
             p5 = this.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-            //p5.setScale(1/8);
             hove(p5, this, p[5] + 'big');
             bselect(p5, this, p[5]);
           }
           if(hand > 14 && typeof p[14] != 'undefined'){
             p14 = this.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-            //p15.setScale(1/8);
             hove(p14, this, p[14] + 'big');
             bselect(p14, this, p[14]);
           }
           if(hand > 6 && typeof p[6] != 'undefined'){
             p6 = this.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-            //p6.setScale(1/8);
             hove(p6, this, p[6] + 'big');
             bselect(p6, this, p[6]);
           }
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-        //c5.setScale(1/8);
         hove(c5, this, cards[5] + 'big');
         select(c5, this, cards[5]);
         c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-        //c4.setScale(1/8);
         hove(c4, this, cards[4] + 'big');
         select(c4, this, cards[4]);
         c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-        //c3.setScale(1/8);
         hove(c3, this, cards[3] + 'big');
         select(c3, this, cards[3]);
         c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-        //c2.setScale(1/8);
         hove(c2, this, cards[2] + 'big');
         select(c2, this, cards[2]);
         c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-        //c1.setScale(1/8);
         hove(c1, this, cards[1] + 'big');
         select(c1, this, cards[1]);
         c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-        //c0.setScale(1/8);
         hove(c0, this, cards[0] + 'big');
         select(c0, this, cards[0]);
         var ma = ["COM", "COM2"];
         shuffle(ma);
         cc = this.add.image(250, 250, ma[0]).setInteractive({ useHandCursor: true  } );
-        //cc.setScale(1/8);
         hove(cc, this, ma[0] + 'big');
         select(cc, this, ma[0]);
         ma = ["ENGINES", "ENGINES2"];
         shuffle(ma);
         ce = this.add.image(375, 250, ma[0]).setInteractive({ useHandCursor: true  } );
-        //ce.setScale(1/8);
         hove(ce, this, ma[0] + 'big');
         select(ce, this, ma[0]);
         ma = ["PORT", "PORT2"];
@@ -1764,64 +1611,29 @@ var P1 = new Phaser.Class({
           por = "PORT2";
         }
         cp = this.add.image(500, 250, ma[0]).setInteractive({ useHandCursor: true  } );
-        //cp.setScale(1/8);
         hove(cp, this, ma[0] + 'big');
         select(cp, this, ma[0]);
         cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
-        //cg.setScale(1/8);
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-        //p0.setScale(1/8);
         hove(p0, this, p[0] + 'big');
         bselect(p0, this, p[0]);
         p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-        //p1.setScale(1/8);
         hove(p1, this, p[1] + 'big');
         bselect(p1, this, p[1]);
         p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-        //p2.setScale(1/8);
         hove(p2, this, p[2] + 'big');
         bselect(p2, this, p[2]);
         p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-        //p3.setScale(1/8);
         hove(p3, this, p[3] + 'big');
         bselect(p3, this, p[3]);
-
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
       gameObject.x = dragX;
       gameObject.y = dragY;
-
     });
   },
-  update() {
-        /*this.stars.clear(true, true);
-        for (var i = 0; i < this.points.length; i++) {
-            var point = this.points[i];
-
-            point.z -= 0.2;
-
-            if (point.z <= 0) {
-                point.x = Phaser.Math.Between(-25, 25);
-                point.y = Phaser.Math.Between(-25, 25);
-                point.z = this.maxDepth;
-            }
-
-            var px = point.x * (128 / point.z) + (this.game.config.width * 0.5);
-            var py = point.y * (128 / point.z) + (this.game.config.height * 0.5);
-
-            var circle = new Phaser.Geom.Circle(
-                px,
-                py,
-                (1 - point.z / 32) * 2
-            );
-
-            var graphics = this.add.graphics({ fillStyle: { color: 0xffffff } });
-            graphics.setAlpha((1 - point.z / 8));
-            graphics.fillCircleShape(circle);
-            this.stars.add(graphics);
-        }*/
-    }
+  update() {}
 });
 var config = {
     type: Phaser.AUTO,
