@@ -377,6 +377,18 @@ var P1 = new Phaser.Class({
                     card += 1;
                     temp.push(c["texture"]["key"]);
                   }
+                  else if(c["texture"]["key"] == "P2C"){
+                    coin += 1;
+                    ccard += 1;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                  }
+                  else if (c["texture"]["key"] == "P2S") {
+                    skill += 1;
+                    scard += 1;
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                  }
                   else if (c["texture"]["key"] == "Browser") {
                     card += 1;
                     temp.push(c["texture"]["key"]);
@@ -544,6 +556,20 @@ var P1 = new Phaser.Class({
                     temp.splice(t, 1);
                   }
                   else if (c["texture"]["key"] == "P1S") {
+                    skill -= 1;
+                    scard -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                  }
+                  else if(c["texture"]["key"] == "P2C"){
+                    coin -= 1;
+                    ccard -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                  }
+                  else if (c["texture"]["key"] == "P2S") {
                     skill -= 1;
                     scard -= 1;
                     card -= 1;
