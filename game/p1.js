@@ -794,6 +794,16 @@ var P1 = new Phaser.Class({
                 if( aquire == "yes"){
                   //console.log("Aquire");
                   aq += 1;
+                  if(por == "PORT2"){
+                    if(aq > 2){
+                      cp.destroy();
+                      game += 1;
+                      por = "no";
+                      if(game > 3){
+                        window.location.href = "win.html";
+                      }
+                    }
+                  }
                   if (typeof big != "undefined" && big != null) {
                     big.destroy();
                     big = null;
@@ -1748,6 +1758,10 @@ var P1 = new Phaser.Class({
         select(ce, this, ma[0]);
         ma = ["PORT", "PORT2"];
         shuffle(ma);
+        por = "PORT";
+        if(ma == "PORT2"){
+          por = "PORT2";
+        }
         cp = this.add.image(500, 250, ma[0]).setInteractive({ useHandCursor: true  } );
         //cp.setScale(1/8);
         hove(cp, this, ma[0] + 'big');
