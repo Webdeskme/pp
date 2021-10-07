@@ -929,14 +929,32 @@ var P1 = new Phaser.Class({
                     if(temp2 == "COM"){
                       th.sound.add('comp').play();
                       cc.destroy();
+                      if(player = 1){
+                        mis1[0] = "NO";
+                      }
+                      else{
+                        mis2[0] = "NO";
+                      }
                     }
                     else if (temp2 == "ENGINES") {
                       th.sound.add('comp').play();
                       ce.destroy();
+                      if(player = 1){
+                        mis1[1] = "NO";
+                      }
+                      else{
+                        mis2[1] = "NO";
+                      }
                     }
                     else if (temp2 == "PORT") {
                       th.sound.add('comp').play();
                       cp.destroy();
+                      if(player = 1){
+                        mis1[2] = "NO";
+                      }
+                      else{
+                        mis2[2] = "NO";
+                      }
                     }
                     else if (temp2 == "Guns") {
                       th.sound.add('comp').play();
@@ -1183,6 +1201,10 @@ var P1 = new Phaser.Class({
         cost = 0;
         type = 0;
         health = 50;
+        health1 = 50;
+        health1 = 50;
+        mis1 = ["yes","yes","yes"];
+        mis2 = ["yes","yes","yes"];
         temp = [];
         temp2 = "";
         hand = 4;
@@ -1192,6 +1214,8 @@ var P1 = new Phaser.Class({
         dis = [];
         red = "No";
         game = 0;
+        game1 = 0;
+        game2 = 0;
         score = 30;
         cscore = 0;
         checkScore = "no";
@@ -1291,22 +1315,6 @@ var P1 = new Phaser.Class({
                 p.filter(val => val);
               }
             }
-          }
-          if(player == 1){
-            player1 = p;
-            p = player2;
-            pdis1 = pdis;
-            pdis = pdis2
-            player = 2;
-            playerText.setText('Player: 2');
-          }
-          else {
-            player2 = p;
-            p = player1;
-            pdis2 = pdis;
-            pdis = pdis1;
-            player = 1;
-            playerText.setText('Player: 1');
           }
           skill = 0;
           coin = 0;
@@ -1467,6 +1475,51 @@ var P1 = new Phaser.Class({
               this.sound.add('mlose').play();
               this.game.sound.stopAll();
               window.location.href = "lose.html";
+          }
+          cc.destroy();
+          ce.destroy();
+          cp.destroy();
+          if(player == 1){
+            player1 = p;
+            p = player2;
+            pdis1 = pdis;
+            pdis = pdis2;
+            health1 = health;
+            health = health2
+            game1 = game;
+            game = game2;
+            player = 2;
+            playerText.setText('Player: 2');
+            if(mis2[0] == "yes"){
+              cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
+            }
+            if(mis2[1] == "yes"){
+              ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
+            }
+            if(mis2[2] == "yes"){
+              ce = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
+            }
+          }
+          else {
+            player2 = p;
+            p = player1;
+            pdis2 = pdis;
+            pdis = pdis1;
+            health2 = health;
+            health = health1
+            game2 = game;
+            game = game1;
+            player = 1;
+            playerText.setText('Player: 1');
+            if(mis1[0] == "yes"){
+              cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
+            }
+            if(mis1[1] == "yes"){
+              ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
+            }
+            if(mis1[2] == "yes"){
+              ce = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
+            }
           }
           healthText.setText('Health:' + health);
           var t = cards.indexOf(c0["texture"]["key"]);
@@ -1635,25 +1688,25 @@ var P1 = new Phaser.Class({
         c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
         hove(c0, this, cards[0] + 'big');
         select(c0, this, cards[0]);
-        var ma = ["COM", "COM2"];
-        shuffle(ma);
-        cc = this.add.image(250, 250, ma[0]).setInteractive({ useHandCursor: true  } );
-        hove(cc, this, ma[0] + 'big');
-        select(cc, this, ma[0]);
-        ma = ["ENGINES", "ENGINES2"];
-        shuffle(ma);
+        //var ma = ["COM", "COM2"];
+        //shuffle(ma);
+        cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
+        hove(cc, this, "COM" + 'big');
+        select(cc, this, "COM");
+        //ma = ["ENGINES", "ENGINES2"];
+        //shuffle(ma);
         ce = this.add.image(375, 250, ma[0]).setInteractive({ useHandCursor: true  } );
-        hove(ce, this, ma[0] + 'big');
-        select(ce, this, ma[0]);
-        ma = ["PORT", "PORT2"];
-        shuffle(ma);
+        hove(ce, this, "ENGINES" + 'big');
+        select(ce, this, "ENGINES");
+        //ma = ["PORT", "PORT2"];
+        //shuffle(ma);
         por = "PORT";
-        if(ma[0] == "PORT2"){
+        /*if(ma[0] == "PORT2"){
           por = "PORT2";
-        }
-        cp = this.add.image(500, 250, ma[0]).setInteractive({ useHandCursor: true  } );
-        hove(cp, this, ma[0] + 'big');
-        select(cp, this, ma[0]);
+        }*/
+        cp = this.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
+        hove(cp, this, "PORT" + 'big');
+        select(cp, this, "PORT");
         /*cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');*/
