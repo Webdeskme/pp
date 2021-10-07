@@ -1497,7 +1497,7 @@ var P1 = new Phaser.Class({
               ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
             }
             if(mis2[2] == "yes"){
-              ce = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
+              cp = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
             }
           }
           else {
@@ -1518,7 +1518,7 @@ var P1 = new Phaser.Class({
               ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
             }
             if(mis1[2] == "yes"){
-              ce = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
+              cp = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
             }
           }
           healthText.setText('Health:' + health);
