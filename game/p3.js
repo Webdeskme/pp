@@ -1203,6 +1203,7 @@ var P1 = new Phaser.Class({
         pdis = [];
         pdis1 = [];
         pdis2 = [];
+        pdis3 = [];
         dis = [];
         red = "No";
         game = 0;
