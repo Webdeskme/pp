@@ -182,6 +182,7 @@ var TitleS = new Phaser.Class({
         this.load.image('logo', 'assets/Text/logo.png');
         this.load.image('ca', 'assets/Text/counter.png');
         this.load.image('coop', 'assets/Text/coop.png');
+        this.load.image('3coop', 'assets/Text/3coop.png');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -412,12 +413,13 @@ var TitleS = new Phaser.Class({
         }
         var d = this.add.image(900, 50, 'title').setScrollFactor(0,0);
         var n = this.add.image(900, 100, 'coop').setScrollFactor(0,0);
-        var e = this.add.image(900, 150, 'videol').setScrollFactor(0,0);
-        var f = this.add.image(900, 200, 'story').setScrollFactor(0,0);
-        var g = this.add.image(900, 250, 'puzzle').setScrollFactor(0,0);
-        var h = this.add.image(900, 300, 'credits').setScrollFactor(0,0);
-        var j = this.add.image(900, 350, 'aii').setScrollFactor(0,0);
-        var k = this.add.image(900, 400, 'sa').setScrollFactor(0,0);
+        var o = this.add.image(900, 150, '3coop').setScrollFactor(0,0);
+        var e = this.add.image(900, 200, 'videol').setScrollFactor(0,0);
+        var f = this.add.image(900, 250, 'story').setScrollFactor(0,0);
+        var g = this.add.image(900, 350, 'puzzle').setScrollFactor(0,0);
+        var h = this.add.image(900, 400, 'credits').setScrollFactor(0,0);
+        var j = this.add.image(900, 300, 'aii').setScrollFactor(0,0);
+        var k = this.add.image(900, 450, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
         var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
@@ -436,6 +438,8 @@ var TitleS = new Phaser.Class({
         k.setScale(1/4);
         n.setInteractive({ useHandCursor: true  } );
         n.setScale(1/4);
+        o.setInteractive({ useHandCursor: true  } );
+        o.setScale(1/4);
         l.setInteractive({ useHandCursor: true  } );
         l.setScale(2/3);
         m.setInteractive({ useHandCursor: true  } );
@@ -457,6 +461,12 @@ var TitleS = new Phaser.Class({
         });
         n.on('pointerout',function(pointer){
           n.setScale(1/4);
+        });
+        o.on('pointerover',function(pointer){
+          o.setScale(1/3);
+        });
+        o.on('pointerout',function(pointer){
+          o.setScale(1/4);
         });
         f.on('pointerover',function(pointer){
           f.setScale(1/3);
@@ -513,6 +523,13 @@ var TitleS = new Phaser.Class({
           this.game.sound.stopAll();
           //this.scene.start('p1');
           window.location.href = "p2.html";
+        });
+        o.on('pointerdown', () => {
+          this.sound.add('click').play();
+          //endm.stop();
+          this.game.sound.stopAll();
+          //this.scene.start('p1');
+          window.location.href = "p3.html";
         });
         e.on('pointerdown', () => {
           this.sound.add('click').play();
