@@ -1695,7 +1695,7 @@ var P1 = new Phaser.Class({
         select(cc, this, "COM");
         //ma = ["ENGINES", "ENGINES2"];
         //shuffle(ma);
-        ce = this.add.image(375, 250, ma[0]).setInteractive({ useHandCursor: true  } );
+        ce = this.add.image(375, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
         hove(ce, this, "ENGINES" + 'big');
         select(ce, this, "ENGINES");
         //ma = ["PORT", "PORT2"];
