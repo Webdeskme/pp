@@ -436,10 +436,10 @@ var TitleS = new Phaser.Class({
         j.setScale(1/4);
         k.setInteractive({ useHandCursor: true  } );
         k.setScale(1/4);
-        n.setInteractive({ useHandCursor: true  } );
+        /*n.setInteractive({ useHandCursor: true  } );
         n.setScale(1/4);
         o.setInteractive({ useHandCursor: true  } );
-        o.setScale(1/4);
+        o.setScale(1/4);*/
         l.setInteractive({ useHandCursor: true  } );
         l.setScale(2/3);
         m.setInteractive({ useHandCursor: true  } );
@@ -682,29 +682,29 @@ var SubM = new Phaser.Class({
 
     create: function ()
     {
-      var a = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
-      var b = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
+      var aa = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
+      var bb = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
       var n = this.add.image(900, 150, 'coop').setScrollFactor(0,0);
       var o = this.add.image(900, 200, '3coop').setScrollFactor(0,0);
-      a.setInteractive({ useHandCursor: true  } );
-      a.setScale(1/4);
-      b.setInteractive({ useHandCursor: true  } );
-      b.setScale(1/4);
+      aa.setInteractive({ useHandCursor: true  } );
+      aa.setScale(1/4);
+      bb.setInteractive({ useHandCursor: true  } );
+      bb.setScale(1/4);
       n.setInteractive({ useHandCursor: true  } );
       n.setScale(1/4);
       o.setInteractive({ useHandCursor: true  } );
       o.setScale(1/4);
-      a.on('pointerover',function(pointer){
-        a.setScale(1/3);
+      aa.on('pointerover',function(pointer){
+        aa.setScale(1/3);
       });
-      a.on('pointerout',function(pointer){
-        a.setScale(1/4);
+      aa.on('pointerout',function(pointer){
+        aa.setScale(1/4);
       });
-      b.on('pointerover',function(pointer){
-        b.setScale(1/3);
+      bb.on('pointerover',function(pointer){
+        bb.setScale(1/3);
       });
-      b.on('pointerout',function(pointer){
-        b.setScale(1/4);
+      bb.on('pointerout',function(pointer){
+        bb.setScale(1/4);
       });
       n.on('pointerover',function(pointer){
         n.setScale(1/3);
@@ -718,14 +718,14 @@ var SubM = new Phaser.Class({
       o.on('pointerout',function(pointer){
         o.setScale(1/4);
       });
-      a.on('pointerdown', () => {
+      aa.on('pointerdown', () => {
         this.sound.add('click').play();
         //endm.stop();
         this.game.sound.stopAll();
         //this.scene.start('p1');
         window.location.href = "p1.html";
       });
-      a.on('pointerdown', () => {
+      bb.on('pointerdown', () => {
         this.sound.add('click').play();
         //endm.stop();
         this.game.sound.stopAll();
