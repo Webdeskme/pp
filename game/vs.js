@@ -1492,6 +1492,8 @@ var P1 = new Phaser.Class({
             playerText.setText('Player: 2');
             if(mis2[0] == "yes"){
               console.log("mis2:cc");
+              console.log(mis1);
+              console.log(mis2);
               cc.visible = true;
             }
             else{
