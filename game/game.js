@@ -181,8 +181,8 @@ var TitleS = new Phaser.Class({
         this.load.image('cb', 'assets/out/back.png');
         this.load.image('logo', 'assets/Text/logo.png');
         this.load.image('ca', 'assets/Text/counter.png');
-        this.load.image('coop', 'assets/Text/coop.png');
-        this.load.image('3coop', 'assets/Text/3coop.png');
+        //this.load.image('coop', 'assets/Text/coop.png');
+        //this.load.image('3coop', 'assets/Text/3coop.png');
         var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/out/' + cards[i] + '.png');
@@ -412,14 +412,14 @@ var TitleS = new Phaser.Class({
           });
         }
         var d = this.add.image(900, 50, 'title').setScrollFactor(0,0);
-        var n = this.add.image(900, 100, 'coop').setScrollFactor(0,0);
-        var o = this.add.image(900, 150, '3coop').setScrollFactor(0,0);
-        var e = this.add.image(900, 200, 'videol').setScrollFactor(0,0);
-        var f = this.add.image(900, 250, 'story').setScrollFactor(0,0);
-        var g = this.add.image(900, 350, 'puzzle').setScrollFactor(0,0);
-        var h = this.add.image(900, 400, 'credits').setScrollFactor(0,0);
-        var j = this.add.image(900, 300, 'aii').setScrollFactor(0,0);
-        var k = this.add.image(900, 450, 'sa').setScrollFactor(0,0);
+        //var n = this.add.image(900, 100, 'coop').setScrollFactor(0,0);
+        //var o = this.add.image(900, 150, '3coop').setScrollFactor(0,0);
+        var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
+        var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
+        var g = this.add.image(900, 250, 'puzzle').setScrollFactor(0,0);
+        var h = this.add.image(900, 300, 'credits').setScrollFactor(0,0);
+        var j = this.add.image(900, 200, 'aii').setScrollFactor(0,0);
+        var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
         var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
         d.setInteractive({ useHandCursor: true  } );
@@ -456,7 +456,7 @@ var TitleS = new Phaser.Class({
         e.on('pointerout',function(pointer){
           e.setScale(1/4);
         });
-        n.on('pointerover',function(pointer){
+        /*n.on('pointerover',function(pointer){
           n.setScale(1/3);
         });
         n.on('pointerout',function(pointer){
@@ -467,7 +467,7 @@ var TitleS = new Phaser.Class({
         });
         o.on('pointerout',function(pointer){
           o.setScale(1/4);
-        });
+        });*/
         f.on('pointerover',function(pointer){
           f.setScale(1/3);
         });
@@ -514,10 +514,10 @@ var TitleS = new Phaser.Class({
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
-          //this.scene.start('p1');
-          window.location.href = "p1.html";
+          this.scene.start('subm');
+          //window.location.href = "p1.html";
         });
-        n.on('pointerdown', () => {
+        /*n.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
@@ -530,7 +530,7 @@ var TitleS = new Phaser.Class({
           this.game.sound.stopAll();
           //this.scene.start('p1');
           window.location.href = "p3.html";
-        });
+        });*/
         e.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
@@ -659,6 +659,95 @@ var TitleS = new Phaser.Class({
     stars.tilePositionY += ship.body.deltaY() * 2;
 }
 });
+var SubM = new Phaser.Class({
+
+    Extends: Phaser.Scene,
+
+    initialize:
+
+    function SubM ()
+    {
+        Phaser.Scene.call(this, { key: 'subm' });
+    },
+
+    preload: function ()
+    {
+      this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
+      this.load.image('back', 'assets/backgrounds/blck.png');
+      this.load.image('coop', 'assets/Text/coop.png');
+      this.load.image('3coop', 'assets/Text/3coop.png');
+      this.load.image('solo', 'assets/Text/solo.png');
+      this.load.image('vs', 'assets/Text/vs.png');
+    },
+
+    create: function ()
+    {
+      var a = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
+      var b = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
+      var n = this.add.image(900, 150, 'coop').setScrollFactor(0,0);
+      var o = this.add.image(900, 200, '3coop').setScrollFactor(0,0);
+      a.setInteractive({ useHandCursor: true  } );
+      a.setScale(1/4);
+      b.setInteractive({ useHandCursor: true  } );
+      b.setScale(1/4);
+      n.setInteractive({ useHandCursor: true  } );
+      n.setScale(1/4);
+      o.setInteractive({ useHandCursor: true  } );
+      o.setScale(1/4);
+      a.on('pointerover',function(pointer){
+        a.setScale(1/3);
+      });
+      a.on('pointerout',function(pointer){
+        a.setScale(1/4);
+      });
+      b.on('pointerover',function(pointer){
+        b.setScale(1/3);
+      });
+      b.on('pointerout',function(pointer){
+        b.setScale(1/4);
+      });
+      n.on('pointerover',function(pointer){
+        n.setScale(1/3);
+      });
+      n.on('pointerout',function(pointer){
+        n.setScale(1/4);
+      });
+      o.on('pointerover',function(pointer){
+        o.setScale(1/3);
+      });
+      o.on('pointerout',function(pointer){
+        o.setScale(1/4);
+      });
+      a.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        //this.scene.start('p1');
+        window.location.href = "p1.html";
+      });
+      a.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        //this.scene.start('p1');
+        window.location.href = "vs.html";
+      });
+      n.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        //this.scene.start('p1');
+        window.location.href = "p2.html";
+      });
+      o.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        //this.scene.start('p1');
+        window.location.href = "p3.html";
+      });
+      }
+    });
 var config = {
     type: Phaser.AUTO,
     scale: {
@@ -679,7 +768,7 @@ var config = {
     },
     enableDebug: false,
     backgroundColor: '#000000',
-    scene: [ TitleS, Vide, Puzz, Cred ]
+    scene: [ TitleS, Vide, Puzz, Cred, SubM ]
 };
 var bg;
 var stars;
