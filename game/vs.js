@@ -1491,12 +1491,15 @@ var P1 = new Phaser.Class({
             player = 2;
             playerText.setText('Player: 2');
             if(mis2[0] == "yes"){
+              console.log("mis2:cc");
               cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
             }
             if(mis2[1] == "yes"){
+              console.log("mis2:ce");
               ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
             }
             if(mis2[2] == "yes"){
+              console.log("mis2:cp");
               cp = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
             }
           }
@@ -1512,12 +1515,15 @@ var P1 = new Phaser.Class({
             player = 1;
             playerText.setText('Player: 1');
             if(mis1[0] == "yes"){
+              console.log("mis1:cc");
               cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
             }
             if(mis1[1] == "yes"){
+              console.log("mis1:ce");
               ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
             }
             if(mis1[2] == "yes"){
+              console.log("mis1:cp");
               cp = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
             }
           }
