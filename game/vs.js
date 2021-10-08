@@ -928,7 +928,8 @@ var P1 = new Phaser.Class({
                     }
                     if(temp2 == "COM"){
                       th.sound.add('comp').play();
-                      cc.destroy();
+                      //cc.destroy();
+                      cc.visible = false;
                       if(player = 1){
                         mis1[0] = "NO";
                       }
@@ -938,7 +939,7 @@ var P1 = new Phaser.Class({
                     }
                     else if (temp2 == "ENGINES") {
                       th.sound.add('comp').play();
-                      ce.destroy();
+                      ce.visible = false;
                       if(player = 1){
                         mis1[1] = "NO";
                       }
@@ -948,7 +949,7 @@ var P1 = new Phaser.Class({
                     }
                     else if (temp2 == "PORT") {
                       th.sound.add('comp').play();
-                      cp.destroy();
+                      cp.visible = false;
                       if(player = 1){
                         mis1[2] = "NO";
                       }
@@ -1476,9 +1477,9 @@ var P1 = new Phaser.Class({
               this.game.sound.stopAll();
               window.location.href = "lose.html";
           }
-          cc.destroy();
-          ce.destroy();
-          cp.destroy();
+          cc.visible = false;
+          ce.visible = false;
+          cp.visible = false;
           if(player == 1){
             player1 = p;
             p = player2;
@@ -1492,15 +1493,15 @@ var P1 = new Phaser.Class({
             playerText.setText('Player: 2');
             if(mis2[0] == "yes"){
               console.log("mis2:cc");
-              cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
+              cc.visible = true;
             }
             if(mis2[1] == "yes"){
               console.log("mis2:ce");
-              ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
+              ce.visible = true;
             }
             if(mis2[2] == "yes"){
               console.log("mis2:cp");
-              cp = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
+              cp.visible = true;
             }
           }
           else {
