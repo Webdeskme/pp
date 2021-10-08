@@ -1527,15 +1527,24 @@ var P1 = new Phaser.Class({
             playerText.setText('Player: 1');
             if(mis1[0] == "yes"){
               console.log("mis1:cc");
-              cc = this.add.image(250, 250, "COM").setInteractive({ useHandCursor: true  } );
+              cc.visible = true;
+            }
+            else{
+              cc.visible = false;
             }
             if(mis1[1] == "yes"){
               console.log("mis1:ce");
-              ce = this.add.image(250, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
+              ce.visible = true;
+            }
+            else{
+              ce.visible = false;
             }
             if(mis1[2] == "yes"){
               console.log("mis1:cp");
-              cp = this.add.image(250, 250, "PORT").setInteractive({ useHandCursor: true  } );
+              cp.visible = true;
+            }
+            else{
+              cp.visible = true;
             }
           }
           healthText.setText('Health:' + health);
