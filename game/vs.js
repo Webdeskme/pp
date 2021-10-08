@@ -928,9 +928,8 @@ var P1 = new Phaser.Class({
                     }
                     if(temp2 == "COM"){
                       th.sound.add('comp').play();
-                      //cc.destroy();
                       cc.visible = false;
-                      if(player = 1){
+                      if(player == 1){
                         mis1[0] = "NO";
                       }
                       else{
@@ -940,7 +939,7 @@ var P1 = new Phaser.Class({
                     else if (temp2 == "ENGINES") {
                       th.sound.add('comp').play();
                       ce.visible = false;
-                      if(player = 1){
+                      if(player == 1){
                         mis1[1] = "NO";
                       }
                       else{
@@ -950,7 +949,7 @@ var P1 = new Phaser.Class({
                     else if (temp2 == "PORT") {
                       th.sound.add('comp').play();
                       cp.visible = false;
-                      if(player = 1){
+                      if(player == 1){
                         mis1[2] = "NO";
                       }
                       else{
@@ -1477,9 +1476,9 @@ var P1 = new Phaser.Class({
               this.game.sound.stopAll();
               window.location.href = "lose.html";
           }
-          cc.visible = false;
+          /*cc.visible = false;
           ce.visible = false;
-          cp.visible = false;
+          cp.visible = false;*/
           if(player == 1){
             player1 = p;
             p = player2;
@@ -1495,13 +1494,22 @@ var P1 = new Phaser.Class({
               console.log("mis2:cc");
               cc.visible = true;
             }
+            else{
+              cc.visible = false;
+            }
             if(mis2[1] == "yes"){
               console.log("mis2:ce");
               ce.visible = true;
             }
+            else{
+              ce.visible = false;
+            }
             if(mis2[2] == "yes"){
               console.log("mis2:cp");
               cp.visible = true;
+            }
+            else{
+              cp.visible = false;
             }
           }
           else {
