@@ -1750,7 +1750,32 @@ if(player == 2){
 var iii;
 //console.log(hand);
 //bob
-for (iii = 0; iii < 9; iii++) {
+//var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C", "P2S", "P2C"];
+const mind = ["PrivilegeEsc", "MFAB", "IMDS", "MFA", "CloudAccount", "ZeroTrust", "Malware", "IAM", "FakeInstaller", "ShadowCopy", "Behavior", "Endpoint", "CloudStorage", "Sysmon", "CredStuffing", "DPAT", "Sinkhole", "User", "Driver", "OfficeMacro", "Browser", "WebShell", "SRUM", "SIEM", "Kubelet", "EMP"];
+var order = [];
+var mindx = 0;
+var i6;
+for (i6 = 0; i6 < mind.length; i6++) {
+  if(c0["texture"]["key"] == mind[i6]){
+    order.push(1);
+  }
+  if(c1["texture"]["key"] == mind[i6]){
+    order.push(2);
+  }
+  if(c2["texture"]["key"] == mind[i6]){
+    order.push(3);
+  }
+  if(c3["texture"]["key"] == mind[i6]){
+    order.push(4);
+  }
+  if(c4["texture"]["key"] == mind[i6]){
+    order.push(5);
+  }
+  if(c5["texture"]["key"] == mind[i6]){
+    order.push(6);
+  }
+}
+for (iii = 0; iii < 3; iii++) {
   if(buy != "yes"){
   if(iii == 0 && mis2[0] == "yes"){
     setTimeout(sel, 0, cc, th, "COM");
@@ -1928,10 +1953,13 @@ for (iii = 0; iii < 9; iii++) {
     }
     }
   }
+}
   //console.log("buy");
   //console.log(buy);
+  var i7;
+  for (i7 = 0; i7 < 6; i7++) {
   if(buy != "yes"){
-    if(iii == 3){
+    if(order[i7] == 1){
     setTimeout(sel, 5400, c0, th, cards[0]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
@@ -1991,7 +2019,7 @@ for (iii = 0; iii < 9; iii++) {
   }
 }
 if(buy != "yes"){
-  if (iii == 4) {
+  if (order[i7] == 2) {
     setTimeout(sel, 7200, c1, th, cards[1]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
@@ -2051,7 +2079,7 @@ if(buy != "yes"){
   }
 }
 if(buy != "yes"){
-  if (iii == 5) {
+  if (order[i7] == 3) {
     setTimeout(sel, 9000, c2, th, cards[2]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
@@ -2111,7 +2139,7 @@ if(buy != "yes"){
   }
 }
 if(buy != "yes"){
-  if (iii == 6) {
+  if (order[i7] == 4) {
     setTimeout(sel, 10800, c3, th, cards[3]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
@@ -2171,7 +2199,7 @@ if(buy != "yes"){
   }
 }
 if(buy != "yes"){
-  if (iii == 7) {
+  if (order[i7] == 5) {
     setTimeout(sel, 12600, c4, th, cards[4]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
@@ -2231,7 +2259,7 @@ if(buy != "yes"){
   }
 }
 if(buy != "yes"){
-  if (iii == 8) {
+  if (order[i7] == 6) {
     setTimeout(sel, 14400, c5, th, cards[5]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
