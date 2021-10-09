@@ -1726,7 +1726,9 @@ var P1 = new Phaser.Class({
 if(player == 2){
   buy = "no";
 var iii;
+console.log(hand);
 for (iii = 0; iii < 6; iii++) {
+  console.log(buy);
   if(buy != "yes"){
     if(iii == 0){
     sel(c0, this, cards[0]);
