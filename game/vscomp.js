@@ -104,7 +104,7 @@ var P1 = new Phaser.Class({
           }
           var red = "no";
           var reds = "";
-          function(c, th, im){
+          function sel(c, th, im){
             th.sound.add('click').play();
             if(reds == c["texture"]["key"]){
               c.clearTint();
