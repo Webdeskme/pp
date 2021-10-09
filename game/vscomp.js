@@ -1778,18 +1778,288 @@ for (iii = 0; iii < 6; iii++) {
   }
   else if (iii == 1) {
     sel(c1, this, cards[1]);
+    var iiii;
+    for (iii = 0; iii < hand.length; iii++) {
+      if(iiii == 0){
+        bsel(p0, this, p[0]);
+      }
+      else if (iiii == 1) {
+        bsel(p1, this, p[1]);
+      }
+      else if (iiii == 2) {
+        bsel(p2, this, p[2]);
+      }
+      else if (iiii == 3) {
+        bsel(p3, this, p[3]);
+      }
+      else if (iiii == 4) {
+        bsel(p4, this, p[4]);
+      }
+      else if (iiii == 5) {
+        bsel(p5, this, p[5]);
+      }
+      else if (iiii == 6) {
+        bsel(p6, this, p[6]);
+      }
+      else if (iiii == 7) {
+        bsel(p7, this, p[7]);
+      }
+      else if (iiii == 8) {
+        bsel(p8, this, p[8]);
+      }
+      else if (iiii == 9) {
+        bsel(p9, this, p[9]);
+      }
+      else if (iiii == 10) {
+        bsel(p10, this, p[10]);
+      }
+      else if (iiii == 11) {
+        bsel(p11, this, p[11]);
+      }
+      else if (iiii == 12) {
+        bsel(p12, this, p[12]);
+      }
+      else if (iiii == 13) {
+        bsel(p13, this, p[13]);
+      }
+      else if (iiii == 14) {
+        bsel(p14, this, p[14]);
+      }
+      else if (iiii == 15) {
+        bsel(p15, this, p[15]);
+      }
+      else if (iiii == 16) {
+        bsel(p16, this, p[16]);
+      }
+    }
   }
   else if (iii == 2) {
     sel(c2, this, cards[2]);
+    var iiii;
+    for (iii = 0; iii < hand.length; iii++) {
+      if(iiii == 0){
+        bsel(p0, this, p[0]);
+      }
+      else if (iiii == 1) {
+        bsel(p1, this, p[1]);
+      }
+      else if (iiii == 2) {
+        bsel(p2, this, p[2]);
+      }
+      else if (iiii == 3) {
+        bsel(p3, this, p[3]);
+      }
+      else if (iiii == 4) {
+        bsel(p4, this, p[4]);
+      }
+      else if (iiii == 5) {
+        bsel(p5, this, p[5]);
+      }
+      else if (iiii == 6) {
+        bsel(p6, this, p[6]);
+      }
+      else if (iiii == 7) {
+        bsel(p7, this, p[7]);
+      }
+      else if (iiii == 8) {
+        bsel(p8, this, p[8]);
+      }
+      else if (iiii == 9) {
+        bsel(p9, this, p[9]);
+      }
+      else if (iiii == 10) {
+        bsel(p10, this, p[10]);
+      }
+      else if (iiii == 11) {
+        bsel(p11, this, p[11]);
+      }
+      else if (iiii == 12) {
+        bsel(p12, this, p[12]);
+      }
+      else if (iiii == 13) {
+        bsel(p13, this, p[13]);
+      }
+      else if (iiii == 14) {
+        bsel(p14, this, p[14]);
+      }
+      else if (iiii == 15) {
+        bsel(p15, this, p[15]);
+      }
+      else if (iiii == 16) {
+        bsel(p16, this, p[16]);
+      }
+    }
   }
   else if (iii == 3) {
     sel(c3, this, cards[3]);
+    var iiii;
+    for (iii = 0; iii < hand.length; iii++) {
+      if(iiii == 0){
+        bsel(p0, this, p[0]);
+      }
+      else if (iiii == 1) {
+        bsel(p1, this, p[1]);
+      }
+      else if (iiii == 2) {
+        bsel(p2, this, p[2]);
+      }
+      else if (iiii == 3) {
+        bsel(p3, this, p[3]);
+      }
+      else if (iiii == 4) {
+        bsel(p4, this, p[4]);
+      }
+      else if (iiii == 5) {
+        bsel(p5, this, p[5]);
+      }
+      else if (iiii == 6) {
+        bsel(p6, this, p[6]);
+      }
+      else if (iiii == 7) {
+        bsel(p7, this, p[7]);
+      }
+      else if (iiii == 8) {
+        bsel(p8, this, p[8]);
+      }
+      else if (iiii == 9) {
+        bsel(p9, this, p[9]);
+      }
+      else if (iiii == 10) {
+        bsel(p10, this, p[10]);
+      }
+      else if (iiii == 11) {
+        bsel(p11, this, p[11]);
+      }
+      else if (iiii == 12) {
+        bsel(p12, this, p[12]);
+      }
+      else if (iiii == 13) {
+        bsel(p13, this, p[13]);
+      }
+      else if (iiii == 14) {
+        bsel(p14, this, p[14]);
+      }
+      else if (iiii == 15) {
+        bsel(p15, this, p[15]);
+      }
+      else if (iiii == 16) {
+        bsel(p16, this, p[16]);
+      }
+    }
   }
   else if (iii == 4) {
     sel(c4, this, cards[4]);
+    var iiii;
+    for (iii = 0; iii < hand.length; iii++) {
+      if(iiii == 0){
+        bsel(p0, this, p[0]);
+      }
+      else if (iiii == 1) {
+        bsel(p1, this, p[1]);
+      }
+      else if (iiii == 2) {
+        bsel(p2, this, p[2]);
+      }
+      else if (iiii == 3) {
+        bsel(p3, this, p[3]);
+      }
+      else if (iiii == 4) {
+        bsel(p4, this, p[4]);
+      }
+      else if (iiii == 5) {
+        bsel(p5, this, p[5]);
+      }
+      else if (iiii == 6) {
+        bsel(p6, this, p[6]);
+      }
+      else if (iiii == 7) {
+        bsel(p7, this, p[7]);
+      }
+      else if (iiii == 8) {
+        bsel(p8, this, p[8]);
+      }
+      else if (iiii == 9) {
+        bsel(p9, this, p[9]);
+      }
+      else if (iiii == 10) {
+        bsel(p10, this, p[10]);
+      }
+      else if (iiii == 11) {
+        bsel(p11, this, p[11]);
+      }
+      else if (iiii == 12) {
+        bsel(p12, this, p[12]);
+      }
+      else if (iiii == 13) {
+        bsel(p13, this, p[13]);
+      }
+      else if (iiii == 14) {
+        bsel(p14, this, p[14]);
+      }
+      else if (iiii == 15) {
+        bsel(p15, this, p[15]);
+      }
+      else if (iiii == 16) {
+        bsel(p16, this, p[16]);
+      }
+    }
   }
   else if (iii == 5) {
     sel(c5, this, cards[5]);
+    var iiii;
+    for (iii = 0; iii < hand.length; iii++) {
+      if(iiii == 0){
+        bsel(p0, this, p[0]);
+      }
+      else if (iiii == 1) {
+        bsel(p1, this, p[1]);
+      }
+      else if (iiii == 2) {
+        bsel(p2, this, p[2]);
+      }
+      else if (iiii == 3) {
+        bsel(p3, this, p[3]);
+      }
+      else if (iiii == 4) {
+        bsel(p4, this, p[4]);
+      }
+      else if (iiii == 5) {
+        bsel(p5, this, p[5]);
+      }
+      else if (iiii == 6) {
+        bsel(p6, this, p[6]);
+      }
+      else if (iiii == 7) {
+        bsel(p7, this, p[7]);
+      }
+      else if (iiii == 8) {
+        bsel(p8, this, p[8]);
+      }
+      else if (iiii == 9) {
+        bsel(p9, this, p[9]);
+      }
+      else if (iiii == 10) {
+        bsel(p10, this, p[10]);
+      }
+      else if (iiii == 11) {
+        bsel(p11, this, p[11]);
+      }
+      else if (iiii == 12) {
+        bsel(p12, this, p[12]);
+      }
+      else if (iiii == 13) {
+        bsel(p13, this, p[13]);
+      }
+      else if (iiii == 14) {
+        bsel(p14, this, p[14]);
+      }
+      else if (iiii == 15) {
+        bsel(p15, this, p[15]);
+      }
+      else if (iiii == 16) {
+        bsel(p16, this, p[16]);
+      }
+    }
   }
 }
 }
