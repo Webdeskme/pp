@@ -1737,55 +1737,55 @@ for (iii = 0; iii < 6; iii++) {
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        bsel(p0, this, p[0]);
+        setTimeout(function(){ bsel(p0, this, p[0]);}, 1000);
       }
       else if (iiii == 1) {
-        bsel(p1, this, p[1]);
+        setTimeout(function(){ bsel(p1, this, p[1]);}, 1000);
       }
       else if (iiii == 2) {
-        bsel(p2, this, p[2]);
+        setTimeout(function(){ bsel(p2, this, p[2]);}, 1000);
       }
       else if (iiii == 3) {
-        bsel(p3, this, p[3]);
+        setTimeout(function(){ bsel(p3, this, p[3]);}, 1000);
       }
       else if (iiii == 4) {
-        bsel(p4, this, p[4]);
+        setTimeout(function(){ bsel(p4, this, p[4]);}, 1000);
       }
       else if (iiii == 5) {
-        bsel(p5, this, p[5]);
+        setTimeout(function(){ bsel(p5, this, p[5]);}, 1000);
       }
       else if (iiii == 6) {
-        bsel(p6, this, p[6]);
+        setTimeout(function(){ bsel(p6, this, p[6]);}, 1000);
       }
       else if (iiii == 7) {
-        bsel(p7, this, p[7]);
+        setTimeout(function(){ bsel(p7, this, p[7]);}, 1000);
       }
       else if (iiii == 8) {
-        bsel(p8, this, p[8]);
+        setTimeout(function(){ bsel(p8, this, p[8]);}, 1000);
       }
       else if (iiii == 9) {
-        bsel(p9, this, p[9]);
+        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);
       }
       else if (iiii == 10) {
-        bsel(p10, this, p[10]);
+        setTimeout(function(){ bsel(p10, this, p[10]);}, 1000);
       }
       else if (iiii == 11) {
-        bsel(p11, this, p[11]);
+        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);
       }
       else if (iiii == 12) {
-        bsel(p12, this, p[12]);
+        setTimeout(function(){ bsel(p12, this, p[12]);}, 1000);
       }
       else if (iiii == 13) {
-        bsel(p13, this, p[13]);
+        setTimeout(function(){ bsel(p13, this, p[13]);}, 1000);
       }
       else if (iiii == 14) {
-        bsel(p14, this, p[14]);
+        setTimeout(function(){ bsel(p14, this, p[14]);}, 1000);
       }
       else if (iiii == 15) {
-        bsel(p15, this, p[15]);
+        setTimeout(function(){ bsel(p15, this, p[15]);}, 1000);
       }
       else if (iiii == 16) {
-        bsel(p16, this, p[16]);
+        setTimeout(function(){ bsel(p16, this, p[16]);}, 1000);
       }
     }
   }
@@ -1796,55 +1796,55 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        bsel(p0, this, p[0]);
+        setTimeout(function(){ bsel(p0, this, p[0]);}, 1000);
       }
       else if (iiii == 1) {
-        bsel(p1, this, p[1]);
+        setTimeout(function(){ bsel(p1, this, p[1]);}, 1000);
       }
       else if (iiii == 2) {
-        bsel(p2, this, p[2]);
+        setTimeout(function(){ bsel(p2, this, p[2]);}, 1000);
       }
       else if (iiii == 3) {
-        bsel(p3, this, p[3]);
+        setTimeout(function(){ bsel(p3, this, p[3]);}, 1000);
       }
       else if (iiii == 4) {
-        bsel(p4, this, p[4]);
+        setTimeout(function(){ bsel(p4, this, p[4]);}, 1000);
       }
       else if (iiii == 5) {
-        bsel(p5, this, p[5]);
+        setTimeout(function(){ bsel(p5, this, p[5]);}, 1000);
       }
       else if (iiii == 6) {
-        bsel(p6, this, p[6]);
+        setTimeout(function(){ bsel(p6, this, p[6]);}, 1000);
       }
       else if (iiii == 7) {
-        bsel(p7, this, p[7]);
+        setTimeout(function(){ bsel(p7, this, p[7]);}, 1000);
       }
       else if (iiii == 8) {
-        bsel(p8, this, p[8]);
+        setTimeout(function(){ bsel(p8, this, p[8]);}, 1000);
       }
       else if (iiii == 9) {
-        bsel(p9, this, p[9]);
+        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);
       }
       else if (iiii == 10) {
-        bsel(p10, this, p[10]);
+        setTimeout(function(){ bsel(p10, this, p[10]);}, 1000);
       }
       else if (iiii == 11) {
-        bsel(p11, this, p[11]);
+        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);
       }
       else if (iiii == 12) {
-        bsel(p12, this, p[12]);
+        setTimeout(function(){ bsel(p12, this, p[12]);}, 1000);
       }
       else if (iiii == 13) {
-        bsel(p13, this, p[13]);
+        setTimeout(function(){ bsel(p13, this, p[13]);}, 1000);
       }
       else if (iiii == 14) {
-        bsel(p14, this, p[14]);
+        setTimeout(function(){ bsel(p14, this, p[14]);}, 1000);
       }
       else if (iiii == 15) {
-        bsel(p15, this, p[15]);
+        setTimeout(function(){ bsel(p15, this, p[15]);}, 1000);
       }
       else if (iiii == 16) {
-        bsel(p16, this, p[16]);
+        setTimeout(function(){ bsel(p16, this, p[16]);}, 1000);
       }
     }
   }
@@ -1855,55 +1855,55 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        bsel(p0, this, p[0]);
+        setTimeout(function(){ bsel(p0, this, p[0]);}, 1000);
       }
       else if (iiii == 1) {
-        bsel(p1, this, p[1]);
+        setTimeout(function(){ bsel(p1, this, p[1]);}, 1000);
       }
       else if (iiii == 2) {
-        bsel(p2, this, p[2]);
+        setTimeout(function(){ bsel(p2, this, p[2]);}, 1000);
       }
       else if (iiii == 3) {
-        bsel(p3, this, p[3]);
+        setTimeout(function(){ bsel(p3, this, p[3]);}, 1000);
       }
       else if (iiii == 4) {
-        bsel(p4, this, p[4]);
+        setTimeout(function(){ bsel(p4, this, p[4]);}, 1000);
       }
       else if (iiii == 5) {
-        bsel(p5, this, p[5]);
+        setTimeout(function(){ bsel(p5, this, p[5]);}, 1000);
       }
       else if (iiii == 6) {
-        bsel(p6, this, p[6]);
+        setTimeout(function(){ bsel(p6, this, p[6]);}, 1000);
       }
       else if (iiii == 7) {
-        bsel(p7, this, p[7]);
+        setTimeout(function(){ bsel(p7, this, p[7]);}, 1000);
       }
       else if (iiii == 8) {
-        bsel(p8, this, p[8]);
+        setTimeout(function(){ bsel(p8, this, p[8]);}, 1000);
       }
       else if (iiii == 9) {
-        bsel(p9, this, p[9]);
+        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);
       }
       else if (iiii == 10) {
-        bsel(p10, this, p[10]);
+        setTimeout(function(){ bsel(p10, this, p[10]);}, 1000);
       }
       else if (iiii == 11) {
-        bsel(p11, this, p[11]);
+        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);
       }
       else if (iiii == 12) {
-        bsel(p12, this, p[12]);
+        setTimeout(function(){ bsel(p12, this, p[12]);}, 1000);
       }
       else if (iiii == 13) {
-        bsel(p13, this, p[13]);
+        setTimeout(function(){ bsel(p13, this, p[13]);}, 1000);
       }
       else if (iiii == 14) {
-        bsel(p14, this, p[14]);
+        setTimeout(function(){ bsel(p14, this, p[14]);}, 1000);
       }
       else if (iiii == 15) {
-        bsel(p15, this, p[15]);
+        setTimeout(function(){ bsel(p15, this, p[15]);}, 1000);
       }
       else if (iiii == 16) {
-        bsel(p16, this, p[16]);
+        setTimeout(function(){ bsel(p16, this, p[16]);}, 1000);
       }
     }
   }
@@ -1914,55 +1914,55 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        bsel(p0, this, p[0]);
+        setTimeout(function(){ bsel(p0, this, p[0]);}, 1000);
       }
       else if (iiii == 1) {
-        bsel(p1, this, p[1]);
+        setTimeout(function(){ bsel(p1, this, p[1]);}, 1000);
       }
       else if (iiii == 2) {
-        bsel(p2, this, p[2]);
+        setTimeout(function(){ bsel(p2, this, p[2]);}, 1000);
       }
       else if (iiii == 3) {
-        bsel(p3, this, p[3]);
+        setTimeout(function(){ bsel(p3, this, p[3]);}, 1000);
       }
       else if (iiii == 4) {
-        bsel(p4, this, p[4]);
+        setTimeout(function(){ bsel(p4, this, p[4]);}, 1000);
       }
       else if (iiii == 5) {
-        bsel(p5, this, p[5]);
+        setTimeout(function(){ bsel(p5, this, p[5]);}, 1000);
       }
       else if (iiii == 6) {
-        bsel(p6, this, p[6]);
+        setTimeout(function(){ bsel(p6, this, p[6]);}, 1000);
       }
       else if (iiii == 7) {
-        bsel(p7, this, p[7]);
+        setTimeout(function(){ bsel(p7, this, p[7]);}, 1000);
       }
       else if (iiii == 8) {
-        bsel(p8, this, p[8]);
+        setTimeout(function(){ bsel(p8, this, p[8]);}, 1000);
       }
       else if (iiii == 9) {
-        bsel(p9, this, p[9]);
+        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);}, 1000);
       }
       else if (iiii == 10) {
-        bsel(p10, this, p[10]);
+        setTimeout(function(){ bsel(p10, this, p[10]);}, 1000);
       }
       else if (iiii == 11) {
-        bsel(p11, this, p[11]);
+        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);}, 1000);
       }
       else if (iiii == 12) {
-        bsel(p12, this, p[12]);
+        setTimeout(function(){ bsel(p12, this, p[12]);}, 1000);
       }
       else if (iiii == 13) {
-        bsel(p13, this, p[13]);
+        setTimeout(function(){ bsel(p13, this, p[13]);}, 1000);
       }
       else if (iiii == 14) {
-        bsel(p14, this, p[14]);
+        setTimeout(function(){ bsel(p14, this, p[14]);}, 1000);
       }
       else if (iiii == 15) {
-        bsel(p15, this, p[15]);
+        setTimeout(function(){ bsel(p15, this, p[15]);}, 1000);
       }
       else if (iiii == 16) {
-        bsel(p16, this, p[16]);
+        setTimeout(function(){ bsel(p16, this, p[16]);}, 1000);
       }
     }
   }
@@ -1973,55 +1973,55 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        bsel(p0, this, p[0]);
+        setTimeout(function(){ bsel(p0, this, p[0]);}, 1000);
       }
       else if (iiii == 1) {
-        bsel(p1, this, p[1]);
+        setTimeout(function(){ bsel(p1, this, p[1]);}, 1000);
       }
       else if (iiii == 2) {
-        bsel(p2, this, p[2]);
+        setTimeout(function(){ bsel(p2, this, p[2]);}, 1000);
       }
       else if (iiii == 3) {
-        bsel(p3, this, p[3]);
+        setTimeout(function(){ bsel(p3, this, p[3]);}, 1000);
       }
       else if (iiii == 4) {
-        bsel(p4, this, p[4]);
+        setTimeout(function(){ bsel(p4, this, p[4]);}, 1000);
       }
       else if (iiii == 5) {
-        bsel(p5, this, p[5]);
+        setTimeout(function(){ bsel(p5, this, p[5]);}, 1000);
       }
       else if (iiii == 6) {
-        bsel(p6, this, p[6]);
+        setTimeout(function(){ bsel(p6, this, p[6]);}, 1000);
       }
       else if (iiii == 7) {
-        bsel(p7, this, p[7]);
+        setTimeout(function(){ bsel(p7, this, p[7]);}, 1000);
       }
       else if (iiii == 8) {
-        bsel(p8, this, p[8]);
+        setTimeout(function(){ bsel(p8, this, p[8]);}, 1000);
       }
       else if (iiii == 9) {
-        bsel(p9, this, p[9]);
+        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);
       }
       else if (iiii == 10) {
-        bsel(p10, this, p[10]);
+        setTimeout(function(){ bsel(p10, this, p[10]);}, 1000);
       }
       else if (iiii == 11) {
-        bsel(p11, this, p[11]);
+        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);
       }
       else if (iiii == 12) {
-        bsel(p12, this, p[12]);
+        setTimeout(function(){ bsel(p12, this, p[12]);}, 1000);
       }
       else if (iiii == 13) {
-        bsel(p13, this, p[13]);
+        setTimeout(function(){ bsel(p13, this, p[13]);}, 1000);
       }
       else if (iiii == 14) {
-        bsel(p14, this, p[14]);
+        setTimeout(function(){ bsel(p14, this, p[14]);}, 1000);
       }
       else if (iiii == 15) {
-        bsel(p15, this, p[15]);
+        setTimeout(function(){ bsel(p15, this, p[15]);}, 1000);
       }
       else if (iiii == 16) {
-        bsel(p16, this, p[16]);
+        setTimeout(function(){ bsel(p16, this, p[16]);}, 1000);
       }
     }
   }
@@ -2032,55 +2032,55 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        bsel(p0, this, p[0]);
+        setTimeout(function(){ bsel(p0, this, p[0])}, 1000);
       }
       else if (iiii == 1) {
-        bsel(p1, this, p[1]);
+        setTimeout(function(){ bsel(p1, this, p[1]);}, 1000);
       }
       else if (iiii == 2) {
-        bsel(p2, this, p[2]);
+        setTimeout(function(){ bsel(p2, this, p[2]);}, 1000);
       }
       else if (iiii == 3) {
-        bsel(p3, this, p[3]);
+      setTimeout(function(){   bsel(p3, this, p[3]);}, 1000);
       }
       else if (iiii == 4) {
-        bsel(p4, this, p[4]);
+        setTimeout(function(){ bsel(p4, this, p[4]);}, 1000);
       }
       else if (iiii == 5) {
-        bsel(p5, this, p[5]);
+        setTimeout(function(){ bsel(p5, this, p[5]);}, 1000);
       }
       else if (iiii == 6) {
-        bsel(p6, this, p[6]);
+        setTimeout(function(){ bsel(p6, this, p[6]);}, 1000);
       }
       else if (iiii == 7) {
-        bsel(p7, this, p[7]);
+        setTimeout(function(){ bsel(p7, this, p[7]);}, 1000);
       }
       else if (iiii == 8) {
-        bsel(p8, this, p[8]);
+        setTimeout(function(){ bsel(p8, this, p[8]);}, 1000);
       }
       else if (iiii == 9) {
-        bsel(p9, this, p[9]);
+        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);
       }
       else if (iiii == 10) {
-        bsel(p10, this, p[10]);
+        setTimeout(function(){ bsel(p10, this, p[10]);}, 1000);
       }
       else if (iiii == 11) {
-        bsel(p11, this, p[11]);
+        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);
       }
       else if (iiii == 12) {
-        bsel(p12, this, p[12]);
+        setTimeout(function(){ bsel(p12, this, p[12]);}, 1000);
       }
       else if (iiii == 13) {
-        bsel(p13, this, p[13]);
+        setTimeout(function(){ bsel(p13, this, p[13]);}, 1000);
       }
       else if (iiii == 14) {
-        bsel(p14, this, p[14]);
+        setTimeout(function(){ bsel(p14, this, p[14]);}, 1000);
       }
       else if (iiii == 15) {
-        bsel(p15, this, p[15]);
+        setTimeout(function(){ bsel(p15, this, p[15]);}, 1000);
       }
       else if (iiii == 16) {
-        bsel(p16, this, p[16]);
+        setTimeout(function(){ bsel(p16, this, p[16]);}, 1000);
       }
     }
   }
