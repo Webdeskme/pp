@@ -1797,7 +1797,7 @@ for (iii = 0; iii < 6; iii++) {
       else if (iiii == 16) {
         setTimeout(bsel, 1000, p16, th, p[16]);
       }
-      sleep(500);
+      //sleep(500);
     }
   }
 }
@@ -1807,57 +1807,57 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 1000, p0, th, p[0]);
+        setTimeout(bsel, 2000, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 1000, p1, th, p[1]);
+        setTimeout(bsel, 2000, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 1000, p2, th, p[2]);
+        setTimeout(bsel, 2000, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 1000, p3, th, p[3]);
+        setTimeout(bsel, 2000, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 1000, p4, th, p[4]);
+        setTimeout(bsel, 2000, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 1000, p5, th, p[5]);
+        setTimeout(bsel, 2000, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 1000, p6, th, p[6]);
+        setTimeout(bsel, 2000, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 1000, p7, th, p[7]);
+        setTimeout(bsel, 2000, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 1000, p8, th, p[8]);
+        setTimeout(bsel, 2000, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 1000, p9, th, p[9]);
+        setTimeout(bsel, 2000, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 1000, p10, th, p[10]);
+        setTimeout(bsel, 2000, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 1000, p11, th, p[11]);
+        setTimeout(bsel, 2000, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 1000, p12, th, p[12]);
+        setTimeout(bsel, 2000, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 1000, p13, th, p[13]);
+        setTimeout(bsel, 2000, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 1000, p14, th, p[14]);
+        setTimeout(bsel, 2000, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 1000, p15, th, p[15]);
+        setTimeout(bsel, 2000, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 1000, p16, th, p[16]);
+        setTimeout(bsel, 2000, p16, th, p[16]);
       }
-      sleep(500);
+      //sleep(500);
     }
   }
 }
@@ -1867,57 +1867,57 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 1000, p0, th, p[0]);
+        setTimeout(bsel, 3000, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 1000, p1, th, p[1]);
+        setTimeout(bsel, 3000, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 1000, p2, th, p[2]);
+        setTimeout(bsel, 3000, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 1000, p3, th, p[3]);
+        setTimeout(bsel, 3000, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 1000, p4, th, p[4]);
+        setTimeout(bsel, 3000, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 1000, p5, th, p[5]);
+        setTimeout(bsel, 3000, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 1000, p6, th, p[6]);
+        setTimeout(bsel, 3000, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 1000, p7, th, p[7]);
+        setTimeout(bsel, 3000, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 1000, p8, th, p[8]);
+        setTimeout(bsel, 3000, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 1000, p9, th, p[9]);
+        setTimeout(bsel, 3000, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 1000, p10, th, p[10]);
+        setTimeout(bsel, 3000, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 1000, p11, th, p[11]);
+        setTimeout(bsel, 3000, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 1000, p12, th, p[12]);
+        setTimeout(bsel, 3000, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 1000, p13, th, p[13]);
+        setTimeout(bsel, 3000, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 1000, p14, th, p[14]);
+        setTimeout(bsel, 3000, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 1000, p15, th, p[15]);
+        setTimeout(bsel, 3000, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 1000, p16, th, p[16]);
+        setTimeout(bsel, 3000, p16, th, p[16]);
       }
-      sleep(500);
+      //sleep(500);
     }
   }
 }
@@ -1927,57 +1927,57 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 1000, p0, th, p[0]);
+        setTimeout(bsel, 4000, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 1000, p1, th, p[1]);
+        setTimeout(bsel, 4000, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 1000, p2, th, p[2]);
+        setTimeout(bsel, 4000, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 1000, p3, th, p[3]);
+        setTimeout(bsel, 4000, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 1000, p4, th, p[4]);
+        setTimeout(bsel, 4000, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 1000, p5, th, p[5]);
+        setTimeout(bsel, 4000, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 1000, p6, th, p[6]);
+        setTimeout(bsel, 4000, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 1000, p7, th, p[7]);
+        setTimeout(bsel, 4000, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 1000, p8, th, p[8]);
+        setTimeout(bsel, 4000, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 1000, p9, th, p[9]);
+        setTimeout(bsel, 4000, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 1000, p10, th, p[10]);
+        setTimeout(bsel, 4000, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 1000, p11, th, p[11]);
+        setTimeout(bsel, 4000, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 1000, p12, th, p[12]);
+        setTimeout(bsel, 4000, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 1000, p13, th, p[13]);
+        setTimeout(bsel, 4000, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 1000, p14, th, p[14]);
+        setTimeout(bsel, 4000, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 1000, p15, th, p[15]);
+        setTimeout(bsel, 4000, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 1000, p16, th, p[16]);
+        setTimeout(bsel, 4000, p16, th, p[16]);
       }
-      sleep(500);
+      //sleep(500);
     }
   }
 }
@@ -1987,57 +1987,57 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 1000, p0, th, p[0]);
+        setTimeout(bsel, 5000, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 1000, p1, th, p[1]);
+        setTimeout(bsel, 5000, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 1000, p2, th, p[2]);
+        setTimeout(bsel, 5000, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 1000, p3, th, p[3]);
+        setTimeout(bsel, 5000, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 1000, p4, th, p[4]);
+        setTimeout(bsel, 5000, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 1000, p5, th, p[5]);
+        setTimeout(bsel, 5000, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 1000, p6, th, p[6]);
+        setTimeout(bsel, 5000, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 1000, p7, th, p[7]);
+        setTimeout(bsel, 5000, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 1000, p8, th, p[8]);
+        setTimeout(bsel, 5000, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 1000, p9, th, p[9]);
+        setTimeout(bsel, 5000, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 1000, p10, th, p[10]);
+        setTimeout(bsel, 5000, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 1000, p11, th, p[11]);
+        setTimeout(bsel, 5000, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 1000, p12, th, p[12]);
+        setTimeout(bsel, 5000, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 1000, p13, th, p[13]);
+        setTimeout(bsel, 5000, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 1000, p14, th, p[14]);
+        setTimeout(bsel, 5000, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 1000, p15, th, p[15]);
+        setTimeout(bsel, 5000, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 1000, p16, th, p[16]);
+        setTimeout(bsel, 5000, p16, th, p[16]);
       }
-      sleep(500);
+      //sleep(500);
     }
   }
 }
@@ -2047,63 +2047,63 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 1000, p0, th, p[0]);
+        setTimeout(bsel, 6000, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 1000, p1, th, p[1]);
+        setTimeout(bsel, 6000, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 1000, p2, th, p[2]);
+        setTimeout(bsel, 6000, p2, th, p[2]);
       }
       else if (iiii == 3) {
-      setTimeout(bsel, 1000, p3, th, p[3]);
+      setTimeout(bsel, 6000, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 1000, p4, th, p[4]);
+        setTimeout(bsel, 6000, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 1000, p5, th, p[5]);
+        setTimeout(bsel, 6000, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 1000, p6, th, p[6]);
+        setTimeout(bsel, 6000, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 1000, p7, th, p[7]);
+        setTimeout(bsel, 6000, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 1000, p8, th, p[8]);
+        setTimeout(bsel, 6000, p8, th, p[8]);
       }
       else if (iiii == 9) {
         setTimeout(bsel, 1000, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 1000, p10, th, p[10]);
+        setTimeout(bsel, 6000, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 1000, p11, th, p[11]);
+        setTimeout(bsel, 6000, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 1000, p12, th, p[12]);
+        setTimeout(bsel, 6000, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 1000, p13, th, p[13]);
+        setTimeout(bsel, 6000, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 1000, p14, th, p[14]);
+        setTimeout(bsel, 6000, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 1000, p15, th, p[15]);
+        setTimeout(bsel, 6000, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 1000, p16, th, p[16]);
+        setTimeout(bsel, 6000, p16, th, p[16]);
       }
-      sleep(500);
+      //sleep(500);
     }
   }
 }
 }
 //sleep(1000);
-setTimeout(ttend, 1000, th);
+setTimeout(ttend, 7000, th);
 }
 
 
