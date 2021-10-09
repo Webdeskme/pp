@@ -1488,7 +1488,7 @@ var P1 = new Phaser.Class({
             localStorage.setItem(localStoragePlayer, player);
               this.sound.add('mlose').play();
               this.game.sound.stopAll();
-              window.location.href = "lose.html";
+              window.location.href = "losev.html";
           }
           /*cc.visible = false;
           ce.visible = false;
@@ -1558,7 +1558,7 @@ var P1 = new Phaser.Class({
               cp.visible = true;
             }
             else{
-              cp.visible = true;
+              cp.visible = false;
             }
           }
           healthText.setText('Health:' + health);

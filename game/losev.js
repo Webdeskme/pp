@@ -263,6 +263,7 @@ var Lose = new Phaser.Class({
         });
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
+        var localStoragePlayer = "piratesPort_player";
         if(localStorage.getItem(localStorageTemp) == null) {
             score = 40;
         } else {
