@@ -1716,10 +1716,29 @@ var P1 = new Phaser.Class({
           }
 // computer AI //
 //bill
-/*var iii;
+if(player == 2){
+var iii;
 for (iii = 0; iii < 6; iii++) {
-
-}*/
+  if(iii == 0){
+    sel(c0, this, cards[0]);
+  }
+  else if (iii == 1) {
+    sel(c1, this, cards[1]);
+  }
+  else if (iii == 2) {
+    sel(c2, this, cards[2]);
+  }
+  else if (iii == 3) {
+    sel(c3, this, cards[3]);
+  }
+  else if (iii == 4) {
+    sel(c4, this, cards[4]);
+  }
+  else if (iii == 5) {
+    sel(c5, this, cards[5]);
+  }
+}
+}
 
 
 
