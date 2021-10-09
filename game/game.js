@@ -739,8 +739,8 @@ var SubM = new Phaser.Class({
         this.sound.add('click').play();
         //endm.stop();
         this.game.sound.stopAll();
-        //this.scene.start('p1');
-        window.location.href = "vscomp.html";
+        this.scene.start('submv');
+        //window.location.href = "vscomp.html";
       });
       bb.on('pointerdown', () => {
         this.sound.add('click').play();
@@ -765,6 +765,61 @@ var SubM = new Phaser.Class({
       });
       }
     });
+    var SubMv = new Phaser.Class({
+
+        Extends: Phaser.Scene,
+
+        initialize:
+
+        function SubMv ()
+        {
+            Phaser.Scene.call(this, { key: 'submv' });
+        },
+
+        preload: function ()
+        {
+          this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
+          this.load.image('back', 'assets/backgrounds/blck.png');
+          this.load.image('bob', 'assets/Text/bob.png');
+          this.load.image('alice', 'assets/Text/alice.png');
+        },
+
+        create: function ()
+        {
+          var aa = this.add.image(900, 50, 'bob').setScrollFactor(0,0);
+          var p = this.add.image(900, 100, 'alice').setScrollFactor(0,0);
+          aa.setInteractive({ useHandCursor: true  } );
+          aa.setScale(1/4);
+          p.setInteractive({ useHandCursor: true  } );
+          p.setScale(1/4);
+          aa.on('pointerover',function(pointer){
+            aa.setScale(1/3);
+          });
+          aa.on('pointerout',function(pointer){
+            aa.setScale(1/4);
+          });
+          p.on('pointerover',function(pointer){
+            p.setScale(1/3);
+          });
+          p.on('pointerout',function(pointer){
+            p.setScale(1/4);
+          });
+          aa.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            //this.scene.start('p1');
+            window.location.href = "vscomp.html";
+          });
+          p.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            //this.scene.start('p1');
+            window.location.href = "vscomph.html";
+          });
+          }
+        });
 var config = {
     type: Phaser.AUTO,
     scale: {
@@ -785,7 +840,7 @@ var config = {
     },
     enableDebug: false,
     backgroundColor: '#000000',
-    scene: [ TitleS, Vide, Puzz, Cred, SubM ]
+    scene: [ TitleS, Vide, Puzz, Cred, SubM, SubMv ]
 };
 var bg;
 var stars;
