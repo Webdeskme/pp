@@ -690,6 +690,8 @@ var SubM = new Phaser.Class({
       var o = this.add.image(900, 250, '3coop').setScrollFactor(0,0);
       aa.setInteractive({ useHandCursor: true  } );
       aa.setScale(1/4);
+      p.setInteractive({ useHandCursor: true  } );
+      p.setScale(1/4);
       bb.setInteractive({ useHandCursor: true  } );
       bb.setScale(1/4);
       n.setInteractive({ useHandCursor: true  } );
@@ -701,6 +703,12 @@ var SubM = new Phaser.Class({
       });
       aa.on('pointerout',function(pointer){
         aa.setScale(1/4);
+      });
+      p.on('pointerover',function(pointer){
+        p.setScale(1/3);
+      });
+      p.on('pointerout',function(pointer){
+        p.setScale(1/4);
       });
       bb.on('pointerover',function(pointer){
         bb.setScale(1/3);
@@ -726,6 +734,13 @@ var SubM = new Phaser.Class({
         this.game.sound.stopAll();
         //this.scene.start('p1');
         window.location.href = "p1.html";
+      });
+      p.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        //this.scene.start('p1');
+        window.location.href = "vscomp.html";
       });
       bb.on('pointerdown', () => {
         this.sound.add('click').play();
