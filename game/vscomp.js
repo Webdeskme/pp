@@ -1743,7 +1743,7 @@ for (iii = 0; iii < 6; iii++) {
     sel(c0, this, cards[0]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
-      sleep(1000);
+      sleep(2000);
       if(iiii == 0){
         setTimeout(bsel(p0, this, p[0]), 1000);
       }
