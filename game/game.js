@@ -715,7 +715,7 @@ var SubM = new Phaser.Class({
           }
       var snip = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11', 's12'];
       shuffle(snip);
-      var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '12px', fill: '#fff', wordWrap: { width: 500 } });
+      var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 600 } });
       var aa = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
       var p = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
       //var bb = this.add.image(900, 150, 'vscomp').setScrollFactor(0,0);
