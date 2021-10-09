@@ -2102,8 +2102,8 @@ if(buy != "yes"){
   }
 }
 }
-sleep(1000);
-ttend(th);
+//sleep(1000);
+setTimeout(ttend, 1000, th);
 }
 
 
