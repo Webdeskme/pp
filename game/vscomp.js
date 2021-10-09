@@ -1941,13 +1941,13 @@ if(buy != "yes"){
         setTimeout(function(){ bsel(p8, this, p[8]);}, 1000);
       }
       else if (iiii == 9) {
-        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);}, 1000);
+        setTimeout(function(){ bsel(p9, this, p[9]);}, 1000);
       }
       else if (iiii == 10) {
         setTimeout(function(){ bsel(p10, this, p[10]);}, 1000);
       }
       else if (iiii == 11) {
-        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);}, 1000);
+        setTimeout(function(){ bsel(p11, this, p[11]);}, 1000);
       }
       else if (iiii == 12) {
         setTimeout(function(){ bsel(p12, this, p[12]);}, 1000);
