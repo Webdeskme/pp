@@ -766,36 +766,43 @@ var P1 = new Phaser.Class({
               if(type == "skill"){
                 if(skill >= cost){
                   aquire = "yes";
+                  buy = "yes";
                 }
               }
               else if (type == "coin") {
                 if(coin >= cost){
                   aquire = "yes";
+                  buy = "yes";
                 }
               }
               else if (type == "total") {
                 if(total >= cost){
                   aquire = "yes";
+                  buy = "yes";
                 }
               }
               else if (type == "card") {
                 if(card >= cost){
                   aquire = "yes";
+                  buy = "yes";
                 }
               }
               else if (type == "ccard") {
                 if(ccard >= cost){
                   aquire = "yes";
+                  buy = "yes";
                 }
               }
               else if (type == "scard") {
                 if(scard >= cost){
                   aquire = "yes";
+                  buy = "yes";
                 }
               }
               else if (type == "aq") {
                 if(aq >= cost){
                   aquire = "yes";
+                  buy = "yes";
                 }
               }
               if( aquire == "yes"){
@@ -1717,9 +1724,11 @@ var P1 = new Phaser.Class({
 // computer AI //
 //bill
 if(player == 2){
+  buy = "no";
 var iii;
 for (iii = 0; iii < 6; iii++) {
-  if(iii == 0){
+  if(buy != "yes"){
+    if(iii == 0){
     sel(c0, this, cards[0]);
     var iiii;
     for (iii = 0; iii < hand.length; iii++) {
@@ -1776,7 +1785,9 @@ for (iii = 0; iii < 6; iii++) {
       }
     }
   }
-  else if (iii == 1) {
+}
+if(buy != "yes"){
+  if (iii == 1) {
     sel(c1, this, cards[1]);
     var iiii;
     for (iii = 0; iii < hand.length; iii++) {
@@ -1833,7 +1844,9 @@ for (iii = 0; iii < 6; iii++) {
       }
     }
   }
-  else if (iii == 2) {
+}
+if(buy != "yes"){
+  if (iii == 2) {
     sel(c2, this, cards[2]);
     var iiii;
     for (iii = 0; iii < hand.length; iii++) {
@@ -1890,7 +1903,9 @@ for (iii = 0; iii < 6; iii++) {
       }
     }
   }
-  else if (iii == 3) {
+}
+if(buy != "yes"){
+  if (iii == 3) {
     sel(c3, this, cards[3]);
     var iiii;
     for (iii = 0; iii < hand.length; iii++) {
@@ -1947,7 +1962,9 @@ for (iii = 0; iii < 6; iii++) {
       }
     }
   }
-  else if (iii == 4) {
+}
+if(buy != "yes"){
+  if (iii == 4) {
     sel(c4, this, cards[4]);
     var iiii;
     for (iii = 0; iii < hand.length; iii++) {
@@ -2004,7 +2021,9 @@ for (iii = 0; iii < 6; iii++) {
       }
     }
   }
-  else if (iii == 5) {
+}
+if(buy != "yes"){
+  if (iii == 5) {
     sel(c5, this, cards[5]);
     var iiii;
     for (iii = 0; iii < hand.length; iii++) {
@@ -2061,6 +2080,7 @@ for (iii = 0; iii < 6; iii++) {
       }
     }
   }
+}
 }
 }
 
