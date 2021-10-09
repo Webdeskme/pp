@@ -679,10 +679,43 @@ var SubM = new Phaser.Class({
       this.load.image('solo', 'assets/Text/solo.png');
       this.load.image('vs', 'assets/Text/vs.png');
       this.load.image('vscomp', 'assets/Text/vscomp.png');
+      this.load.text('s1', 'assets/Text/story/s1.txt');
+      this.load.text('s2', 'assets/Text/story/s2.txt');
+      this.load.text('s3', 'assets/Text/story/s3.txt');
+      this.load.text('s4', 'assets/Text/story/s4.txt');
+      this.load.text('s5', 'assets/Text/story/s5.txt');
+      this.load.text('s6', 'assets/Text/story/s6.txt');
+      this.load.text('s7', 'assets/Text/story/s7.txt');
+      this.load.text('s8', 'assets/Text/story/s8.txt');
+      this.load.text('s9', 'assets/Text/story/s9.txt');
+      this.load.text('s10', 'assets/Text/story/s10.txt');
+      this.load.text('s11', 'assets/Text/story/s11.txt');
+      this.load.text('s12', 'assets/Text/story/s12.txt');
     },
 
     create: function ()
     {
+      function shuffle(array) {
+          var currentIndex = array.length, temporaryValue, randomIndex;
+
+          // While there remain elements to shuffle...
+          while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+
+          return array;
+          }
+      var snip = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11', 's12'];
+      shuffle(snip);
+      var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '12px', fill: '#fff', wordWrap: { width: 500 } });
       var aa = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
       var p = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
       //var bb = this.add.image(900, 150, 'vscomp').setScrollFactor(0,0);
