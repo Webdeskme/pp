@@ -1941,62 +1941,84 @@ for (iii = 0; iii < 3; iii++) {
 }
   console.log(order);
   var i7;
+  var i8 = 0;
   for (i7 = 0; i7 < 6; i7++) {
   if(buy != "yes"){
     if(order[i7] == 1){
-    setTimeout(sel, 5400, c0, th, cards[0]);
+      console.log("in: 1");
+      i8 = i7 + 1;
+      i8 = i8 * 1800;
+      i8 = i8 + 3600;
+    setTimeout(sel, i8, c0, th, cards[0]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 5500, p0, th, p[0]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 5600, p1, th, p[1]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 5700, p2, th, p[2]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 5800, p3, th, p[3]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 5900, p4, th, p[4]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 6000, p5, th, p[5]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 6100, p6, th, p[6]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 6200, p7, th, p[7]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 6300, p8, th, p[8]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 6400, p9, th, p[9]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 6500, p10, th, p[10]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 6600, p11, th, p[11]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 6700, p12, th, p[12]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 6800, p13, th, p[13]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 6900, p14, th, p[14]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 7000, p15, th, p[15]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 7100, p16, th, p[16]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p16, th, p[16]);
       }
       //sleep(500);
     }
@@ -2004,59 +2026,80 @@ for (iii = 0; iii < 3; iii++) {
 }
 if(buy != "yes"){
   if (order[i7] == 2) {
-    setTimeout(sel, 7200, c1, th, cards[1]);
+    console.log("in: 2");
+    i8 = i7 + 1;
+    i8 = i8 * 1800;
+    i8 = i8 + 3600;
+    setTimeout(sel, i8, c1, th, cards[1]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 7300, p0, th, p[0]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 7400, p1, th, p[1]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 7500, p2, th, p[2]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 7600, p3, th, p[3]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 7700, p4, th, p[4]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 7800, p5, th, p[5]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 7900, p6, th, p[6]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 8000, p7, th, p[7]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 8100, p8, th, p[8]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 8200, p9, th, p[9]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 8300, p10, th, p[10]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 8400, p11, th, p[11]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 8500, p12, th, p[12]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 8600, p13, th, p[13]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 9700, p14, th, p[14]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 8800, p15, th, p[15]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 8900, p16, th, p[16]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p16, th, p[16]);
       }
       //sleep(500);
     }
@@ -2064,59 +2107,80 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (order[i7] == 3) {
-    setTimeout(sel, 9000, c2, th, cards[2]);
+    console.log("in: 3");
+    i8 = i7 + 1;
+    i8 = i8 * 1800;
+    i8 = i8 + 3600;
+    setTimeout(sel, i8, c2, th, cards[2]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 9100, p0, th, p[0]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 9200, p1, th, p[1]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 9300, p2, th, p[2]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 9400, p3, th, p[3]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 9500, p4, th, p[4]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 9600, p5, th, p[5]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 9700, p6, th, p[6]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 9800, p7, th, p[7]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p7, th, p[7]);
       }
       else if (iiii == 8) {
+        i8 = i8 + 100;
         setTimeout(bsel, 9900, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 10000, p9, th, p[9]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 10100, p10, th, p[10]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 10200, p11, th, p[11]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 10300, p12, th, p[12]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 10400, p13, th, p[13]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 10500, p14, th, p[14]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 10600, p15, th, p[15]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 10700, p16, th, p[16]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p16, th, p[16]);
       }
       //sleep(500);
     }
@@ -2124,59 +2188,80 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (order[i7] == 4) {
-    setTimeout(sel, 10800, c3, th, cards[3]);
+    console.log("in: 4");
+    i8 = i7 + 1;
+    i8 = i8 * 1800;
+    i8 = i8 + 3600;
+    setTimeout(sel, i8, c3, th, cards[3]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 10900, p0, th, p[0]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 11000, p1, th, p[1]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 11100, p2, th, p[2]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 11200, p3, th, p[3]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 11300, p4, th, p[4]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 11400, p5, th, p[5]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 11500, p6, th, p[6]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 11600, p7, th, p[7]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 11700, p8, th, p[8]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 11800, p9, th, p[9]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 11900, p10, th, p[10]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 12000, p11, th, p[11]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 12100, p12, th, p[12]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 12200, p13, th, p[13]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 12300, p14, th, p[14]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 12400, p15, th, p[15]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 12500, p16, th, p[16]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p16, th, p[16]);
       }
       //sleep(500);
     }
@@ -2184,59 +2269,80 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (order[i7] == 5) {
-    setTimeout(sel, 12600, c4, th, cards[4]);
+    console.log("in: 5");
+    i8 = i7 + 1;
+    i8 = i8 * 1800;
+    i8 = i8 + 3600;
+    setTimeout(sel, i8, c4, th, cards[4]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 12700, p0, th, p[0]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 12800, p1, th, p[1]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 12900, p2, th, p[2]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p2, th, p[2]);
       }
       else if (iiii == 3) {
-        setTimeout(bsel, 13000, p3, th, p[3]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 13100, p4, th, p[4]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 13200, p5, th, p[5]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 13300, p6, th, p[6]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 13400, p7, th, p[7]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 13500, p8, th, p[8]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 13600, p9, th, p[9]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 13700, p10, th, p[10]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 13800, p11, th, p[11]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 13900, p12, th, p[12]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 14000, p13, th, p[13]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 14100, p14, th, p[14]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 14200, p15, th, p[15]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 14300, p16, th, p[16]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p16, th, p[16]);
       }
       //sleep(500);
     }
@@ -2244,59 +2350,80 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (order[i7] == 6) {
-    setTimeout(sel, 14400, c5, th, cards[5]);
+    console.log("in: 6");
+    i8 = i7 + 1;
+    i8 = i8 * 1800;
+    i8 = i8 + 3600;
+    setTimeout(sel, i8, c5, th, cards[5]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel, 14500, p0, th, p[0]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p0, th, p[0]);
       }
       else if (iiii == 1) {
-        setTimeout(bsel, 14600, p1, th, p[1]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p1, th, p[1]);
       }
       else if (iiii == 2) {
-        setTimeout(bsel, 14700, p2, th, p[2]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p2, th, p[2]);
       }
       else if (iiii == 3) {
-      setTimeout(bsel, 14800, p3, th, p[3]);
+        i8 = i8 + 100;
+      setTimeout(bsel, i8, p3, th, p[3]);
       }
       else if (iiii == 4) {
-        setTimeout(bsel, 14900, p4, th, p[4]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p4, th, p[4]);
       }
       else if (iiii == 5) {
-        setTimeout(bsel, 15000, p5, th, p[5]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p5, th, p[5]);
       }
       else if (iiii == 6) {
-        setTimeout(bsel, 15100, p6, th, p[6]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p6, th, p[6]);
       }
       else if (iiii == 7) {
-        setTimeout(bsel, 15200, p7, th, p[7]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p7, th, p[7]);
       }
       else if (iiii == 8) {
-        setTimeout(bsel, 15300, p8, th, p[8]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p8, th, p[8]);
       }
       else if (iiii == 9) {
-        setTimeout(bsel, 15400, p9, th, p[9]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p9, th, p[9]);
       }
       else if (iiii == 10) {
-        setTimeout(bsel, 15500, p10, th, p[10]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p10, th, p[10]);
       }
       else if (iiii == 11) {
-        setTimeout(bsel, 15600, p11, th, p[11]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p11, th, p[11]);
       }
       else if (iiii == 12) {
-        setTimeout(bsel, 15700, p12, th, p[12]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p12, th, p[12]);
       }
       else if (iiii == 13) {
-        setTimeout(bsel, 15800, p13, th, p[13]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p13, th, p[13]);
       }
       else if (iiii == 14) {
-        setTimeout(bsel, 15900, p14, th, p[14]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p14, th, p[14]);
       }
       else if (iiii == 15) {
-        setTimeout(bsel, 16000, p15, th, p[15]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p15, th, p[15]);
       }
       else if (iiii == 16) {
-        setTimeout(bsel, 16100, p16, th, p[16]);
+        i8 = i8 + 100;
+        setTimeout(bsel, i8, p16, th, p[16]);
       }
       //sleep(500);
     }
