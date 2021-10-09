@@ -1794,7 +1794,7 @@ if(buy != "yes"){
   if (iii == 1) {
     sel(c1, this, cards[1]);
     var iiii;
-    for (iiii = 0; iiii < hand.length; iiii++) {
+    for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
         bsel(p0, this, p[0]);
       }
@@ -1853,7 +1853,7 @@ if(buy != "yes"){
   if (iii == 2) {
     sel(c2, this, cards[2]);
     var iiii;
-    for (iiii = 0; iiii < hand.length; iiii++) {
+    for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
         bsel(p0, this, p[0]);
       }
@@ -1912,7 +1912,7 @@ if(buy != "yes"){
   if (iii == 3) {
     sel(c3, this, cards[3]);
     var iiii;
-    for (iiii = 0; iiii < hand.length; iiii++) {
+    for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
         bsel(p0, this, p[0]);
       }
@@ -1971,7 +1971,7 @@ if(buy != "yes"){
   if (iii == 4) {
     sel(c4, this, cards[4]);
     var iiii;
-    for (iiii = 0; iiii < hand.length; iiii++) {
+    for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
         bsel(p0, this, p[0]);
       }
@@ -2030,7 +2030,7 @@ if(buy != "yes"){
   if (iii == 5) {
     sel(c5, this, cards[5]);
     var iiii;
-    for (iiii = 0; iiii < hand.length; iiii++) {
+    for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
         bsel(p0, this, p[0]);
       }
