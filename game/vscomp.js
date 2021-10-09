@@ -365,6 +365,7 @@ var P1 = new Phaser.Class({
             console.log("buy:");
             console.log(buy);
             if(buy != "yes" || player == 1){
+              console.log("Got in");
             //console.log("bsel");
             //console.log(c);
             var aquire = "no";
