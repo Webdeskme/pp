@@ -1725,12 +1725,15 @@ var P1 = new Phaser.Class({
           }
 // computer AI //
 //bill
-function sleep(milliseconds) {
+/*function sleep(milliseconds) {
   const date = Date.now();
   let currentDate = null;
   do {
     currentDate = Date.now();
   } while (currentDate - date < milliseconds);
+}*/
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 if(player == 2){
   buy = "no";
