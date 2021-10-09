@@ -362,7 +362,7 @@ var P1 = new Phaser.Class({
             });
           }
           function bsel(c, th, im){
-            if(buy != "yes" || player = 1){
+            if(buy != "yes" || player == 1){
             //console.log("bsel");
             //console.log(c);
             var aquire = "no";
