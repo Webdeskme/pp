@@ -1735,7 +1735,7 @@ for (iii = 0; iii < 6; iii++) {
     if(iii == 0){
     sel(c0, this, cards[0]);
     var iiii;
-    for (iiii = 0; iiii < hand.length; iiii++) {
+    for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
         bsel(p0, this, p[0]);
       }
