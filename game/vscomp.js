@@ -2099,6 +2099,8 @@ if(buy != "yes"){
   }
 }
 }
+sleep(1000);
+ttend(this);
 }
 
 
