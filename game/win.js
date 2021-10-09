@@ -203,12 +203,12 @@ var Win = new Phaser.Class({
       //////////////////////////////////////////////////////////////
       setTimeout(() => {
         this.sound.add('avic').play();
-      }, 6000);
+      }, 0);
       setTimeout(() => {
         endm = this.sound.add('mwin');
         //endm.loop = true;
         endm.play();
-      }, 9000);
+      }, 10000);
       //this.scale.startFullscreen();
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
