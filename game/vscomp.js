@@ -1743,7 +1743,6 @@ for (iii = 0; iii < 6; iii++) {
     sel(c0, th, cards[0]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
-      sleep(2000);
       if(iiii == 0){
         setTimeout(bsel(p0, th, p[0]), 1000);
       }
@@ -1795,6 +1794,7 @@ for (iii = 0; iii < 6; iii++) {
       else if (iiii == 16) {
         setTimeout(bsel(p16, th, p[16]), 1000);
       }
+      sleep(500);
     }
   }
 }
@@ -1854,6 +1854,7 @@ if(buy != "yes"){
       else if (iiii == 16) {
         setTimeout(bsel(p16, th, p[16]), 1000);
       }
+      sleep(500);
     }
   }
 }
@@ -1913,6 +1914,7 @@ if(buy != "yes"){
       else if (iiii == 16) {
         setTimeout(bsel(p16, th, p[16]), 1000);
       }
+      sleep(500);
     }
   }
 }
@@ -1972,6 +1974,7 @@ if(buy != "yes"){
       else if (iiii == 16) {
         setTimeout(bsel(p16, th, p[16]), 1000);
       }
+      sleep(500);
     }
   }
 }
@@ -2031,6 +2034,7 @@ if(buy != "yes"){
       else if (iiii == 16) {
         setTimeout(bsel(p16, th, p[16]), 1000);
       }
+      sleep(500);
     }
   }
 }
@@ -2090,6 +2094,7 @@ if(buy != "yes"){
       else if (iiii == 16) {
         setTimeout(bsel(p16, th, p[16]), 1000);
       }
+      sleep(500);
     }
   }
 }
