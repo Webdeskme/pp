@@ -2041,7 +2041,7 @@ if(buy != "yes"){
         setTimeout(bsel(p2, this, p[2]), 1000);
       }
       else if (iiii == 3) {
-      setTimeout(function(){   bsel(p3, this, p[3]), 1000);
+      setTimeout(bsel(p3, this, p[3]), 1000);
       }
       else if (iiii == 4) {
         setTimeout(bsel(p4, this, p[4]), 1000);
