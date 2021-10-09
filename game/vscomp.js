@@ -808,6 +808,8 @@ var P1 = new Phaser.Class({
                 }
               }
               if( aquire == "yes"){
+                buy = "yes";
+                console.log("buy: yes");
                 aq += 1;
                 if(por == "PORT2"){
                   if(aq > 2){
@@ -1519,23 +1521,23 @@ var P1 = new Phaser.Class({
             player = 2;
             playerText.setText('Player: 2');
             if(mis2[0] == "yes"){
-              console.log("mis2:cc");
-              console.log(mis1);
-              console.log(mis2);
+              //console.log("mis2:cc");
+              //console.log(mis1);
+              //console.log(mis2);
               cc.visible = true;
             }
             else{
               cc.visible = false;
             }
             if(mis2[1] == "yes"){
-              console.log("mis2:ce");
+              //console.log("mis2:ce");
               ce.visible = true;
             }
             else{
               ce.visible = false;
             }
             if(mis2[2] == "yes"){
-              console.log("mis2:cp");
+              //console.log("mis2:cp");
               cp.visible = true;
             }
             else{
@@ -1554,21 +1556,21 @@ var P1 = new Phaser.Class({
             player = 1;
             playerText.setText('Player: 1');
             if(mis1[0] == "yes"){
-              console.log("mis1:cc");
+              //console.log("mis1:cc");
               cc.visible = true;
             }
             else{
               cc.visible = false;
             }
             if(mis1[1] == "yes"){
-              console.log("mis1:ce");
+              //console.log("mis1:ce");
               ce.visible = true;
             }
             else{
               ce.visible = false;
             }
             if(mis1[2] == "yes"){
-              console.log("mis1:cp");
+              //console.log("mis1:cp");
               cp.visible = true;
             }
             else{
@@ -1740,7 +1742,8 @@ if(player == 2){
 var iii;
 //console.log(hand);
 for (iii = 0; iii < 6; iii++) {
-  //console.log(buy);
+  console.log("buy");
+  console.log(buy);
   if(buy != "yes"){
     if(iii == 0){
     setTimeout(sel, 1000, c0, th, cards[0]);
