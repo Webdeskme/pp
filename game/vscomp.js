@@ -362,6 +362,7 @@ var P1 = new Phaser.Class({
             });
           }
           function bsel(c, th, im){
+            if(buy != "yes" || player = 1){
             //console.log("bsel");
             //console.log(c);
             var aquire = "no";
@@ -1205,6 +1206,7 @@ var P1 = new Phaser.Class({
               }, 1000);
             }
           }
+          }
           function bselect(c, th, im,){
             c.on('pointerdown',function(pointer){
               bsel(c, th, im);
@@ -1330,6 +1332,7 @@ var P1 = new Phaser.Class({
           }
         });
         function ttend(th){
+          //buy = "yes";
           th.sound.add('mend').play();
           var zz = c0["texture"]["key"];
           setTimeout(() => {
