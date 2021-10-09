@@ -1738,12 +1738,12 @@ function sleep(ms) {
 if(player == 2){
   buy = "no";
 var iii;
-console.log(hand);
+//console.log(hand);
 for (iii = 0; iii < 6; iii++) {
-  console.log(buy);
+  //console.log(buy);
   if(buy != "yes"){
     if(iii == 0){
-    sel(c0, th, cards[0]);
+    setTimeout(sel, 1000, c0, th, cards[0]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
@@ -1803,7 +1803,7 @@ for (iii = 0; iii < 6; iii++) {
 }
 if(buy != "yes"){
   if (iii == 1) {
-    sel(c1, th, cards[1]);
+    setTimeout(sel, 2000, c1, th, cards[1]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
@@ -1863,7 +1863,7 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (iii == 2) {
-    sel(c2, th, cards[2]);
+    setTimeout(sel, 3000, c2, th, cards[2]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
@@ -1923,7 +1923,7 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (iii == 3) {
-    sel(c3, th, cards[3]);
+    setTimeout(sel, 4000, c3, th, cards[3]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
@@ -1983,7 +1983,7 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (iii == 4) {
-    sel(c4, th, cards[4]);
+    setTimeout(sel, 5000, c4, th, cards[4]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
@@ -2043,7 +2043,7 @@ if(buy != "yes"){
 }
 if(buy != "yes"){
   if (iii == 5) {
-    sel(c5, th, cards[5]);
+    setTimeout(sel, 6000, c5, th, cards[5]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
