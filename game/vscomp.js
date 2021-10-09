@@ -1325,7 +1325,7 @@ var P1 = new Phaser.Class({
             checkScore = "yes";
           }
         });
-        tend.on('pointerdown', () => {
+        function ttend(){
           this.sound.add('mend').play();
           var zz = c0["texture"]["key"];
           setTimeout(() => {
@@ -2101,6 +2101,9 @@ if(buy != "yes"){
 
 
   //////////////////
+        }
+        tend.on('pointerdown', () => {
+          ttend();
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         hove(c5, this, cards[5] + 'big');
