@@ -2032,7 +2032,7 @@ if(buy != "yes"){
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel(p0, this, p[0])}, 1000);
+        setTimeout(bsel(p0, this, p[0]), 1000);
       }
       else if (iiii == 1) {
         setTimeout(bsel(p1, this, p[1]), 1000);
