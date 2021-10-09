@@ -362,6 +362,8 @@ var P1 = new Phaser.Class({
             });
           }
           function bsel(c, th, im){
+            console.log("bsel");
+            console.log(c);
             var aquire = "no";
             th.sound.add('click').play();
             if(red == "yes"){
