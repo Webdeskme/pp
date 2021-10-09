@@ -362,8 +362,8 @@ var P1 = new Phaser.Class({
             });
           }
           function bsel(c, th, im){
-            console.log("bsel");
-            console.log(c);
+            //console.log("bsel");
+            //console.log(c);
             var aquire = "no";
             th.sound.add('click').play();
             if(red == "yes"){
@@ -1742,9 +1742,9 @@ if(player == 2){
 var iii;
 //console.log(hand);
 for (iii = 0; iii < 6; iii++) {
-  console.log("buy");
-  console.log(buy);
-  if(buy != "yes"){
+  console.log("aquire");
+  console.log(aquire);
+  if(aquire != "yes"){
     if(iii == 0){
     setTimeout(sel, 1000, c0, th, cards[0]);
     var iiii;
@@ -1804,7 +1804,7 @@ for (iii = 0; iii < 6; iii++) {
     }
   }
 }
-if(buy != "yes"){
+if(aquire != "yes"){
   if (iii == 1) {
     setTimeout(sel, 2000, c1, th, cards[1]);
     var iiii;
@@ -1864,7 +1864,7 @@ if(buy != "yes"){
     }
   }
 }
-if(buy != "yes"){
+if(aquire != "yes"){
   if (iii == 2) {
     setTimeout(sel, 3000, c2, th, cards[2]);
     var iiii;
@@ -1924,7 +1924,7 @@ if(buy != "yes"){
     }
   }
 }
-if(buy != "yes"){
+if(aquire != "yes"){
   if (iii == 3) {
     setTimeout(sel, 4000, c3, th, cards[3]);
     var iiii;
@@ -1984,7 +1984,7 @@ if(buy != "yes"){
     }
   }
 }
-if(buy != "yes"){
+if(aquire != "yes"){
   if (iii == 4) {
     setTimeout(sel, 5000, c4, th, cards[4]);
     var iiii;
@@ -2044,7 +2044,7 @@ if(buy != "yes"){
     }
   }
 }
-if(buy != "yes"){
+if(aquire != "yes"){
   if (iii == 5) {
     setTimeout(sel, 6000, c5, th, cards[5]);
     var iiii;
