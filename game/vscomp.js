@@ -363,6 +363,8 @@ var P1 = new Phaser.Class({
           }
           function bsel(c, th, im){
             if(buy != "yes" || player == 1){
+              console.log("buy:");
+              console.log(buy);
             //console.log("bsel");
             //console.log(c);
             var aquire = "no";
@@ -1747,8 +1749,8 @@ if(player == 2){
 var iii;
 //console.log(hand);
 for (iii = 0; iii < 6; iii++) {
-  console.log("buy");
-  console.log(buy);
+  //console.log("buy");
+  //console.log(buy);
   if(buy != "yes"){
     if(iii == 0){
     setTimeout(sel, 1000, c0, th, cards[0]);
