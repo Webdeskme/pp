@@ -362,12 +362,7 @@ var P1 = new Phaser.Class({
             });
           }
           function bsel(c, th, im){
-            console.log("buy:");
-            console.log(buy);
             if(buy != "yes" || player == 1){
-              console.log("Got in");
-            //console.log("bsel");
-            //console.log(c);
             var aquire = "no";
             th.sound.add('click').play();
             if(red == "yes"){
@@ -813,7 +808,6 @@ var P1 = new Phaser.Class({
               }
               if( aquire == "yes"){
                 buy = "yes";
-                console.log("buy: yes");
                 aq += 1;
                 if(por == "PORT2"){
                   if(aq > 2){
@@ -1529,23 +1523,18 @@ var P1 = new Phaser.Class({
             player = 2;
             playerText.setText('Player: 2');
             if(mis2[0] == "yes"){
-              //console.log("mis2:cc");
-              //console.log(mis1);
-              //console.log(mis2);
               cc.visible = true;
             }
             else{
               cc.visible = false;
             }
             if(mis2[1] == "yes"){
-              //console.log("mis2:ce");
               ce.visible = true;
             }
             else{
               ce.visible = false;
             }
             if(mis2[2] == "yes"){
-              //console.log("mis2:cp");
               cp.visible = true;
             }
             else{
@@ -1564,21 +1553,18 @@ var P1 = new Phaser.Class({
             player = 1;
             playerText.setText('Player: 1');
             if(mis1[0] == "yes"){
-              //console.log("mis1:cc");
               cc.visible = true;
             }
             else{
               cc.visible = false;
             }
             if(mis1[1] == "yes"){
-              //console.log("mis1:ce");
               ce.visible = true;
             }
             else{
               ce.visible = false;
             }
             if(mis1[2] == "yes"){
-              //console.log("mis1:cp");
               cp.visible = true;
             }
             else{
@@ -1748,7 +1734,6 @@ function sleep(ms) {
 if(player == 2){
   buy = "no";
 var iii;
-//console.log(hand);
 //bob
 //var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C", "P2S", "P2C"];
 const mind = ["PrivilegeEsc", "MFAB", "IMDS", "MFA", "CloudAccount", "ZeroTrust", "Malware", "IAM", "FakeInstaller", "ShadowCopy", "Behavior", "Endpoint", "CloudStorage", "Sysmon", "CredStuffing", "DPAT", "Sinkhole", "User", "Driver", "OfficeMacro", "Browser", "WebShell", "SRUM", "SIEM", "Kubelet", "EMP"];
@@ -1954,8 +1939,7 @@ for (iii = 0; iii < 3; iii++) {
     }
   }
 }
-  //console.log("buy");
-  //console.log(buy);
+  console.log(order);
   var i7;
   for (i7 = 0; i7 < 6; i7++) {
   if(buy != "yes"){
