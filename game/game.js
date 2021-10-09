@@ -678,14 +678,16 @@ var SubM = new Phaser.Class({
       this.load.image('3coop', 'assets/Text/3coop.png');
       this.load.image('solo', 'assets/Text/solo.png');
       this.load.image('vs', 'assets/Text/vs.png');
+      this.load.image('vscomp', 'assets/Text/vscomp.png');
     },
 
     create: function ()
     {
       var aa = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
-      var bb = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
-      var n = this.add.image(900, 150, 'coop').setScrollFactor(0,0);
-      var o = this.add.image(900, 200, '3coop').setScrollFactor(0,0);
+      var p = this.add.image(900, 100, 'vscomp').setScrollFactor(0,0);
+      var bb = this.add.image(900, 150, 'vs').setScrollFactor(0,0);
+      var n = this.add.image(900, 200, 'coop').setScrollFactor(0,0);
+      var o = this.add.image(900, 250, '3coop').setScrollFactor(0,0);
       aa.setInteractive({ useHandCursor: true  } );
       aa.setScale(1/4);
       bb.setInteractive({ useHandCursor: true  } );
