@@ -779,6 +779,16 @@ var P1 = new Phaser.Class({
                       game += 1;
                       por = "no";
                       if(game > 3){
+                        th.sound.add('mwin').play();
+                        if(localStorage.getItem(localStorageName) == null) {
+                            highScore = 40;
+                        } else {
+                            highScore = localStorage.getItem(localStorageName);
+                        }
+                        if(score < highScore){
+                          localStorage.setItem(localStorageName, score);
+                        }
+                        localStorage.setItem(localStorageTemp, score);
                         window.location.href = "win.html";
                       }
                     }

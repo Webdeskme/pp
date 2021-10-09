@@ -805,7 +805,18 @@ var P1 = new Phaser.Class({
                       game += 1;
                       por = "no";
                       if(game > 2){
-                        window.location.href = "win.html";
+                        th.sound.add('mwin').play();
+                        if(localStorage.getItem(localStorageName) == null) {
+                            highScore = 40;
+                        } else {
+                            highScore = localStorage.getItem(localStorageName);
+                        }
+                        if(score < highScore){
+                          localStorage.setItem(localStorageName, score);
+                        }
+                        localStorage.setItem(localStorageTemp, score);
+                        localStorage.setItem(localStoragePlayer, player);
+                        window.location.href = "winv.html";
                       }
                     }
                   }
@@ -924,7 +935,8 @@ var P1 = new Phaser.Class({
                           localStorage.setItem(localStorageName, score);
                         }
                         localStorage.setItem(localStorageTemp, score);
-                        window.location.href = "win.html";
+                        localStorage.setItem(localStoragePlayer, player);
+                        window.location.href = "winv.html";
                     }
                     if(temp2 == "COM"){
                       th.sound.add('comp').play();
@@ -1472,6 +1484,7 @@ var P1 = new Phaser.Class({
             health -= 1;
           }
           if(health < 1){
+            localStorage.setItem(localStoragePlayer, player);
               this.sound.add('mlose').play();
               this.game.sound.stopAll();
               window.location.href = "lose.html";
