@@ -673,7 +673,7 @@ var SubM = new Phaser.Class({
     preload: function ()
     {
       this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
-      this.load.image('back', 'assets/backgrounds/blck.png');
+      this.load.image('back', 'assets/backgrounds/black.png');
       this.load.image('coop', 'assets/Text/coop.png');
       this.load.image('3coop', 'assets/Text/3coop.png');
       this.load.image('solo', 'assets/Text/solo.png');
@@ -779,7 +779,7 @@ var SubM = new Phaser.Class({
         preload: function ()
         {
           this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
-          this.load.image('back', 'assets/backgrounds/blck.png');
+          this.load.image('back', 'assets/backgrounds/black.png');
           this.load.image('bob', 'assets/Text/bob.png');
           this.load.image('alice', 'assets/Text/alice.png');
         },
