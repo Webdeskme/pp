@@ -1325,11 +1325,11 @@ var P1 = new Phaser.Class({
             checkScore = "yes";
           }
         });
-        function ttend(){
-          this.sound.add('mend').play();
+        function ttend(th){
+          th.sound.add('mend').play();
           var zz = c0["texture"]["key"];
           setTimeout(() => {
-              this.sound.add(zz).play();
+              th.sound.add(zz).play();
           }, 2000);
           pdis = pdis.filter(function( element ) {
              return element !== undefined;
@@ -1500,8 +1500,8 @@ var P1 = new Phaser.Class({
           }
           if(health < 1){
             localStorage.setItem(localStoragePlayer, player);
-              this.sound.add('mlose').play();
-              this.game.sound.stopAll();
+              th.sound.add('mlose').play();
+              th.game.sound.stopAll();
               window.location.href = "lose.html";
           }
           /*cc.visible = false;
@@ -1581,33 +1581,33 @@ var P1 = new Phaser.Class({
           cards.filter(val => val);
           dis.push(c0["texture"]["key"]);
           if (typeof cards[5] !== 'undefined') {
-            c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-            hove(c5, this, cards[5] + 'big');
-            select(c5, this, cards[5]);
+            c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+            hove(c5, th, cards[5] + 'big');
+            select(c5, th, cards[5]);
           }
           else {
             shuffle(dis);
             cards = cards.concat(dis);
             dis = [];
-            c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
-            hove(c5, this, cards[5] + 'big');
-            select(c5, this, cards[5]);
+            c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
+            hove(c5, th, cards[5] + 'big');
+            select(c5, th, cards[5]);
           }
-          c4 = this.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
-          hove(c4, this, cards[4] + 'big');
-          select(c4, this, cards[4]);
-          c3 = this.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
-          hove(c3, this, cards[3] + 'big');
-          select(c3, this, cards[3]);
-          c2 = this.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
-          hove(c2, this, cards[2] + 'big');
-          select(c2, this, cards[2]);
-          c1 = this.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
-          hove(c1, this, cards[1] + 'big');
-          select(c1, this, cards[1]);
-          c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
-          hove(c0, this, cards[0] + 'big');
-          select(c0, this, cards[0]);
+          c4 = th.add.image(375, 400, cards[4]).setInteractive({ useHandCursor: true  } );
+          hove(c4, th, cards[4] + 'big');
+          select(c4, th, cards[4]);
+          c3 = th.add.image(500, 400, cards[3]).setInteractive({ useHandCursor: true  } );
+          hove(c3, th, cards[3] + 'big');
+          select(c3, th, cards[3]);
+          c2 = th.add.image(625, 400, cards[2]).setInteractive({ useHandCursor: true  } );
+          hove(c2, th, cards[2] + 'big');
+          select(c2, th, cards[2]);
+          c1 = th.add.image(750, 400, cards[1]).setInteractive({ useHandCursor: true  } );
+          hove(c1, th, cards[1] + 'big');
+          select(c1, th, cards[1]);
+          c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
+          hove(c0, th, cards[0] + 'big');
+          select(c0, th, cards[0]);
           var z = hand - 1;
           if (typeof p[z] == 'undefined') {
             shuffle(pdis);
@@ -1639,89 +1639,89 @@ var P1 = new Phaser.Class({
             pdis = [];
           }
           if(hand > 15 && typeof p[15] != 'undefined'){
-            p15 = this.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
-            hove(p15, this, p[15] + 'big');
-            bselect(p15, this, p[15]);
+            p15 = th.add.image(63, 550, p[15]).setInteractive({ useHandCursor: true  } );
+            hove(p15, th, p[15] + 'big');
+            bselect(p15, th, p[15]);
           }
           if(hand > 7 && typeof p[7] != 'undefined'){
-            p7 = this.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
-            hove(p7, this, p[7] + 'big');
-            bselect(p7, this, p[7]);
+            p7 = th.add.image(125, 550, p[7]).setInteractive({ useHandCursor: true  } );
+            hove(p7, th, p[7] + 'big');
+            bselect(p7, th, p[7]);
           }
           if(hand > 8 && typeof p[8] != 'undefined'){
-            p8 = this.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
-            hove(p8, this, p[8] + 'big');
-            bselect(p8, this, p[8]);
+            p8 = th.add.image(187, 550, p[8]).setInteractive({ useHandCursor: true  } );
+            hove(p8, th, p[8] + 'big');
+            bselect(p8, th, p[8]);
           }
           if(hand > 0 && typeof p[0] != 'undefined'){
-            p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-            hove(p0, this, p[0] + 'big');
-            bselect(p0, this, p[0]);
+            p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
+            hove(p0, th, p[0] + 'big');
+            bselect(p0, th, p[0]);
           }
           if(hand > 9 && typeof p[9] != 'undefined'){
-            p9 = this.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
-            hove(p9, this, p[9] + 'big');
-            bselect(p9, this, p[9]);
+            p9 = th.add.image(312, 550, p[9]).setInteractive({ useHandCursor: true  } );
+            hove(p9, th, p[9] + 'big');
+            bselect(p9, th, p[9]);
           }
           if(hand > 1 && typeof p[1] != 'undefined'){
-            p1 = this.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-            hove(p1, this, p[1] + 'big');
-            bselect(p1, this, p[1]);
+            p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
+            hove(p1, th, p[1] + 'big');
+            bselect(p1, th, p[1]);
           }
           if(hand > 10 && typeof p[10] != 'undefined'){
-            p10 = this.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
-            hove(p10, this, p[10] + 'big');
-            bselect(p10, this, p[10]);
+            p10 = th.add.image(437, 550, p[10]).setInteractive({ useHandCursor: true  } );
+            hove(p10, th, p[10] + 'big');
+            bselect(p10, th, p[10]);
           }
           if(hand > 2 && typeof p[2] != 'undefined'){
-            p2 = this.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-            hove(p2, this, p[2] + 'big');
-            bselect(p2, this, p[2]);
+            p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
+            hove(p2, th, p[2] + 'big');
+            bselect(p2, th, p[2]);
           }
           if(hand > 11 && typeof p[11] != 'undefined'){
-            p11 = this.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
-            hove(p11, this, p[11] + 'big');
-            bselect(p11, this, p[11]);
+            p11 = th.add.image(562, 550, p[11]).setInteractive({ useHandCursor: true  } );
+            hove(p11, th, p[11] + 'big');
+            bselect(p11, th, p[11]);
           }
           if(hand > 3 && typeof p[3] != 'undefined'){
-            p3 = this.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-            hove(p3, this, p[3] + 'big');
-            bselect(p3, this, p[3]);
+            p3 = th.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
+            hove(p3, th, p[3] + 'big');
+            bselect(p3, th, p[3]);
           }
           if(hand > 12 && typeof p[12] != 'undefined'){
-            p12 = this.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
-            hove(p12, this, p[12] + 'big');
-            bselect(p12, this, p[12]);
+            p12 = th.add.image(687, 550, p[12]).setInteractive({ useHandCursor: true  } );
+            hove(p12, th, p[12] + 'big');
+            bselect(p12, th, p[12]);
           }
           if(hand > 4 && typeof p[4] != 'undefined'){
-            p4 = this.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
-            hove(p4, this, p[4] + 'big');
-            bselect(p4, this, p[4]);
+            p4 = th.add.image(750, 550, p[4]).setInteractive({ useHandCursor: true  } );
+            hove(p4, th, p[4] + 'big');
+            bselect(p4, th, p[4]);
           }
           if(hand > 13 && typeof p[13] != 'undefined'){
-            p13 = this.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
-            hove(p13, this, p[13] + 'big');
-            bselect(p13, this, p[13]);
+            p13 = th.add.image(812, 550, p[13]).setInteractive({ useHandCursor: true  } );
+            hove(p13, th, p[13] + 'big');
+            bselect(p13, th, p[13]);
           }
           if(hand > 16 && typeof p[16] != 'undefined'){
-            p16 = this.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
-            hove(p16, this, p[16] + 'big');
-            bselect(p16, this, p[16]);
+            p16 = th.add.image(850, 550, p[16]).setInteractive({ useHandCursor: true  } );
+            hove(p16, th, p[16] + 'big');
+            bselect(p16, th, p[16]);
           }
           if(hand > 5 && typeof p[5] != 'undefined'){
-            p5 = this.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
-            hove(p5, this, p[5] + 'big');
-            bselect(p5, this, p[5]);
+            p5 = th.add.image(875, 550, p[5]).setInteractive({ useHandCursor: true  } );
+            hove(p5, th, p[5] + 'big');
+            bselect(p5, th, p[5]);
           }
           if(hand > 14 && typeof p[14] != 'undefined'){
-            p14 = this.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
-            hove(p14, this, p[14] + 'big');
-            bselect(p14, this, p[14]);
+            p14 = th.add.image(937, 550, p[14]).setInteractive({ useHandCursor: true  } );
+            hove(p14, th, p[14] + 'big');
+            bselect(p14, th, p[14]);
           }
           if(hand > 6 && typeof p[6] != 'undefined'){
-            p6 = this.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
-            hove(p6, this, p[6] + 'big');
-            bselect(p6, this, p[6]);
+            p6 = th.add.image(1000, 550, p[6]).setInteractive({ useHandCursor: true  } );
+            hove(p6, th, p[6] + 'big');
+            bselect(p6, th, p[6]);
           }
 // computer AI //
 //bill
@@ -1740,355 +1740,355 @@ for (iii = 0; iii < 6; iii++) {
   console.log(buy);
   if(buy != "yes"){
     if(iii == 0){
-    sel(c0, this, cards[0]);
+    sel(c0, th, cards[0]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       sleep(2000);
       if(iiii == 0){
-        setTimeout(bsel(p0, this, p[0]), 1000);
+        setTimeout(bsel(p0, th, p[0]), 1000);
       }
       else if (iiii == 1) {
-        setTimeout(bsel(p1, this, p[1]), 1000);
+        setTimeout(bsel(p1, th, p[1]), 1000);
       }
       else if (iiii == 2) {
-        setTimeout(bsel(p2, this, p[2]), 1000);
+        setTimeout(bsel(p2, th, p[2]), 1000);
       }
       else if (iiii == 3) {
-        setTimeout(bsel(p3, this, p[3]), 1000);
+        setTimeout(bsel(p3, th, p[3]), 1000);
       }
       else if (iiii == 4) {
-        setTimeout(bsel(p4, this, p[4]), 1000);
+        setTimeout(bsel(p4, th, p[4]), 1000);
       }
       else if (iiii == 5) {
-        setTimeout(bsel(p5, this, p[5]), 1000);
+        setTimeout(bsel(p5, th, p[5]), 1000);
       }
       else if (iiii == 6) {
-        setTimeout(bsel(p6, this, p[6]), 1000);
+        setTimeout(bsel(p6, th, p[6]), 1000);
       }
       else if (iiii == 7) {
-        setTimeout(bsel(p7, this, p[7]), 1000);
+        setTimeout(bsel(p7, th, p[7]), 1000);
       }
       else if (iiii == 8) {
-        setTimeout(bsel(p8, this, p[8]), 1000);
+        setTimeout(bsel(p8, th, p[8]), 1000);
       }
       else if (iiii == 9) {
-        setTimeout(bsel(p9, this, p[9]), 1000);
+        setTimeout(bsel(p9, th, p[9]), 1000);
       }
       else if (iiii == 10) {
-        setTimeout(bsel(p10, this, p[10]), 1000);
+        setTimeout(bsel(p10, th, p[10]), 1000);
       }
       else if (iiii == 11) {
-        setTimeout(bsel(p11, this, p[11]), 1000);
+        setTimeout(bsel(p11, th, p[11]), 1000);
       }
       else if (iiii == 12) {
-        setTimeout(bsel(p12, this, p[12]), 1000);
+        setTimeout(bsel(p12, th, p[12]), 1000);
       }
       else if (iiii == 13) {
-        setTimeout(bsel(p13, this, p[13]), 1000);
+        setTimeout(bsel(p13, th, p[13]), 1000);
       }
       else if (iiii == 14) {
-        setTimeout(bsel(p14, this, p[14]), 1000);
+        setTimeout(bsel(p14, th, p[14]), 1000);
       }
       else if (iiii == 15) {
-        setTimeout(bsel(p15, this, p[15]), 1000);
+        setTimeout(bsel(p15, th, p[15]), 1000);
       }
       else if (iiii == 16) {
-        setTimeout(bsel(p16, this, p[16]), 1000);
+        setTimeout(bsel(p16, th, p[16]), 1000);
       }
     }
   }
 }
 if(buy != "yes"){
   if (iii == 1) {
-    sel(c1, this, cards[1]);
+    sel(c1, th, cards[1]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel(p0, this, p[0]), 1000);
+        setTimeout(bsel(p0, th, p[0]), 1000);
       }
       else if (iiii == 1) {
-        setTimeout(bsel(p1, this, p[1]), 1000);
+        setTimeout(bsel(p1, th, p[1]), 1000);
       }
       else if (iiii == 2) {
-        setTimeout(bsel(p2, this, p[2]), 1000);
+        setTimeout(bsel(p2, th, p[2]), 1000);
       }
       else if (iiii == 3) {
-        setTimeout(bsel(p3, this, p[3]), 1000);
+        setTimeout(bsel(p3, th, p[3]), 1000);
       }
       else if (iiii == 4) {
-        setTimeout(bsel(p4, this, p[4]), 1000);
+        setTimeout(bsel(p4, th, p[4]), 1000);
       }
       else if (iiii == 5) {
-        setTimeout(bsel(p5, this, p[5]), 1000);
+        setTimeout(bsel(p5, th, p[5]), 1000);
       }
       else if (iiii == 6) {
-        setTimeout(bsel(p6, this, p[6]), 1000);
+        setTimeout(bsel(p6, th, p[6]), 1000);
       }
       else if (iiii == 7) {
-        setTimeout(bsel(p7, this, p[7]), 1000);
+        setTimeout(bsel(p7, th, p[7]), 1000);
       }
       else if (iiii == 8) {
-        setTimeout(bsel(p8, this, p[8]), 1000);
+        setTimeout(bsel(p8, th, p[8]), 1000);
       }
       else if (iiii == 9) {
-        setTimeout(bsel(p9, this, p[9]), 1000);
+        setTimeout(bsel(p9, th, p[9]), 1000);
       }
       else if (iiii == 10) {
-        setTimeout(bsel(p10, this, p[10]), 1000);
+        setTimeout(bsel(p10, th, p[10]), 1000);
       }
       else if (iiii == 11) {
-        setTimeout(bsel(p11, this, p[11]), 1000);
+        setTimeout(bsel(p11, th, p[11]), 1000);
       }
       else if (iiii == 12) {
-        setTimeout(bsel(p12, this, p[12]), 1000);
+        setTimeout(bsel(p12, th, p[12]), 1000);
       }
       else if (iiii == 13) {
-        setTimeout(bsel(p13, this, p[13]), 1000);
+        setTimeout(bsel(p13, th, p[13]), 1000);
       }
       else if (iiii == 14) {
-        setTimeout(bsel(p14, this, p[14]), 1000);
+        setTimeout(bsel(p14, th, p[14]), 1000);
       }
       else if (iiii == 15) {
-        setTimeout(bsel(p15, this, p[15]), 1000);
+        setTimeout(bsel(p15, th, p[15]), 1000);
       }
       else if (iiii == 16) {
-        setTimeout(bsel(p16, this, p[16]), 1000);
+        setTimeout(bsel(p16, th, p[16]), 1000);
       }
     }
   }
 }
 if(buy != "yes"){
   if (iii == 2) {
-    sel(c2, this, cards[2]);
+    sel(c2, th, cards[2]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel(p0, this, p[0]), 1000);
+        setTimeout(bsel(p0, th, p[0]), 1000);
       }
       else if (iiii == 1) {
-        setTimeout(bsel(p1, this, p[1]), 1000);
+        setTimeout(bsel(p1, th, p[1]), 1000);
       }
       else if (iiii == 2) {
-        setTimeout(bsel(p2, this, p[2]), 1000);
+        setTimeout(bsel(p2, th, p[2]), 1000);
       }
       else if (iiii == 3) {
-        setTimeout(bsel(p3, this, p[3]), 1000);
+        setTimeout(bsel(p3, th, p[3]), 1000);
       }
       else if (iiii == 4) {
-        setTimeout(bsel(p4, this, p[4]), 1000);
+        setTimeout(bsel(p4, th, p[4]), 1000);
       }
       else if (iiii == 5) {
-        setTimeout(bsel(p5, this, p[5]), 1000);
+        setTimeout(bsel(p5, th, p[5]), 1000);
       }
       else if (iiii == 6) {
-        setTimeout(bsel(p6, this, p[6]), 1000);
+        setTimeout(bsel(p6, th, p[6]), 1000);
       }
       else if (iiii == 7) {
-        setTimeout(bsel(p7, this, p[7]), 1000);
+        setTimeout(bsel(p7, th, p[7]), 1000);
       }
       else if (iiii == 8) {
-        setTimeout(bsel(p8, this, p[8]), 1000);
+        setTimeout(bsel(p8, th, p[8]), 1000);
       }
       else if (iiii == 9) {
-        setTimeout(bsel(p9, this, p[9]), 1000);
+        setTimeout(bsel(p9, th, p[9]), 1000);
       }
       else if (iiii == 10) {
-        setTimeout(bsel(p10, this, p[10]), 1000);
+        setTimeout(bsel(p10, th, p[10]), 1000);
       }
       else if (iiii == 11) {
-        setTimeout(bsel(p11, this, p[11]), 1000);
+        setTimeout(bsel(p11, th, p[11]), 1000);
       }
       else if (iiii == 12) {
-        setTimeout(bsel(p12, this, p[12]), 1000);
+        setTimeout(bsel(p12, th, p[12]), 1000);
       }
       else if (iiii == 13) {
-        setTimeout(bsel(p13, this, p[13]), 1000);
+        setTimeout(bsel(p13, th, p[13]), 1000);
       }
       else if (iiii == 14) {
-        setTimeout(bsel(p14, this, p[14]), 1000);
+        setTimeout(bsel(p14, th, p[14]), 1000);
       }
       else if (iiii == 15) {
-        setTimeout(bsel(p15, this, p[15]), 1000);
+        setTimeout(bsel(p15, th, p[15]), 1000);
       }
       else if (iiii == 16) {
-        setTimeout(bsel(p16, this, p[16]), 1000);
+        setTimeout(bsel(p16, th, p[16]), 1000);
       }
     }
   }
 }
 if(buy != "yes"){
   if (iii == 3) {
-    sel(c3, this, cards[3]);
+    sel(c3, th, cards[3]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel(p0, this, p[0]), 1000);
+        setTimeout(bsel(p0, th, p[0]), 1000);
       }
       else if (iiii == 1) {
-        setTimeout(bsel(p1, this, p[1]), 1000);
+        setTimeout(bsel(p1, th, p[1]), 1000);
       }
       else if (iiii == 2) {
-        setTimeout(bsel(p2, this, p[2]), 1000);
+        setTimeout(bsel(p2, th, p[2]), 1000);
       }
       else if (iiii == 3) {
-        setTimeout(bsel(p3, this, p[3]), 1000);
+        setTimeout(bsel(p3, th, p[3]), 1000);
       }
       else if (iiii == 4) {
-        setTimeout(bsel(p4, this, p[4]), 1000);
+        setTimeout(bsel(p4, th, p[4]), 1000);
       }
       else if (iiii == 5) {
-        setTimeout(bsel(p5, this, p[5]), 1000);
+        setTimeout(bsel(p5, th, p[5]), 1000);
       }
       else if (iiii == 6) {
-        setTimeout(bsel(p6, this, p[6]), 1000);
+        setTimeout(bsel(p6, th, p[6]), 1000);
       }
       else if (iiii == 7) {
-        setTimeout(bsel(p7, this, p[7]), 1000);
+        setTimeout(bsel(p7, th, p[7]), 1000);
       }
       else if (iiii == 8) {
-        setTimeout(bsel(p8, this, p[8]), 1000);
+        setTimeout(bsel(p8, th, p[8]), 1000);
       }
       else if (iiii == 9) {
-        setTimeout(bsel(p9, this, p[9]), 1000);
+        setTimeout(bsel(p9, th, p[9]), 1000);
       }
       else if (iiii == 10) {
-        setTimeout(bsel(p10, this, p[10]), 1000);
+        setTimeout(bsel(p10, th, p[10]), 1000);
       }
       else if (iiii == 11) {
-        setTimeout(bsel(p11, this, p[11]), 1000);
+        setTimeout(bsel(p11, th, p[11]), 1000);
       }
       else if (iiii == 12) {
-        setTimeout(bsel(p12, this, p[12]), 1000);
+        setTimeout(bsel(p12, th, p[12]), 1000);
       }
       else if (iiii == 13) {
-        setTimeout(bsel(p13, this, p[13]), 1000);
+        setTimeout(bsel(p13, th, p[13]), 1000);
       }
       else if (iiii == 14) {
-        setTimeout(bsel(p14, this, p[14]), 1000);
+        setTimeout(bsel(p14, th, p[14]), 1000);
       }
       else if (iiii == 15) {
-        setTimeout(bsel(p15, this, p[15]), 1000);
+        setTimeout(bsel(p15, th, p[15]), 1000);
       }
       else if (iiii == 16) {
-        setTimeout(bsel(p16, this, p[16]), 1000);
+        setTimeout(bsel(p16, th, p[16]), 1000);
       }
     }
   }
 }
 if(buy != "yes"){
   if (iii == 4) {
-    sel(c4, this, cards[4]);
+    sel(c4, th, cards[4]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel(p0, this, p[0]), 1000);
+        setTimeout(bsel(p0, th, p[0]), 1000);
       }
       else if (iiii == 1) {
-        setTimeout(bsel(p1, this, p[1]), 1000);
+        setTimeout(bsel(p1, th, p[1]), 1000);
       }
       else if (iiii == 2) {
-        setTimeout(bsel(p2, this, p[2]), 1000);
+        setTimeout(bsel(p2, th, p[2]), 1000);
       }
       else if (iiii == 3) {
-        setTimeout(bsel(p3, this, p[3]), 1000);
+        setTimeout(bsel(p3, th, p[3]), 1000);
       }
       else if (iiii == 4) {
-        setTimeout(bsel(p4, this, p[4]), 1000);
+        setTimeout(bsel(p4, th, p[4]), 1000);
       }
       else if (iiii == 5) {
-        setTimeout(bsel(p5, this, p[5]), 1000);
+        setTimeout(bsel(p5, th, p[5]), 1000);
       }
       else if (iiii == 6) {
-        setTimeout(bsel(p6, this, p[6]), 1000);
+        setTimeout(bsel(p6, th, p[6]), 1000);
       }
       else if (iiii == 7) {
-        setTimeout(bsel(p7, this, p[7]), 1000);
+        setTimeout(bsel(p7, th, p[7]), 1000);
       }
       else if (iiii == 8) {
-        setTimeout(bsel(p8, this, p[8]), 1000);
+        setTimeout(bsel(p8, th, p[8]), 1000);
       }
       else if (iiii == 9) {
-        setTimeout(bsel(p9, this, p[9]), 1000);
+        setTimeout(bsel(p9, th, p[9]), 1000);
       }
       else if (iiii == 10) {
-        setTimeout(bsel(p10, this, p[10]), 1000);
+        setTimeout(bsel(p10, th, p[10]), 1000);
       }
       else if (iiii == 11) {
-        setTimeout(bsel(p11, this, p[11]), 1000);
+        setTimeout(bsel(p11, th, p[11]), 1000);
       }
       else if (iiii == 12) {
-        setTimeout(bsel(p12, this, p[12]), 1000);
+        setTimeout(bsel(p12, th, p[12]), 1000);
       }
       else if (iiii == 13) {
-        setTimeout(bsel(p13, this, p[13]), 1000);
+        setTimeout(bsel(p13, th, p[13]), 1000);
       }
       else if (iiii == 14) {
-        setTimeout(bsel(p14, this, p[14]), 1000);
+        setTimeout(bsel(p14, th, p[14]), 1000);
       }
       else if (iiii == 15) {
-        setTimeout(bsel(p15, this, p[15]), 1000);
+        setTimeout(bsel(p15, th, p[15]), 1000);
       }
       else if (iiii == 16) {
-        setTimeout(bsel(p16, this, p[16]), 1000);
+        setTimeout(bsel(p16, th, p[16]), 1000);
       }
     }
   }
 }
 if(buy != "yes"){
   if (iii == 5) {
-    sel(c5, this, cards[5]);
+    sel(c5, th, cards[5]);
     var iiii;
     for (iiii = 0; iiii < hand; iiii++) {
       if(iiii == 0){
-        setTimeout(bsel(p0, this, p[0]), 1000);
+        setTimeout(bsel(p0, th, p[0]), 1000);
       }
       else if (iiii == 1) {
-        setTimeout(bsel(p1, this, p[1]), 1000);
+        setTimeout(bsel(p1, th, p[1]), 1000);
       }
       else if (iiii == 2) {
-        setTimeout(bsel(p2, this, p[2]), 1000);
+        setTimeout(bsel(p2, th, p[2]), 1000);
       }
       else if (iiii == 3) {
-      setTimeout(bsel(p3, this, p[3]), 1000);
+      setTimeout(bsel(p3, th, p[3]), 1000);
       }
       else if (iiii == 4) {
-        setTimeout(bsel(p4, this, p[4]), 1000);
+        setTimeout(bsel(p4, th, p[4]), 1000);
       }
       else if (iiii == 5) {
-        setTimeout(bsel(p5, this, p[5]), 1000);
+        setTimeout(bsel(p5, th, p[5]), 1000);
       }
       else if (iiii == 6) {
-        setTimeout(bsel(p6, this, p[6]), 1000);
+        setTimeout(bsel(p6, th, p[6]), 1000);
       }
       else if (iiii == 7) {
-        setTimeout(bsel(p7, this, p[7]), 1000);
+        setTimeout(bsel(p7, th, p[7]), 1000);
       }
       else if (iiii == 8) {
-        setTimeout(bsel(p8, this, p[8]), 1000);
+        setTimeout(bsel(p8, th, p[8]), 1000);
       }
       else if (iiii == 9) {
-        setTimeout(bsel(p9, this, p[9]), 1000);
+        setTimeout(bsel(p9, th, p[9]), 1000);
       }
       else if (iiii == 10) {
-        setTimeout(bsel(p10, this, p[10]), 1000);
+        setTimeout(bsel(p10, th, p[10]), 1000);
       }
       else if (iiii == 11) {
-        setTimeout(bsel(p11, this, p[11]), 1000);
+        setTimeout(bsel(p11, th, p[11]), 1000);
       }
       else if (iiii == 12) {
-        setTimeout(bsel(p12, this, p[12]), 1000);
+        setTimeout(bsel(p12, th, p[12]), 1000);
       }
       else if (iiii == 13) {
-        setTimeout(bsel(p13, this, p[13]), 1000);
+        setTimeout(bsel(p13, th, p[13]), 1000);
       }
       else if (iiii == 14) {
-        setTimeout(bsel(p14, this, p[14]), 1000);
+        setTimeout(bsel(p14, th, p[14]), 1000);
       }
       else if (iiii == 15) {
-        setTimeout(bsel(p15, this, p[15]), 1000);
+        setTimeout(bsel(p15, th, p[15]), 1000);
       }
       else if (iiii == 16) {
-        setTimeout(bsel(p16, this, p[16]), 1000);
+        setTimeout(bsel(p16, th, p[16]), 1000);
       }
     }
   }
@@ -2103,7 +2103,7 @@ if(buy != "yes"){
   //////////////////
         }
         tend.on('pointerdown', () => {
-          ttend();
+          ttend(this);
         });
         c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         hove(c5, this, cards[5] + 'big');
