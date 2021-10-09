@@ -684,8 +684,8 @@ var SubM = new Phaser.Class({
     create: function ()
     {
       var aa = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
-      var p = this.add.image(900, 100, 'vscomp').setScrollFactor(0,0);
-      //var bb = this.add.image(900, 150, 'vs').setScrollFactor(0,0);
+      var p = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
+      //var bb = this.add.image(900, 150, 'vscomp').setScrollFactor(0,0);
       var n = this.add.image(900, 150, 'coop').setScrollFactor(0,0);
       var o = this.add.image(900, 200, '3coop').setScrollFactor(0,0);
       aa.setInteractive({ useHandCursor: true  } );
