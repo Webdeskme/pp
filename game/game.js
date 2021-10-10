@@ -463,12 +463,16 @@ else if (!s)
         var lu = this.add.image(675, 50, 'levelup').setScrollFactor(0,0);
         var badge1 = this.add.image(50, 550, 'badge').setScrollFactor(0,0);
         badge1.setScale(1/5);
+        badge1.visible = false;
         var badge2 = this.add.image(125, 550, 'badge').setScrollFactor(0,0);
         badge2.setScale(1/5);
+        badge1.visible = false;
         var badge3 = this.add.image(200, 550, 'badge').setScrollFactor(0,0);
         badge3.setScale(1/5);
+        badge1.visible = false;
         var badge4 = this.add.image(275, 550, 'badge').setScrollFactor(0,0);
         badge4.setScale(1/5);
+        badge1.visible = false;
         ccc.setInteractive({ useHandCursor: true  } );
         ccc.setScale(1/4);
         lu.setInteractive({ useHandCursor: true  } );
