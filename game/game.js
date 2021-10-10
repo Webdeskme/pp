@@ -465,6 +465,10 @@ else if (!s)
         badge1.setScale(1/5);
         var badge2 = this.add.image(125, 550, 'badge').setScrollFactor(0,0);
         badge2.setScale(1/5);
+        var badge3 = this.add.image(200, 550, 'badge').setScrollFactor(0,0);
+        badge3.setScale(1/5);
+        var badge4 = this.add.image(275, 550, 'badge').setScrollFactor(0,0);
+        badge4.setScale(1/5);
         ccc.setInteractive({ useHandCursor: true  } );
         ccc.setScale(1/4);
         lu.setInteractive({ useHandCursor: true  } );
