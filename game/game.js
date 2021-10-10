@@ -679,6 +679,7 @@ var SubM = new Phaser.Class({
       this.load.image('solo', 'assets/Text/solo.png');
       this.load.image('vs', 'assets/Text/vs.png');
       this.load.image('vscomp', 'assets/Text/vscomp.png');
+      this.load.image('undo', 'assets/Text/back.png');
       this.load.text('s1', 'assets/Text/story/s1.txt');
       this.load.text('s2', 'assets/Text/story/s2.txt');
       this.load.text('s3', 'assets/Text/story/s3.txt');
@@ -716,11 +717,14 @@ var SubM = new Phaser.Class({
       var snip = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11', 's12'];
       shuffle(snip);
       var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
-      var aa = this.add.image(900, 50, 'solo').setScrollFactor(0,0);
-      var p = this.add.image(900, 100, 'vs').setScrollFactor(0,0);
+      var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
+      var aa = this.add.image(900, 100, 'solo').setScrollFactor(0,0);
+      var p = this.add.image(900, 150, 'vs').setScrollFactor(0,0);
       //var bb = this.add.image(900, 150, 'vscomp').setScrollFactor(0,0);
-      var n = this.add.image(900, 150, 'coop').setScrollFactor(0,0);
-      var o = this.add.image(900, 200, '3coop').setScrollFactor(0,0);
+      var n = this.add.image(900, 200, 'coop').setScrollFactor(0,0);
+      var o = this.add.image(900, 250, '3coop').setScrollFactor(0,0);
+      un.setInteractive({ useHandCursor: true  } );
+      un.setScale(1/4);
       aa.setInteractive({ useHandCursor: true  } );
       aa.setScale(1/4);
       p.setInteractive({ useHandCursor: true  } );
@@ -731,6 +735,12 @@ var SubM = new Phaser.Class({
       n.setScale(1/4);
       o.setInteractive({ useHandCursor: true  } );
       o.setScale(1/4);
+      un.on('pointerover',function(pointer){
+        un.setScale(1/3);
+      });
+      un.on('pointerout',function(pointer){
+        un.setScale(1/4);
+      });
       aa.on('pointerover',function(pointer){
         aa.setScale(1/3);
       });
@@ -760,6 +770,13 @@ var SubM = new Phaser.Class({
       });
       o.on('pointerout',function(pointer){
         o.setScale(1/4);
+      });
+      un.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        this.scene.start('titles');
+        //window.location.href = "vscomp.html";
       });
       aa.on('pointerdown', () => {
         this.sound.add('click').play();
@@ -813,6 +830,7 @@ var SubM = new Phaser.Class({
         {
           this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
           this.load.image('back', 'assets/backgrounds/black.png');
+          this.load.image('undo', 'assets/Text/back.png');
           this.load.image('bob', 'assets/Text/bob.png');
           this.load.image('alice', 'assets/Text/alice.png');
           this.load.image('2play', 'assets/Text/2play.png');
@@ -820,15 +838,24 @@ var SubM = new Phaser.Class({
 
         create: function ()
         {
-          var bb = this.add.image(900, 50, '2play').setScrollFactor(0,0);
-          var aa = this.add.image(900, 100, 'bob').setScrollFactor(0,0);
-          var p = this.add.image(900, 150, 'alice').setScrollFactor(0,0);
+          var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
+          var bb = this.add.image(900, 100, '2play').setScrollFactor(0,0);
+          var aa = this.add.image(900, 150, 'bob').setScrollFactor(0,0);
+          var p = this.add.image(900, 200, 'alice').setScrollFactor(0,0);
+          un.setInteractive({ useHandCursor: true  } );
+          un.setScale(1/4);
           bb.setInteractive({ useHandCursor: true  } );
           bb.setScale(1/4);
           aa.setInteractive({ useHandCursor: true  } );
           aa.setScale(1/4);
           p.setInteractive({ useHandCursor: true  } );
           p.setScale(1/4);
+          un.on('pointerover',function(pointer){
+            un.setScale(1/3);
+          });
+          un.on('pointerout',function(pointer){
+            un.setScale(1/4);
+          });
           bb.on('pointerover',function(pointer){
             bb.setScale(1/3);
           });
@@ -846,6 +873,13 @@ var SubM = new Phaser.Class({
           });
           p.on('pointerout',function(pointer){
             p.setScale(1/4);
+          });
+          un.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            this.scene.start('subm');
+            //window.location.href = "vscomp.html";
           });
           bb.on('pointerdown', () => {
             this.sound.add('click').play();
