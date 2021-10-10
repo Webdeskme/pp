@@ -834,10 +834,71 @@ var SubM = new Phaser.Class({
           this.load.image('bob', 'assets/Text/bob.png');
           this.load.image('alice', 'assets/Text/alice.png');
           this.load.image('2play', 'assets/Text/2play.png');
+          this.load.text('q1', 'assets/Text/quote/q1.txt');
+          this.load.text('q2', 'assets/Text/quote/q2.txt');
+          this.load.text('q3', 'assets/Text/quote/q3.txt');
+          this.load.text('q4', 'assets/Text/quote/q4.txt');
+          this.load.text('q5', 'assets/Text/quote/q5.txt');
+          this.load.text('q6', 'assets/Text/quote/q6.txt');
+          this.load.text('q7', 'assets/Text/quote/q7.txt');
+          this.load.text('q8', 'assets/Text/quote/q8.txt');
+          this.load.text('q9', 'assets/Text/quote/q9.txt');
+          this.load.text('q10', 'assets/Text/quote/q10.txt');
+          this.load.text('q11', 'assets/Text/quote/q11.txt');
+          this.load.text('q12', 'assets/Text/quote/q12.txt');
+          this.load.text('q13', 'assets/Text/quote/q13.txt');
+          this.load.text('q14', 'assets/Text/quote/q14.txt');
+          this.load.text('q15', 'assets/Text/quote/q15.txt');
+          this.load.text('q16', 'assets/Text/quote/q16.txt');
+          this.load.text('q17', 'assets/Text/quote/q17.txt');
+          this.load.text('q18', 'assets/Text/quote/q18.txt');
+          this.load.text('q19', 'assets/Text/quote/q19.txt');
+          this.load.text('q20', 'assets/Text/quote/q20.txt');
+          this.load.text('q21', 'assets/Text/quote/q21.txt');
+          this.load.text('q22', 'assets/Text/quote/q22.txt');
+          this.load.text('q23', 'assets/Text/quote/q23.txt');
+          this.load.text('q24', 'assets/Text/quote/q24.txt');
+          this.load.text('q25', 'assets/Text/quote/q25.txt');
+          this.load.text('q26', 'assets/Text/quote/q26.txt');
+          this.load.text('q27', 'assets/Text/quote/q27.txt');
+          this.load.text('q28', 'assets/Text/quote/q28.txt');
+          this.load.text('q29', 'assets/Text/quote/q29.txt');
+          this.load.text('q30', 'assets/Text/quote/q30.txt');
+          this.load.text('q31', 'assets/Text/quote/q31.txt');
+          this.load.text('q32', 'assets/Text/quote/q32.txt');
+          this.load.text('q33', 'assets/Text/quote/q33.txt');
+          this.load.text('q34', 'assets/Text/quote/q34.txt');
+          this.load.text('q35', 'assets/Text/quote/q35.txt');
+          this.load.text('q36', 'assets/Text/quote/q36.txt');
+          this.load.text('q37', 'assets/Text/quote/q37.txt');
+          this.load.text('q38', 'assets/Text/quote/q38.txt');
+          this.load.text('q39', 'assets/Text/quote/q39.txt');
+          this.load.text('q40', 'assets/Text/quote/q40.txt');
         },
 
         create: function ()
         {
+          function shuffle(array) {
+              var currentIndex = array.length, temporaryValue, randomIndex;
+
+              // While there remain elements to shuffle...
+              while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+              }
+
+              return array;
+              }
+          var snip = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20', 'q21', 'q22', 'q23', 'q24', 'q25', 'q26', 'q27', 'q28', 'q29', 'q30', 'q31', 'q32', 'q33', 'q34', 'q35', 'q36', 'q37', 'q38', 'q39', 'q40'];
+          sfuffle(snip);
+          var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
           var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
           var bb = this.add.image(900, 100, '2play').setScrollFactor(0,0);
           var aa = this.add.image(900, 150, 'bob').setScrollFactor(0,0);
