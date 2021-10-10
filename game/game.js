@@ -638,8 +638,8 @@ else if (!s)
           //this.scene.start('san');
           window.location.href = "at-Desk/index.html";
         });
-        ccc.on('pointerdown', openSANSLink, this);
-        lu.on('pointerdown', openCourseLink, this);
+        lu.on('pointerdown', openSANSLink, this);
+        ccc.on('pointerdown', openCourseLink, this);
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         if(localStorage.getItem(localStorageTemp) == null) {
