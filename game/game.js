@@ -463,7 +463,7 @@ else if (!s)
         var lu = this.add.image(675, 50, 'levelup').setScrollFactor(0,0);
         var badge1 = this.add.image(50, 550, 'badge').setScrollFactor(0,0);
         badge1.setScale(1/5);
-        var badge2 = this.add.image(100, 550, 'badge').setScrollFactor(0,0);
+        var badge2 = this.add.image(125, 550, 'badge').setScrollFactor(0,0);
         badge2.setScale(1/5);
         ccc.setInteractive({ useHandCursor: true  } );
         ccc.setScale(1/4);
