@@ -718,11 +718,11 @@ var SubM = new Phaser.Class({
       shuffle(snip);
       var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
       var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
-      var aa = this.add.image(900, 100, 'solo').setScrollFactor(0,0);
-      var p = this.add.image(900, 150, 'vs').setScrollFactor(0,0);
+      var aa = this.add.image(900, 150, 'solo').setScrollFactor(0,0);
+      var p = this.add.image(900, 200, 'vs').setScrollFactor(0,0);
       //var bb = this.add.image(900, 150, 'vscomp').setScrollFactor(0,0);
-      var n = this.add.image(900, 200, 'coop').setScrollFactor(0,0);
-      var o = this.add.image(900, 250, '3coop').setScrollFactor(0,0);
+      var n = this.add.image(900, 250, 'coop').setScrollFactor(0,0);
+      var o = this.add.image(900, 300, '3coop').setScrollFactor(0,0);
       un.setInteractive({ useHandCursor: true  } );
       un.setScale(1/4);
       aa.setInteractive({ useHandCursor: true  } );
@@ -900,9 +900,9 @@ var SubM = new Phaser.Class({
           shuffle(snip);
           var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
           var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
-          var bb = this.add.image(900, 100, '2play').setScrollFactor(0,0);
-          var aa = this.add.image(900, 150, 'bob').setScrollFactor(0,0);
-          var p = this.add.image(900, 200, 'alice').setScrollFactor(0,0);
+          var bb = this.add.image(900, 150, '2play').setScrollFactor(0,0);
+          var aa = this.add.image(900, 200, 'bob').setScrollFactor(0,0);
+          var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
           un.setInteractive({ useHandCursor: true  } );
           un.setScale(1/4);
           bb.setInteractive({ useHandCursor: true  } );
