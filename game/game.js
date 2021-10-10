@@ -696,6 +696,23 @@ var SubM = new Phaser.Class({
 
     create: function ()
     {
+      /*function openExternalLink ()
+{
+    //var tweet = 'I am testing a button from within a Phaser example';
+
+    //var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet);
+    var url = '';
+    var s = window.open(url, '_blank');
+
+    if (s && s.focus)
+    {
+        s.focus();
+    }
+    else if (!s)
+    {
+        window.location.href = url;
+    }
+}*/
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
 
