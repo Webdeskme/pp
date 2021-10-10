@@ -663,14 +663,14 @@ else if (!s)
           }
         }
         var localStorageBadge2 = "piratesPort_badge2";
-        if(localStorage.getItem(localStorageBadgeBadge2) != null) {
+        if(localStorage.getItem(localStorageBadge2) != null) {
           var bad2 = localStorage.getItem(localStorage2);
           if(bad2 == "badge2"){
             badge2.visible = true;
           }
         }
         var localStorageBadge3 = "piratesPort_badge3";
-        if(localStorage.getItem(localStorageBadgeBadge3) != null) {
+        if(localStorage.getItem(localStorageBadge3) != null) {
           var bad3 = localStorage.getItem(localStorage3);
           if(bad3 == "badge3"){
             badge3.visible = true;
