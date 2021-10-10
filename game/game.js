@@ -183,6 +183,7 @@ var TitleS = new Phaser.Class({
         this.load.image('ca', 'assets/Text/counter.png');
         this.load.image('levelup', 'assets/Text/levelup.png');
         this.load.image('course', 'assets/Text/course.png');
+        this.load.image('badge', 'assets/icons/star-medal.png');
         //this.load.image('coop', 'assets/Text/coop.png');
         //this.load.image('3coop', 'assets/Text/3coop.png');
         var i;
@@ -460,6 +461,7 @@ else if (!s)
         var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
         var ccc = this.add.image(900, 250, 'course').setScrollFactor(0,0);
         var lu = this.add.image(675, 50, 'levelup').setScrollFactor(0,0);
+        var badge1 = this.add.image(45, 550, 'badge').setScrollFactor(0,0);
         ccc.setInteractive({ useHandCursor: true  } );
         ccc.setScale(1/4);
         lu.setInteractive({ useHandCursor: true  } );
