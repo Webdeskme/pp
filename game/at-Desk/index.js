@@ -52,6 +52,7 @@ var SceneC = new Phaser.Class({
       //music.play();
       var win = 0;
       var lose = 0;
+      var localStorageBadge = "piratesPort_badge4";
       var winText = this.add.bitmapText(16, 375, 'font', 'Wins:0', 32);
       var loseText = this.add.bitmapText(200, 375, 'font', 'Losses:0', 32);
       var h = this.add.bitmapText(16, 16, 'font', 'Home', 32);
@@ -714,6 +715,7 @@ var SceneE = new Phaser.Class({
     create: function ()
     {
       var rule = this.add.image(400, 300, 'back2');
+      localStorage.setItem(localStorageBadge, "badge4");
       var h = this.add.bitmapText(100, 300, 'font', 'You Win!', 64);
       h.setInteractive({ useHandCursor: true  } );
       h.on('pointerdown', () => {

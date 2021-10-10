@@ -789,6 +789,9 @@ var P1 = new Phaser.Class({
                           localStorage.setItem(localStorageName, score);
                         }
                         localStorage.setItem(localStorageTemp, score);
+                        //if(player == 1){
+                          localStorage.setItem(localStorageBadge, "badge1");
+                        //}
                         window.location.href = "win.html";
                       }
                     }
@@ -908,6 +911,9 @@ var P1 = new Phaser.Class({
                           localStorage.setItem(localStorageName, score);
                         }
                         localStorage.setItem(localStorageTemp, score);
+                        //if(player == 1){
+                          localStorage.setItem(localStorageBadge, "badge1");
+                        //}
                         window.location.href = "win.html";
                     }
                     if(temp2 == "COM"){
@@ -1177,6 +1183,7 @@ var P1 = new Phaser.Class({
         checkScore = "no";
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
+        var localStorageBadge = "piratesPort_badge1";
         var highScore;
         var healthText = this.add.bitmapText(250, 30, 'topaz', 'Health: 50', 48);
         var scoreText = this.add.bitmapText(250, 90, 'topaz', 'Score: 30', 48);
