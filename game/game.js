@@ -655,10 +655,32 @@ else if (!s)
         ccc.on('pointerdown', openCourseLink, this);
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
-        var localStorageBadge = "piratesPort_badge3";
-        if(localStorage.getItem(localStorageBadge) != null) {
-          if(localStorageBadge == "badge3"){
+        var localStorageBadge1 = "piratesPort_badge1";
+        if(localStorage.getItem(localStorageBadge1) != null) {
+          var bad = localStorage.getItem(localStorage1);
+          if(bad == "badge1"){
+            badge1.visible = true;
+          }
+        }
+        var localStorageBadge2 = "piratesPort_badge2";
+        if(localStorage.getItem(localStorageBadge2) != null) {
+          var bad = localStorage.getItem(localStorage2);
+          if(bad == "badge2"){
+            badge2.visible = true;
+          }
+        }
+        var localStorageBadge3 = "piratesPort_badge3";
+        if(localStorage.getItem(localStorageBadge3) != null) {
+          var bad = localStorage.getItem(localStorage3);
+          if(bad == "badge3"){
             badge3.visible = true;
+          }
+        }
+        var localStorageBadge4 = "piratesPort_badge4";
+        if(localStorage.getItem(localStorageBadge4) != null) {
+          var bad = localStorage.getItem(localStorage4);
+          if(bad == "badge4"){
+            badge4.visible = true;
           }
         }
         if(localStorage.getItem(localStorageTemp) == null) {
