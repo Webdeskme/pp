@@ -655,6 +655,12 @@ else if (!s)
         ccc.on('pointerdown', openCourseLink, this);
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
+        var localStorageBadge = "piratesPort_badge3";
+        if(localStorage.getItem(localStorageBadge) != null) {
+          if(localStorageBadge == "badge3"){
+            badge3.visible = true;
+          }
+        }
         if(localStorage.getItem(localStorageTemp) == null) {
             score = 40;
         } else {
