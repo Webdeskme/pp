@@ -181,6 +181,8 @@ var TitleS = new Phaser.Class({
         this.load.image('cb', 'assets/out/back.png');
         this.load.image('logo', 'assets/Text/logo.png');
         this.load.image('ca', 'assets/Text/counter.png');
+        this.load.image('levelup', 'assets/Text/levelup.png');
+        this.load.image('course', 'assets/Text/course.png');
         //this.load.image('coop', 'assets/Text/coop.png');
         //this.load.image('3coop', 'assets/Text/3coop.png');
         var i;
@@ -204,6 +206,40 @@ var TitleS = new Phaser.Class({
 
     create: function ()
     {
+      function openSANSLink ()
+{
+    //var tweet = 'I am testing a button from within a Phaser example';
+
+    //var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet);
+    var url = 'https://www.sans.org/mlp/level-up/';
+    var s = window.open(url, '_blank');
+
+    if (s && s.focus)
+    {
+        s.focus();
+    }
+    else if (!s)
+    {
+        window.location.href = url;
+    }
+}
+function openCourselLink ()
+{
+//var tweet = 'I am testing a button from within a Phaser example';
+
+//var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweet);
+var url = 'https://pp.webdesk.me/into-to-cyber-security.html';
+var s = window.open(url, '_blank');
+
+if (s && s.focus)
+{
+  s.focus();
+}
+else if (!s)
+{
+  window.location.href = url;
+}
+}
       this.game.sound.stopAll();
       var Bullet = new Phaser.Class({
 
@@ -416,12 +452,18 @@ var TitleS = new Phaser.Class({
         //var o = this.add.image(900, 150, '3coop').setScrollFactor(0,0);
         var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
         var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
-        var g = this.add.image(900, 250, 'puzzle').setScrollFactor(0,0);
-        var h = this.add.image(900, 300, 'credits').setScrollFactor(0,0);
+        var g = this.add.image(900, 300, 'puzzle').setScrollFactor(0,0);
+        var h = this.add.image(900, 350, 'credits').setScrollFactor(0,0);
         var j = this.add.image(900, 200, 'aii').setScrollFactor(0,0);
-        var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
+        var k = this.add.image(900, 400, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
         var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
+        var ccc = this.add.image(900, 250, 'course').setScrollFactor(0,0);
+        var lu = this.add.image(825, 50, 'levelup').setScrollFactor(0,0);
+        ccc.setInteractive({ useHandCursor: true  } );
+        ccc.setScale(1/4);
+        lu.setInteractive({ useHandCursor: true  } );
+        lu.setScale(1/4);
         d.setInteractive({ useHandCursor: true  } );
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
@@ -444,6 +486,18 @@ var TitleS = new Phaser.Class({
         l.setScale(2/3);
         m.setInteractive({ useHandCursor: true  } );
         m.setScale(1/2);
+        ccc.on('pointerover',function(pointer){
+          ccc.setScale(1/3);
+        });
+        ccc.on('pointerout',function(pointer){
+          ccc.setScale(1/4);
+        });
+        lu.on('pointerover',function(pointer){
+          lu.setScale(1/3);
+        });
+        lu.on('pointerout',function(pointer){
+          lu.setScale(1/4);
+        });
         d.on('pointerover',function(pointer){
           d.setScale(1/3);
         });
@@ -584,6 +638,8 @@ var TitleS = new Phaser.Class({
           //this.scene.start('san');
           window.location.href = "at-Desk/index.html";
         });
+        ccc.on('pointerup', openSANSLink, this);
+        lu.on('pointerup', openCourseLink, this);
         var localStorageName = "piratesPort";
         var localStorageTemp = "piratesPort_temp";
         if(localStorage.getItem(localStorageTemp) == null) {
