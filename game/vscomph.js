@@ -827,7 +827,9 @@ var P1 = new Phaser.Class({
                       }
                       localStorage.setItem(localStorageTemp, score);
                       localStorage.setItem(localStoragePlayer, player);
-                      localStorage.setItem(localStorageBadge, "badge3");
+                      if(player == 1){
+                        localStorage.setItem(localStorageBadge, "badge3");
+                      }
                       window.location.href = "winv.html";
                     }
                   }
@@ -948,7 +950,9 @@ var P1 = new Phaser.Class({
                       }
                       localStorage.setItem(localStorageTemp, score);
                       localStorage.setItem(localStoragePlayer, player);
-                      localStorage.setItem(localStorageBadge, "badge3");
+                      if(player == 1){
+                        localStorage.setItem(localStorageBadge, "badge3");
+                      }
                       window.location.href = "winv.html";
                   }
                   if(temp2 == "COM"){
