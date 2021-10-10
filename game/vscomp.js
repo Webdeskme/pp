@@ -1259,7 +1259,7 @@ var P1 = new Phaser.Class({
         var localStorageTemp = "piratesPort_temp";
         var localStoragePlayer = "piratesPort_player";
         var highScore;
-        var healthText = this.add.bitmapText(250, 30, 'topaz', 'Health: 50', 48);
+        var healthText = this.add.bitmapText(250, 30, 'topaz', 'Health: 40', 48);
         var scoreText = this.add.bitmapText(250, 90, 'topaz', 'Score: 30', 48);
         var playerText = this.add.bitmapText(700, 90, 'topaz', 'Player: 1', 48);
         var skillText = this.add.bitmapText(15, 65, 'topaz', 'Skill: 0', 32);
