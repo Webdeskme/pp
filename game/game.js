@@ -461,8 +461,8 @@ else if (!s)
         var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
         var ccc = this.add.image(900, 250, 'course').setScrollFactor(0,0);
         var lu = this.add.image(675, 50, 'levelup').setScrollFactor(0,0);
-        var badge1 = this.add.image(45, 600, 'badge').setScrollFactor(0,0);
-        badge1.setScale(1/4);
+        var badge1 = this.add.image(45, 575, 'badge').setScrollFactor(0,0);
+        badge1.setScale(1/5);
         ccc.setInteractive({ useHandCursor: true  } );
         ccc.setScale(1/4);
         lu.setInteractive({ useHandCursor: true  } );
