@@ -223,7 +223,7 @@ var TitleS = new Phaser.Class({
         window.location.href = url;
     }
 }
-function openCourselLink ()
+function openCourseLink ()
 {
 //var tweet = 'I am testing a button from within a Phaser example';
 
@@ -459,7 +459,7 @@ else if (!s)
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
         var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
         var ccc = this.add.image(900, 250, 'course').setScrollFactor(0,0);
-        var lu = this.add.image(825, 50, 'levelup').setScrollFactor(0,0);
+        var lu = this.add.image(675, 50, 'levelup').setScrollFactor(0,0);
         ccc.setInteractive({ useHandCursor: true  } );
         ccc.setScale(1/4);
         lu.setInteractive({ useHandCursor: true  } );
