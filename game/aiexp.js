@@ -25,11 +25,15 @@ var P1 = new Phaser.Class({
         this.load.image('PORTbig', 'assets/out/PORT.png');
         this.load.image('PORT2big', 'assets/out/PORT2.png');
         this.load.image('Gunsbig', 'assets/out/Guns.png');
+        this.load.image('awarebig', 'assets/out/aware.png');
+        this.load.image('Controlbig', 'assets/out/Control.png');
         this.load.image('END', 'assets/text/end.png');
         this.load.image('SCORE', 'assets/text/SCORE2.png');
         this.load.image('musicOff', 'assets/icons/sound-off.png');
         this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.image('full', 'assets/icons/expand.png');
+        this.load.image('aware', 'assets/cards/aware.png');
+        this.load.image('Control', 'assets/cards/Control.png');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -1299,7 +1303,7 @@ var P1 = new Phaser.Class({
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
         hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
-        var tscore = this.add.image(825, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
+        var tscore = this.add.image(875, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tscore.on('pointerdown', () => {
@@ -1750,6 +1754,12 @@ var P1 = new Phaser.Class({
         /*cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');*/
+        cp = this.add.image(625, 250, "aware").setInteractive({ useHandCursor: true  } );
+        hove(cp, this, "aware" + 'big');
+        select(cp, this, "aware");
+        cp = this.add.image(625, 250, "Control").setInteractive({ useHandCursor: true  } );
+        hove(cp, this, "Control" + 'big');
+        select(cp, this, "Control");
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
         hove(p0, this, p[0] + 'big');
         bselect(p0, this, p[0]);
