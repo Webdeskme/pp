@@ -117,9 +117,7 @@ var P1 = new Phaser.Class({
                 red = "no";
               }
               else if(c["texture"]["key"] != "EMP"){
-                console.log("player: " + player);
-                console.log("pic: " + c["texture"]["key"]);
-                if(player == 1 &&  c["texture"]["key"] != 'aware' && c["texture"]["key"] != 'Control'){
+                if(player == 1 &&  c["texture"]["key"] != "aware" && c["texture"]["key"] != "Control"){
                   red = "yes";
                   reds = c["texture"]["key"];
                   if (typeof cc !== 'undefined') {
@@ -129,7 +127,9 @@ var P1 = new Phaser.Class({
                     mac.clearTint();
                   }
                 }
-                if(player == 2 && c["texture"]["key"] != 'COM' && c["texture"]["key"] != 'ENGINES'){
+                if(player == 2 && c["texture"]["key"] != "COM" && c["texture"]["key"] != "ENGINES"){
+                  console.log("player: " + player);
+                  console.log("pic: " + c["texture"]["key"]);
                   red = "yes";
                   reds = c["texture"]["key"];
                   if (typeof cc !== 'undefined') {
