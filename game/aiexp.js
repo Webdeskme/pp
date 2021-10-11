@@ -118,6 +118,7 @@ var P1 = new Phaser.Class({
               }
               else if(c["texture"]["key"] != "EMP"){
                 console.log("player: " + player);
+                console.log("pic: " + c["texture"]["key"]);
                 if(player == 1 &&  c["texture"]["key"] != 'aware' && c["texture"]["key"] != 'Control'){
                   red = "yes";
                   reds = c["texture"]["key"];
