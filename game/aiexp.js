@@ -1644,10 +1644,10 @@ var P1 = new Phaser.Class({
           cards.splice(t, 1);
           cards.filter(val => val);
           if(player == 1){
-            pdis2.push(c0["texture"]["key"]);
+            dis.push(c0["texture"]["key"]);
           }
           else if (player == 2) {
-            dis.push(c0["texture"]["key"]);
+            pdis2.push(c0["texture"]["key"]);
           }
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
