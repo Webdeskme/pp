@@ -121,10 +121,28 @@ var P1 = new Phaser.Class({
                 if(player == 1 &&  c["texture"]["key"] != 'aware' && c["texture"]["key"] != 'Control'){
                   red = "yes";
                   reds = c["texture"]["key"];
+                  if (typeof cc !== 'undefined') {
+                    maa.clearTint();
+                  }
+                  if (typeof cc !== 'undefined') {
+                    mac.clearTint();
+                  }
                 }
                 if(player == 2 && c["texture"]["key"] != 'COM' && c["texture"]["key"] != 'ENGINES'){
                   red = "yes";
                   reds = c["texture"]["key"];
+                  if (typeof cc !== 'undefined') {
+                    cc.clearTint();
+                  }
+                  if (typeof cc !== 'undefined') {
+                    ce.clearTint();
+                  }
+                }
+                if (typeof cc !== 'undefined') {
+                  maa.clearTint();
+                }
+                if (typeof cc !== 'undefined') {
+                  mac.clearTint();
                 }
                 if (typeof cc !== 'undefined') {
                   cc.clearTint();
