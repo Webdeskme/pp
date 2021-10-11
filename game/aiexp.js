@@ -1303,7 +1303,7 @@ var P1 = new Phaser.Class({
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
         hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
-        var tscore = this.add.image(875, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
+        var tscore = this.add.image(900, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tscore.on('pointerdown', () => {
@@ -1757,7 +1757,7 @@ var P1 = new Phaser.Class({
         cp = this.add.image(625, 250, "aware").setInteractive({ useHandCursor: true  } );
         hove(cp, this, "aware" + 'big');
         select(cp, this, "aware");
-        cp = this.add.image(625, 250, "Control").setInteractive({ useHandCursor: true  } );
+        cp = this.add.image(750, 250, "Control").setInteractive({ useHandCursor: true  } );
         hove(cp, this, "Control" + 'big');
         select(cp, this, "Control");
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
