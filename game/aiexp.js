@@ -1312,7 +1312,7 @@ var P1 = new Phaser.Class({
         var highScore;
         var healthText = this.add.bitmapText(250, 30, 'topaz', 'Health: 50', 48);
         var scoreText = this.add.bitmapText(250, 90, 'topaz', 'Score: 30', 48);
-        var playerText = this.add.bitmapText(850, 90, 'topaz', 'Player: 1', 48);
+        var playerText = this.add.bitmapText(700, 90, 'topaz', 'Player: 1', 48);
         var skillText = this.add.bitmapText(15, 65, 'topaz', 'Skill: 0', 32);
         var coinText = this.add.bitmapText(15, 90, 'topaz', 'Coins: 0', 32);
         var totalText = this.add.bitmapText(15, 115, 'topaz', 'Total: 0', 32);
@@ -1373,7 +1373,7 @@ var P1 = new Phaser.Class({
         cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
         hove(cb, this, 'cb');
         var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
-        var tscore = this.add.image(900, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
+        var tscore = this.add.image(825, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
         tend.setScale(1/3);
         tscore.setScale(1/3);
         tscore.on('pointerdown', () => {
@@ -1834,10 +1834,10 @@ var P1 = new Phaser.Class({
         /*cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');*/
-        maa = this.add.image(625, 250, "aware").setInteractive({ useHandCursor: true  } );
+        maa = this.add.image(500, 250, "aware").setInteractive({ useHandCursor: true  } );
         hove(maa, this, "aware" + 'big');
         select(maa, this, "aware");
-        mac = this.add.image(750, 250, "Control").setInteractive({ useHandCursor: true  } );
+        mac = this.add.image(625, 250, "Control").setInteractive({ useHandCursor: true  } );
         hove(mac, this, "Control" + 'big');
         select(mac, this, "Control");
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
