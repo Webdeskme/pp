@@ -226,7 +226,7 @@ var P1 = new Phaser.Class({
                 if (typeof p16 !== 'undefined') {
                   p16.clearTint();
                 }
-                if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns" || c["texture"]["key"] == "COM2" || c["texture"]["key"] == "ENGINES2" || c["texture"]["key"] == "PORT2"){
+                if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns" || c["texture"]["key"] == "COM2" || c["texture"]["key"] == "ENGINES2" || c["texture"]["key"] == "PORT2" || c["texture"]["key"] == "aware" || c["texture"]["key"] == "Control"){
                   c.setTint(0xff0000);
                 }
                 else{
@@ -384,6 +384,14 @@ var P1 = new Phaser.Class({
                 else if (c["texture"]["key"] == "PORT2") {
                   cost = 3;
                   type = "aq";
+                }
+                else if (c["texture"]["key"] == "aware") {
+                  cost = 10;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "Control") {
+                  cost = 14;
+                  type = "total";
                 }
               }
             });
