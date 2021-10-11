@@ -226,19 +226,26 @@ var P1 = new Phaser.Class({
                 if (typeof p16 !== 'undefined') {
                   p16.clearTint();
                 }
+                if(c["texture"]["key"] != "aware" || c["texture"]["key"] != "Control" || c["texture"]["key"] != "COM" || c["texture"]["key"] != "ENGINES"){
                 if(player == 1 &&  c["texture"]["key"] != "aware" && c["texture"]["key"] != "Control"){
                   c.setTint(0xff0000);
                 }
                 else if (player == 2 &&  c["texture"]["key"] != "COM" && c["texture"]["key"] != "ENGINES") {
                   c.setTint(0xff0000);
                 }
+              }
                 else{
+                  if(player == 1 &&  c["texture"]["key"] != "aware" && c["texture"]["key"] != "Control"){
                   if(checkScore == "yes"){
                     c.setTint(0x0000ff);
                   }
                   else{
                     c.setTint(0xff0000);
                   }
+                }
+                else if (player == 2 &&  c["texture"]["key"] != "COM" && c["texture"]["key"] != "ENGINES") {
+                  c.setTint(0xff0000);
+                }
                 }
                 skill = 0;
                 coin = 0;
