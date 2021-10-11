@@ -117,8 +117,14 @@ var P1 = new Phaser.Class({
                 red = "no";
               }
               else if(c["texture"]["key"] != "EMP"){
-                red = "yes";
-                reds = c["texture"]["key"];
+                if(player == 1 &&  c["texture"]["key"] != 'aware' && c["texture"]["key"] != 'Control'){
+                  red = "yes";
+                  reds = c["texture"]["key"];
+                }
+                if(player == 2 && c["texture"]["key"] != 'COM' && c["texture"]["key"] != 'ENGINES'){
+                  red = "yes";
+                  reds = c["texture"]["key"];
+                }
                 if (typeof cc !== 'undefined') {
                   cc.clearTint();
                 }
@@ -1219,8 +1225,8 @@ var P1 = new Phaser.Class({
         health = 50;
         health1 = 50;
         health2 = 50;
-        mis1 = ["yes","yes","yes"];
-        mis2 = ["yes","yes","yes"];
+        mis1 = ["yes","yes","NO"];
+        mis2 = ["yes","yes","NO"];
         temp = [];
         temp2 = "";
         hand = 4;
@@ -1751,6 +1757,7 @@ var P1 = new Phaser.Class({
         cp = this.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
         hove(cp, this, "PORT" + 'big');
         select(cp, this, "PORT");
+        cp.visible == false;
         /*cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');*/
