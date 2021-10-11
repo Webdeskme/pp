@@ -970,7 +970,7 @@ var P1 = new Phaser.Class({
                     }
                     scoreText.setText('Score:' + score);
                   }
-                    if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns" || temp2 == "COM2" || temp2 == "ENGINES2" || temp2 == "PORT2"){
+                    if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns" || temp2 == "COM2" || temp2 == "ENGINES2" || temp2 == "PORT2" || temp2 == "aware" || temp2 == "Control"){
                     game += 1;
                     if(game > 2){
                         th.sound.add('mwin').play();
@@ -1006,6 +1006,26 @@ var P1 = new Phaser.Class({
                         mis2[1] = "NO";
                       }
                     }
+                    if(temp2 == "aware"){
+                      th.sound.add('comp').play();
+                      maa.visible = false;
+                      if(player == 1){
+                        mis1[0] = "NO";
+                      }
+                      else{
+                        mis2[0] = "NO";
+                      }
+                    }
+                    if(temp2 == "Control"){
+                      th.sound.add('comp').play();
+                      mac.visible = false;
+                      if(player == 1){
+                        mis1[0] = "NO";
+                      }
+                      else{
+                        mis2[0] = "NO";
+                      }
+                    }
                     else if (temp2 == "PORT") {
                       th.sound.add('comp').play();
                       cp.visible = false;
@@ -1039,7 +1059,13 @@ var P1 = new Phaser.Class({
                     cards.splice(t, 1);
                     cards.filter(val => val);
                     if(checkScore != "yes"){
-                      pdis.push(temp2);
+                      if(player == 1){
+                        pdis.push(temp2);
+                      }
+                      else{
+                        dis.push(temp2);
+                        console.log(dis);
+                      }
                     }
                     if (typeof cards[5] !== 'undefined') {
                       c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
@@ -1613,7 +1639,12 @@ var P1 = new Phaser.Class({
           var t = cards.indexOf(c0["texture"]["key"]);
           cards.splice(t, 1);
           cards.filter(val => val);
-          dis.push(c0["texture"]["key"]);
+          if(player == 1){
+            dis.push(c0["texture"]["key"]);
+          }
+          else if (player == 2) {
+            pdis2.push(c0["texture"]["key"]);
+          }
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
             hove(c5, this, cards[5] + 'big');
