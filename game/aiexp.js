@@ -852,7 +852,7 @@ var P1 = new Phaser.Class({
                       cp.destroy();
                       game += 1;
                       por = "no";
-                      if(game > 2){
+                      if(game > 1){
                         th.sound.add('mwin').play();
                         if(localStorage.getItem(localStorageName) == null) {
                             highScore = 40;
@@ -972,7 +972,7 @@ var P1 = new Phaser.Class({
                   }
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns" || temp2 == "COM2" || temp2 == "ENGINES2" || temp2 == "PORT2" || temp2 == "aware" || temp2 == "Control"){
                     game += 1;
-                    if(game > 2){
+                    if(game > 1){
                         th.sound.add('mwin').play();
                         if(localStorage.getItem(localStorageName) == null) {
                             highScore = 40;
@@ -1474,6 +1474,7 @@ var P1 = new Phaser.Class({
           coinText.setText('Coins: ' + coin);
           totalText.setText('Total: ' + total);
           cardText.setText('Cards: ' + card);
+          if(player == 1){
           if(c0["texture"]["key"] == "Browser"){
             health -= 5;
           }
@@ -1558,6 +1559,7 @@ var P1 = new Phaser.Class({
           else if (c0["texture"]["key"] == "MFAB") {
             health -= 1;
           }
+        }
           if(health < 1){
             localStorage.setItem(localStoragePlayer, player);
               this.sound.add('mlose').play();
@@ -1573,7 +1575,7 @@ var P1 = new Phaser.Class({
             pdis1 = pdis;
             pdis = pdis2;
             health1 = health;
-            health = health2
+            //health = health2
             game1 = game;
             game = game2;
             player = 2;
@@ -1635,15 +1637,17 @@ var P1 = new Phaser.Class({
               cp.visible = false;
             }
           }
-          healthText.setText('Health:' + health);
+          if(player == 1){
+            healthText.setText('Health:' + health);
+          }
           var t = cards.indexOf(c0["texture"]["key"]);
           cards.splice(t, 1);
           cards.filter(val => val);
           if(player == 1){
-            dis.push(c0["texture"]["key"]);
+            pdis2.push(c0["texture"]["key"]);
           }
           else if (player == 2) {
-            pdis2.push(c0["texture"]["key"]);
+            dis.push(c0["texture"]["key"]);
           }
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
