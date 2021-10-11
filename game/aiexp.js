@@ -1757,14 +1757,14 @@ var P1 = new Phaser.Class({
         cp = this.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
         hove(cp, this, "PORT" + 'big');
         select(cp, this, "PORT");
-        cp.visible == false;
+        cp.visible = false;
         /*cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');*/
-        cp = this.add.image(625, 250, "aware").setInteractive({ useHandCursor: true  } );
+        maa = this.add.image(625, 250, "aware").setInteractive({ useHandCursor: true  } );
         hove(cp, this, "aware" + 'big');
         select(cp, this, "aware");
-        cp = this.add.image(750, 250, "Control").setInteractive({ useHandCursor: true  } );
+        mac = this.add.image(750, 250, "Control").setInteractive({ useHandCursor: true  } );
         hove(cp, this, "Control" + 'big');
         select(cp, this, "Control");
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
