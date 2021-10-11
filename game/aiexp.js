@@ -1763,11 +1763,11 @@ var P1 = new Phaser.Class({
         hove(cg, this, 'Guns' + 'big');
         select(cg, this, 'Guns');*/
         maa = this.add.image(625, 250, "aware").setInteractive({ useHandCursor: true  } );
-        hove(cp, this, "aware" + 'big');
-        select(cp, this, "aware");
+        hove(maa, this, "aware" + 'big');
+        select(maa, this, "aware");
         mac = this.add.image(750, 250, "Control").setInteractive({ useHandCursor: true  } );
-        hove(cp, this, "Control" + 'big');
-        select(cp, this, "Control");
+        hove(mac, this, "Control" + 'big');
+        select(mac, this, "Control");
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
         hove(p0, this, p[0] + 'big');
         bselect(p0, this, p[0]);
