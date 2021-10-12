@@ -184,6 +184,7 @@ var TitleS = new Phaser.Class({
         this.load.image('levelup', 'assets/Text/levelup.png');
         this.load.image('course', 'assets/Text/course.png');
         this.load.image('badge', 'assets/icons/star-medal.png');
+        this.load.image('health', 'assets/icons/astroid.png');
         //this.load.image('coop', 'assets/Text/coop.png');
         //this.load.image('3coop', 'assets/Text/3coop.png');
         var i;
@@ -339,6 +340,29 @@ else if (!s)
     this.add.image(3140, 2974, 'space', 'brown-planet').setOrigin(0).setScrollFactor(0.6).setScale(0.8).setTint(0x882d2d);
     this.add.image(6052, 4280, 'space', 'purple-planet').setOrigin(0).setScrollFactor(0.6);
 
+
+/// add game ///
+
+healthGroup = this.physics.add.staticGroup({
+        key: 'health',
+        frameQuantity: 10,
+        immovable: true
+    });
+
+    var children = healthGroup.getChildren();
+
+    for (var i = 0; i < children.length; i++)
+    {
+        var x = Phaser.Math.Between(50, 750);
+        var y = Phaser.Math.Between(50, 550);
+
+        children[i].setPosition(x, y);
+    }
+
+    healthGroup.refresh();
+
+
+///
     for (var i = 0; i < 8; i++)
     {
         this.add.image(Phaser.Math.Between(0, 8000), Phaser.Math.Between(0, 6000), 'space', 'eyes').setBlendMode(1).setScrollFactor(0.8);
