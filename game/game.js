@@ -355,10 +355,10 @@ healthGroup = this.physics.add.staticGroup({
         var y = Phaser.Math.Between(1500, 4500);
 
         children[i].setPosition(x, y);
+        children[i].scale(1/5);
     }
 
     healthGroup.refresh();
-    healthGroup.scale(1/5);
 this.physics.add.overlap(bullet, healthGroup, spriteHitHealth);
 
 function spriteHitHealth (sprite, health)
