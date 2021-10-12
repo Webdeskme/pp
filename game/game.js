@@ -361,13 +361,13 @@ healthGroup = this.physics.add.staticGroup({
     healthGroup.refresh();
 //this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
 
-function spriteHitHealth (sprite, health)
+function spriteHitHealth (bullets, health)
 {
     //  Hide the sprite
     healthGroup.killAndHide(health);
 
     //  And disable the body
-    health.body.enable = false;
+    //health.body.enable = false;
 
 }
 ///
