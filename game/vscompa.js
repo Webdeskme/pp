@@ -764,6 +764,7 @@ var P1 = new Phaser.Class({
               total = skill + coin;
               totalText.setText('Total: ' + total);
               cardText.setText('Cards: ' + card);
+              if(buy != "yes"){
               if(type == "skill"){
                 if(skill >= cost){
                   aquire = "yes";
@@ -806,6 +807,7 @@ var P1 = new Phaser.Class({
                   buy = "yes";
                 }
               }
+            }
               if( aquire == "yes"){
                 buy = "yes";
                 aq += 1;
