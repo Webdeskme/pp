@@ -359,16 +359,7 @@ healthGroup = this.physics.add.staticGroup({
     }
 
     healthGroup.refresh();
-this.physics.add.collide(bullets, healthGroup, spriteHitHealth);
-function spriteHitHealth (bullets, health)
-{
-    //  Hide the sprite
-    //healthGroup.killAndHide(health);
 
-    //  And disable the body
-    //health.body.enable = false;
-
-}
 ///
     for (var i = 0; i < 8; i++)
     {
@@ -785,6 +776,18 @@ function spriteHitHealth (bullets, health)
 
     stars.tilePositionX += ship.body.deltaX() * 2;
     stars.tilePositionY += ship.body.deltaY() * 2;
+
+    ////////
+    this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
+    function spriteHitHealth (bullets, health)
+    {
+        //  Hide the sprite
+        //healthGroup.killAndHide(health);
+
+        //  And disable the body
+        //health.body.enable = false;
+
+    }
 }
 });
 var SubM = new Phaser.Class({
