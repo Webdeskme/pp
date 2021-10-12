@@ -351,11 +351,11 @@ healthGroup = this.physics.add.staticGroup({
     var children = healthGroup.getChildren();
     for (var i = 0; i < children.length; i++)
     {
-        var x = Phaser.Math.Between(5500, 8500);
-        var y = Phaser.Math.Between(1500, 4500);
+        var x = Phaser.Math.Between(4500, 9500);
+        var y = Phaser.Math.Between(500, 5500);
 
         children[i].setPosition(x, y);
-        children[i].setScale(1/5);
+        //children[i].setScale(1/5);
     }
 
     healthGroup.refresh();
