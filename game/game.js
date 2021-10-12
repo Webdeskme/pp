@@ -345,22 +345,31 @@ else if (!s)
 
 healthGroup = this.physics.add.staticGroup({
         key: 'health',
-        frameQuantity: 10,
+        frameQuantity: 100,
         immovable: true
     });
-
     var children = healthGroup.getChildren();
     for (var i = 0; i < children.length; i++)
     {
-        var x = Phaser.Math.Between(6500, 7500);
-        var y = Phaser.Math.Between(2500, 3500);
+        var x = Phaser.Math.Between(5500, 8500);
+        var y = Phaser.Math.Between(1500, 4500);
 
         children[i].setPosition(x, y);
     }
 
     healthGroup.refresh();
+    healthGroup.scale(1/5);
+this.physics.add.overlap(bullet, healthGroup, spriteHitHealth);
 
+function spriteHitHealth (sprite, health)
+{
+    //  Hide the sprite
+    healthGroup.killAndHide(health);
 
+    //  And disable the body
+    health.body.enable = false;
+
+}
 ///
     for (var i = 0; i < 8; i++)
     {
