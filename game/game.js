@@ -359,8 +359,9 @@ healthGroup = this.physics.add.staticGroup({
     }
 
     healthGroup.refresh();
+    if (startGame) {
 this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
-
+}
 function spriteHitHealth (bullets, health)
 {
     //  Hide the sprite
