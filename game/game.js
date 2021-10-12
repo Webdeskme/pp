@@ -359,7 +359,7 @@ healthGroup = this.physics.add.staticGroup({
     }
 
     healthGroup.refresh();
-this.physics.add.overlap(bullet, healthGroup, spriteHitHealth);
+this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
 
 function spriteHitHealth (sprite, health)
 {
