@@ -345,14 +345,14 @@ else if (!s)
 
 healthGroup = this.physics.add.staticGroup({
         key: 'health',
-        frameQuantity: 100,
+        frameQuantity: 150,
         immovable: true
     });
     var children = healthGroup.getChildren();
     for (var i = 0; i < children.length; i++)
     {
-        var x = Phaser.Math.Between(4500, 9500);
-        var y = Phaser.Math.Between(500, 5500);
+        var x = Phaser.Math.Between(4000, 10000);
+        var y = Phaser.Math.Between(0, 600);
 
         children[i].setPosition(x, y);
         //children[i].setScale(1/5);
@@ -716,7 +716,8 @@ healthGroup = this.physics.add.staticGroup({
             highScore = localStorage.getItem(localStorageName);
         }
         //this.add.bitmapText(16, 0, 'fat-and-tiny', 'SCORE: 0', 32);
-        var scoreText = this.add.bitmapText(475, 400, 'topaz', 'Last Score: ' + score, 64).setScrollFactor(0,0);
+        var scoreText = this.add.bitmapText(475, 350, 'topaz', 'Astroids: 0', 64).setScrollFactor(0,0);
+        var scoreText = this.add.bitmapText(475, 425, 'topaz', 'Last Score: ' + score, 64).setScrollFactor(0,0);
         //var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         //var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         var highscoreText = this.add.bitmapText(475, 500, 'topaz', 'Best Score: ' + highScore, 64).setScrollFactor(0,0);
