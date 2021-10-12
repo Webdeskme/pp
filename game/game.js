@@ -364,7 +364,7 @@ this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
 function spriteHitHealth (bullets, health)
 {
     //  Hide the sprite
-    healthGroup.killAndHide(health);
+    //healthGroup.killAndHide(health);
 
     //  And disable the body
     //health.body.enable = false;
