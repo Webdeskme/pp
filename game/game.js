@@ -350,11 +350,10 @@ healthGroup = this.physics.add.staticGroup({
     });
 
     var children = healthGroup.getChildren();
-
     for (var i = 0; i < children.length; i++)
     {
-        var x = Phaser.Math.Between(50, 750);
-        var y = Phaser.Math.Between(50, 550);
+        var x = Phaser.Math.Between(6500, 7500);
+        var y = Phaser.Math.Between(2500, 3500);
 
         children[i].setPosition(x, y);
     }
