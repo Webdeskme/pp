@@ -2018,8 +2018,8 @@ var P1 = new Phaser.Class({
                 }
               }
               }
-            }
-          }*/
+            }*/
+          }
             console.log(order);
             var i7;
             var i8 = 0;
