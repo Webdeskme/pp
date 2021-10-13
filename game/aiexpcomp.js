@@ -852,6 +852,7 @@ var P1 = new Phaser.Class({
                 }
                 if( aquire == "yes"){
                   aq += 1;
+                  buy = "yes";
                   if(por == "PORT2"){
                     if(aq > 2){
                       th.sound.add('comp').play();
