@@ -109,7 +109,7 @@ var P1 = new Phaser.Class({
           var red = "no";
           var reds = "";
           function sel(c, th, im){
-            c.on('pointerdown',function(pointer){
+            //c.on('pointerdown',function(pointer){
               th.sound.add('click').play();
               if(reds == c["texture"]["key"]){
                 c.clearTint();
@@ -404,13 +404,15 @@ var P1 = new Phaser.Class({
                   type = "total";
                 }
               }
-            });
+            //});
           }
           function select(c, th, im){
+            c.on('pointerdown',function(pointer){
             sel(c, th, im);
+            });
           }
           function bsel(c, th, im){
-            c.on('pointerdown',function(pointer){
+            //c.on('pointerdown',function(pointer){
               var aquire = "no";
               th.sound.add('click').play();
               if(red == "yes"){
@@ -1268,12 +1270,16 @@ var P1 = new Phaser.Class({
 
                 }, 1000);
               }
-            });
+            //});
             return skill;
             return coin;
           }
           function bselect(c, th, im){
+            c.on('pointerdown',function(pointer){
             bsel(c, th, im);
+          });
+          return skill;
+          return coin;
           }
           // "Service", "WateringHole",
         var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
