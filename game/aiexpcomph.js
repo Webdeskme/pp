@@ -2514,6 +2514,7 @@ var P1 = new Phaser.Class({
           //sleep(1000);
           setTimeout(ttend, 16200, th);
           }
+        }
         tend.on('pointerdown', () => {
 
           ttend(this);
