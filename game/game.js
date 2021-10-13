@@ -345,7 +345,7 @@ else if (!s)
 
 healthGroup = this.physics.add.staticGroup({
         key: 'health',
-        frameQuantity: 5000,
+        frameQuantity: 3000,
         immovable: true
     });
     var children = healthGroup.getChildren();
