@@ -1000,7 +1000,7 @@ var P1 = new Phaser.Class({
                         mis1[0] = "NO";
                       }
                       else{
-                        mis2[0] = "NO";
+                        //mis2[0] = "NO";
                       }
                     }
                     else if (temp2 == "ENGINES") {
@@ -1010,7 +1010,7 @@ var P1 = new Phaser.Class({
                         mis1[1] = "NO";
                       }
                       else{
-                        mis2[1] = "NO";
+                        //mis2[1] = "NO";
                       }
                     }
                     if(temp2 == "aware"){
@@ -1040,7 +1040,7 @@ var P1 = new Phaser.Class({
                         mis1[2] = "NO";
                       }
                       else{
-                        mis2[2] = "NO";
+                        //mis2[2] = "NO";
                       }
                     }
                     else if (temp2 == "Guns") {
