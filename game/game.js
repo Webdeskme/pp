@@ -780,6 +780,7 @@ healthGroup = this.physics.add.staticGroup({
     stars.tilePositionY += ship.body.deltaY() * 2;
 
     ////////
+    var he = 0;
     this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
     function spriteHitHealth (bullets, health)
     {
