@@ -1017,7 +1017,7 @@ var P1 = new Phaser.Class({
                       th.sound.add('comp').play();
                       maa.visible = false;
                       if(player == 1){
-                        mis1[0] = "NO";
+                      //  mis1[0] = "NO";
                       }
                       else{
                         mis2[0] = "NO";
@@ -1027,7 +1027,7 @@ var P1 = new Phaser.Class({
                       th.sound.add('comp').play();
                       mac.visible = false;
                       if(player == 1){
-                        mis1[0] = "NO";
+                      //  mis1[0] = "NO";
                       }
                       else{
                         mis2[0] = "NO";
