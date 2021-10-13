@@ -345,13 +345,13 @@ else if (!s)
 
 healthGroup = this.physics.add.staticGroup({
         key: 'health',
-        frameQuantity: 150,
+        frameQuantity: 500,
         immovable: true
     });
     var children = healthGroup.getChildren();
     for (var i = 0; i < children.length; i++)
     {
-        var x = Phaser.Math.Between(4000, 10000);
+        var x = Phaser.Math.Between(0, 10000);
         var y = Phaser.Math.Between(0, 6000);
 
         children[i].setPosition(x, y);
