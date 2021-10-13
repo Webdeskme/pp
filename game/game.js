@@ -716,7 +716,7 @@ healthGroup = this.physics.add.staticGroup({
             highScore = localStorage.getItem(localStorageName);
         }
         //this.add.bitmapText(16, 0, 'fat-and-tiny', 'SCORE: 0', 32);
-        var aText = this.add.bitmapText(475, 400, 'topaz', 'Astroids: 0', 64).setScrollFactor(0,0);
+        aText = this.add.bitmapText(475, 400, 'topaz', 'Astroids: 0', 64).setScrollFactor(0,0);
         var scoreText = this.add.bitmapText(475, 465, 'topaz', 'Last Score: ' + score, 64).setScrollFactor(0,0);
         //var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         //var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
