@@ -716,7 +716,7 @@ healthGroup = this.physics.add.staticGroup({
             highScore = localStorage.getItem(localStorageName);
         }
         //this.add.bitmapText(16, 0, 'fat-and-tiny', 'SCORE: 0', 32);
-        var scoreText = this.add.bitmapText(475, 400, 'topaz', 'Astroids: 0', 64).setScrollFactor(0,0);
+        var aText = this.add.bitmapText(475, 400, 'topaz', 'Astroids: 0', 64).setScrollFactor(0,0);
         var scoreText = this.add.bitmapText(475, 465, 'topaz', 'Last Score: ' + score, 64).setScrollFactor(0,0);
         //var scoreText = this.add.text(475, 400, 'Last Score: ' + score, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
         //var highscoreText = this.add.text(475, 500, 'Best Score: ' + highScore, { fontSize: '64px', fill: '#fff' }).setScrollFactor(0,0);
@@ -727,6 +727,7 @@ healthGroup = this.physics.add.staticGroup({
 
     });
     this.add.bitmapText(50, 600, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
+    var he = 0;
   },
   update: function (time, delta)
 {
@@ -787,7 +788,8 @@ healthGroup = this.physics.add.staticGroup({
 
         //  And disable the body
         health.body.enable = false;
-
+        he += 1;
+        aText.setText('Astroids: ' + he);
     }
 }
 });
