@@ -1819,7 +1819,7 @@ var P1 = new Phaser.Class({
           for (iii = 0; iii < 9; iii++) {
             if(buy != "yes"){
             if(iii == 0 && mis2[0] == "yes"){
-              setTimeout(sel, 0, cc, th, "maa");
+              setTimeout(sel, 0, maa, th, "aware");
               var iiii;
               for (iiii = 0; iiii < hand; iiii++) {
                 if(iiii == 0){
@@ -1878,7 +1878,7 @@ var P1 = new Phaser.Class({
             }
             if(buy != "yes"){
             if(iii == 1 && mis2[1] == "yes"){
-              setTimeout(sel, 1800, ce, th, "mac");
+              setTimeout(sel, 1800, mac, th, "Control");
               var iiii;
               for (iiii = 0; iiii < hand; iiii++) {
                 if(iiii == 0){
