@@ -413,6 +413,7 @@ var P1 = new Phaser.Class({
           }
           function bsel(c, th, im){
             //c.on('pointerdown',function(pointer){
+            if(buy != "yes"){
               var aquire = "no";
               th.sound.add('click').play();
               if(red == "yes"){
@@ -1274,6 +1275,7 @@ var P1 = new Phaser.Class({
             return skill;
             return coin;
           }
+        }
           function bselect(c, th, im){
             c.on('pointerdown',function(pointer){
             bsel(c, th, im);
@@ -1817,7 +1819,7 @@ var P1 = new Phaser.Class({
           for (iii = 0; iii < 9; iii++) {
             if(buy != "yes"){
             if(iii == 0 && mis2[0] == "yes"){
-              setTimeout(sel, 0, cc, th, "COM");
+              setTimeout(sel, 0, cc, th, "maa");
               var iiii;
               for (iiii = 0; iiii < hand; iiii++) {
                 if(iiii == 0){
@@ -1876,7 +1878,7 @@ var P1 = new Phaser.Class({
             }
             if(buy != "yes"){
             if(iii == 1 && mis2[1] == "yes"){
-              setTimeout(sel, 1800, ce, th, "ENGINES");
+              setTimeout(sel, 1800, ce, th, "mac");
               var iiii;
               for (iiii = 0; iiii < hand; iiii++) {
                 if(iiii == 0){
@@ -1933,7 +1935,7 @@ var P1 = new Phaser.Class({
               }
               }
             }
-            if(buy != "yes"){
+            /*if(buy != "yes"){
             if(iii == 2 && mis2[2] == "yes"){
               setTimeout(sel, 3600, cp, th, "PORT");
               var iiii;
@@ -1991,7 +1993,7 @@ var P1 = new Phaser.Class({
                 }
               }
               }
-            }
+            }*/
             //console.log("buy");
             //console.log(buy);
             if(buy != "yes"){
