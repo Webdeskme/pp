@@ -1240,7 +1240,7 @@ var SubM = new Phaser.Class({
               var bb = this.add.image(900, 150, '2play').setScrollFactor(0,0);
               var aa = this.add.image(900, 200, 'bob').setScrollFactor(0,0);
               var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
-              var ba = this.add.image(900, 250, 'ba').setScrollFactor(0,0);
+              var ba = this.add.image(900, 300, 'ba').setScrollFactor(0,0);
               un.setInteractive({ useHandCursor: true  } );
               un.setScale(1/4);
               bb.setInteractive({ useHandCursor: true  } );
