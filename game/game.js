@@ -1237,16 +1237,19 @@ var SubM = new Phaser.Class({
               var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
               var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
               var bb = this.add.image(900, 150, '2play').setScrollFactor(0,0);
-              //var aa = this.add.image(900, 200, 'bob').setScrollFactor(0,0);
-              //var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
+              var aa = this.add.image(900, 200, 'bob').setScrollFactor(0,0);
+              var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
+              var ba = this.add.image(900, 250, 'bob-alice').setScrollFactor(0,0);
               un.setInteractive({ useHandCursor: true  } );
               un.setScale(1/4);
               bb.setInteractive({ useHandCursor: true  } );
               bb.setScale(1/4);
-              /*aa.setInteractive({ useHandCursor: true  } );
+              aa.setInteractive({ useHandCursor: true  } );
               aa.setScale(1/4);
               p.setInteractive({ useHandCursor: true  } );
-              p.setScale(1/4);*/
+              p.setScale(1/4);
+              ba.setInteractive({ useHandCursor: true  } );
+              ba.setScale(1/4);
               un.on('pointerover',function(pointer){
                 un.setScale(1/3);
               });
@@ -1259,7 +1262,7 @@ var SubM = new Phaser.Class({
               bb.on('pointerout',function(pointer){
                 bb.setScale(1/4);
               });
-              /*aa.on('pointerover',function(pointer){
+              aa.on('pointerover',function(pointer){
                 aa.setScale(1/3);
               });
               aa.on('pointerout',function(pointer){
@@ -1270,7 +1273,13 @@ var SubM = new Phaser.Class({
               });
               p.on('pointerout',function(pointer){
                 p.setScale(1/4);
-              });*/
+              });
+              ba.on('pointerover',function(pointer){
+                ba.setScale(1/3);
+              });
+              ba.on('pointerout',function(pointer){
+                ba.setScale(1/4);
+              });
               un.on('pointerdown', () => {
                 this.sound.add('click').play();
                 //endm.stop();
@@ -1285,20 +1294,27 @@ var SubM = new Phaser.Class({
                 //this.scene.start('p1');
                 window.location.href = "aiexp.html";
               });
-              /*aa.on('pointerdown', () => {
+              aa.on('pointerdown', () => {
                 this.sound.add('click').play();
                 //endm.stop();
                 this.game.sound.stopAll();
                 //this.scene.start('p1');
-                window.location.href = "vscomp.html";
+                window.location.href = "aiexpcomp.html";
               });
               p.on('pointerdown', () => {
                 this.sound.add('click').play();
                 //endm.stop();
                 this.game.sound.stopAll();
                 //this.scene.start('p1');
-                window.location.href = "vscomph.html";
-              });*/
+                window.location.href = "aiexpcomph.html";
+              });
+              ba.on('pointerdown', () => {
+                this.sound.add('click').play();
+                //endm.stop();
+                this.game.sound.stopAll();
+                //this.scene.start('p1');
+                window.location.href = "aiexpcompa.html";
+              });
               }
             });
 var config = {
