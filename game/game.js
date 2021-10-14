@@ -1170,6 +1170,7 @@ var SubM = new Phaser.Class({
               this.load.image('bob', 'assets/Text/bob.png');
               this.load.image('alice', 'assets/Text/alice.png');
               this.load.image('2play', 'assets/Text/2play.png');
+              this.load.image('ba', 'assets/Text/ba.png');
               this.load.text('q1', 'assets/Text/quote/q1.txt');
               this.load.text('q2', 'assets/Text/quote/q2.txt');
               this.load.text('q3', 'assets/Text/quote/q3.txt');
@@ -1239,7 +1240,7 @@ var SubM = new Phaser.Class({
               var bb = this.add.image(900, 150, '2play').setScrollFactor(0,0);
               var aa = this.add.image(900, 200, 'bob').setScrollFactor(0,0);
               var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
-              var ba = this.add.image(900, 250, 'bob-alice').setScrollFactor(0,0);
+              var ba = this.add.image(900, 250, 'ba').setScrollFactor(0,0);
               un.setInteractive({ useHandCursor: true  } );
               un.setScale(1/4);
               bb.setInteractive({ useHandCursor: true  } );
