@@ -1661,7 +1661,7 @@ var P1 = new Phaser.Class({
           if(player == 1){
             dis.push(c0["texture"]["key"]);
           }
-          else if (player == 2) {
+          else if (player == 2 && c0["texture"]["key"] != "EMP") {
             pdis2.push(c0["texture"]["key"]);
           }
           if (typeof cards[5] !== 'undefined') {
