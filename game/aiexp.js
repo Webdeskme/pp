@@ -1649,6 +1649,9 @@ var P1 = new Phaser.Class({
           else if (player == 2 && c0["texture"]["key"] != "EMP") {
             pdis2.push(c0["texture"]["key"]);
           }
+          else{
+            dis.push(c0["texture"]["key"]);
+          }
           if (typeof cards[5] !== 'undefined') {
             c5 = this.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
             hove(c5, this, cards[5] + 'big');
