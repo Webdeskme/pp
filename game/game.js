@@ -1334,7 +1334,7 @@ var config = {
         }
     },
     render: {
-      clearBeforeRender: false
+      clearBeforeRender: true
     },
     fps: {
     target: 25,
