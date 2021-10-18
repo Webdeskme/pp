@@ -1336,6 +1336,10 @@ var config = {
     render: {
       clearBeforeRender: false
     },
+    fps: {
+    target: 25,
+    forceSetTimeOut: true
+    },
     enableDebug: false,
     backgroundColor: '#000000',
     scene: [ TitleS, Vide, Puzz, Cred, SubM, SubMv, SubMa ]
