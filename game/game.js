@@ -816,6 +816,7 @@ var SubM = new Phaser.Class({
       this.load.image('vscomp', 'assets/Text/vscomp.png');
       this.load.image('undo', 'assets/Text/back.png');
       this.load.image('aiexp', 'assets/Text/aiexp.png');
+      this.load.image('on', 'assets/Text/on.png');
       this.load.text('s1', 'assets/Text/story/s1.txt');
       this.load.text('s2', 'assets/Text/story/s2.txt');
       this.load.text('s3', 'assets/Text/story/s3.txt');
@@ -877,8 +878,11 @@ var SubM = new Phaser.Class({
       var n = this.add.image(900, 250, 'coop').setScrollFactor(0,0);
       var o = this.add.image(900, 300, '3coop').setScrollFactor(0,0);
       var aie = this.add.image(900, 350, 'aiexp').setScrollFactor(0,0);
+      var onn = this.add.image(900, 350, 'on').setScrollFactor(0,0);
       aie.setInteractive({ useHandCursor: true  } );
       aie.setScale(1/4);
+      onn.setInteractive({ useHandCursor: true  } );
+      onn.setScale(1/4);
       un.setInteractive({ useHandCursor: true  } );
       un.setScale(1/4);
       aa.setInteractive({ useHandCursor: true  } );
@@ -896,6 +900,12 @@ var SubM = new Phaser.Class({
       });
       aie.on('pointerout',function(pointer){
         aie.setScale(1/4);
+      });
+      onn.on('pointerover',function(pointer){
+        onn.setScale(1/3);
+      });
+      onn.on('pointerout',function(pointer){
+        onn.setScale(1/4);
       });
       un.on('pointerover',function(pointer){
         un.setScale(1/3);
@@ -939,6 +949,13 @@ var SubM = new Phaser.Class({
         this.game.sound.stopAll();
         this.scene.start('subma');
         //window.location.href = "p1.html";
+      });
+      onn.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        //this.scene.start('subma');
+        window.location.href = "on.html";
       });
       un.on('pointerdown', () => {
         this.sound.add('click').play();
