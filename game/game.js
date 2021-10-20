@@ -878,7 +878,7 @@ var SubM = new Phaser.Class({
       var n = this.add.image(900, 250, 'coop').setScrollFactor(0,0);
       var o = this.add.image(900, 300, '3coop').setScrollFactor(0,0);
       var aie = this.add.image(900, 350, 'aiexp').setScrollFactor(0,0);
-      var onn = this.add.image(900, 350, 'on').setScrollFactor(0,0);
+      var onn = this.add.image(900, 400, 'on').setScrollFactor(0,0);
       aie.setInteractive({ useHandCursor: true  } );
       aie.setScale(1/4);
       onn.setInteractive({ useHandCursor: true  } );
