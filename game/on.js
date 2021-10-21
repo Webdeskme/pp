@@ -75,10 +75,11 @@ var P1 = new Phaser.Class({
       this.socket = io('https://on.piratesport.net');
       setTimeout(() => {
         if(aww == "Yes"){
+          this.socket.emit('timed');
           this.game.sound.stopAll();
           this.scene.start('alice');
         }
-      }, 3000);
+      }, 30000);
       this.socket.on('end', function (type) {
         if(type == 'win'){
           window.location.href = "win.html";
