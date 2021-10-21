@@ -111,6 +111,13 @@ var P1 = new Phaser.Class({
       this.socket.on('player', function (si1) {
         aww = "No";
         serv.setText('You are Player ' + si1);
+        //bill
+        he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
+        he.scale(1/8);
+        ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
+        ae.scale(1/8);
+        se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
+        se.scale(1/8);
         if(si1 == 1){
           pl = 1;
           shuffle(cards);
@@ -118,10 +125,6 @@ var P1 = new Phaser.Class({
           th.socket.emit("cards", cards, health);
           th.socket.emit("p", p);
           healthText.setText('Health: ' + health);
-          //bill
-          he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
-          ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
-          se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
           start(th, cards, p);
         }
         else{
