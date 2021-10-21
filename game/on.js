@@ -2465,12 +2465,12 @@ var P1 = new Phaser.Class({
       //bill
       function emo(cemo, emo, type){
         cemo.on('pointerdown',function(pointer){
-          emo.visible = true;
+          //emo.visible = true;
           cemo.setTint(0x00ff00);
           th.socket.emit('emo', type);
           setTimeout(() => {
               //th.sound.add(zz).play();
-              emo.visible = false;
+              //emo.visible = false;
               cemo.clearTint();
           }, 3000);
         });
