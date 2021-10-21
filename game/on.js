@@ -112,14 +112,20 @@ var P1 = new Phaser.Class({
         aww = "No";
         serv.setText('You are Player ' + si1);
         //bill
-        he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
+        he = th.add.image(50, 150, "happy").setInteractive({ useHandCursor: true  } );
         he.setScale(1/8);
+        heb = th.add.image(550, 250, "happy").setInteractive({ useHandCursor: true  } );
+        heb.setScale(1/2);
         emo(he, "happy");
         ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
         ae.setScale(1/8);
+        aeb = th.add.image(550, 250, "anger").setInteractive({ useHandCursor: true  } );
+        aeb.setScale(1/2);
         emo(ae, "anger");
         se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
         se.setScale(1/8);
+        seb = th.add.image(550, 250, "shock").setInteractive({ useHandCursor: true  } );
+        seb.setScale(1/2);
         emo(se, "shock");
         if(si1 == 1){
           pl = 1;
