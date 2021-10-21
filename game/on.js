@@ -86,6 +86,7 @@ var P1 = new Phaser.Class({
       }, 30000);
       //bill
       this.socket.on('emo', function (emo) {
+        console.log(emo);
         emo.visible = true;
         setTimeout(() => {
             //th.sound.add(zz).play();
@@ -102,7 +103,6 @@ var P1 = new Phaser.Class({
       });
       this.socket.on('next', function (cards, p, health, mis) {
         healthText.setText('Health: ' + health);
-        console.log(player);
         playerText.setText('Player: ' + player);
         if(player == 1){
           mis1 = mis;
@@ -1458,8 +1458,6 @@ var P1 = new Phaser.Class({
                     cp.destroy();
                   }
                   //add
-                  console.log(mis1);
-                  console.log(mis2);
                   if(player == 1){
                     if(mis1[0] == "NO" && mis1[1] == "NO" && mis1[2] == "NO"){
                       th.sound.add('mwin').play();
@@ -1750,7 +1748,6 @@ var P1 = new Phaser.Class({
       var red = "no";
       var reds = "";
       function select(c, th, im){
-        console.log('game: ' + game);
         if(player == pl){
           c.on('pointerdown',function(pointer){
             th.sound.add('click').play();
