@@ -87,10 +87,26 @@ var P1 = new Phaser.Class({
       //bill
       this.socket.on('emo', function (emo) {
         console.log(emo);
-        emo.visible = true;
+        if(emo == "happy"){
+          he.visible = true;
+        }
+        else if(emo == "angry"){
+          ae.visible = true;
+        }
+        else{
+          se.visible = true;
+        }
         setTimeout(() => {
             //th.sound.add(zz).play();
-            emo.visible = false;
+            if(emo == "happy"){
+              he.visible = false;
+            }
+            else if(emo == "angry"){
+              ae.visible = false;
+            }
+            else{
+              se.visible = fale;
+            }
         }, 3000);
       });
       this.socket.on('end', function (type) {
@@ -124,19 +140,19 @@ var P1 = new Phaser.Class({
         heb = th.add.image(650, 250, "happy").setInteractive({ useHandCursor: true  } );
         heb.setScale(1/3);
         heb.visible = false;
-        emo(he, heb);
+        emo(he, heb, "happy");
         ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
         ae.setScale(1/8);
         aeb = th.add.image(650, 250, "anger").setInteractive({ useHandCursor: true  } );
         aeb.setScale(1/3);
         aeb.visible = false;
-        emo(ae, aeb);
+        emo(ae, aeb, "angry");
         se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
         se.setScale(1/8);
         seb = th.add.image(650, 250, "shock").setInteractive({ useHandCursor: true  } );
         seb.setScale(1/3);
         seb.visible = false;
-        emo(se, seb);
+        emo(se, seb, "shock");
         if(si1 == 1){
           pl = 1;
           shuffle(cards);
@@ -2447,11 +2463,11 @@ var P1 = new Phaser.Class({
       }
       // functions //
       //bill
-      function emo(cemo, emo){
+      function emo(cemo, emo, type){
         cemo.on('pointerdown',function(pointer){
           emo.visible = true;
           cemo.setTint(0x00ff00);
-          th.socket.emit('emo', emo);
+          th.socket.emit('emo', type);
           setTimeout(() => {
               //th.sound.add(zz).play();
               emo.visible = false;
