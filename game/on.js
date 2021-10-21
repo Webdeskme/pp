@@ -117,19 +117,19 @@ var P1 = new Phaser.Class({
         heb = th.add.image(650, 250, "happy").setInteractive({ useHandCursor: true  } );
         heb.setScale(1/3);
         heb.visible = false;
-        emo(he, "happy");
+        emo(he, heb);
         ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
         ae.setScale(1/8);
         aeb = th.add.image(650, 250, "anger").setInteractive({ useHandCursor: true  } );
         aeb.setScale(1/3);
         aeb.visible = false;
-        emo(ae, "anger");
+        emo(ae, aeb);
         se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
         se.setScale(1/8);
         seb = th.add.image(650, 250, "shock").setInteractive({ useHandCursor: true  } );
         seb.setScale(1/3);
         seb.visible = false;
-        emo(se, "shock");
+        emo(se, seb);
         if(si1 == 1){
           pl = 1;
           shuffle(cards);
@@ -2442,9 +2442,16 @@ var P1 = new Phaser.Class({
         }
       }
       // functions //
-      function emo(c, emo){
-        c.on('pointerover',function(pointer){
-
+      //bill
+      function emo(cemo, emo){
+        cemo.on('pointerover',function(pointer){
+          emo.visible = true;
+          cemo.setTint(0x00ff00);
+          setTimeout(() => {
+              //this.sound.add(zz).play();
+              emo.visible = false;
+              cemo.clearTint();
+          }, 3000);
         });
       }
       function shuffle(array) {
