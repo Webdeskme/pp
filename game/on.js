@@ -78,14 +78,24 @@ var P1 = new Phaser.Class({
           window.location.href = "win.html";
         }
         else{
-          window.location.href = "lode.html";
+          window.location.href = "lose.html";
         }
       });
-      this.socket.on('next', function (cards, p, health) {
+      this.socket.on('next', function (cards, p, health, mis) {
         healthText.setText('Health: ' + health);
         console.log(player);
         playerText.setText('Player: ' + player);
+        if(player == 1){
+          mis1 = mis;
+        }
+        else{
+          mis2 = mis;
+        }
         start(th, cards, p);
+        //bill
+      });
+      this.socket.on('dis', function (dis) {
+        serv.setText('Other Player Left');
       });
       this.socket.on('player', function (si1) {
         serv.setText('You are Player ' + si1);
@@ -129,7 +139,6 @@ var P1 = new Phaser.Class({
           //start(th, cards, p);
           hand = 4;
           if(player == pl){
-            //bill
             if(typeof cc != 'undefined'){
               cc.destroy();
             }
@@ -408,7 +417,12 @@ var P1 = new Phaser.Class({
             hove(p6, th, p[6] + 'big');
             bselect(p6, th, p[6]);
           }
-          th.socket.emit('next', cards, p, health);
+          if(player == 1){
+            th.socket.emit('next', cards, p, health, mis1);
+          }
+          else{
+            th.socket.emit('next', cards, p, health, mis2);
+          }
           //th.socket.emit('p', p);
         }
         });
@@ -1232,8 +1246,8 @@ var P1 = new Phaser.Class({
                       }
                       localStorage.setItem(localStorageTemp, score);
                       localStorage.setItem(localStoragePlayer, player);*/
-                        th.socket.emit('end', 'lose');
-                        window.location.href = "win.html";
+                        //th.socket.emit('end', 'lose');
+                        //window.location.href = "win.html";
                     }
                   }
                 }
@@ -1353,8 +1367,8 @@ var P1 = new Phaser.Class({
                       }
                       localStorage.setItem(localStorageTemp, score);
                       localStorage.setItem(localStoragePlayer, player);*/
-                      th.socket.emit('end', 'lose');
-                      window.location.href = "win.html";
+                      //th.socket.emit('end', 'lose');
+                      //window.location.href = "win.html";
                   }
                   if(temp2 == "COM"){
                     th.sound.add('comp').play();
@@ -1404,6 +1418,23 @@ var P1 = new Phaser.Class({
                   else if (temp2 == "PORT2") {
                     th.sound.add('comp').play();
                     cp.destroy();
+                  }
+                  //add
+                  console.log(mis1);
+                  console.log(mis2);
+                  if(player == 1){
+                    if(mis1[0] == "NO" && mis1[1] == "NO" && mis1[2] == "NO"){
+                      th.sound.add('mwin').play();
+                      th.socket.emit('end', 'lose');
+                      window.location.href = "win.html";
+                    }
+                  }
+                  else{
+                    if(mis2[0] == "No" && mis2[1] == "No" && mis2[2] == "No"){
+                      th.sound.add('mwin').play();
+                      th.socket.emit('end', 'lose');
+                      window.location.href = "win.html";
+                    }
                   }
                   temp2 = "";
                 }
@@ -1681,7 +1712,7 @@ var P1 = new Phaser.Class({
       var red = "no";
       var reds = "";
       function select(c, th, im){
-        console.log('in');
+        console.log('game: ' + game);
         if(player == pl){
           c.on('pointerdown',function(pointer){
             th.sound.add('click').play();
@@ -2809,7 +2840,6 @@ var P1 = new Phaser.Class({
         c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
         hove(c0, this, cards[0] + 'big');
         select(c0, this, cards[0]);
-        //bill
         var z = hand - 1;
         if (typeof p[z] == 'undefined') {
           shuffle(pdis);
