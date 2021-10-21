@@ -2451,7 +2451,7 @@ var P1 = new Phaser.Class({
       // functions //
       //bill
       function emo(cemo, emo){
-        cemo.on('click',function(pointer){
+        cemo.on('pointerdown',function(pointer){
           emo.visible = true;
           cemo.setTint(0x00ff00);
           th.socket.emit('emo', emo);
