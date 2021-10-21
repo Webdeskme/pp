@@ -104,6 +104,7 @@ var P1 = new Phaser.Class({
       });
       this.socket.on('dis', function (dis) {
         serv.setText('Other Player Left');
+        window.location.reload(false); 
       });
       this.socket.on('player', function (si1) {
         aww = "No";
