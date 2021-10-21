@@ -113,11 +113,11 @@ var P1 = new Phaser.Class({
         serv.setText('You are Player ' + si1);
         //bill
         he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
-        he.scale(1/8);
+        he.setScale(1/8);
         ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
-        ae.scale(1/8);
+        ae.setScale(1/8);
         se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
-        se.scale(1/8);
+        se.setScale(1/8);
         if(si1 == 1){
           pl = 1;
           shuffle(cards);
