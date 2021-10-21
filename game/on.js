@@ -84,9 +84,7 @@ var P1 = new Phaser.Class({
           window.location.href = "vscomph.html";
         }
       }, 30000);
-      //bill
       this.socket.on('emo', function (emo) {
-        console.log(emo);
         if(emo == "happy"){
           heb.visible = true;
         }
@@ -174,6 +172,8 @@ var P1 = new Phaser.Class({
           });
         }
         th.socket.on('tend', function (cardss, diss) {
+          console.log('tend2');
+          console.log(cardss);
           player = pl;
           if(player == 1){
             game = game1;
@@ -2462,7 +2462,6 @@ var P1 = new Phaser.Class({
         }
       }
       // functions //
-      //bill
       function emo(cemo, emo, type){
         cemo.on('pointerdown',function(pointer){
           //emo.visible = true;
@@ -3020,6 +3019,8 @@ var P1 = new Phaser.Class({
           hove(p6, this, p[6] + 'big');
           bselect(p6, this, p[6]);
         }
+        console.log('tend1');
+        console.log(cards);
         th.socket.emit('tend', cards, dis);
       }
       });
