@@ -30,6 +30,9 @@ var P1 = new Phaser.Class({
         this.load.image('musicOff', 'assets/icons/sound-off.png');
         this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.image('full', 'assets/icons/expand.png');
+        this.load.image('shock', 'assets/icons/surprised-skull.png');
+        this.load.image('happy', 'assets/icons/pirate-skull.png');
+        this.load.image('anger', 'assets/icons/blade-bite.png');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
         var i;
         for (i = 0; i < cards.length; i++) {
@@ -100,11 +103,10 @@ var P1 = new Phaser.Class({
           mis2 = mis;
         }
         start(th, cards, p);
-        //bill
       });
       this.socket.on('dis', function (dis) {
         serv.setText('Other Player Left');
-        window.location.reload(false); 
+        window.location.reload(false);
       });
       this.socket.on('player', function (si1) {
         aww = "No";
@@ -116,6 +118,10 @@ var P1 = new Phaser.Class({
           th.socket.emit("cards", cards, health);
           th.socket.emit("p", p);
           healthText.setText('Health: ' + health);
+          //bill
+          he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
+          ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
+          se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
           start(th, cards, p);
         }
         else{
