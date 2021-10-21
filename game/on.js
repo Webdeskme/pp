@@ -114,10 +114,13 @@ var P1 = new Phaser.Class({
         //bill
         he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
         he.setScale(1/8);
+        emo(he, "happy");
         ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
         ae.setScale(1/8);
+        emo(ae, "anger");
         se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
         se.setScale(1/8);
+        emo(se, "shock");
         if(si1 == 1){
           pl = 1;
           shuffle(cards);
@@ -2430,6 +2433,11 @@ var P1 = new Phaser.Class({
         }
       }
       // functions //
+      function emo(c, emo){
+        c.on('pointerover',function(pointer){
+
+        });
+      }
       function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
           while (0 !== currentIndex) {
