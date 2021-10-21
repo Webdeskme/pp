@@ -88,24 +88,24 @@ var P1 = new Phaser.Class({
       this.socket.on('emo', function (emo) {
         console.log(emo);
         if(emo == "happy"){
-          he.visible = true;
+          heb.visible = true;
         }
         else if(emo == "angry"){
-          ae.visible = true;
+          aeb.visible = true;
         }
         else{
-          se.visible = true;
+          seb.visible = true;
         }
         setTimeout(() => {
             //th.sound.add(zz).play();
             if(emo == "happy"){
-              he.visible = false;
+              heb.visible = false;
             }
             else if(emo == "angry"){
-              ae.visible = false;
+              aeb.visible = false;
             }
             else{
-              se.visible = fale;
+              seb.visible = false;
             }
         }, 3000);
       });
