@@ -84,6 +84,14 @@ var P1 = new Phaser.Class({
           window.location.href = "vscomph.html";
         }
       }, 30000);
+      //bill
+      this.socket.on('emo', function (emo) {
+        emo.visible = true;
+        setTimeout(() => {
+            //th.sound.add(zz).play();
+            emo.visible = false;
+        }, 3000);
+      });
       this.socket.on('end', function (type) {
         if(type == 'win'){
           window.location.href = "win.html";
@@ -111,7 +119,6 @@ var P1 = new Phaser.Class({
       this.socket.on('player', function (si1) {
         aww = "No";
         serv.setText('You are Player ' + si1);
-        //bill
         he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
         he.setScale(1/8);
         heb = th.add.image(650, 250, "happy").setInteractive({ useHandCursor: true  } );
@@ -2444,11 +2451,12 @@ var P1 = new Phaser.Class({
       // functions //
       //bill
       function emo(cemo, emo){
-        cemo.on('pointerover',function(pointer){
+        cemo.on('click',function(pointer){
           emo.visible = true;
           cemo.setTint(0x00ff00);
+          th.socket.emit('emo', emo);
           setTimeout(() => {
-              //this.sound.add(zz).play();
+              //th.sound.add(zz).play();
               emo.visible = false;
               cemo.clearTint();
           }, 3000);
