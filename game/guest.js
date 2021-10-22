@@ -40,6 +40,9 @@ var Guest = new Phaser.Class({
           wri += st;
           text.setText('ID: ' + wri);
         }
+        if(wri.length = 8){
+          this.scene.start('p1');
+        }
       }
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
       wri = '';
@@ -336,7 +339,10 @@ var P1 = new Phaser.Class({
           window.location.href = "vscomph.html";
         }
       }, 30000);*/
-      this.socket.emit('online');
+      this.socket.emit('guest', wri);
+      this.socket.on('bad', function (emo) {
+        this.scene.start('guest');
+      });
       this.socket.on('emo', function (emo) {
         if(emo == "happy"){
           heb.visible = true;
