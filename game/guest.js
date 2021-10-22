@@ -26,9 +26,23 @@ var Guest = new Phaser.Class({
       function down(th, c){
         c.on('pointerdown',function(pointer){
           console.log(c["_text"]);
+          wr(c["_text"]);
         });
       }
+      function wr(st){
+        if(st == 'DELETE'){
+          if(wr.length > 0){
+            wr = wr.slice(0, -1);
+            text.setText('ID: ' = wr);
+          }
+        }
+        else{
+          wr += st;
+          text.setText('ID: ' = wr);
+        }
+      }
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
+      wr = '';
       var fonts = 100;
       var fonty1 = 250;
       var fonty2 = 350;
@@ -42,6 +56,7 @@ var Guest = new Phaser.Class({
       var fontx6 = 650;
       var fontx7 = 775;
       var fontx8 = 900;
+      text = this.add.bitmapText(50, 100, 'topaz', 'ID: ', fonts).setInteractive({ useHandCursor: true  } );
       var a = this.add.bitmapText(fontx1, fonty1, 'topaz', 'A', fonts).setInteractive({ useHandCursor: true  } );
       tin(a);
       down(this, a);
@@ -126,84 +141,111 @@ var Guest = new Phaser.Class({
       this.input.keyboard.on('keyup', function (event) {
         if(event.keyCode === 65){
           console.log("A");
+          wr("A");
         }
         else if (event.keyCode === 66) {
           console.log("B");
+          wr("B");
         }
         else if (event.keyCode === 67) {
           console.log("C");
+          wr("C");
         }
         else if (event.keyCode === 68) {
           console.log("D");
+          wr("D");
         }
         else if (event.keyCode === 69) {
           console.log("E");
+          wr("E");
         }
         else if (event.keyCode === 70) {
           console.log("F");
+          wr("F");
         }
         else if (event.keyCode === 71) {
           console.log("G");
+          wr("G");
         }
         else if (event.keyCode === 72) {
           console.log("H");
+          wr("H");
         }
         else if (event.keyCode === 73) {
           console.log("I");
+          wr("I");
         }
         else if (event.keyCode === 74) {
           console.log("J");
+          wr("J");
         }
         else if (event.keyCode === 75) {
           console.log("K");
+          wr("K");
         }
         else if (event.keyCode === 76) {
           console.log("L");
+          wr("L");
         }
         else if (event.keyCode === 77) {
           console.log("M");
+          wr("M");
         }
         else if (event.keyCode === 78) {
           console.log("N");
+          wr("N");
         }
         else if (event.keyCode === 79) {
           console.log("O");
+          wr("O");
         }
         else if (event.keyCode === 80) {
           console.log("P");
+          wr("P");
         }
         else if (event.keyCode === 81) {
           console.log("Q");
+          wr("Q");
         }
         else if (event.keyCode === 82) {
           console.log("R");
+          wr("R");
         }
         else if (event.keyCode === 83) {
           console.log("S");
+          wr("S");
         }
         else if (event.keyCode === 84) {
           console.log("T");
+          wr("T");
         }
         else if (event.keyCode === 85) {
           console.log("U");
+          wr("U");
         }
         else if (event.keyCode === 86) {
           console.log("V");
+          wr("V");
         }
         else if (event.keyCode === 87) {
           console.log("W");
+          wr("W");
         }
         else if (event.keyCode === 88) {
           console.log("X");
+          wr("X");
         }
         else if (event.keyCode === 89) {
           console.log("Y");
+          wr("Y");
         }
         else if (event.keyCode === 90) {
           console.log("Z");
+          wr("Z");
         }
         else if (event.keyCode === 8) {
           console.log("DELETE");
+          wr("DELETE");
         }
       });
     }
