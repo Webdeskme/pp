@@ -2205,7 +2205,8 @@ var P1 = new Phaser.Class({
       var totalText = this.add.bitmapText(15, 115, 'topaz', 'Total: 0', 32);
       var cardText = this.add.bitmapText(15, 140, 'topaz', 'Cards: 0', 32);
       var r = this.add.bitmapText(800, 15, 'topaz', 'Rules', 32);
-      this.socket.on('emo', function (mid) {
+      //bill
+      this.socket.on('host', function (mid) {
         playerText.setText('code: ' + mid);
         console.log(mid);
       });
