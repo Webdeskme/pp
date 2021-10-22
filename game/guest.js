@@ -15,7 +15,7 @@ var Guest = new Phaser.Class({
     },
     create: function ()
     {
-      function tin(th, c){
+      function tin(c){
         c.on('pointerover',function(pointer){
           c.setTint(0x00ff00);
         });
@@ -43,32 +43,86 @@ var Guest = new Phaser.Class({
       var fontx7 = 775;
       var fontx8 = 900;
       var a = this.add.bitmapText(fontx1, fonty1, 'topaz', 'A', fonts).setInteractive({ useHandCursor: true  } );
+      tin(a);
+      down(this, a);
       var b = this.add.bitmapText(fontx2, fonty1, 'topaz', 'B', fonts).setInteractive({ useHandCursor: true  } );
+      tin(b);
+      down(this, b);
       var c = this.add.bitmapText(fontx3, fonty1, 'topaz', 'C', fonts).setInteractive({ useHandCursor: true  } );
+      tin(c);
+      down(this, c);
       var d = this.add.bitmapText(fontx4, fonty1, 'topaz', 'D', fonts).setInteractive({ useHandCursor: true  } );
+      tin(d);
+      down(this, d);
       var e = this.add.bitmapText(fontx5, fonty1, 'topaz', 'E', fonts).setInteractive({ useHandCursor: true  } );
+      tin(e);
+      down(this, e);
       var f = this.add.bitmapText(fontx6, fonty1, 'topaz', 'F', fonts).setInteractive({ useHandCursor: true  } );
+      tin(f);
+      down(this, f);
       var g = this.add.bitmapText(fontx7, fonty1, 'topaz', 'G', fonts).setInteractive({ useHandCursor: true  } );
+      tin(g);
+      down(this, g);
       var h = this.add.bitmapText(fontx8, fonty1, 'topaz', 'H', fonts).setInteractive({ useHandCursor: true  } );
+      tin(h);
+      down(this, h);
       var i = this.add.bitmapText(fontx1, fonty2, 'topaz', 'I', fonts).setInteractive({ useHandCursor: true  } );
+      tin(i);
+      down(this, i);
       var j = this.add.bitmapText(fontx2, fonty2, 'topaz', 'J', fonts).setInteractive({ useHandCursor: true  } );
+      tin(j);
+      down(this, j);
       var k = this.add.bitmapText(fontx3, fonty2, 'topaz', 'K', fonts).setInteractive({ useHandCursor: true  } );
+      tin(k);
+      down(this, k);
       var l = this.add.bitmapText(fontx4, fonty2, 'topaz', 'L', fonts).setInteractive({ useHandCursor: true  } );
+      tin(l);
+      down(this, l);
       var m = this.add.bitmapText(fontx5, fonty2, 'topaz', 'M', fonts).setInteractive({ useHandCursor: true  } );
+      tin(m);
+      down(this, m);
       var n = this.add.bitmapText(fontx6, fonty2, 'topaz', 'N', fonts).setInteractive({ useHandCursor: true  } );
+      tin(n);
+      down(this, n);
       var o = this.add.bitmapText(fontx7, fonty2, 'topaz', 'O', fonts).setInteractive({ useHandCursor: true  } );
+      tin(o);
+      down(this, o);
       var p = this.add.bitmapText(fontx8, fonty2, 'topaz', 'P', fonts).setInteractive({ useHandCursor: true  } );
+      tin(p);
+      down(this, p);
       var q = this.add.bitmapText(fontx1, fonty3, 'topaz', 'Q', fonts).setInteractive({ useHandCursor: true  } );
+      tin(q);
+      down(this, q);
       var r = this.add.bitmapText(fontx2, fonty3, 'topaz', 'R', fonts).setInteractive({ useHandCursor: true  } );
+      tin(r);
+      down(this, r);
       var s = this.add.bitmapText(fontx3, fonty3, 'topaz', 'S', fonts).setInteractive({ useHandCursor: true  } );
+      tin(s);
+      down(this, s);
       var t = this.add.bitmapText(fontx4, fonty3, 'topaz', 'T', fonts).setInteractive({ useHandCursor: true  } );
+      tin(t);
+      down(this, t);
       var u = this.add.bitmapText(fontx5, fonty3, 'topaz', 'U', fonts).setInteractive({ useHandCursor: true  } );
-      var z = this.add.bitmapText(fontx6, fonty3, 'topaz', 'V', fonts).setInteractive({ useHandCursor: true  } );
+      tin(u);
+      down(this, u);
+      var v = this.add.bitmapText(fontx6, fonty3, 'topaz', 'V', fonts).setInteractive({ useHandCursor: true  } );
+      tin(v);
+      down(this, v);
       var w = this.add.bitmapText(fontx7, fonty3, 'topaz', 'W', fonts).setInteractive({ useHandCursor: true  } );
+      tin(w);
+      down(this, w);
       var x = this.add.bitmapText(fontx8, fonty3, 'topaz', 'X', fonts).setInteractive({ useHandCursor: true  } );
+      tin(x);
+      down(this, x);
       var y = this.add.bitmapText(fontx1, fonty4, 'topaz', 'Y', fonts).setInteractive({ useHandCursor: true  } );
+      tin(y);
+      down(this, y);
       var z = this.add.bitmapText(fontx2, fonty4, 'topaz', 'Z', fonts).setInteractive({ useHandCursor: true  } );
+      tin(z);
+      down(this, z);
       var ldelete = this.add.bitmapText(fontx3, fonty4, 'topaz', 'DELETE', fonts).setInteractive({ useHandCursor: true  } );
+      tin(ldelete);
+      down(this, ldelete);
     }
     });
 
