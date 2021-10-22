@@ -1511,7 +1511,7 @@ var SubM = new Phaser.Class({
                     //endm.stop();
                     this.game.sound.stopAll();
                     //this.scene.start('p1');
-                    window.location.href = "on.html";
+                    window.location.href = "guest.html";
                   });
                   /*aa.on('pointerdown', () => {
                     this.sound.add('click').play();
