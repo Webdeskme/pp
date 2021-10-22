@@ -29,6 +29,7 @@ var Guest = new Phaser.Class({
           wr(th, c["_text"]);
         });
       }
+      th = this;
       function wr(th, st){
         if(st == 'DELETE'){
           if(wri.length > 0){
