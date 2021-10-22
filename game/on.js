@@ -116,6 +116,8 @@ var P1 = new Phaser.Class({
         }
       });
       this.socket.on('next', function (cards, p, health, mis) {
+        console.log('step4');
+        console.log(cards);
         healthText.setText('Health: ' + health);
         playerText.setText('Player: ' + player);
         if(player == 1){
