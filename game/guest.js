@@ -46,6 +46,9 @@ var Guest = new Phaser.Class({
       }
       var back1 = this.add.image(512, 320, 'back1');
       var bac = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
+      bac.on('pointerdown',function(pointer){
+        window.location.href = "game.html";
+      });
       wri = '';
       var fonts = 100;
       var fonty1 = 250;
