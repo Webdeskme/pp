@@ -8,7 +8,7 @@ var Guest = new Phaser.Class({
     preload: function ()
     {
       this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
-      this.load.image('back', 'assets/backgrounds/black.png');
+      this.load.image('back1', 'assets/backgrounds/black.png');
       this.load.audio('click', [
       "assets/Audio/mouseclick.wav"
       ]);
@@ -44,6 +44,7 @@ var Guest = new Phaser.Class({
           th.scene.start('p1');
         }
       }
+      var back = this.add.image(512, 320, 'back');
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
       wri = '';
       var fonts = 100;
