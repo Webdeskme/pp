@@ -20,15 +20,15 @@ var Guest = new Phaser.Class({
       var fonty1 = 250;
       var fonty2 = 350;
       var fonty3 = 450;
-      var fontx1 = 50;
+      var fontx1 = 25;
       var fontx2 = 150;
-      var fontx3 = 250;
-      var fontx4 = 350;
-      var fontx5 = 450;
-      var fontx6 = 550;
-      var fontx7 = 650;
-      var fontx8 = 750;
-      var fontx9 = 850;
+      var fontx3 = 275;
+      var fontx4 = 400;
+      var fontx5 = 525;
+      var fontx6 = 650;
+      var fontx7 = 775;
+      var fontx8 = 900;
+      var fontx9 = 1025;
       var a = this.add.bitmapText(fontx1, fonty1, 'topaz', 'A', fonts);
       var b = this.add.bitmapText(fontx2, fonty1, 'topaz', 'B', fonts);
       var c = this.add.bitmapText(fontx3, fonty1, 'topaz', 'C', fonts);
@@ -55,7 +55,7 @@ var Guest = new Phaser.Class({
       var x = this.add.bitmapText(fontx6, fonty3, 'topaz', 'X', fonts);
       var y = this.add.bitmapText(fontx7, fonty3, 'topaz', 'Y', fonts);
       var z = this.add.bitmapText(fontx8, fonty3, 'topaz', 'Z', fonts);
-      var ldelete = this.add.bitmapText(fontx9, fonty3, 'topaz', 'Delete', fonts);
+      var ldelete = this.add.bitmapText(fontx9, fonty3, 'topaz', '<', fonts);
     }
     });
 
