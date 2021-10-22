@@ -38,7 +38,7 @@ var Guest = new Phaser.Class({
         }
         else{
           wr += st;
-          text.setText('ID: ' = wr);
+          text.setText('ID: ' + wr);
         }
       }
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
