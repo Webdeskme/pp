@@ -27,6 +27,89 @@ var Guest = new Phaser.Class({
         c.on('pointerdown',function(pointer){
           console.log(c["_text"]);
         });
+        this.input.keyboard.on('keyup', function (event) {
+          if(event.keyCode === 65){
+            console.log("A");
+          }
+          else if (event.keyCode === 66) {
+            console.log("B");
+          }
+          else if (event.keyCode === 67) {
+            console.log("C");
+          }
+          else if (event.keyCode === 68) {
+            console.log("D");
+          }
+          else if (event.keyCode === 69) {
+            console.log("E");
+          }
+          else if (event.keyCode === 70) {
+            console.log("F");
+          }
+          else if (event.keyCode === 71) {
+            console.log("G");
+          }
+          else if (event.keyCode === 72) {
+            console.log("H");
+          }
+          else if (event.keyCode === 73) {
+            console.log("I");
+          }
+          else if (event.keyCode === 74) {
+            console.log("J");
+          }
+          else if (event.keyCode === 75) {
+            console.log("K");
+          }
+          else if (event.keyCode === 76) {
+            console.log("L");
+          }
+          else if (event.keyCode === 77) {
+            console.log("M");
+          }
+          else if (event.keyCode === 78) {
+            console.log("N");
+          }
+          else if (event.keyCode === 79) {
+            console.log("O");
+          }
+          else if (event.keyCode === 80) {
+            console.log("P");
+          }
+          else if (event.keyCode === 81) {
+            console.log("Q");
+          }
+          else if (event.keyCode === 82) {
+            console.log("R");
+          }
+          else if (event.keyCode === 83) {
+            console.log("S");
+          }
+          else if (event.keyCode === 84) {
+            console.log("T");
+          }
+          else if (event.keyCode === 85) {
+            console.log("U");
+          }
+          else if (event.keyCode === 86) {
+            console.log("V");
+          }
+          else if (event.keyCode === 87) {
+            console.log("W");
+          }
+          else if (event.keyCode === 88) {
+            console.log("X");
+          }
+          else if (event.keyCode === 89) {
+            console.log("Y");
+          }
+          else if (event.keyCode === 90) {
+            console.log("Z");
+          }
+          else if (event.keyCode === 8) {
+            console.log("DELETE");
+          }
+        });
       }
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
       var fonts = 100;
