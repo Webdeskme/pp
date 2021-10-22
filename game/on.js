@@ -190,6 +190,8 @@ var P1 = new Phaser.Class({
           game = game2;
           dis = diss;
           cards = cardss;
+          console.log('step2');
+          console.log(cards);
           //start(th, cards, p);
           hand = 4;
           if(player == pl){
@@ -471,6 +473,8 @@ var P1 = new Phaser.Class({
             hove(p6, th, p[6] + 'big');
             bselect(p6, th, p[6]);
           }
+          console.log('step3');
+          console.log(cards);
           if(player == 1){
             th.socket.emit('next', cards, p, health, mis1);
           }
@@ -2153,6 +2157,8 @@ var P1 = new Phaser.Class({
         }*/
       }
       function start(th, cards, p){
+        console.log('step5');
+        console.log(cards);
         c5 = th.add.image(250, 400, cards[5]).setInteractive({ useHandCursor: true  } );
         hove(c5, th, cards[5] + 'big');
         select(c5, th, cards[5]);
