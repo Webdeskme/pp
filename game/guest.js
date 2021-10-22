@@ -25,7 +25,7 @@ var Guest = new Phaser.Class({
       }
       function down(th, c){
         c.on('pointerdown',function(pointer){
-          console.log(c);
+          console.log(c["_text"]);
         });
       }
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
