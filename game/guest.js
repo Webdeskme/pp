@@ -1,3 +1,64 @@
+var Guest = new Phaser.Class({
+    Extends: Phaser.Scene,
+    initialize:
+    function Guest ()
+    {
+        Phaser.Scene.call(this, { key: 'guest' });
+    },
+    preload: function ()
+    {
+      this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
+      this.load.image('back', 'assets/backgrounds/black.jpg');
+      this.load.audio('click', [
+      "assets/Audio/mouseclick.wav"
+      ]);
+    },
+    create: function ()
+    {
+      var back = this.add.bitmapText(25, 25, 'topaz', 'Back', 48);
+      var fonts = 48;
+      var fonty1 = 150;
+      var fonty2 = 250;
+      var fonty3 = 350;
+      var fontx1 = 50;
+      var fontx2 = 100;
+      var fontx3 = 150;
+      var fontx4 = 200;
+      var fontx5 = 250;
+      var fontx6 = 300;
+      var fontx7 = 350;
+      var fontx8 = 400;
+      var fontx9 = 450;
+      var a = this.add.bitmapText(fontx1, fonty1, 'topaz', 'A', fonts);
+      var b = this.add.bitmapText(fontx2, fonty1, 'topaz', 'B', fonts);
+      var c = this.add.bitmapText(fontx3, fonty1, 'topaz', 'C', fonts);
+      var d = this.add.bitmapText(fontx4, fonty1, 'topaz', 'D', fonts);
+      var e = this.add.bitmapText(fontx5, fonty1, 'topaz', 'E', fonts);
+      var f = this.add.bitmapText(fontx6, fonty1, 'topaz', 'F', fonts);
+      var g = this.add.bitmapText(fontx7, fonty1, 'topaz', 'G', fonts);
+      var h = this.add.bitmapText(fontx8, fonty1, 'topaz', 'H', fonts);
+      var i = this.add.bitmapText(fontx9, fonty1, 'topaz', 'I', fonts);
+      var j = this.add.bitmapText(fontx1, fonty2, 'topaz', 'J', fonts);
+      var k = this.add.bitmapText(fontx2, fonty2, 'topaz', 'K', fonts);
+      var l = this.add.bitmapText(fontx3, fonty2, 'topaz', 'L', fonts);
+      var m = this.add.bitmapText(fontx4, fonty2, 'topaz', 'M', fonts);
+      var n = this.add.bitmapText(fontx5, fonty2, 'topaz', 'N', fonts);
+      var o = this.add.bitmapText(fontx6, fonty2, 'topaz', 'O', fonts);
+      var p = this.add.bitmapText(fontx7, fonty2, 'topaz', 'P', fonts);
+      var q = this.add.bitmapText(fontx8, fonty2, 'topaz', 'Q', fonts);
+      var r = this.add.bitmapText(fontx9, fonty2, 'topaz', 'R', fonts);
+      var s = this.add.bitmapText(fontx1, fonty3, 'topaz', 'S', fonts);
+      var t = this.add.bitmapText(fontx2, fonty3, 'topaz', 'T', fonts);
+      var u = this.add.bitmapText(fontx3, fonty3, 'topaz', 'U', fonts);
+      var z = this.add.bitmapText(fontx4, fonty3, 'topaz', 'V', fonts);
+      var w = this.add.bitmapText(fontx5, fonty3, 'topaz', 'W', fonts);
+      var x = this.add.bitmapText(fontx6, fonty3, 'topaz', 'X', fonts);
+      var y = this.add.bitmapText(fontx7, fonty3, 'topaz', 'Y', fonts);
+      var z = this.add.bitmapText(fontx8, fonty3, 'topaz', 'Z', fonts);
+      var ldelete = this.add.bitmapText(fontx9, fonty3, 'topaz', 'Delete', fonts);
+    }
+    });
+
 var P1 = new Phaser.Class({
     Extends: Phaser.Scene,
     initialize:
@@ -83,7 +144,7 @@ var P1 = new Phaser.Class({
           window.location.href = "vscomph.html";
         }
       }, 30000);*/
-      this.socket.emit('host');
+      this.socket.emit('online');
       this.socket.on('emo', function (emo) {
         if(emo == "happy"){
           heb.visible = true;
@@ -2205,11 +2266,6 @@ var P1 = new Phaser.Class({
       var totalText = this.add.bitmapText(15, 115, 'topaz', 'Total: 0', 32);
       var cardText = this.add.bitmapText(15, 140, 'topaz', 'Cards: 0', 32);
       var r = this.add.bitmapText(800, 15, 'topaz', 'Rules', 32);
-      //bill
-      this.socket.on('host', function (mid) {
-        serv.setText('ID: ' + mid);
-        console.log(mid);
-      });
       mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
       mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
       fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
@@ -2640,6 +2696,6 @@ var config = {
     },
      enableDebug: false,
     backgroundColor: '#000000',
-    scene: [ P1 ]
+    scene: [ Guest, P1 ]
 };
 var game = new Phaser.Game(config);
