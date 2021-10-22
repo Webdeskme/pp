@@ -1352,6 +1352,8 @@ var SubM = new Phaser.Class({
                   this.load.image('back', 'assets/backgrounds/black.png');
                   this.load.image('undo', 'assets/Text/back.png');
                   this.load.image('on', 'assets/Text/on.png');
+                  this.load.image('host', 'assets/Text/host.png');
+                  this.load.image('connect', 'assets/Text/connect.png');
                   this.load.image('alice', 'assets/Text/alice.png');
                   this.load.image('2play', 'assets/Text/2play.png');
                   this.load.image('ba', 'assets/Text/ba.png');
@@ -1422,6 +1424,8 @@ var SubM = new Phaser.Class({
                   var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
                   var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
                   var on = this.add.image(900, 150, 'on').setScrollFactor(0,0);
+                  var host = this.add.image(900, 200, 'host').setScrollFactor(0,0);
+                  var connect = this.add.image(900, 250, 'connect').setScrollFactor(0,0);
                   /*var aa = this.add.image(900, 200, 'bob').setScrollFactor(0,0);
                   var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
                   var ba = this.add.image(900, 300, 'ba').setScrollFactor(0,0);*/
@@ -1429,6 +1433,10 @@ var SubM = new Phaser.Class({
                   un.setScale(1/4);
                   on.setInteractive({ useHandCursor: true  } );
                   on.setScale(1/4);
+                  host.setInteractive({ useHandCursor: true  } );
+                  host.setScale(1/4);
+                  connect.setInteractive({ useHandCursor: true  } );
+                  connect.setScale(1/4);
                   /*aa.setInteractive({ useHandCursor: true  } );
                   aa.setScale(1/4);
                   p.setInteractive({ useHandCursor: true  } );
@@ -1446,6 +1454,18 @@ var SubM = new Phaser.Class({
                   });
                   on.on('pointerout',function(pointer){
                     on.setScale(1/4);
+                  });
+                  host.on('pointerover',function(pointer){
+                    host.setScale(1/3);
+                  });
+                  host.on('pointerout',function(pointer){
+                    host.setScale(1/4);
+                  });
+                  connect.on('pointerover',function(pointer){
+                    connect.setScale(1/3);
+                  });
+                  connect.on('pointerout',function(pointer){
+                    connect.setScale(1/4);
                   });
                   /*aa.on('pointerover',function(pointer){
                     aa.setScale(1/3);
@@ -1473,6 +1493,20 @@ var SubM = new Phaser.Class({
                     //window.location.href = "vscomp.html";
                   });
                   on.on('pointerdown', () => {
+                    this.sound.add('click').play();
+                    //endm.stop();
+                    this.game.sound.stopAll();
+                    //this.scene.start('p1');
+                    window.location.href = "on.html";
+                  });
+                  host.on('pointerdown', () => {
+                    this.sound.add('click').play();
+                    //endm.stop();
+                    this.game.sound.stopAll();
+                    //this.scene.start('subm');
+                    window.location.href = "on.html";
+                  });
+                  connect.on('pointerdown', () => {
                     this.sound.add('click').play();
                     //endm.stop();
                     this.game.sound.stopAll();
