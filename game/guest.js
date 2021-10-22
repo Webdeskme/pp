@@ -27,7 +27,7 @@ var Guest = new Phaser.Class({
         c.on('pointerdown',function(pointer){
           console.log(c["_text"]);
         });
-        this.input.keyboard.on('keyup', function (event) {
+        th.input.keyboard.on('keyup', function (event) {
           if(event.keyCode === 65){
             console.log("A");
           }
