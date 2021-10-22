@@ -29,7 +29,6 @@ var Guest = new Phaser.Class({
           wr(th, c["_text"]);
         });
       }
-      th = this;
       function wr(th, st){
         if(st == 'DELETE'){
           if(wri.length > 0){
@@ -146,34 +145,35 @@ var Guest = new Phaser.Class({
       var ldelete = this.add.bitmapText(fontx3, fonty4, 'topaz', 'DELETE', fonts).setInteractive({ useHandCursor: true  } );
       tin(ldelete);
       down(this, ldelete);
+      th = this;
       this.input.keyboard.on('keyup', function (event) {
         if(event.keyCode === 65){
           console.log("A");
-          wr(this, "A");
+          wr(th, "A");
         }
         else if (event.keyCode === 66) {
           console.log("B");
-          wr(this, "B");
+          wr(th, "B");
         }
         else if (event.keyCode === 67) {
           console.log("C");
-          wr(this, "C");
+          wr(th, "C");
         }
         else if (event.keyCode === 68) {
           console.log("D");
-          wr(this, "D");
+          wr(th, "D");
         }
         else if (event.keyCode === 69) {
           console.log("E");
-          wr(this, "E");
+          wr(th, "E");
         }
         else if (event.keyCode === 70) {
           console.log("F");
-          wr(this, "F");
+          wr(th, "F");
         }
         else if (event.keyCode === 71) {
           console.log("G");
-          wr(this, "G");
+          wr(th, "G");
         }
         else if (event.keyCode === 72) {
           console.log("H");
@@ -181,79 +181,79 @@ var Guest = new Phaser.Class({
         }
         else if (event.keyCode === 73) {
           console.log("I");
-          wr(this, "I");
+          wr(th, "I");
         }
         else if (event.keyCode === 74) {
           console.log("J");
-          wr(this, "J");
+          wr(th, "J");
         }
         else if (event.keyCode === 75) {
           console.log("K");
-          wr(this, "K");
+          wr(th, "K");
         }
         else if (event.keyCode === 76) {
           console.log("L");
-          wr(this, "L");
+          wr(th, "L");
         }
         else if (event.keyCode === 77) {
           console.log("M");
-          wr(this, "M");
+          wr(th, "M");
         }
         else if (event.keyCode === 78) {
           console.log("N");
-          wr(this, "N");
+          wr(th, "N");
         }
         else if (event.keyCode === 79) {
           console.log("O");
-          wr(this, "O");
+          wr(th, "O");
         }
         else if (event.keyCode === 80) {
           console.log("P");
-          wr(this, "P");
+          wr(th, "P");
         }
         else if (event.keyCode === 81) {
           console.log("Q");
-          wr(this, "Q");
+          wr(th, "Q");
         }
         else if (event.keyCode === 82) {
           console.log("R");
-          wr(this, "R");
+          wr(th, "R");
         }
         else if (event.keyCode === 83) {
           console.log("S");
-          wr(this, "S");
+          wr(th, "S");
         }
         else if (event.keyCode === 84) {
           console.log("T");
-          wr(this, "T");
+          wr(th, "T");
         }
         else if (event.keyCode === 85) {
           console.log("U");
-          wr(this, "U");
+          wr(th, "U");
         }
         else if (event.keyCode === 86) {
           console.log("V");
-          wr(this, "V");
+          wr(th, "V");
         }
         else if (event.keyCode === 87) {
           console.log("W");
-          wr(this, "W");
+          wr(th, "W");
         }
         else if (event.keyCode === 88) {
           console.log("X");
-          wr(this, "X");
+          wr(th, "X");
         }
         else if (event.keyCode === 89) {
           console.log("Y");
-          wr(this, "Y");
+          wr(th, "Y");
         }
         else if (event.keyCode === 90) {
           console.log("Z");
-          wr(this, "Z");
+          wr(th, "Z");
         }
         else if (event.keyCode === 8) {
           console.log("DELETE");
-          wr(this, "DELETE");
+          wr(th, "DELETE");
         }
       });
     }
