@@ -33,7 +33,7 @@ var Guest = new Phaser.Class({
         if(st == 'DELETE'){
           if(wr.length > 0){
             wr = wr.slice(0, -1);
-            text.setText('ID: ' = wr);
+            text.setText('ID: ' + wr);
           }
         }
         else{
