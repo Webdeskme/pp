@@ -44,8 +44,8 @@ var Guest = new Phaser.Class({
           th.scene.start('p1');
         }
       }
-      var back = this.add.image(512, 320, 'back');
-      var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
+      var back1 = this.add.image(512, 320, 'back1');
+      var bac = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
       wri = '';
       var fonts = 100;
       var fonty1 = 250;
