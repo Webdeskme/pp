@@ -40,7 +40,7 @@ var Guest = new Phaser.Class({
           wri += st;
           text.setText('ID: ' + wri);
         }
-        if(wri.length = 8){
+        if(wri.length == 8){
           th.scene.start('p1');
         }
       }
@@ -340,8 +340,8 @@ var P1 = new Phaser.Class({
         }
       }, 30000);*/
       this.socket.emit('guest', wri);
-      this.socket.on('bad', function (emo) {
-        this.scene.start('guest');
+      this.socket.on('bad', function () {
+        th.scene.start('guest');
       });
       this.socket.on('emo', function (emo) {
         if(emo == "happy"){
