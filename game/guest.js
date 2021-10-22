@@ -26,10 +26,10 @@ var Guest = new Phaser.Class({
       function down(th, c){
         c.on('pointerdown',function(pointer){
           console.log(c["_text"]);
-          wr(c["_text"]);
+          wr(th, c["_text"]);
         });
       }
-      function wr(st){
+      function wr(th, st){
         if(st == 'DELETE'){
           if(wri.length > 0){
             wri = wri.slice(0, -1);
@@ -41,7 +41,7 @@ var Guest = new Phaser.Class({
           text.setText('ID: ' + wri);
         }
         if(wri.length = 8){
-          this.scene.start('p1');
+          th.scene.start('p1');
         }
       }
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
@@ -144,111 +144,111 @@ var Guest = new Phaser.Class({
       this.input.keyboard.on('keyup', function (event) {
         if(event.keyCode === 65){
           console.log("A");
-          wr("A");
+          wr(this, "A");
         }
         else if (event.keyCode === 66) {
           console.log("B");
-          wr("B");
+          wr(this, "B");
         }
         else if (event.keyCode === 67) {
           console.log("C");
-          wr("C");
+          wr(this, "C");
         }
         else if (event.keyCode === 68) {
           console.log("D");
-          wr("D");
+          wr(this, "D");
         }
         else if (event.keyCode === 69) {
           console.log("E");
-          wr("E");
+          wr(this, "E");
         }
         else if (event.keyCode === 70) {
           console.log("F");
-          wr("F");
+          wr(this, "F");
         }
         else if (event.keyCode === 71) {
           console.log("G");
-          wr("G");
+          wr(this, "G");
         }
         else if (event.keyCode === 72) {
           console.log("H");
-          wr("H");
+          wr(this, "H");
         }
         else if (event.keyCode === 73) {
           console.log("I");
-          wr("I");
+          wr(this, "I");
         }
         else if (event.keyCode === 74) {
           console.log("J");
-          wr("J");
+          wr(this, "J");
         }
         else if (event.keyCode === 75) {
           console.log("K");
-          wr("K");
+          wr(this, "K");
         }
         else if (event.keyCode === 76) {
           console.log("L");
-          wr("L");
+          wr(this, "L");
         }
         else if (event.keyCode === 77) {
           console.log("M");
-          wr("M");
+          wr(this, "M");
         }
         else if (event.keyCode === 78) {
           console.log("N");
-          wr("N");
+          wr(this, "N");
         }
         else if (event.keyCode === 79) {
           console.log("O");
-          wr("O");
+          wr(this, "O");
         }
         else if (event.keyCode === 80) {
           console.log("P");
-          wr("P");
+          wr(this, "P");
         }
         else if (event.keyCode === 81) {
           console.log("Q");
-          wr("Q");
+          wr(this, "Q");
         }
         else if (event.keyCode === 82) {
           console.log("R");
-          wr("R");
+          wr(this, "R");
         }
         else if (event.keyCode === 83) {
           console.log("S");
-          wr("S");
+          wr(this, "S");
         }
         else if (event.keyCode === 84) {
           console.log("T");
-          wr("T");
+          wr(this, "T");
         }
         else if (event.keyCode === 85) {
           console.log("U");
-          wr("U");
+          wr(this, "U");
         }
         else if (event.keyCode === 86) {
           console.log("V");
-          wr("V");
+          wr(this, "V");
         }
         else if (event.keyCode === 87) {
           console.log("W");
-          wr("W");
+          wr(this, "W");
         }
         else if (event.keyCode === 88) {
           console.log("X");
-          wr("X");
+          wr(this, "X");
         }
         else if (event.keyCode === 89) {
           console.log("Y");
-          wr("Y");
+          wr(this, "Y");
         }
         else if (event.keyCode === 90) {
           console.log("Z");
-          wr("Z");
+          wr(this, "Z");
         }
         else if (event.keyCode === 8) {
           console.log("DELETE");
-          wr("DELETE");
+          wr(this, "DELETE");
         }
       });
     }
