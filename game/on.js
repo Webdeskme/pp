@@ -80,10 +80,10 @@ var P1 = new Phaser.Class({
         if(aww == "Yes"){
           this.socket.emit('timed');
           this.game.sound.stopAll();
-          //this.scene.start('alice');
           window.location.href = "vscomph.html";
         }
       }, 30000);
+      this.emit('online');
       this.socket.on('emo', function (emo) {
         if(emo == "happy"){
           heb.visible = true;
@@ -95,7 +95,6 @@ var P1 = new Phaser.Class({
           seb.visible = true;
         }
         setTimeout(() => {
-            //th.sound.add(zz).play();
             if(emo == "happy"){
               heb.visible = false;
             }
@@ -194,7 +193,6 @@ var P1 = new Phaser.Class({
           cards = cardss;
           console.log('step2');
           console.log(cards);
-          //start(th, cards, p);
           hand = 4;
           if(player == pl){
             if(typeof cc != 'undefined'){
@@ -212,19 +210,12 @@ var P1 = new Phaser.Class({
           hove(cc, th, "COM" + 'big');
           select(cc, th, "COM");
         }
-          //ma = ["ENGINES", "ENGINES2"];
-          //shuffle(ma);
         if(mis1[1] == 'yes'){
           ce = th.add.image(375, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
           hove(ce, th, "ENGINES" + 'big');
           select(ce, th, "ENGINES");
         }
-          //ma = ["PORT", "PORT2"];
-          //shuffle(ma);
           por = "PORT";
-          /*if(ma[0] == "PORT2"){
-            por = "PORT2";
-          }*/
         if(mis1[2] == 'yes'){
           cp = th.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
           hove(cp, th, "PORT" + 'big');
@@ -237,19 +228,12 @@ var P1 = new Phaser.Class({
             hove(cc, th, "COM" + 'big');
             select(cc, th, "COM");
           }
-            //ma = ["ENGINES", "ENGINES2"];
-            //shuffle(ma);
           if(mis2[1] == 'yes'){
             ce = th.add.image(375, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
             hove(ce, th, "ENGINES" + 'big');
             select(ce, th, "ENGINES");
           }
-            //ma = ["PORT", "PORT2"];
-            //shuffle(ma);
             por = "PORT";
-            /*if(ma[0] == "PORT2"){
-              por = "PORT2";
-            }*/
           if(mis2[2] == 'yes'){
             cp = th.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
             hove(cp, th, "PORT" + 'big');
@@ -276,36 +260,6 @@ var P1 = new Phaser.Class({
           c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
           hove(c0, th, cards[0] + 'big');
           select(c0, th, cards[0]);
-          /*var z = hand - 1;
-          /*if (typeof p[z] == 'undefined') {
-            shuffle(pdis);
-            p = p.concat(pdis);
-            pdis = [];
-          }
-          function draw(start, num){
-            var y = 0;
-            for (var i = start; i < num; i++) {
-              /*if(typeof p[i] == "undefined"){
-                shuffle(pdis);
-                p = p.concat(pdis);
-                pdis = [];
-              }
-              if(p[i] == "Browser" || p[i] == "Driver" || p[i] == "CloudStorage" || p[i] == "IMDS" || p[i] == "User" || p[i] == "FakeInstaller" || p[i] == "OfficeMacro" || p[i] == "Sysmon" || p[i] == "DPAT" || p[i] == "Endpoint" || p[i] == "Sinkhole" || p[i] == "IAM" || p[i] == "MFAB"){
-                hand += 1;
-                y += 1;
-              }
-            }
-            if(y > 0){
-              draw(num, hand);
-            }
-          }
-          draw(0,4);
-          z = hand - 1;
-          if (typeof p[z] == 'undefined') {
-            shuffle(pdis);
-            p = p.concat(pdis);
-            pdis = [];
-          }*/
           var z = hand - 1;
           if (typeof p[z] == 'undefined') {
             shuffle(pdis);
@@ -483,7 +437,6 @@ var P1 = new Phaser.Class({
           else{
             th.socket.emit('next', cards, p, health, mis2);
           }
-          //th.socket.emit('p', p);
         }
         });
         th.socket.on('aq', function (cards, p, mis, l) {
@@ -830,17 +783,6 @@ var P1 = new Phaser.Class({
             else if(c5["texture"]["key"] == si5){
               c5.setTint(0xff0000);
             }
-            /*if(si5 == "COM" || si5 == "ENGINES" || si5 == "PORT" || si5 == "Guns" || si5 == "COM2" || si5 == "ENGINES2" || si5 == "PORT2"){
-              c.setTint(0xff0000);
-            }
-            else{
-              if(checkScore == "yes"){
-                c.setTint(0x0000ff);
-              }
-              else{
-                c.setTint(0xff0000);
-              }
-            }*/
           }
         });
       });
@@ -1285,8 +1227,6 @@ var P1 = new Phaser.Class({
                 }
               }
               if( aquire == "yes"){
-                //aq += 1;
-                //th.socket.emit('aq', temp2, temp);
                 aq += 1;
                 if(por == "PORT2"){
                   if(aq > 2){
@@ -1296,18 +1236,6 @@ var P1 = new Phaser.Class({
                     por = "no";
                     if(game > 2){
                       th.sound.add('mwin').play();
-                      /*if(localStorage.getItem(localStorageName) == null) {
-                          highScore = 40;
-                      } else {
-                          highScore = localStorage.getItem(localStorageName);
-                      }
-                      if(score < highScore){
-                        localStorage.setItem(localStorageName, score);
-                      }
-                      localStorage.setItem(localStorageTemp, score);
-                      localStorage.setItem(localStoragePlayer, player);*/
-                        //th.socket.emit('end', 'lose');
-                        //window.location.href = "win.html";
                     }
                   }
                 }
@@ -1417,18 +1345,6 @@ var P1 = new Phaser.Class({
                   game += 1;
                   if(game > 2){
                       th.sound.add('mwin').play();
-                      /*if(localStorage.getItem(localStorageName) == null) {
-                          highScore = 40;
-                      } else {
-                          highScore = localStorage.getItem(localStorageName);
-                      }
-                      if(score < highScore){
-                        localStorage.setItem(localStorageName, score);
-                      }
-                      localStorage.setItem(localStorageTemp, score);
-                      localStorage.setItem(localStoragePlayer, player);*/
-                      //th.socket.emit('end', 'lose');
-                      //window.location.href = "win.html";
                   }
                   if(temp2 == "COM"){
                     th.sound.add('comp').play();
@@ -1479,7 +1395,6 @@ var P1 = new Phaser.Class({
                     th.sound.add('comp').play();
                     cp.destroy();
                   }
-                  //add
                   if(player == 1){
                     if(mis1[0] == "NO" && mis1[1] == "NO" && mis1[2] == "NO"){
                       th.sound.add('mwin').play();
@@ -1708,64 +1623,7 @@ var P1 = new Phaser.Class({
               }, 1000);
             }
           });
-        //  return skill;
-        //  return coin;
         }
-        /*else{
-          th.socket.on('bsel', function (si6) {
-            if(typeof p0 !== 'undefined' && p0['x'] == si6){
-              p0.setTint(0x00ff00);
-            }
-            else if(typeof p1 !== 'undefined' && p1['x'] == si6){
-              p1.setTint(0x00ff00);
-            }
-            else if(typeof p2 !== 'undefined' && p2['x'] == si6){
-              p2.setTint(0x00ff00);
-            }
-            else if(typeof p3 !== 'undefined' && p3['x'] == si6){
-                p3.setTint(0x00ff00);
-            }
-            else if(typeof p4 !== 'undefined' && p4['x'] == si6){
-              p4.setTint(0x00ff00);
-            }
-            else if(typeof p5 !== 'undefined' && p5['x'] == si6){
-              p5.setTint(0x00ff00);
-            }
-            else if(typeof p6 !== 'undefined' && p6['x'] == si6){
-              p6.setTint(0x00ff00);
-            }
-            else if(typeof p7 !== 'undefined' && p7['x'] == si6){
-              p7.setTint(0x00ff00);
-            }
-            else if(typeof p8 !== 'undefined' && p8['x'] == si6){
-              p8.setTint(0x00ff00);
-            }
-            else if(typeof p9 !== 'undefined' && p9['x'] == si6){
-              p9.setTint(0x00ff00);
-            }
-            else if(typeof p10 !== 'undefined' && p10['x'] == si6){
-              p10.setTint(0x00ff00);
-            }
-            else if(typeof p11 !== 'undefined' && p11['x'] == si6){
-              p11.setTint(0x00ff00);
-            }
-            else if(typeof p12 !== 'undefined' && p12['x'] == si6){
-              p12.setTint(0x00ff00);
-            }
-            else if(typeof p13 !== 'undefined' && p13['x'] == si6){
-              p13.setTint(0x00ff00);
-            }
-            else if(typeof p14 !== 'undefined' && p14['x'] == si6){
-              p14.setTint(0x00ff00);
-            }
-            else if(typeof p15 !== 'undefined' && p15['x'] == si6){
-              p15.setTint(0x00ff00);
-            }
-            else if(typeof p16 !== 'undefined' && p16['x'] == si6){
-              p16.setTint(0x00ff00);
-            }
-          });
-        }*/
       }
       var red = "no";
       var reds = "";
@@ -2025,138 +1883,6 @@ var P1 = new Phaser.Class({
             }
           });
         }
-        /*else{
-          th.socket.on('sel', function (si5) {
-            if(reds == si5){
-              c.clearTint();
-              reds = "";
-              red = "no";
-            }
-            else if(si5 != "EMP"){
-              red = "yes";
-              reds = si5;
-              if (typeof cc !== 'undefined') {
-                cc.clearTint();
-              }
-              if (typeof ce !== 'undefined') {
-                ce.clearTint();
-              }
-              if (typeof cp !== 'undefined') {
-                cp.clearTint();
-              }
-              if (typeof cg !== 'undefined') {
-                cg.clearTint();
-              }
-              if (typeof c0 !== 'undefined') {
-                c0.clearTint();
-              }
-              if (typeof c1 !== 'undefined') {
-                c1.clearTint();
-              }
-              if (typeof c2 !== 'undefined') {
-                c2.clearTint();
-              }
-              if (typeof c3 !== 'undefined') {
-                c3.clearTint();
-              }
-              if (typeof c4 !== 'undefined') {
-                c4.clearTint();
-              }
-              if (typeof c5 !== 'undefined') {
-                c5.clearTint();
-              }
-              if (typeof p0 !== 'undefined') {
-                p0.clearTint();
-              }
-              if (typeof p1 !== 'undefined') {
-                p1.clearTint();
-              }
-              if (typeof p2 !== 'undefined') {
-                p2.clearTint();
-              }
-              if (typeof p3 !== 'undefined') {
-                p3.clearTint();
-              }
-              if (typeof p4 !== 'undefined') {
-                p4.clearTint();
-              }
-              if (typeof p5 !== 'undefined') {
-                p5.clearTint();
-              }
-              if (typeof p6 !== 'undefined') {
-                p6.clearTint();
-              }
-              if (typeof p7 !== 'undefined') {
-                p7.clearTint();
-              }
-              if (typeof p8 !== 'undefined') {
-                p8.clearTint();
-              }
-              if (typeof p9 !== 'undefined') {
-                p9.clearTint();
-              }
-              if (typeof p10 !== 'undefined') {
-                p10.clearTint();
-              }
-              if (typeof p11 !== 'undefined') {
-                p11.clearTint();
-              }
-              if (typeof p12 !== 'undefined') {
-                p12.clearTint();
-              }
-              if (typeof p13 !== 'undefined') {
-                p13.clearTint();
-              }
-              if (typeof p14 !== 'undefined') {
-                p14.clearTint();
-              }
-              if (typeof p15 !== 'undefined') {
-                p15.clearTint();
-              }
-              if (typeof p16 !== 'undefined') {
-                p16.clearTint();
-              }
-              if(cc["texture"]["key"] == si5){
-                cc.setTint(0xff0000);
-              }
-              else if(ce["texture"]["key"] == si5){
-                ce.setTint(0xff0000);
-              }
-              else if(cp["texture"]["key"] == si5){
-                cp.setTint(0xff0000);
-              }
-              else if(c0["texture"]["key"] == si5){
-                c0.setTint(0xff0000);
-              }
-              else if(c1["texture"]["key"] == si5){
-                c1.setTint(0xff0000);
-              }
-              else if(c2["texture"]["key"] == si5){
-                c2.setTint(0xff0000);
-              }
-              else if(c3["texture"]["key"] == si5){
-                c3.setTint(0xff0000);
-              }
-              else if(c4["texture"]["key"] == si5){
-                c4.setTint(0xff0000);
-              }
-              else if(c5["texture"]["key"] == si5){
-                c5.setTint(0xff0000);
-              }
-              /*if(si5 == "COM" || si5 == "ENGINES" || si5 == "PORT" || si5 == "Guns" || si5 == "COM2" || si5 == "ENGINES2" || si5 == "PORT2"){
-                c.setTint(0xff0000);
-              }
-              else{
-                if(checkScore == "yes"){
-                  c.setTint(0x0000ff);
-                }
-                else{
-                  c.setTint(0xff0000);
-                }
-              }
-            }
-          });
-        }*/
       }
       function start(th, cards, p){
         console.log('step5');
@@ -2179,10 +1905,6 @@ var P1 = new Phaser.Class({
         c0 = th.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
         hove(c0, th, cards[0] + 'big');
         select(c0, th, cards[0]);
-        //var ma = ["COM", "COM2"];
-        //shuffle(ma);
-        //if(inn == 1){
-          //inn = 2
           if(typeof cc != 'undefined'){
             cc.destroy();
           }
@@ -2198,19 +1920,12 @@ var P1 = new Phaser.Class({
         hove(cc, th, "COM" + 'big');
         select(cc, th, "COM");
       }
-        //ma = ["ENGINES", "ENGINES2"];
-        //shuffle(ma);
       if(mis1[1] == 'yes'){
         ce = th.add.image(375, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
         hove(ce, th, "ENGINES" + 'big');
         select(ce, th, "ENGINES");
       }
-        //ma = ["PORT", "PORT2"];
-        //shuffle(ma);
         por = "PORT";
-        /*if(ma[0] == "PORT2"){
-          por = "PORT2";
-        }*/
       if(mis1[2] == 'yes'){
         cp = th.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
         hove(cp, th, "PORT" + 'big');
@@ -2223,96 +1938,23 @@ var P1 = new Phaser.Class({
           hove(cc, th, "COM" + 'big');
           select(cc, th, "COM");
         }
-          //ma = ["ENGINES", "ENGINES2"];
-          //shuffle(ma);
         if(mis2[1] == 'yes'){
           ce = th.add.image(375, 250, "ENGINES").setInteractive({ useHandCursor: true  } );
           hove(ce, th, "ENGINES" + 'big');
           select(ce, th, "ENGINES");
         }
-          //ma = ["PORT", "PORT2"];
-          //shuffle(ma);
           por = "PORT";
-          /*if(ma[0] == "PORT2"){
-            por = "PORT2";
-          }*/
         if(mis2[2] == 'yes'){
           cp = th.add.image(500, 250, "PORT").setInteractive({ useHandCursor: true  } );
           hove(cp, th, "PORT" + 'big');
           select(cp, th, "PORT");
         }
       }
-        /*if(player == 1){
-          if(mis1[0] == "yes"){
-            cc.visible = true;
-          }
-          else{
-            cc.visible = false;
-          }
-          if(mis1[1] == "yes"){
-            ce.visible = true;
-          }
-          else{
-            ce.visible = false;
-          }
-          if(mis1[2] == "yes"){
-            cp.visible = true;
-          }
-          else{
-            cp.visible = false;
-          }
-        }
-        else{
-          if(mis2[0] == "yes"){
-            cc.visible = true;
-          }
-          else{
-            cc.visible = false;
-          }
-          if(mis2[1] == "yes"){
-            ce.visible = true;
-          }
-          else{
-            ce.visible = false;
-          }
-          if(mis2[2] == "yes"){
-            cp.visible = true;
-          }
-          else{
-            cp.visible = false;
-          }
-        }
-      }*/
-        /*cg = th.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
-        hove(cg, th, 'Guns' + 'big');
-        select(cg, th, 'Guns');*/
-        /*p0 = th.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
-        hove(p0, th, p[0] + 'big');
-        bselect(p0, th, p[0]);
-        p1 = th.add.image(375, 550, p[1]).setInteractive({ useHandCursor: true  } );
-        hove(p1, th, p[1] + 'big');
-        bselect(p1, th, p[1]);
-        p2 = th.add.image(500, 550, p[2]).setInteractive({ useHandCursor: true  } );
-        hove(p2, th, p[2] + 'big');
-        bselect(p2, th, p[2]);
-        p3 = th.add.image(625, 550, p[3]).setInteractive({ useHandCursor: true  } );
-        hove(p3, th, p[3] + 'big');
-        bselect(p3, th, p[3]);*/
         hand = 4;
         var z = hand - 1;
-        /*if (typeof p[z] == 'undefined') {
-          shuffle(pdis);
-          p = p.concat(pdis);
-          pdis = [];
-        }*/
         function draw(start, num){
           var y = 0;
           for (var i = start; i < num; i++) {
-            /*if(typeof p[i] == "undefined"){
-              shuffle(pdis);
-              p = p.concat(pdis);
-              pdis = [];
-            }*/
             if(p[i] == "Browser" || p[i] == "Driver" || p[i] == "CloudStorage" || p[i] == "IMDS" || p[i] == "User" || p[i] == "FakeInstaller" || p[i] == "OfficeMacro" || p[i] == "Sysmon" || p[i] == "DPAT" || p[i] == "Endpoint" || p[i] == "Sinkhole" || p[i] == "IAM" || p[i] == "MFAB"){
               hand += 1;
               y += 1;
@@ -2472,12 +2114,10 @@ var P1 = new Phaser.Class({
       // functions //
       function emo(cemo, emo, type){
         cemo.on('pointerdown',function(pointer){
-          //emo.visible = true;
+          th.sound.add('click').play();
           cemo.setTint(0x00ff00);
           th.socket.emit('emo', type);
           setTimeout(() => {
-              //th.sound.add(zz).play();
-              //emo.visible = false;
               cemo.clearTint();
           }, 3000);
         });
@@ -2491,7 +2131,6 @@ var P1 = new Phaser.Class({
             array[currentIndex] = array[randomIndex];
             array[randomIndex] = temporaryValue;
           }
-
           return array;
           }
       function hove(c, th, im){
@@ -2621,20 +2260,7 @@ var P1 = new Phaser.Class({
       cb = this.add.image(125, 400, 'cb').setInteractive({ useHandCursor: true  } );
       hove(cb, this, 'cb');
       var tend = this.add.image(90, 200, 'END').setInteractive({ useHandCursor: true  } );
-      //var tscore = this.add.image(825, 200, 'SCORE').setInteractive({ useHandCursor: true  } );
       tend.setScale(1/3);
-      /*tscore.setScale(1/3);
-      tscore.on('pointerdown', () => {
-        this.sound.add('click').play();
-        if(checkScore == "yes"){
-          checkScore = "no";
-        }
-        else{
-          checkScore = "yes";
-        }
-      });*/
-
-      // tend
       tend.on('pointerdown', () => {
         if(pl == player){
         this.sound.add('mend').play();
@@ -2810,15 +2436,11 @@ var P1 = new Phaser.Class({
           health -= 1;
         }
         if(health < 1){
-          //localStorage.setItem(localStoragePlayer, player);
             this.sound.add('mlose').play();
             this.game.sound.stopAll();
             th.socket.emit('end', 'win');
             window.location.href = "lose.html";
         }
-        /*cc.visible = false;
-        ce.visible = false;
-        cp.visible = false;*/
         if(player == 1){
           player1 = p;
           p = player2;
@@ -2830,24 +2452,6 @@ var P1 = new Phaser.Class({
           game = game2;
           player = 2;
           playerText.setText('Player: 2');
-          /*if(mis2[0] == "yes"){
-            cc.visible = true;
-          }
-          else{
-            cc.visible = false;
-          }
-          if(mis2[1] == "yes"){
-            ce.visible = true;
-          }
-          else{
-            ce.visible = false;
-          }
-          if(mis2[2] == "yes"){
-            cp.visible = true;
-          }
-          else{
-            cp.visible = false;
-          }*/
         }
         else {
           player2 = p;
@@ -2860,24 +2464,6 @@ var P1 = new Phaser.Class({
           game = game1;
           player = 1;
           playerText.setText('Player: 1');
-          /*if(mis1[0] == "yes"){
-            cc.visible = true;
-          }
-          else{
-            cc.visible = false;
-          }
-          if(mis1[1] == "yes"){
-            ce.visible = true;
-          }
-          else{
-            ce.visible = false;
-          }
-          if(mis1[2] == "yes"){
-            cp.visible = true;
-          }
-          else{
-            cp.visible = false;
-          }*/
         }
         healthText.setText('Health:' + health);
         var t = cards.indexOf(c0["texture"]["key"]);
@@ -3032,7 +2618,6 @@ var P1 = new Phaser.Class({
         th.socket.emit('tend', cards, dis);
       }
       });
-
   },
   update() {}
 });
