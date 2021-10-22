@@ -83,7 +83,7 @@ var P1 = new Phaser.Class({
           window.location.href = "vscomph.html";
         }
       }, 30000);
-      this.emit('online');
+      this.socket.emit('online');
       this.socket.on('emo', function (emo) {
         if(emo == "happy"){
           heb.visible = true;
