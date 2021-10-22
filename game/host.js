@@ -2207,7 +2207,7 @@ var P1 = new Phaser.Class({
       var r = this.add.bitmapText(800, 15, 'topaz', 'Rules', 32);
       //bill
       this.socket.on('host', function (mid) {
-        playerText.setText('code: ' + mid);
+        playerText.setText('ID: ' + mid);
         console.log(mid);
       });
       mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
