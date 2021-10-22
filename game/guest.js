@@ -26,20 +26,23 @@ var Guest = new Phaser.Class({
       function down(th, c){
         c.on('pointerdown',function(pointer){
           console.log(c["_text"]);
-            if(c["_text"] == 'DELETE'){
-              if(wr.length > 0){
-                wr = wr.slice(0, -1);
-                text.setText('ID: ' + wr);
-              }
-            }
-            else{
-              wr += c["_text"];
-              text.setText('ID: ' + wr);
-            }
+          wr(c["_text"]);
         });
       }
+      function wr(st){
+        if(st == 'DELETE'){
+          if(wri.length > 0){
+            wri = wri.slice(0, -1);
+            text.setText('ID: ' + wri);
+          }
+        }
+        else{
+          wr += st;
+          text.setText('ID: ' + wr);
+        }
+      }
       var back = this.add.bitmapText(10, 10, 'topaz', 'Back', 48);
-      wr = '';
+      wri = '';
       var fonts = 100;
       var fonty1 = 250;
       var fonty2 = 350;
@@ -136,18 +139,6 @@ var Guest = new Phaser.Class({
       tin(ldelete);
       down(this, ldelete);
       this.input.keyboard.on('keyup', function (event) {
-        function wr(st){
-          if(st == 'DELETE'){
-            if(wr.length > 0){
-              wr = wr.slice(0, -1);
-              text.setText('ID: ' + wr);
-            }
-          }
-          else{
-            wr += st;
-            text.setText('ID: ' + wr);
-          }
-        }
         if(event.keyCode === 65){
           console.log("A");
           wr("A");
