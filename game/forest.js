@@ -44,6 +44,7 @@ var P1 = new Phaser.Class({
       sans.setScale(1/2);
       sans.enableBody = true;
       sans.body.immovable = true;
+      sans.setCollideWorldBounds(true);
       player = this.physics.add.sprite(25, 550, 'idle');
       player.enableBody = true;
       player.setBounce(0.2);
