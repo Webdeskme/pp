@@ -336,7 +336,7 @@ else if (!s)
 
     //  Add our planets, etc
     this.add.image(512, 680, 'space', 'blue-planet').setOrigin(0).setScrollFactor(0.6);
-    brown = this.physics.add.image(2833, 1246, 'space', 'brown-planet').setOrigin(0).setScrollFactor(0.6).setDepth(2);
+    brown = this.physics.add.sprite(2833, 1246, 'space', 'brown-planet').setOrigin(0).setScrollFactor(0.6);
     this.add.image(3875, 531, 'space', 'sun').setOrigin(0).setScrollFactor(0.6);
     var galaxy = this.add.image(5345 + 1024, 327 + 1024, 'space', 'galaxy').setBlendMode(1).setScrollFactor(0.6);
     this.add.image(908, 3922, 'space', 'gas-giant').setOrigin(0).setScrollFactor(0.6);
@@ -405,7 +405,7 @@ healthGroup = this.physics.add.staticGroup({
         runChildUpdate: true
     });
 
-    ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
+    ship = this.physics.add.sprite(7000, 3000, 'space', 'ship').setDepth(2);
 
     //ship.setInteractive({ draggable: true , useHandCursor: true } )
     //this.input.setDraggable(ship);
