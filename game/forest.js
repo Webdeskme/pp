@@ -14,9 +14,9 @@ var P1 = new Phaser.Class({
         this.load.image('back4', 'assets/backgrounds/parallax-forest-front-trees.png');
         this.load.image('back1', 'assets/backgrounds/parallax-forest-back-trees.png');
         this.load.image('sans', 'assets/player/bldg.png');
-        this.load.spritesheet('walk', 'assets/player/shq_trooper_run_strip6.png', { frameWidth: 32, frameHeight: 48 });
-        this.load.spritesheet('idle', 'assets/player/shq_trooper_idle_strip2.png', { frameWidth: 32, frameHeight: 48 });
-        this.load.spritesheet('jump', 'assets/player/shq_trooper_jump_strip4.png', { frameWidth: 32, frameHeight: 48 });
+        this.load.spritesheet('walk', 'assets/player/shq_trooper_run_strip6.png', { frameWidth: 48, frameHeight: 72 });
+        this.load.spritesheet('idle', 'assets/player/shq_trooper_idle_strip2.png', { frameWidth: 48, frameHeight: 72 });
+        this.load.spritesheet('jump', 'assets/player/shq_trooper_jump_strip4.png', { frameWidth: 48, frameHeight: 72 });
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
@@ -27,11 +27,16 @@ var P1 = new Phaser.Class({
   {
       //star.disableBody(true, true);
   }
-      this.add.image(512, 320, 'back1');
-      this.add.image(512, 320, 'back2');
-      this.add.image(512, 320, 'back3');
-      this.add.image(512, 320, 'back4');
+      back1 = this.add.image(512, 320, 'back1');
+      back1.setScale(5);
+      back2 = this.add.image(512, 320, 'back2');
+      back2.setScale(5);
+      back3 = this.add.image(512, 320, 'back3');
+      back3.setScale(5);
+      back4 = this.add.image(512, 320, 'back4');
+      back4.setScale(5);
       sans  = this.add.image(1000, 600, 'sans');
+      sans.setScale(1/3);
       player = this.physics.add.sprite(25, 600, 'idle');
       player.setBounce(0.2);
       player.setCollideWorldBounds(true);
