@@ -31,6 +31,7 @@ var P1 = new Phaser.Class({
           window.location.href = "game.html";
       }, 5000);
   }
+  left = "no";
       mu = this.sound.add('music');
         mu.loop = true;
         mu.play();
@@ -83,22 +84,30 @@ var P1 = new Phaser.Class({
         player.setVelocityX(-160);
 
         player.anims.play('walk', true);
-        player.flipX = true;
-    }
-    if (cursors.left.isUp){
-      player.flipX = true;
+        if(left == "no"){
+          player.flipX = true;
+          left = "yes";
+        }
     }
     else if (cursors.right.isDown)
     {
         player.setVelocityX(160);
 
         player.anims.play('walk', true);
+        if(left == "yes"){
+          player.flipX = true;
+          left = "no";
+        }
     }
     else
     {
         player.setVelocityX(0);
 
         player.anims.play('idle');
+        if(left == "yes"){
+          player.flipX = true;
+          left = "no";
+        }
     }
 
     //if (cursors.up.isDown && player.body.touching.down)
