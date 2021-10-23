@@ -25,8 +25,11 @@ var P1 = new Phaser.Class({
     {
       function collectStar (player, sans)
   {
+      text.setText('Sorry, but the SANS institute is on a different planet!')
       console.log('here');
-      window.location.href = "game.html";
+      setTimeout(() => {
+          window.location.href = "game.html";
+      }, 5000);
   }
       mu = this.sound.add('music');
         mu.loop = true;
@@ -49,6 +52,7 @@ var P1 = new Phaser.Class({
       player.enableBody = true;
       player.setBounce(0.2);
       player.setCollideWorldBounds(true);
+      var text = this.add.bitmapText(250, 30, 'topaz', 'Did I finally find the SANS institute?', 48);
       this.anims.create({
         key: 'walk',
         frames: this.anims.generateFrameNumbers('walk', { start: 0, end: 5 }),
