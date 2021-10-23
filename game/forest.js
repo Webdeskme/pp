@@ -37,7 +37,7 @@ var P1 = new Phaser.Class({
       back4.setScale(5);
       sans  = this.add.image(1000, 600, 'sans');
       sans.setScale(1/3);
-      player = this.physics.add.sprite(25, 600, 'idle');
+      player = this.physics.add.sprite(25, 550, 'idle');
       player.setBounce(0.2);
       player.setCollideWorldBounds(true);
       this.anims.create({
