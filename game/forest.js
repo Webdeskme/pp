@@ -84,7 +84,8 @@ var P1 = new Phaser.Class({
         player.anims.play('idle');
     }
 
-    if (cursors.up.isDown && player.body.touching.down)
+    //if (cursors.up.isDown && player.body.touching.down)
+    if (cursors.up.isDown)
     {
         player.setVelocityY(-330);
 
