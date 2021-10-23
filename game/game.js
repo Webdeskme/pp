@@ -406,7 +406,7 @@ healthGroup = this.physics.add.staticGroup({
         runChildUpdate: true
     });
 
-    ship = this.physics.add.sprite(7000, 3000, 'space', 'ship').setDepth(2);
+    ship = this.physics.add.sprite(7000, 3000, 'space', 'ship');
     ship.enableBody = true;
     //ship.setInteractive({ draggable: true , useHandCursor: true } )
     //this.input.setDraggable(ship);
