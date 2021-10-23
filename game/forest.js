@@ -96,7 +96,7 @@ var P1 = new Phaser.Class({
 
         player.anims.play('walk', true);
         if(left == "yes"){
-          player.flipX = true;
+          player.flipX = false;
           left = "no";
           console.log(left);
         }
@@ -107,7 +107,7 @@ var P1 = new Phaser.Class({
 
         player.anims.play('idle');
         if(left == "yes"){
-          player.flipX = true;
+          player.flipX = false;
           left = "no";
           console.log(left);
         }
