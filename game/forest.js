@@ -63,7 +63,8 @@ var P1 = new Phaser.Class({
     cursors = this.input.keyboard.createCursorKeys();
     this.physics.add.overlap(player, sans, collectStar, null, this);
     },
-    update() {
+    update: function ()
+    {
       if (cursors.left.isDown)
     {
         player.setVelocityX(-160);
