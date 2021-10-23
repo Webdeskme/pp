@@ -741,8 +741,8 @@ healthGroup = this.physics.add.staticGroup({
     {
         ship.setAngularVelocity(-150);
         mobile = "No";
-        //console.log('x: ' + ship.body.x);
-        //console.log('y: ' + ship.body.y);
+        console.log('x: ' + ship.body.x);
+        console.log('y: ' + ship.body.y);
     }
     else if (cursors.right.isDown)
     {
