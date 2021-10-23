@@ -25,8 +25,12 @@ var P1 = new Phaser.Class({
     {
       function collectStar (player, sans)
   {
-      //star.disableBody(true, true);
+      console.log('here');
+      window.location.href = "game.html";
   }
+      mu = this.sound.add('music');
+        mu.loop = true;
+        mu.play();
       back1 = this.add.image(512, 320, 'back1');
       back1.setScale(4);
       back2 = this.add.image(512, 320, 'back2');
