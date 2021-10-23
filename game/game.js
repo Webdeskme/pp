@@ -737,9 +737,6 @@ healthGroup = this.physics.add.staticGroup({
   },
   update: function (time, delta)
 {
-  if(ship.body.x > 4500 && ship.body.x < 6000 && ship.body.y > 2000 && ship.body < 4000){
-    console.log('land');
-  }
     if (cursors.left.isDown)
     {
         ship.setAngularVelocity(-150);
@@ -769,6 +766,9 @@ healthGroup = this.physics.add.staticGroup({
         }
         else{
           this.physics.velocityFromRotation(ship.rotation, 1, ship.body.acceleration);
+        }
+        if(ship.body.x > 4500 && ship.body.x < 6000 && ship.body.y > 2000 && ship.body < 4000){
+          console.log('land');
         }
     }
 
