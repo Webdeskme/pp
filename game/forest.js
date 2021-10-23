@@ -23,6 +23,10 @@ var P1 = new Phaser.Class({
     },
     create: function ()
     {
+      function collectStar (player, sans)
+  {
+      //star.disableBody(true, true);
+  }
       this.add.image(512, 320, 'back1');
       this.add.image(512, 320, 'back2');
       this.add.image(512, 320, 'back3');
@@ -81,10 +85,6 @@ var P1 = new Phaser.Class({
         player.anims.play('jump');
     }
     }
-    function collectStar (player, sans)
-{
-    //star.disableBody(true, true);
-}
 });
 var config = {
     type: Phaser.AUTO,
