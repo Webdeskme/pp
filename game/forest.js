@@ -14,9 +14,9 @@ var P1 = new Phaser.Class({
         this.load.image('back4', 'assets/backgrounds/parallax-forest-front-trees.png');
         this.load.image('back1', 'assets/backgrounds/parallax-forest-back-trees.png');
         this.load.image('sans', 'assets/player/bldg.png');
-        this.load.spritesheet('walk', 'assets/player/shq_trooper_run_strip6.png', { frameWidth: 48, frameHeight: 72 });
-        this.load.spritesheet('idle', 'assets/player/shq_trooper_idle_strip2.png', { frameWidth: 48, frameHeight: 72 });
-        this.load.spritesheet('jump', 'assets/player/shq_trooper_jump_strip4.png', { frameWidth: 48, frameHeight: 72 });
+        this.load.spritesheet('walk', 'assets/player/shq_trooper_run_strip6.png', { frameWidth: 64, frameHeight: 64 });
+        this.load.spritesheet('idle', 'assets/player/shq_trooper_idle_strip2.png', { frameWidth: 64, frameHeight: 64 });
+        this.load.spritesheet('jump', 'assets/player/shq_trooper_jump_strip4.png', { frameWidth: 64, frameHeight: 64 });
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
