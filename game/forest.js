@@ -28,15 +28,15 @@ var P1 = new Phaser.Class({
       //star.disableBody(true, true);
   }
       back1 = this.add.image(512, 320, 'back1');
-      back1.setScale(4);
+      back1.setScale(3);
       back2 = this.add.image(512, 320, 'back2');
-      back2.setScale(4);
+      back2.setScale(3);
       back3 = this.add.image(512, 320, 'back3');
-      back3.setScale(4);
+      back3.setScale(3);
       back4 = this.add.image(512, 320, 'back4');
-      back4.setScale(4);
+      back4.setScale(3);
       sans  = this.add.image(1000, 600, 'sans');
-      sans.setScale(1/3);
+      sans.setScale(1/2);
       player = this.physics.add.sprite(25, 550, 'idle');
       player.setBounce(0.2);
       player.setCollideWorldBounds(true);
