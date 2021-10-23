@@ -336,7 +336,7 @@ else if (!s)
 
     //  Add our planets, etc
     this.add.image(512, 680, 'space', 'blue-planet').setOrigin(0).setScrollFactor(0.6);
-    brown = this.physics.add.sprite(2833, 1246, 'space', 'brown-planet').setOrigin(0).setScrollFactor(0.6);
+    brown = this.physics.add.sprite(2833, 1246, 'space', 'brown-planet').setOrigin(0).setScrollFactor(0.6).setDepth(2);
     this.add.image(3875, 531, 'space', 'sun').setOrigin(0).setScrollFactor(0.6);
     var galaxy = this.add.image(5345 + 1024, 327 + 1024, 'space', 'galaxy').setBlendMode(1).setScrollFactor(0.6);
     this.add.image(908, 3922, 'space', 'gas-giant').setOrigin(0).setScrollFactor(0.6);
