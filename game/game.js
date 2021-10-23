@@ -208,10 +208,6 @@ var TitleS = new Phaser.Class({
 
     create: function ()
     {
-      function gland(){
-        //window.location.href = "forest.html";
-        console.log('land');
-      }
       function openSANSLink ()
 {
     //var tweet = 'I am testing a button from within a Phaser example';
@@ -732,8 +728,6 @@ healthGroup = this.physics.add.staticGroup({
     });
     this.add.bitmapText(50, 600, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
     var he = 0;
-    //bill
-    //this.physics.add.overlap(ship, brown, gland, null, this);
   },
   update: function (time, delta)
 {
@@ -768,8 +762,19 @@ healthGroup = this.physics.add.staticGroup({
           this.physics.velocityFromRotation(ship.rotation, 1, ship.body.acceleration);
         }
         if(ship.body.x > 4500 && ship.body.x < 6000 && ship.body.y > 2000 && ship.body.y < 4000){
-          //console.log('land');
           window.location.href = "forest.html";
+        }
+        if(ship.body.x > 5000 && ship.body.x < 6200 && ship.body.y > 5000 && ship.body.y < 6100){
+          window.location.href = "djnfber.html";
+        }
+        if(ship.body.x > 1500 && ship.body.x < 3000 && ship.body.y > 6000 && ship.body.y < 8000){
+          window.location.href = "nsrsdhbe.html";
+        }
+        if(ship.body.x > 500 && ship.body.x < 2000 && ship.body.y > 1000 && ship.body.y < 2500){
+          window.location.href = "qncis.html";
+        }
+        if(ship.body.x > 10000 && ship.body.x < 11000 && ship.body.y > 7000 && ship.body.y < 8500){
+          window.location.href = "fopwne.html";
         }
     }
 
