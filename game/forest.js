@@ -70,7 +70,7 @@ var P1 = new Phaser.Class({
     });
 
     cursors = this.input.keyboard.createCursorKeys();
-    this.physics.add.collide(player, sans, collectStar, null, this);
+    this.physics.add.collider(player, sans, collectStar, null, this);
     },
     update: function ()
     {
