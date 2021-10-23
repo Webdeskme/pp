@@ -28,13 +28,13 @@ var P1 = new Phaser.Class({
       //star.disableBody(true, true);
   }
       back1 = this.add.image(512, 320, 'back1');
-      back1.setScale(5);
+      back1.setScale(4);
       back2 = this.add.image(512, 320, 'back2');
-      back2.setScale(5);
+      back2.setScale(4);
       back3 = this.add.image(512, 320, 'back3');
-      back3.setScale(5);
+      back3.setScale(4);
       back4 = this.add.image(512, 320, 'back4');
-      back4.setScale(5);
+      back4.setScale(4);
       sans  = this.add.image(1000, 600, 'sans');
       sans.setScale(1/3);
       player = this.physics.add.sprite(25, 550, 'idle');
@@ -85,7 +85,7 @@ var P1 = new Phaser.Class({
     }
 
     //if (cursors.up.isDown && player.body.touching.down)
-    if (cursors.up.isDown)
+    if (cursors.up.isDown && player.body.blocked.down)
     {
         player.setVelocityY(-330);
 
