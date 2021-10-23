@@ -53,7 +53,7 @@ var P1 = new Phaser.Class({
       player.enableBody = true;
       player.setBounce(0.2);
       player.setCollideWorldBounds(true);
-      var text = this.add.bitmapText(100, 525, 'topaz', 'Did I finally find the SANS institute?', 48);
+      var text = this.add.bitmapText(100, 525, 'topaz', 'Did I finally find the SANS Institute?', 48);
       this.anims.create({
         key: 'walk',
         frames: this.anims.generateFrameNumbers('walk', { start: 0, end: 5 }),
@@ -87,7 +87,7 @@ var P1 = new Phaser.Class({
         if(left == "no"){
           player.flipX = true;
           left = "yes";
-          console.log(left);
+          //console.log(left);
         }
     }
     else if (cursors.right.isDown)
@@ -98,7 +98,7 @@ var P1 = new Phaser.Class({
         if(left == "yes"){
           player.flipX = false;
           left = "no";
-          console.log(left);
+          //console.log(left);
         }
     }
     else
@@ -109,7 +109,7 @@ var P1 = new Phaser.Class({
         if(left == "yes"){
           player.flipX = false;
           left = "no";
-          console.log(left);
+          //console.log(left);
         }
     }
 
