@@ -83,6 +83,7 @@ var P1 = new Phaser.Class({
         player.setVelocityX(-160);
 
         player.anims.play('walk', true);
+        player.flipX = true;
     }
     else if (cursors.right.isDown)
     {
