@@ -52,7 +52,7 @@ var P1 = new Phaser.Class({
       player.enableBody = true;
       player.setBounce(0.2);
       player.setCollideWorldBounds(true);
-      var text = this.add.bitmapText(250, 30, 'topaz', 'Did I finally find the SANS institute?', 48);
+      var text = this.add.bitmapText(100, 550, 'topaz', 'Did I finally find the SANS institute?', 48);
       this.anims.create({
         key: 'walk',
         frames: this.anims.generateFrameNumbers('walk', { start: 0, end: 5 }),
