@@ -39,9 +39,13 @@ var P1 = new Phaser.Class({
       back3.setScale(4);
       back4 = this.add.image(512, 320, 'back4');
       back4.setScale(4);
-      sans  = this.add.image(950, 500, 'sans');
+      //sans  = this.add.image(950, 500, 'sans');
+      sans = this.physics.add.sprite(950, 500, 'sans');
       sans.setScale(1/2);
+      sans.enableBody = true;
+      sans.body.immovable = true;
       player = this.physics.add.sprite(25, 550, 'idle');
+      player.enableBody = true;
       player.setBounce(0.2);
       player.setCollideWorldBounds(true);
       this.anims.create({
@@ -65,7 +69,7 @@ var P1 = new Phaser.Class({
     });
 
     cursors = this.input.keyboard.createCursorKeys();
-    this.physics.add.overlap(player, sans, collectStar, null, this);
+    this.physics.add.collide(player, sans, collectStar, null, this);
     },
     update: function ()
     {
