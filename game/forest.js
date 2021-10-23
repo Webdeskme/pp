@@ -87,6 +87,7 @@ var P1 = new Phaser.Class({
         if(left == "no"){
           player.flipX = true;
           left = "yes";
+          console.log(left);
         }
     }
     else if (cursors.right.isDown)
@@ -97,6 +98,7 @@ var P1 = new Phaser.Class({
         if(left == "yes"){
           player.flipX = true;
           left = "no";
+          console.log(left);
         }
     }
     else
@@ -107,6 +109,7 @@ var P1 = new Phaser.Class({
         if(left == "yes"){
           player.flipX = true;
           left = "no";
+          console.log(left);
         }
     }
 
