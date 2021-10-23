@@ -40,7 +40,7 @@ var P1 = new Phaser.Class({
       back4 = this.add.image(512, 320, 'back4');
       back4.setScale(4);
       //sans  = this.add.image(950, 500, 'sans');
-      sans = this.physics.add.sprite(950, 500, 'sans');
+      sans = this.physics.add.sprite(950, 475, 'sans');
       sans.setScale(1/2);
       sans.enableBody = true;
       sans.body.immovable = true;
