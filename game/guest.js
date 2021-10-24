@@ -2882,7 +2882,7 @@ var P1 = new Phaser.Class({
       ///// keyboard /////
 
       var stext = this.add.text(575, 150, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 400 } });
-      var rtext = this.add.text(575, 225, 'Read other players chat here.', { fontSize: '24px', fill: '0x00ff00', wordWrap: { width: 400 } });
+      var rtext = this.add.text(575, 225, 'Read other players chat here.', { fontSize: '24px', fill: '#4AF626', wordWrap: { width: 400 } });
       strin = '';
       this.input.keyboard.on('keyup', function (event) {
         if(event.keyCode === 65){
