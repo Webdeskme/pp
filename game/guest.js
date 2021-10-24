@@ -2885,7 +2885,8 @@ var P1 = new Phaser.Class({
 
       ///// keyboard /////
 
-      var stext = this.add.text(550, 200, 'Type + return to chat.', { fontSize: '12px', fill: '#fff', wordWrap: { width: 300 } });
+      var stext = this.add.text(575, 150, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 300 } });
+      var rtext = this.add.text(575, 300, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 300 } });
       strin = '';
       this.input.keyboard.on('keyup', function (event) {
         if(event.keyCode === 65 && event.keyCode === 16){
