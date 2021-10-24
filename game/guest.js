@@ -2888,7 +2888,7 @@ var P1 = new Phaser.Class({
       var stext = this.add.text(575, 150, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 400 } });
       var rtext = this.add.text(575, 225, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 400 } });
       strin = '';
-      this.input.keyboard.on('keydown-shiftKey', function (event) {
+      this.input.keyboard.on('keydown_shiftKey', function (event) {
         if (event.keyCode === 69) {
           strin += "E";
           stext.setText(strin);
