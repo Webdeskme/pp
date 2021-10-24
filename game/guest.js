@@ -2882,6 +2882,333 @@ var P1 = new Phaser.Class({
         th.socket.emit('tend', cards, dis);
       }
       });
+
+      ///// keyboard /////
+
+      var stext = this.add.text(550, 200, 'Type + return to chat.', { fontSize: '12px', fill: '#fff', wordWrap: { width: 300 } });
+      strin = '';
+      this.input.keyboard.on('keyup', function (event) {
+        if(event.keyCode === 65 && event.keyCode === 16){
+          strin += "A";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 66 && event.keyCode === 16) {
+          strin += "B";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 67 && event.keyCode === 16) {
+          strin += "C";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 68 && event.keyCode === 16) {
+          strin += "D";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 69 && event.keyCode === 16) {
+          strin += "E";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 70 && event.keyCode === 16) {
+          strin += "F";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 71 && event.keyCode === 16) {
+          strin += "G";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 72 && event.keyCode === 16) {
+          strin += "H";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 73 && event.keyCode === 16) {
+          strin += "I";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 74 && event.keyCode === 16) {
+          strin += "J";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 75 && event.keyCode === 16) {
+          strin += "K";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 76 && event.keyCode === 16) {
+          strin += "L";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 77 && event.keyCode === 16) {
+          strin += "M";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 78 && event.keyCode === 16) {
+          strin += "N";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 79 && event.keyCode === 16) {
+          strin += "O";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 80 && event.keyCode === 16) {
+          strin += "P";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 81 && event.keyCode === 16) {
+          strin += "Q";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 82 && event.keyCode === 16) {
+          strin += "R";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 83 && event.keyCode === 16) {
+          strin += "S";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 84 && event.keyCode === 16) {
+          strin += "T";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 85 && event.keyCode === 16) {
+          strin += "U";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 86 && event.keyCode === 16) {
+          strin += "V";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 87 && event.keyCode === 16) {
+          strin += "W";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 88 && event.keyCode === 16) {
+          strin += "X";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 89 && event.keyCode === 16) {
+          strin += "Y";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 90 && event.keyCode === 16) {
+          strin += "Z";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 49 && event.keyCode === 16) {
+          strin += "!";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 50 && event.keyCode === 16) {
+          strin += "@";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 51 && event.keyCode === 16) {
+          strin += "#";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 52 && event.keyCode === 16) {
+          strin += "$";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 53 && event.keyCode === 16) {
+          strin += "%";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 54 && event.keyCode === 16) {
+          strin += "^";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 55 && event.keyCode === 16) {
+          strin += "&";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 56 && event.keyCode === 16) {
+          strin += "*";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 189 && event.keyCode === 16) {
+          strin += "_";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 187 && event.keyCode === 16) {
+          strin += "+";
+          stext.setText(strin);
+        }
+        if(event.keyCode === 65){
+          strin += "a";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 66) {
+          strin += "b";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 67) {
+          strin += "c";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 68) {
+          strin += "d";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 69) {
+          strin += "e";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 70) {
+          strin += "f";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 71) {
+          strin += "g";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 72) {
+          strin += "h";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 73) {
+          strin += "i";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 74) {
+          strin += "j";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 75) {
+          strin += "k";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 76) {
+          strin += "l";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 77) {
+          strin += "m";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 78) {
+          strin += "n";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 79) {
+          strin += "o";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 80) {
+          strin += "p";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 81) {
+          strin += "q";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 82) {
+          strin += "r";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 83) {
+          strin += "s";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 84) {
+          strin += "t";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 85) {
+          strin += "u";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 86) {
+          strin += "v";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 87) {
+          strin += "w";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 88) {
+          strin += "x";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 89) {
+          strin += "y";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 90) {
+          strin += "z";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 49) {
+          strin += "1";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 50) {
+          strin += "2";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 51) {
+          strin += "3";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 52) {
+          strin += "4";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 53) {
+          strin += "5";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 54) {
+          strin += "6";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 55) {
+          strin += "7";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 56) {
+          strin += "8";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 57) {
+          strin += "9";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 48) {
+          strin += "0";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 189) {
+          strin += "-";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 187) {
+          strin += "=";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 188) {
+          strin += ",";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 190) {
+          strin += ".";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 191) {
+          strin += "/";
+          stext.setText(strin);
+        }
+        else if (event.keyCode === 8) {
+          if(strin.length > 0){
+            strin = strin.slice(0, -1);
+            stext.setText(strin);
+          }
+        }
+        else if (event.keyCode === 13) {
+          stext.setText(strin);
+          th.socket.emit('strin', strin);
+          strin = '';
+        }
+        //bill
+      });
   },
   update() {}
 });
