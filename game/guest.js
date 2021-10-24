@@ -2889,147 +2889,147 @@ var P1 = new Phaser.Class({
       var rtext = this.add.text(575, 300, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 300 } });
       strin = '';
       this.input.keyboard.on('keyup', function (event) {
-        if(event.keyCode === 65 && event.keyCode === 16){
+        if(event.shiftKey === 65){
           strin += "A";
           stext.setText(strin);
         }
-        else if (event.keyCode === 66 && event.keyCode === 16) {
+        else if (event.shiftKey === 66) {
           strin += "B";
           stext.setText(strin);
         }
-        else if (event.keyCode === 67 && event.keyCode === 16) {
+        else if (event.shiftKey === 67) {
           strin += "C";
           stext.setText(strin);
         }
-        else if (event.keyCode === 68 && event.keyCode === 16) {
+        else if (event.shiftKey === 68) {
           strin += "D";
           stext.setText(strin);
         }
-        else if (event.keyCode === 69 && event.keyCode === 16) {
+        else if (event.shiftKey === 69) {
           strin += "E";
           stext.setText(strin);
         }
-        else if (event.keyCode === 70 && event.keyCode === 16) {
+        else if (event.shiftKey === 70) {
           strin += "F";
           stext.setText(strin);
         }
-        else if (event.keyCode === 71 && event.keyCode === 16) {
+        else if (event.shiftKey === 71) {
           strin += "G";
           stext.setText(strin);
         }
-        else if (event.keyCode === 72 && event.keyCode === 16) {
+        else if (event.shiftKey === 72) {
           strin += "H";
           stext.setText(strin);
         }
-        else if (event.keyCode === 73 && event.keyCode === 16) {
+        else if (event.shiftKey === 73) {
           strin += "I";
           stext.setText(strin);
         }
-        else if (event.keyCode === 74 && event.keyCode === 16) {
+        else if (event.shiftKey === 74) {
           strin += "J";
           stext.setText(strin);
         }
-        else if (event.keyCode === 75 && event.keyCode === 16) {
+        else if (event.shiftKey === 75) {
           strin += "K";
           stext.setText(strin);
         }
-        else if (event.keyCode === 76 && event.keyCode === 16) {
+        else if (event.shiftKey === 76) {
           strin += "L";
           stext.setText(strin);
         }
-        else if (event.keyCode === 77 && event.keyCode === 16) {
+        else if (event.shiftKey === 77) {
           strin += "M";
           stext.setText(strin);
         }
-        else if (event.keyCode === 78 && event.keyCode === 16) {
+        else if (event.shiftKey=== 78) {
           strin += "N";
           stext.setText(strin);
         }
-        else if (event.keyCode === 79 && event.keyCode === 16) {
+        else if (event.shiftKey === 79) {
           strin += "O";
           stext.setText(strin);
         }
-        else if (event.keyCode === 80 && event.keyCode === 16) {
+        else if (event.shiftKey === 80) {
           strin += "P";
           stext.setText(strin);
         }
-        else if (event.keyCode === 81 && event.keyCode === 16) {
+        else if (event.shiftKey === 81) {
           strin += "Q";
           stext.setText(strin);
         }
-        else if (event.keyCode === 82 && event.keyCode === 16) {
+        else if (event.shiftKey === 82) {
           strin += "R";
           stext.setText(strin);
         }
-        else if (event.keyCode === 83 && event.keyCode === 16) {
+        else if (event.shiftKey === 83) {
           strin += "S";
           stext.setText(strin);
         }
-        else if (event.keyCode === 84 && event.keyCode === 16) {
+        else if (event.shiftKey === 84) {
           strin += "T";
           stext.setText(strin);
         }
-        else if (event.keyCode === 85 && event.keyCode === 16) {
+        else if (event.shiftKey === 85) {
           strin += "U";
           stext.setText(strin);
         }
-        else if (event.keyCode === 86 && event.keyCode === 16) {
+        else if (event.shiftKey === 86) {
           strin += "V";
           stext.setText(strin);
         }
-        else if (event.keyCode === 87 && event.keyCode === 16) {
+        else if (event.shiftKey === 87) {
           strin += "W";
           stext.setText(strin);
         }
-        else if (event.keyCode === 88 && event.keyCode === 16) {
+        else if (event.shiftKey === 88) {
           strin += "X";
           stext.setText(strin);
         }
-        else if (event.keyCode === 89 && event.keyCode === 16) {
+        else if (event.shiftKey === 89) {
           strin += "Y";
           stext.setText(strin);
         }
-        else if (event.keyCode === 90 && event.keyCode === 16) {
+        else if (event.shiftKey === 90) {
           strin += "Z";
           stext.setText(strin);
         }
-        else if (event.keyCode === 49 && event.keyCode === 16) {
+        else if (event.shiftKey === 49) {
           strin += "!";
           stext.setText(strin);
         }
-        else if (event.keyCode === 50 && event.keyCode === 16) {
+        else if (event.shiftKey === 50) {
           strin += "@";
           stext.setText(strin);
         }
-        else if (event.keyCode === 51 && event.keyCode === 16) {
+        else if (event.shiftKey === 51) {
           strin += "#";
           stext.setText(strin);
         }
-        else if (event.keyCode === 52 && event.keyCode === 16) {
+        else if (event.shiftKey === 52) {
           strin += "$";
           stext.setText(strin);
         }
-        else if (event.keyCode === 53 && event.keyCode === 16) {
+        else if (event.shiftKey === 53) {
           strin += "%";
           stext.setText(strin);
         }
-        else if (event.keyCode === 54 && event.keyCode === 16) {
+        else if (event.shiftKey === 54) {
           strin += "^";
           stext.setText(strin);
         }
-        else if (event.keyCode === 55 && event.keyCode === 16) {
+        else if (event.shiftKey === 55) {
           strin += "&";
           stext.setText(strin);
         }
-        else if (event.keyCode === 56 && event.keyCode === 16) {
+        else if (event.shiftKey === 56) {
           strin += "*";
           stext.setText(strin);
         }
-        else if (event.keyCode === 189 && event.keyCode === 16) {
+        else if (event.shiftKey === 189) {
           strin += "_";
           stext.setText(strin);
         }
-        else if (event.keyCode === 187 && event.keyCode === 16) {
+        else if (event.shiftKey === 187) {
           strin += "+";
           stext.setText(strin);
         }
