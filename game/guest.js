@@ -2888,8 +2888,14 @@ var P1 = new Phaser.Class({
       var stext = this.add.text(575, 150, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 400 } });
       var rtext = this.add.text(575, 225, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 400 } });
       strin = '';
+      this.input.keyboard.on('keydown-shiftKey', function (event) {
+        if (event.keyCode === 69) {
+          strin += "E";
+          stext.setText(strin);
+        }
+      });
       this.input.keyboard.on('keyup', function (event) {
-        if(event.shiftKey === 65){
+        /*if(event.shiftKey === 65){
           strin += "A";
           stext.setText(strin);
         }
@@ -3032,7 +3038,7 @@ var P1 = new Phaser.Class({
         else if (event.shiftKey === 187) {
           strin += "+";
           stext.setText(strin);
-        }
+        }*/
         if(event.keyCode === 65){
           strin += "a";
           stext.setText(strin);
