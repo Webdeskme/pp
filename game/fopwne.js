@@ -25,10 +25,10 @@ var P1 = new Phaser.Class({
     {
       function collectStar (player, sans)
   {
-      text.setText('Sorry, but the SANS institute is on a different planet!')
+      text.setText('Welcome to the SANS Institute, the best place to learn about cyber security!')
       console.log('here');
       setTimeout(() => {
-          window.location.href = "game.html";
+          window.location.href = "sans.html";
       }, 5000);
   }
   left = "no";
