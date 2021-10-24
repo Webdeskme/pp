@@ -3197,6 +3197,10 @@ var P1 = new Phaser.Class({
           strin += "/";
           stext.setText(strin);
         }
+        else if (event.keyCode === 32) {
+          strin += " ";
+          stext.setText(strin);
+        }
         else if (event.keyCode === 8) {
           if(strin.length > 0){
             strin = strin.slice(0, -1);
