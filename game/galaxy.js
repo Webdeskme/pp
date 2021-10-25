@@ -27,6 +27,10 @@ var P1 = new Phaser.Class({
       console.log(z);
       back = this.add.image(512, 320, 'back' + z);
       var ship;
+      var bullets;
+      var lastFired = 0;
+      var cursors;
+      var fire;
       ship = this.physics.add.image(512, 320, 'space', 'ship').setDepth(2);
       var Bullet = new Phaser.Class({
 
@@ -61,9 +65,104 @@ var P1 = new Phaser.Class({
 
             this.body.velocity.x *= 2;
             this.body.velocity.y *= 2;
+          },
+
+     update: function (time, delta)
+     {
+         this.lifespan -= delta;
+
+         if (this.lifespan <= 0)
+         {
+             this.setActive(false);
+             this.setVisible(false);
+             this.body.stop();
+         }
+     }
+
+ });
+
+
+ var particles = this.add.particles('space');
+
+    var emitter = particles.createEmitter({
+        frame: 'blue',
+        speed: 100,
+        lifespan: {
+            onEmit: function (particle, key, t, value)
+            {
+                return Phaser.Math.Percent(ship.body.speed, 0, 300) * 2000;
+            }
+        },
+        alpha: {
+            onEmit: function (particle, key, t, value)
+            {
+                return Phaser.Math.Percent(ship.body.speed, 0, 300);
+            }
+        },
+        angle: {
+            onEmit: function (particle, key, t, value)
+            {
+                var v = Phaser.Math.Between(-10, 10);
+                return (ship.angle - 180) + v;
+            }
+        },
+        scale: { start: 0.6, end: 0 },
+        blendMode: 'ADD'
+    });
+
+    bullets = this.physics.add.group({
+        classType: Bullet,
+        maxSize: 30,
+        runChildUpdate: true
+    });
+
+    ship.setDrag(300);
+    ship.setAngularDrag(400);
+    ship.setMaxVelocity(600);
+
+    emitter.startFollow(ship);
+
+    cursors = this.input.keyboard.createCursorKeys();
+    fire = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
     },
-    update: function ()
+    update: function (time, delta)
     {
+
+
+      if (cursors.left.isDown)
+          {
+              ship.setAngularVelocity(-150);
+          }
+          else if (cursors.right.isDown)
+          {
+              ship.setAngularVelocity(150);
+          }
+          else
+          {
+              ship.setAngularVelocity(0);
+          }
+
+          if (cursors.up.isDown)
+          {
+              this.physics.velocityFromRotation(ship.rotation, 600, ship.body.acceleration);
+          }
+          else
+          {
+              ship.setAcceleration(0);
+          }
+
+          if (fire.isDown && time > lastFired)
+          {
+              var bullet = bullets.get();
+
+              if (bullet)
+              {
+                  bullet.fire(ship);
+
+                  lastFired = time + 100;
+              }
+            }
+
 
     }
 });
