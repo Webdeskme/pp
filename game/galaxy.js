@@ -38,13 +38,29 @@ var P1 = new Phaser.Class({
       ship.setScale(1/2);
       ship.setBounce(0.2);
       ship.setCollideWorldBounds(true);
-      var yx = Phaser.Math.Between(1, 50);
+      var healthGroup = this.physics.add.group({
+        // Initial angular speed of 60 degrees per second.
+        // Drag reduces it by 5 degrees/s per second, thus to zero after 12 seconds.
+        angularDrag: 0,
+        angularVelocity: 60,
+        bounceX: 1,
+        bounceY: 1,
+        collideWorldBounds: true,
+        dragX: 0,
+        dragY: 0
+    });
+
+    var block1 = healthGroup.create(100, 200, 'health').setVelocity(100, 200);
+    var block2 = healthGroup.create(500, 200, 'health').setVelocity(-100, -100);
+    var block3 = healthGroup.create(300, 400, 'health').setVelocity(60, 100);
+    var block4 = healthGroup.create(600, 300, 'health').setVelocity(-30, -50);
+      //var yx = Phaser.Math.Between(1, 50);
       //var yy = Phaser.Math.Between(1, 50);
-      healthGroup = this.physics.add.group({
+      /*healthGroup = this.physics.add.group({
               key: 'health',
               frameQuantity: 35,
               angularDrag: 1,
-              angularVelocity: yx,
+              angularVelocity: yx
           });
           var children = healthGroup.getChildren();
           for (var i = 0; i < children.length; i++)
@@ -60,7 +76,7 @@ var P1 = new Phaser.Class({
               //children[i].setScale(1/5);
           }
 
-          healthGroup.refresh();
+          healthGroup.refresh();*/
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
@@ -156,14 +172,6 @@ var P1 = new Phaser.Class({
     },
     update: function (time, delta)
     {
-      /*var children = healthGroup.getChildren();
-      for (var i = 0; i < children.length; i++)
-      {
-        var yx = Phaser.Math.Between(1, 50);
-        var yy = Phaser.Math.Between(1, 50);
-        children[i].setVelocityX = yx;
-        children[i].setVelocityY = yy;
-      }*/
 
       if (cursors.left.isDown)
           {
