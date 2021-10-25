@@ -32,6 +32,9 @@ var P1 = new Phaser.Class({
       //cursors;
       //fire;
       ship = this.physics.add.image(512, 320, 'space', 'ship').setDepth(2);
+      ship.enableBody = true;
+      ship.setBounce(0.2);
+      ship.setCollideWorldBounds(true);
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
