@@ -64,33 +64,7 @@ var P1 = new Phaser.Class({
       var xy = Phaser.Math.Between(420, 640);
       healthGroup.create(xx, xy, 'health').setVelocity(yx, yy);
     }
-    /*block1 = healthGroup.create(100, 200, 'health').setVelocity(100, 200);
-    block2 = healthGroup.create(500, 200, 'health').setVelocity(-100, -100);
-    block3 = healthGroup.create(300, 400, 'health').setVelocity(60, 100);
-    block4 = healthGroup.create(600, 300, 'health').setVelocity(-30, -50);*/
-      //var yx = Phaser.Math.Between(1, 50);
-      //var yy = Phaser.Math.Between(1, 50);
-      /*healthGroup = this.physics.add.group({
-              key: 'health',
-              frameQuantity: 35,
-              angularDrag: 1,
-              angularVelocity: yx
-          });
-          var children = healthGroup.getChildren();
-          for (var i = 0; i < children.length; i++)
-          {
-              var x = Phaser.Math.Between(0, 1024);
-              var y = Phaser.Math.Between(0, -100);
-              //console.log('yx: ' + yx);
-              //console.log('yy: ' + yx);
-              children[i].setPosition(x, y);
-              //var yx = Phaser.Math.Between(1, 50);
-              //children[i].body.setGravityY(yx);
-              //this.physics.velocityFromRotation(children[i].rotation, 20, children[i].body.acceleration);
-              //children[i].setScale(1/5);
-          }
 
-          healthGroup.refresh();*/
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
@@ -223,6 +197,7 @@ var P1 = new Phaser.Class({
 
             var he = 0;
             this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
+            this.physics.add.overlap(ship, healthGroup, out);
             function spriteHitHealth (bullets, health)
             {
                 //  Hide the sprite
@@ -232,6 +207,9 @@ var P1 = new Phaser.Class({
                 health.body.enable = false;
                 he += 1;
                 aText.setText('Astroids: ' + he);
+            }
+            function out(){
+              window.location.href = "game.html";
             }
     }
 });
