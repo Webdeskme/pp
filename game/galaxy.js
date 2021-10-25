@@ -27,7 +27,40 @@ var P1 = new Phaser.Class({
       console.log(z);
       back = this.add.image(512, 320, 'back' + z);
       var ship;
-      ship = this.physics.add.image(100, 100, 'space', 'ship').setDepth(2);
+      ship = this.physics.add.image(512, 320, 'space', 'ship').setDepth(2);
+      var Bullet = new Phaser.Class({
+
+        Extends: Phaser.Physics.Arcade.Image,
+
+        initialize:
+
+        function Bullet (scene)
+        {
+            Phaser.Physics.Arcade.Image.call(this, scene, 0, 0, 'space', 'blaster');
+
+            this.setBlendMode(1);
+            this.setDepth(1);
+
+            this.speed = 1000;
+            this.lifespan = 1000;
+
+            this._temp = new Phaser.Math.Vector2();
+        },
+
+        fire: function (ship)
+        {
+            this.lifespan = 1000;
+
+            this.setActive(true);
+            this.setVisible(true);
+            this.setAngle(ship.body.rotation);
+            this.setPosition(ship.x, ship.y);
+            this.body.reset(ship.x, ship.y);
+                var angle = Phaser.Math.DegToRad(ship.body.rotation);
+            this.scene.physics.velocityFromRotation(angle, this.speed, this.body.velocity);
+
+            this.body.velocity.x *= 2;
+            this.body.velocity.y *= 2;
     },
     update: function ()
     {
