@@ -22,7 +22,20 @@ var P1 = new Phaser.Class({
           return Math.random() * (max - min) + min;
       }
       var z = getRandomArbitrary(1, 5);
-      back = this.add.image(512, 320, 'back' + z);
+      console.log(z);
+      if(z == 1){
+        back = this.add.image(512, 320, 'back1');
+      }
+      else if (z == 2) {
+        back = this.add.image(512, 320, 'back2');
+      }
+      else if (z == 3) {
+        back = this.add.image(512, 320, 'back3');
+      }
+      else if (z == 4) {
+        back = this.add.image(512, 320, 'back4');
+      }
+      back.setScale(3/2);
     },
     update: function ()
     {
