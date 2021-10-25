@@ -27,6 +27,7 @@ var P1 = new Phaser.Class({
       z = Math.ceil(z);
       console.log(z);
       back = this.add.image(512, 320, 'back' + z);
+      aText = this.add.bitmapText(25, 25, 'topaz', 'Astroids: 0', 64);
       //ship;
       //bullets;
       lastFired = 0;
