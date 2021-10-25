@@ -147,7 +147,7 @@ var P1 = new Phaser.Class({
 
           if (cursors.up.isDown)
           {
-              this.physics.velocityFromRotation(ship.rotation, 600, ship.body.acceleration);
+              this.physics.velocityFromRotation(ship.rotation, 100, ship.body.acceleration);
           }
           else
           {
