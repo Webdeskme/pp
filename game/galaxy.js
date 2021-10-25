@@ -47,9 +47,11 @@ var P1 = new Phaser.Class({
           {
               var x = Phaser.Math.Between(0, 1024);
               var y = Phaser.Math.Between(0, -100);
-              console.log('yx: ' + yx);
-              console.log('yy: ' + yx);
+              //console.log('yx: ' + yx);
+              //console.log('yy: ' + yx);
               children[i].setPosition(x, y);
+              var yx = Phaser.Math.Between(1, 50);
+              children[i].body.setGravityY(yx);
               //this.physics.velocityFromRotation(children[i].rotation, 20, children[i].body.acceleration);
               //children[i].setScale(1/5);
           }
@@ -150,14 +152,14 @@ var P1 = new Phaser.Class({
     },
     update: function (time, delta)
     {
-      var children = healthGroup.getChildren();
+      /*var children = healthGroup.getChildren();
       for (var i = 0; i < children.length; i++)
       {
         var yx = Phaser.Math.Between(1, 50);
         var yy = Phaser.Math.Between(1, 50);
         children[i].setVelocityX = yx;
         children[i].setVelocityY = yy;
-      }
+      }*/
 
       if (cursors.left.isDown)
           {
