@@ -26,11 +26,11 @@ var P1 = new Phaser.Class({
       z = Math.ceil(z);
       console.log(z);
       back = this.add.image(512, 320, 'back' + z);
-      var ship;
-      var bullets;
-      var lastFired = 0;
-      var cursors;
-      var fire;
+      //ship;
+      //bullets;
+      lastFired = 0;
+      //cursors;
+      //fire;
       ship = this.physics.add.image(512, 320, 'space', 'ship').setDepth(2);
       var Bullet = new Phaser.Class({
 
