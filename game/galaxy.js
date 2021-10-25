@@ -227,11 +227,10 @@ var Forest = new Phaser.Class({
     preload: function ()
     {
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
-        this.load.image('back1', 'assets/backgrounds/parallax-forest-back-trees.png');
-        this.load.image('back2', 'assets/backgrounds/parallax-forest-lights.png');
-        this.load.image('back3', 'assets/backgrounds/parallax-forest-middle-trees.png');
-        this.load.image('back4', 'assets/backgrounds/parallax-forest-front-trees.png');
-        this.load.image('back1', 'assets/backgrounds/parallax-forest-back-trees.png');
+        this.load.image('back11', 'assets/backgrounds/parallax-forest-back-trees.png');
+        this.load.image('back21', 'assets/backgrounds/parallax-forest-lights.png');
+        this.load.image('back31', 'assets/backgrounds/parallax-forest-middle-trees.png');
+        this.load.image('back41', 'assets/backgrounds/parallax-forest-front-trees.png');
         this.load.image('sans', 'assets/player/bldg.png');
         this.load.spritesheet('walk', 'assets/player/shq_trooper_run_strip6.png', { frameWidth: 64, frameHeight: 64 });
         this.load.spritesheet('idle', 'assets/player/shq_trooper_idle_strip2.png', { frameWidth: 64, frameHeight: 64 });
@@ -254,13 +253,13 @@ var Forest = new Phaser.Class({
       mu = this.sound.add('music');
         mu.loop = true;
         mu.play();
-      back1 = this.add.image(512, 320, 'back1');
+      back1 = this.add.image(512, 320, 'back11');
       back1.setScale(4);
-      back2 = this.add.image(512, 320, 'back2');
+      back2 = this.add.image(512, 320, 'back21');
       back2.setScale(4);
-      back3 = this.add.image(512, 320, 'back3');
+      back3 = this.add.image(512, 320, 'back31');
       back3.setScale(4);
-      back4 = this.add.image(512, 320, 'back4');
+      back4 = this.add.image(512, 320, 'back41');
       back4.setScale(4);
       //sans  = this.add.image(950, 500, 'sans');
       sans = this.physics.add.sprite(950, 475, 'sans');
