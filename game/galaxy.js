@@ -227,7 +227,7 @@ var Forest = new Phaser.Class({
     preload: function ()
     {
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
-        this.load.image('back1', 'assets/backgrounds/Background-3.png');
+        this.load.image('back1', 'assets/backgrounds/parallax-forest-back-trees.png');
         this.load.image('back2', 'assets/backgrounds/parallax-forest-lights.png');
         this.load.image('back3', 'assets/backgrounds/parallax-forest-middle-trees.png');
         this.load.image('back4', 'assets/backgrounds/parallax-forest-front-trees.png');
