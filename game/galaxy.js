@@ -38,7 +38,7 @@ var P1 = new Phaser.Class({
       ship.setScale(1/2);
       ship.setBounce(0.2);
       ship.setCollideWorldBounds(true);
-      var healthGroup = this.physics.add.group({
+      healthGroup = this.physics.add.group({
         // Initial angular speed of 60 degrees per second.
         // Drag reduces it by 5 degrees/s per second, thus to zero after 12 seconds.
         angularDrag: 0,
@@ -50,10 +50,10 @@ var P1 = new Phaser.Class({
         dragY: 0
     });
 
-    var block1 = healthGroup.create(100, 200, 'health').setVelocity(100, 200);
-    var block2 = healthGroup.create(500, 200, 'health').setVelocity(-100, -100);
-    var block3 = healthGroup.create(300, 400, 'health').setVelocity(60, 100);
-    var block4 = healthGroup.create(600, 300, 'health').setVelocity(-30, -50);
+    block1 = healthGroup.create(100, 200, 'health').setVelocity(100, 200);
+    block2 = healthGroup.create(500, 200, 'health').setVelocity(-100, -100);
+    block3 = healthGroup.create(300, 400, 'health').setVelocity(60, 100);
+    block4 = healthGroup.create(600, 300, 'health').setVelocity(-30, -50);
       //var yx = Phaser.Math.Between(1, 50);
       //var yy = Phaser.Math.Between(1, 50);
       /*healthGroup = this.physics.add.group({
