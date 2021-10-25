@@ -37,7 +37,7 @@ var P1 = new Phaser.Class({
       else if (z == 4) {
         back = this.add.image(512, 320, 'back4');
       }*/
-      back.setScale(3/2);
+      //back.setScale(3/2);
     },
     update: function ()
     {
