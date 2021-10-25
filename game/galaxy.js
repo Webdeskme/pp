@@ -21,9 +21,11 @@ var P1 = new Phaser.Class({
       function getRandomArbitrary(min, max) {
           return Math.random() * (max - min) + min;
       }
-      var z = getRandomArbitrary(1, 5);
+      var z = getRandomArbitrary(0, 4);
+      z = Math.ceil(z);
       console.log(z);
-      if(z == 1){
+      back = this.add.image(512, 320, 'back' + z);
+      /*if(z == 1){
         back = this.add.image(512, 320, 'back1');
       }
       else if (z == 2) {
@@ -34,7 +36,7 @@ var P1 = new Phaser.Class({
       }
       else if (z == 4) {
         back = this.add.image(512, 320, 'back4');
-      }
+      }*/
       back.setScale(3/2);
     },
     update: function ()
