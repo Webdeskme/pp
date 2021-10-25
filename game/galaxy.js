@@ -50,8 +50,8 @@ var P1 = new Phaser.Class({
               var yy = Phaser.Math.Between(1, 50);
 
               children[i].setPosition(x, y);
-              children[i].setVelocityX = yx;
-              children[i].setVelocityY = yy;
+              children[i].defaults.setVelocityX = yx;
+              children[i].defaults.setVelocityY = yy;
               //children[i].setScale(1/5);
           }
 
