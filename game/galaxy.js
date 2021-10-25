@@ -185,7 +185,18 @@ var P1 = new Phaser.Class({
               }
             }
 
+            var he = 0;
+            this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
+            function spriteHitHealth (bullets, health)
+            {
+                //  Hide the sprite
+                healthGroup.killAndHide(health);
 
+                //  And disable the body
+                health.body.enable = false;
+                he += 1;
+                aText.setText('Astroids: ' + he);
+            }
     }
 });
 var config = {
