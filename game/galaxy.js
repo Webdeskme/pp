@@ -199,7 +199,7 @@ var P1 = new Phaser.Class({
             this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
             this.physics.add.overlap(ship, healthGroup, out);
             th = this;
-            function spriteHitHealth (bullets, health, th)
+            function spriteHitHealth (bullets, health)
             {
                 //  Hide the sprite
                 healthGroup.killAndHide(health);
