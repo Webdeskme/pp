@@ -12,6 +12,7 @@ var P1 = new Phaser.Class({
         this.load.image('back2', 'assets/backgrounds/Background-2.png');
         this.load.image('back3', 'assets/backgrounds/Background-3.png');
         this.load.image('back4', 'assets/backgrounds/Background-4.png');
+        this.load.atlas('space', 'assets/space/space.png', 'assets/space/space.json');
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
@@ -25,19 +26,8 @@ var P1 = new Phaser.Class({
       z = Math.ceil(z);
       console.log(z);
       back = this.add.image(512, 320, 'back' + z);
-      /*if(z == 1){
-        back = this.add.image(512, 320, 'back1');
-      }
-      else if (z == 2) {
-        back = this.add.image(512, 320, 'back2');
-      }
-      else if (z == 3) {
-        back = this.add.image(512, 320, 'back3');
-      }
-      else if (z == 4) {
-        back = this.add.image(512, 320, 'back4');
-      }*/
-      //back.setScale(3/2);
+      var ship;
+      ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
     },
     update: function ()
     {
