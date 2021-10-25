@@ -776,6 +776,9 @@ healthGroup = this.physics.add.staticGroup({
         if(ship.body.x > 10000 && ship.body.x < 11000 && ship.body.y > 7000 && ship.body.y < 8500){
           window.location.href = "fopwne.html";
         }
+        if(ship.body.x > 10000 && ship.body.x < 10400 && ship.body.y > 1800 && ship.body.y < 2250){
+          window.location.href = "galaxy.html";
+        }
     }
 
     if (fire.isDown && time > lastFired)
