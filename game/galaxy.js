@@ -198,7 +198,8 @@ var P1 = new Phaser.Class({
             var he = 0;
             this.physics.add.overlap(bullets, healthGroup, spriteHitHealth);
             this.physics.add.overlap(ship, healthGroup, out);
-            function spriteHitHealth (bullets, health)
+            th = this;
+            function spriteHitHealth (bullets, health, th)
             {
                 //  Hide the sprite
                 healthGroup.killAndHide(health);
@@ -208,7 +209,7 @@ var P1 = new Phaser.Class({
                 he += 1;
                 aText.setText('Astroids: ' + he);
                 if(he > 19){
-                  this.scene.start('forest');
+                  th.scene.start('forest');
                 }
             }
             function out(){
