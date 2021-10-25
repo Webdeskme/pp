@@ -52,6 +52,7 @@ var P1 = new Phaser.Class({
               console.log('yx: ' + yx);
               console.log('yy: ' + yx);
               children[i].setPosition(x, y);
+              this.physics.velocityFromRotation(children[i].rotation, 1, children[i].body.acceleration);
               children[i].setVelocityX = yx;
               children[i].setVelocityY = yy;
               //children[i].setScale(1/5);
