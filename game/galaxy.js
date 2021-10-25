@@ -27,7 +27,7 @@ var P1 = new Phaser.Class({
       console.log(z);
       back = this.add.image(512, 320, 'back' + z);
       var ship;
-      ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
+      ship = this.physics.add.image(100, 100, 'space', 'ship').setDepth(2);
     },
     update: function ()
     {
