@@ -13,6 +13,7 @@ var P1 = new Phaser.Class({
         this.load.image('back3', 'assets/backgrounds/Background-3.png');
         this.load.image('back4', 'assets/backgrounds/Background-4.png');
         this.load.atlas('space', 'assets/space/space.png', 'assets/space/space.json');
+        this.load.image('health', 'assets/icons/astroid.png');
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
@@ -36,6 +37,23 @@ var P1 = new Phaser.Class({
       ship.setScale(1/2);
       ship.setBounce(0.2);
       ship.setCollideWorldBounds(true);
+      healthGroup = this.physics.add.staticGroup({
+              key: 'health',
+              frameQuantity: 35
+          });
+          var children = healthGroup.getChildren();
+          for (var i = 0; i < children.length; i++)
+          {
+              var x = Phaser.Math.Between(0, 1024);
+              var y = Phaser.Math.Between(0, -100);
+
+              children[i].setPosition(x, y);
+              children[i].defaults.setVelocityX = Phaser.Math.Between(1, 50);
+              children[i].defaults.setVelocityY = Phaser.Math.Between(1, 50);
+              //children[i].setScale(1/5);
+          }
+
+          healthGroup.refresh();
       var Bullet = new Phaser.Class({
 
         Extends: Phaser.Physics.Arcade.Image,
@@ -116,13 +134,13 @@ var P1 = new Phaser.Class({
 
     bullets = this.physics.add.group({
         classType: Bullet,
-        maxSize: 30,
+        maxSize: 15,
         runChildUpdate: true
     });
 
     ship.setDrag(300);
     ship.setAngularDrag(400);
-    ship.setMaxVelocity(200);
+    ship.setMaxVelocity(100);
 
     emitter.startFollow(ship);
 
@@ -148,7 +166,7 @@ var P1 = new Phaser.Class({
 
           if (cursors.up.isDown)
           {
-              this.physics.velocityFromRotation(ship.rotation, 100, ship.body.acceleration);
+              this.physics.velocityFromRotation(ship.rotation, 50, ship.body.acceleration);
           }
           else
           {
