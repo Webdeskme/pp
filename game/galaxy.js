@@ -33,6 +33,7 @@ var P1 = new Phaser.Class({
       //fire;
       ship = this.physics.add.image(512, 320, 'space', 'ship').setDepth(2);
       ship.enableBody = true;
+      ship.scale(1/2);
       ship.setBounce(0.2);
       ship.setCollideWorldBounds(true);
       var Bullet = new Phaser.Class({
@@ -121,7 +122,7 @@ var P1 = new Phaser.Class({
 
     ship.setDrag(300);
     ship.setAngularDrag(400);
-    ship.setMaxVelocity(600);
+    ship.setMaxVelocity(200);
 
     emitter.startFollow(ship);
 
