@@ -9,13 +9,20 @@ var P1 = new Phaser.Class({
     {
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
         this.load.image('back1', 'assets/backgrounds/Background-1.png');
+        this.load.image('back2', 'assets/backgrounds/Background-2.png');
+        this.load.image('back3', 'assets/backgrounds/Background-3.png');
+        this.load.image('back4', 'assets/backgrounds/Background-4.png');
         this.load.audio('music', [
         "assets/Audio/MyVeryOwnDeadShip.mp3"
         ]);
     },
     create: function ()
     {
-      back1 = this.add.image(512, 320, 'back1');
+      function getRandomArbitrary(min, max) {
+          return Math.random() * (max - min) + min;
+      }
+      var z = getRandomArbitrary(1, 5);
+      back = this.add.image(512, 320, 'back' + z);
     },
     update: function ()
     {
