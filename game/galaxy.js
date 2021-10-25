@@ -50,10 +50,24 @@ var P1 = new Phaser.Class({
         dragY: 0
     });
 
-    block1 = healthGroup.create(100, 200, 'health').setVelocity(100, 200);
+    for (let i = 0; i < 20; i++) {
+      var yx = Phaser.Math.Between(-50, 50);
+      var yy = Phaser.Math.Between(-50, 50);
+      var xx = Phaser.Math.Between(0, 1024);
+      var xy = Phaser.Math.Between(0, 220);
+      healthGroup.create(xx, xy, 'health').setVelocity(yx, yy);
+    }
+    for (let i = 0; i < 20; i++) {
+      var yx = Phaser.Math.Between(-50, 50);
+      var yy = Phaser.Math.Between(-50, 50);
+      var xx = Phaser.Math.Between(0, 1024);
+      var xy = Phaser.Math.Between(420, 640);
+      healthGroup.create(xx, xy, 'health').setVelocity(yx, yy);
+    }
+    /*block1 = healthGroup.create(100, 200, 'health').setVelocity(100, 200);
     block2 = healthGroup.create(500, 200, 'health').setVelocity(-100, -100);
     block3 = healthGroup.create(300, 400, 'health').setVelocity(60, 100);
-    block4 = healthGroup.create(600, 300, 'health').setVelocity(-30, -50);
+    block4 = healthGroup.create(600, 300, 'health').setVelocity(-30, -50);*/
       //var yx = Phaser.Math.Between(1, 50);
       //var yy = Phaser.Math.Between(1, 50);
       /*healthGroup = this.physics.add.group({
