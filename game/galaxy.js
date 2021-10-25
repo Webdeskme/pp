@@ -38,9 +38,13 @@ var P1 = new Phaser.Class({
       ship.setScale(1/2);
       ship.setBounce(0.2);
       ship.setCollideWorldBounds(true);
-      healthGroup = this.physics.add.staticGroup({
+      var yx = Phaser.Math.Between(1, 50);
+      //var yy = Phaser.Math.Between(1, 50);
+      healthGroup = this.physics.add.group({
               key: 'health',
-              frameQuantity: 35
+              frameQuantity: 35,
+              angularDrag: 1,
+              angularVelocity: yx,
           });
           var children = healthGroup.getChildren();
           for (var i = 0; i < children.length; i++)
@@ -50,8 +54,8 @@ var P1 = new Phaser.Class({
               //console.log('yx: ' + yx);
               //console.log('yy: ' + yx);
               children[i].setPosition(x, y);
-              var yx = Phaser.Math.Between(1, 50);
-              children[i].body.setGravityY(yx);
+              //var yx = Phaser.Math.Between(1, 50);
+              //children[i].body.setGravityY(yx);
               //this.physics.velocityFromRotation(children[i].rotation, 20, children[i].body.acceleration);
               //children[i].setScale(1/5);
           }
