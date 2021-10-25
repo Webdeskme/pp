@@ -50,16 +50,16 @@ var P1 = new Phaser.Class({
         dragY: 0
     });
 
-    for (let i = 0; i < 20; i++) {
-      var yx = Phaser.Math.Between(-50, 50);
-      var yy = Phaser.Math.Between(-50, 50);
+    for (let i = 0; i < 10; i++) {
+      var yx = Phaser.Math.Between(-100, 100);
+      var yy = Phaser.Math.Between(-100, 100);
       var xx = Phaser.Math.Between(0, 1024);
       var xy = Phaser.Math.Between(0, 220);
       healthGroup.create(xx, xy, 'health').setVelocity(yx, yy);
     }
-    for (let i = 0; i < 20; i++) {
-      var yx = Phaser.Math.Between(-50, 50);
-      var yy = Phaser.Math.Between(-50, 50);
+    for (let i = 0; i < 10; i++) {
+      var yx = Phaser.Math.Between(-100, 100);
+      var yy = Phaser.Math.Between(-100, 100);
       var xx = Phaser.Math.Between(0, 1024);
       var xy = Phaser.Math.Between(420, 640);
       healthGroup.create(xx, xy, 'health').setVelocity(yx, yy);
