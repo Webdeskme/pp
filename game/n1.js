@@ -1442,7 +1442,7 @@ var P1 = new Phaser.Class({
           var t = cards.indexOf(c0["texture"]["key"]);
           cards.splice(t, 1);
           cards.filter(val => val);
-          if( c["texture"]["key"] != "neglect"){
+          if( c0["texture"]["key"] != "neglect"){
             dis.push(c0["texture"]["key"]);
           }
           else{
