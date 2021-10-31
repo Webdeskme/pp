@@ -533,6 +533,10 @@ var P1 = new Phaser.Class({
                     card += 1;
                     temp.push(c["texture"]["key"]);
                   }
+                  else if (c["texture"]["key"] == "neglect") {
+                    card += 1;
+                    temp.push(c["texture"]["key"]);
+                  }
                 }
                 else{
                   c.clearTint();
@@ -725,6 +729,11 @@ var P1 = new Phaser.Class({
                   else if (c["texture"]["key"] == "MFAB") {
                     coin -= 6;
                     ccard -= 1;
+                    card -= 1;
+                    var t = temp.indexOf(c["texture"]["key"]);
+                    temp.splice(t, 1);
+                  }
+                  else if (c["texture"]["key"] == "neglect") {
                     card -= 1;
                     var t = temp.indexOf(c["texture"]["key"]);
                     temp.splice(t, 1);
