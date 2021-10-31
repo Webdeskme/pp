@@ -832,6 +832,7 @@ var SubM = new Phaser.Class({
       this.load.image('coop', 'assets/Text/coop.png');
       this.load.image('3coop', 'assets/Text/3coop.png');
       this.load.image('solo', 'assets/Text/solo.png');
+      this.load.image('exp', 'assets/Text/exp.png');
       this.load.image('vs', 'assets/Text/vs.png');
       this.load.image('vscomp', 'assets/Text/vscomp.png');
       this.load.image('undo', 'assets/Text/back.png');
@@ -893,6 +894,7 @@ var SubM = new Phaser.Class({
       var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
       var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
       var aa = this.add.image(900, 150, 'solo').setScrollFactor(0,0);
+      var exx = this.add.image(900, 150, 'exp').setScrollFactor(0,0);
       var p = this.add.image(900, 200, 'vs').setScrollFactor(0,0);
       //var bb = this.add.image(900, 150, 'vscomp').setScrollFactor(0,0);
       var n = this.add.image(900, 250, 'coop').setScrollFactor(0,0);
@@ -901,6 +903,8 @@ var SubM = new Phaser.Class({
       var onn = this.add.image(900, 400, 'on').setScrollFactor(0,0);
       aie.setInteractive({ useHandCursor: true  } );
       aie.setScale(1/4);
+      exx.setInteractive({ useHandCursor: true  } );
+      exx.setScale(1/4);
       onn.setInteractive({ useHandCursor: true  } );
       onn.setScale(1/4);
       un.setInteractive({ useHandCursor: true  } );
@@ -920,6 +924,12 @@ var SubM = new Phaser.Class({
       });
       aie.on('pointerout',function(pointer){
         aie.setScale(1/4);
+      });
+      exx.on('pointerover',function(pointer){
+        exx.setScale(1/3);
+      });
+      exx.on('pointerout',function(pointer){
+        exx.setScale(1/4);
       });
       onn.on('pointerover',function(pointer){
         onn.setScale(1/3);
@@ -969,6 +979,13 @@ var SubM = new Phaser.Class({
         this.game.sound.stopAll();
         this.scene.start('subma');
         //window.location.href = "p1.html";
+      });
+      exx.on('pointerdown', () => {
+        this.sound.add('click').play();
+        //endm.stop();
+        this.game.sound.stopAll();
+        //this.scene.start('subma');
+        window.location.href = "n1.html";
       });
       onn.on('pointerdown', () => {
         this.sound.add('click').play();
