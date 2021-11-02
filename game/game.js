@@ -1125,7 +1125,7 @@ var SubM = new Phaser.Class({
           var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
           var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
           var bb = this.add.image(900, 150, 'neg').setScrollFactor(0,0);
-          var aa = this.add.image(900, 200, 'big').setScrollFactor(0,0);
+          var aa = this.add.image(900, 200, 'aa').setScrollFactor(0,0);
           /*var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
           var ba = this.add.image(900, 300, 'ba').setScrollFactor(0,0);*/
           un.setInteractive({ useHandCursor: true  } );
