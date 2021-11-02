@@ -1057,7 +1057,7 @@ var SubM = new Phaser.Class({
           //this.load.image('bob', 'assets/Text/bob.png');
           //this.load.image('alice', 'assets/Text/alice.png');
           this.load.image('neg', 'assets/Text/neg.png');
-          //this.load.image('ba', 'assets/Text/ba.png');
+          this.load.image('aa', 'assets/Text/big.png');
           this.load.text('q1', 'assets/Text/quote/q1.txt');
           this.load.text('q2', 'assets/Text/quote/q2.txt');
           this.load.text('q3', 'assets/Text/quote/q3.txt');
@@ -1125,16 +1125,16 @@ var SubM = new Phaser.Class({
           var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
           var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
           var bb = this.add.image(900, 150, 'neg').setScrollFactor(0,0);
-          /*var aa = this.add.image(900, 200, 'bob').setScrollFactor(0,0);
-          var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
+          var aa = this.add.image(900, 200, 'big').setScrollFactor(0,0);
+          /*var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
           var ba = this.add.image(900, 300, 'ba').setScrollFactor(0,0);*/
           un.setInteractive({ useHandCursor: true  } );
           un.setScale(1/4);
           bb.setInteractive({ useHandCursor: true  } );
           bb.setScale(1/4);
-          /*aa.setInteractive({ useHandCursor: true  } );
+          aa.setInteractive({ useHandCursor: true  } );
           aa.setScale(1/4);
-          p.setInteractive({ useHandCursor: true  } );
+          /*p.setInteractive({ useHandCursor: true  } );
           p.setScale(1/4);
           ba.setInteractive({ useHandCursor: true  } );
           ba.setScale(1/4);*/
@@ -1150,13 +1150,13 @@ var SubM = new Phaser.Class({
           bb.on('pointerout',function(pointer){
             bb.setScale(1/4);
           });
-          /*aa.on('pointerover',function(pointer){
+          aa.on('pointerover',function(pointer){
             aa.setScale(1/3);
           });
           aa.on('pointerout',function(pointer){
             aa.setScale(1/4);
           });
-          p.on('pointerover',function(pointer){
+          /*p.on('pointerover',function(pointer){
             p.setScale(1/3);
           });
           p.on('pointerout',function(pointer){
@@ -1182,14 +1182,14 @@ var SubM = new Phaser.Class({
             //this.scene.start('p1');
             window.location.href = "n1.html";
           });
-          /*aa.on('pointerdown', () => {
+          aa.on('pointerdown', () => {
             this.sound.add('click').play();
             //endm.stop();
             this.game.sound.stopAll();
             //this.scene.start('p1');
-            window.location.href = "vscomp.html";
+            window.location.href = "emp.html";
           });
-          p.on('pointerdown', () => {
+          /*p.on('pointerdown', () => {
             this.sound.add('click').play();
             //endm.stop();
             this.game.sound.stopAll();
