@@ -4,5 +4,5 @@ $('body').terminal({
                   '. Wellcome to this terminal.');
     }
 }, {
-    greetings: 'Ship: SANS504 \n Chief Security Officer \n ls to start. \n type exit to exit';
+    greetings: 'Ship: SANS504 \nChief Security Officer \nls to start. \ntype exit to exit';
 });
