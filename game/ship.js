@@ -32,5 +32,5 @@ $('body').terminal({
       }
     }
 }, {
-    greetings: 'Ship: SANS504 \nChief Security Officer \nhelp to start. \ntype exit to exit'
+    greetings: greetings.innerHTML + 'Ship: SANS504 \nChief Security Officer \nhelp to start. \ntype exit to exit'
 });
