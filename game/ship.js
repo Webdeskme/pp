@@ -39,7 +39,7 @@ $('body').terminal({
           dir = "/"
         }
       }
-    }
+    },
     cat: function(f) {
       if(dir == "/inbox"){
         if(f == "Rescue.txt"){
