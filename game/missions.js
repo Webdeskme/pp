@@ -210,7 +210,7 @@ var P1 = new Phaser.Class({
                 if (typeof p16 !== 'undefined') {
                   p16.clearTint();
                 }
-                if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns" || c["texture"]["key"] == "Guns2" || c["texture"]["key"] == "COM2" || c["texture"]["key"] == "COM3" || c["texture"]["key"] == "COM4" || c["texture"]["key"] == "ENGINES2" || c["texture"]["key"] == "ENGINES3" || c["texture"]["key"] == "ENGINES4" || c["texture"]["key"] == "PORT2" c["texture"]["key"] == "PORT3" c["texture"]["key"] == "PORT4"){
+                if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns" || c["texture"]["key"] == "Guns2" || c["texture"]["key"] == "COM2" || c["texture"]["key"] == "COM3" || c["texture"]["key"] == "COM4" || c["texture"]["key"] == "ENGINES2" || c["texture"]["key"] == "ENGINES3" || c["texture"]["key"] == "ENGINES4" || c["texture"]["key"] == "PORT2" || c["texture"]["key"] == "PORT3" || c["texture"]["key"] == "PORT4"){
                   c.setTint(0xff0000);
                 }
                 else{
