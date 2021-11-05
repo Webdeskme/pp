@@ -1,4 +1,3 @@
-<script>
 $('body').terminal({
     hello: function(what) {
         this.echo('Hello, ' + what +
@@ -7,4 +6,3 @@ $('body').terminal({
 }, {
     greetings: 'My First Web Terminal'
 });
-</script>
