@@ -7,5 +7,5 @@ $('body').terminal({
       window.location.href = "game.html";
     }
 }, {
-    greetings: 'Ship: SANS504 \nChief Security Officer \nls to start. \ntype exit to exit';
+    greetings: 'Ship: SANS504 \nChief Security Officer \nls to start. \ntype exit to exit'
 });
