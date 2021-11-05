@@ -13,19 +13,32 @@ var P1 = new Phaser.Class({
         this.load.image('cb', 'assets/cards/back.png');
         this.load.image('COM', 'assets/cards/COM.png');
         this.load.image('COM2', 'assets/cards/COM2.png');
-        
+        this.load.image('COM3', 'assets/cards/COM3.png');
+        this.load.image('COM4', 'assets/cards/COM4.png');
         this.load.image('ENGINES', 'assets/cards/ENGINES.png');
         this.load.image('ENGINES2', 'assets/cards/ENGINES2.png');
+        this.load.image('ENGINES3', 'assets/cards/ENGINES3.png');
+        this.load.image('ENGINES4', 'assets/cards/ENGINES4.png');
         this.load.image('PORT', 'assets/cards/PORT.png');
         this.load.image('PORT2', 'assets/cards/PORT2.png');
+        this.load.image('PORT3', 'assets/cards/PORT3.png');
+        this.load.image('PORT4', 'assets/cards/PORT4.png');
         this.load.image('Guns', 'assets/cards/Guns.png');
+        this.load.image('Guns2', 'assets/cards/Guns2.png');
         this.load.image('COMbig', 'assets/out/COM.png');
         this.load.image('COM2big', 'assets/out/COM2.png');
+        this.load.image('COM3big', 'assets/out/COM3.png');
+        this.load.image('COM4big', 'assets/out/COM4.png');
         this.load.image('ENGINESbig', 'assets/out/ENGINES.png');
         this.load.image('ENGINES2big', 'assets/out/ENGINES2.png');
+        this.load.image('ENGINES3big', 'assets/out/ENGINES3.png');
+        this.load.image('ENGINES4big', 'assets/out/ENGINES4.png');
         this.load.image('PORTbig', 'assets/out/PORT.png');
         this.load.image('PORT2big', 'assets/out/PORT2.png');
+        this.load.image('PORT3big', 'assets/out/PORT3.png');
+        this.load.image('PORT4big', 'assets/out/PORT4.png');
         this.load.image('Gunsbig', 'assets/out/Guns.png');
+        this.load.image('Guns2big', 'assets/out/Guns2.png');
         this.load.image('END', 'assets/text/end.png');
         this.load.image('SCORE', 'assets/text/SCORE2.png');
         this.load.image('musicOff', 'assets/icons/sound-off.png');
@@ -197,7 +210,7 @@ var P1 = new Phaser.Class({
                 if (typeof p16 !== 'undefined') {
                   p16.clearTint();
                 }
-                if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns" || c["texture"]["key"] == "COM2" || c["texture"]["key"] == "ENGINES2" || c["texture"]["key"] == "PORT2"){
+                if(c["texture"]["key"] == "COM" || c["texture"]["key"] == "ENGINES" || c["texture"]["key"] == "PORT" || c["texture"]["key"] == "Guns" || c["texture"]["key"] == "Guns2" || c["texture"]["key"] == "COM2" || c["texture"]["key"] == "COM3" || c["texture"]["key"] == "COM4" || c["texture"]["key"] == "ENGINES2" || c["texture"]["key"] == "ENGINES3" || c["texture"]["key"] == "ENGINES4" || c["texture"]["key"] == "PORT2" c["texture"]["key"] == "PORT3" c["texture"]["key"] == "PORT4"){
                   c.setTint(0xff0000);
                 }
                 else{
@@ -332,28 +345,56 @@ var P1 = new Phaser.Class({
                   cost = 6;
                   type = "skill";
                 }
+                else if (c["texture"]["key"] == "COM3") {
+                  cost = 7;
+                  type = "skill";
+                }
                 else if (c["texture"]["key"] == "ENGINES") {
                   cost = 6;
+                  type = "coin";
+                }
+                else if (c["texture"]["key"] == "ENGINES3") {
+                  cost = 7;
                   type = "coin";
                 }
                 else if (c["texture"]["key"] == "PORT") {
                   cost = 7;
                   type = "card";
                 }
+                else if (c["texture"]["key"] == "PORT3") {
+                  cost = 8;
+                  type = "card";
+                }
                 else if (c["texture"]["key"] == "Guns") {
                   cost = 12;
+                  type = "total";
+                }
+                else if (c["texture"]["key"] == "Guns2") {
+                  cost = 14;
                   type = "total";
                 }
                 else if (c["texture"]["key"] == "COM2") {
                   cost = 5;
                   type = "scard";
                 }
+                else if (c["texture"]["key"] == "COM4") {
+                  cost = 6;
+                  type = "scard";
+                }
                 else if (c["texture"]["key"] == "ENGINES2") {
                   cost = 4;
                   type = "ccard";
                 }
+                else if (c["texture"]["key"] == "ENGINES4") {
+                  cost = 5;
+                  type = "ccard";
+                }
                 else if (c["texture"]["key"] == "PORT2") {
                   cost = 3;
+                  type = "aq";
+                }
+                else if (c["texture"]["key"] == "PORT4") {
+                  cost = 4;
                   type = "aq";
                 }
               }
@@ -899,7 +940,7 @@ var P1 = new Phaser.Class({
                     }
                     scoreText.setText('Score:' + score);
                   }
-                    if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns" || temp2 == "COM2" || temp2 == "ENGINES2" || temp2 == "PORT2"){
+                    if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns" || temp2 == "COM2" || temp2 == "ENGINES2" || temp2 == "PORT2" || temp2 == "Guns2" || temp2 == "COM3" || temp2 == "ENGINES3" || temp2 == "PORT3" || temp2 == "COM4" || temp2 == "ENGINES4" || temp2 == "PORT4"){
                     game += 1;
                     if(game > 3){
                         th.sound.add('mwin').play();
@@ -921,7 +962,15 @@ var P1 = new Phaser.Class({
                       th.sound.add('comp').play();
                       cc.destroy();
                     }
+                    else if(temp2 == "COM3"){
+                      th.sound.add('comp').play();
+                      cc.destroy();
+                    }
                     else if (temp2 == "ENGINES") {
+                      th.sound.add('comp').play();
+                      ce.destroy();
+                    }
+                    else if (temp2 == "ENGINES3") {
                       th.sound.add('comp').play();
                       ce.destroy();
                     }
@@ -929,7 +978,15 @@ var P1 = new Phaser.Class({
                       th.sound.add('comp').play();
                       cp.destroy();
                     }
+                    else if (temp2 == "PORT3") {
+                      th.sound.add('comp').play();
+                      cp.destroy();
+                    }
                     else if (temp2 == "Guns") {
+                      th.sound.add('comp').play();
+                      cg.destroy();
+                    }
+                    else if (temp2 == "Guns2") {
                       th.sound.add('comp').play();
                       cg.destroy();
                     }
@@ -937,11 +994,23 @@ var P1 = new Phaser.Class({
                       th.sound.add('comp').play();
                       cc.destroy();
                     }
+                    else if (temp2 == "COM4") {
+                      th.sound.add('comp').play();
+                      cc.destroy();
+                    }
                     else if (temp2 == "ENGINES2") {
                       th.sound.add('comp').play();
                       ce.destroy();
                     }
+                    else if (temp2 == "ENGINES4") {
+                      th.sound.add('comp').play();
+                      ce.destroy();
+                    }
                     else if (temp2 == "PORT2") {
+                      th.sound.add('comp').play();
+                      cp.destroy();
+                    }
+                    else if (temp2 == "PORT4") {
                       th.sound.add('comp').play();
                       cp.destroy();
                     }
@@ -1606,28 +1675,30 @@ var P1 = new Phaser.Class({
         c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
         hove(c0, this, cards[0] + 'big');
         select(c0, this, cards[0]);
-        var ma = ["COM", "COM2"];
+        var ma = ["COM", "COM2", "COM3", "COM4"];
         shuffle(ma);
         cc = this.add.image(250, 250, ma[0]).setInteractive({ useHandCursor: true  } );
         hove(cc, this, ma[0] + 'big');
         select(cc, this, ma[0]);
-        ma = ["ENGINES", "ENGINES2"];
+        ma = ["ENGINES", "ENGINES2", "ENGINES3", "ENGINES4"];
         shuffle(ma);
         ce = this.add.image(375, 250, ma[0]).setInteractive({ useHandCursor: true  } );
         hove(ce, this, ma[0] + 'big');
         select(ce, this, ma[0]);
-        ma = ["PORT", "PORT2"];
+        ma = ["PORT", "PORT2", "PORT3", "PORT4"];
         shuffle(ma);
         por = "PORT";
-        if(ma[0] == "PORT2"){
+        if(ma[0] == "PORT2" || ma[0] == "PORT4"){
           por = "PORT2";
         }
         cp = this.add.image(500, 250, ma[0]).setInteractive({ useHandCursor: true  } );
         hove(cp, this, ma[0] + 'big');
         select(cp, this, ma[0]);
-        cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
-        hove(cg, this, 'Guns' + 'big');
-        select(cg, this, 'Guns');
+        var ma = ["Guns", "Guns2"];
+        shuffle(ma);
+        cg = this.add.image(625, 250, ma[0]).setInteractive({ useHandCursor: true  } );
+        hove(cg, this, ma[0] + 'big');
+        select(cg, this, ma[0]);
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
         hove(p0, this, p[0] + 'big');
         bselect(p0, this, p[0]);
