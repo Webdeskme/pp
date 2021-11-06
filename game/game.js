@@ -403,6 +403,7 @@ healthGroup = this.physics.add.staticGroup({
     });
 
     ship = this.physics.add.image(7000, 3000, 'space', 'ship').setDepth(2);
+    ship.setInteractive({ useHandCursor: true  } );
     ship.on('pointerdown', () => {
       window.location.href = "ship.html";
     });
