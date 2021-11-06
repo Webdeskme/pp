@@ -19,7 +19,7 @@ $('body').terminal({
         this.echo(inbox);
       }
       else if(dir == "/navigation"){
-        this.echo('1: The Half Rift\n2: The Shallow Earth\n3: The Blooming Globe\n4: The Primal Havens\n5:The Primal Havens\n6: The Drifting Province');
+        this.echo('1: The Half Rift\n2: The Shallow Earth\n3: The Blooming Globe\n4: The Primal Havens\n5: The Primal Havens\n6: The Drifting Province');
       }
     },
     cd: function(d) {
