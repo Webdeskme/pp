@@ -9,7 +9,7 @@ $('body').terminal({
       window.location.href = "game.html";
     },
     help: function() {
-      this.echo('ls: list\ncd "dirname": change directories\ncd "../": to go back\ncat "filename": to read a file\npwd: current directory');
+      this.echo('ls: list\ncd "dirname": change directories\ncd "../": to go back\ncat "filename": to read a file\npwd: current directory\nnav "#": to navigate to tht planet');
     },
     ls: function() {
       if(dir == "/"){
@@ -17,6 +17,9 @@ $('body').terminal({
       }
       else if(dir == "/inbox"){
         this.echo(inbox);
+      }
+      else if(dir == "/navigation"){
+        this.echo('1: The Half Rift\n2: The Shallow Earth\n3: The Blooming Globe\n4: The Primal Havens\n5:The Primal Havens\n6: The Drifting Province');
       }
     },
     cd: function(d) {
@@ -45,6 +48,29 @@ $('body').terminal({
         if(f == "Rescue.txt"){
           this.echo('Internal Comunication\nFrom: The Captain\nTo: The Chief Security Officer\nSubject:Rescue\nI believe the pirates were able to take some important data of the ship. We must locate the pirates and take back that data before it falls into the wrong hand. You are in charge of this mission and the ships navigation is in your hands.');
         }
+      }
+    },
+    pwd: function() {
+      this.echo(dir);
+    },
+    nav: function(n) {
+      if(n == 1){
+        window.location.href = "galaxy.html";
+      }
+      if(n == 2){
+        window.location.href = "forest.html";
+      }
+      if(n == 3){
+        window.location.href = "djnfber.html";
+      }
+      if(n == 4){
+        window.location.href = "nsrsdhbe.html";
+      }
+      if(n == 5){
+        window.location.href = "qncis.html";
+      }
+      if(n == 6){
+          window.location.href = "fopwne.html";
       }
     }
 }, {
