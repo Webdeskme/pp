@@ -51,10 +51,16 @@ $('body').terminal({
         if(f == "Rescue.txt"){
           this.echo('Internal Comunication\nFrom: The Captain\nTo: The Chief Security Officer\nSubject:Rescue\nI believe the pirates were able to take some important data of the ship. We must locate the pirates and take back that data before it falls into the wrong hand. You are in charge of this mission and the ships navigation is in your hands.');
         }
+        else{
+          this.echo('Error: No such file.');
+        }
       }
       if(dir == "/server_info"){
         if(f == "logs.txt"){
           this.echo('Processor use is at 82%.');
+        }
+        else{
+          this.echo('Error: No such file.');
         }
       }
     },
