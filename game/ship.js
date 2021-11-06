@@ -40,7 +40,7 @@ $('body').terminal({
           this.echo('Error: Location not found.');
         }
       }
-      else if(dir == "/inbox" || dir == "/navigation"){
+      else if(dir == "/inbox" || dir == "/navigation" || dir == "/server_info"){
         if(d == "../"){
           dir = "/"
         }
