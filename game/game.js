@@ -731,7 +731,7 @@ healthGroup = this.physics.add.staticGroup({
 
     });
     //this.add.bitmapText(50, 600, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
-    this.add.bitmapText(50, 50, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
+    this.add.bitmapText(50, 75, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
     var he = 0;
   },
   update: function (time, delta)
