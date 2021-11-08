@@ -736,6 +736,13 @@ healthGroup = this.physics.add.staticGroup({
     this.add.bitmapText(50, 75, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
     var purple = this.add.image(100, 620, 'purple').setScrollFactor(0,0).setInteractive({ useHandCursor: true  } );
     purple.setScale(1/2);
+    purple.on('pointerdown', () => {
+      this.sound.add('click').play();
+      //endm.stop();
+      this.game.sound.stopAll();
+      this.scene.start('pur');
+      //window.location.href = "purple/host.html";
+    });
     var he = 0;
   },
   update: function (time, delta)
@@ -1047,6 +1054,190 @@ var SubM = new Phaser.Class({
       });
       }
     });
+    var Pur = new Phaser.Class({
+
+        Extends: Phaser.Scene,
+
+        initialize:
+
+        function Pur ()
+        {
+            Phaser.Scene.call(this, { key: 'pur' });
+        },
+
+        preload: function ()
+        {
+          this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
+          this.load.image('back', 'assets/backgrounds/black.png');
+          this.load.image('undo', 'assets/Text/back.png');
+          //this.load.image('bob', 'assets/Text/bob.png');
+          //this.load.image('alice', 'assets/Text/alice.png');
+          this.load.image('neg', 'assets/Text/host.png');
+          this.load.image('aa', 'assets/Text/connect.png');
+          //this.load.image('mis', 'assets/Text/missions.png');
+          this.load.text('q1', 'assets/Text/quote/q1.txt');
+          this.load.text('q2', 'assets/Text/quote/q2.txt');
+          this.load.text('q3', 'assets/Text/quote/q3.txt');
+          this.load.text('q4', 'assets/Text/quote/q4.txt');
+          this.load.text('q5', 'assets/Text/quote/q5.txt');
+          this.load.text('q6', 'assets/Text/quote/q6.txt');
+          this.load.text('q7', 'assets/Text/quote/q7.txt');
+          this.load.text('q8', 'assets/Text/quote/q8.txt');
+          this.load.text('q9', 'assets/Text/quote/q9.txt');
+          this.load.text('q10', 'assets/Text/quote/q10.txt');
+          this.load.text('q11', 'assets/Text/quote/q11.txt');
+          this.load.text('q12', 'assets/Text/quote/q12.txt');
+          this.load.text('q13', 'assets/Text/quote/q13.txt');
+          this.load.text('q14', 'assets/Text/quote/q14.txt');
+          this.load.text('q15', 'assets/Text/quote/q15.txt');
+          this.load.text('q16', 'assets/Text/quote/q16.txt');
+          this.load.text('q17', 'assets/Text/quote/q17.txt');
+          this.load.text('q18', 'assets/Text/quote/q18.txt');
+          this.load.text('q19', 'assets/Text/quote/q19.txt');
+          this.load.text('q20', 'assets/Text/quote/q20.txt');
+          this.load.text('q21', 'assets/Text/quote/q21.txt');
+          this.load.text('q22', 'assets/Text/quote/q22.txt');
+          this.load.text('q23', 'assets/Text/quote/q23.txt');
+          this.load.text('q24', 'assets/Text/quote/q24.txt');
+          this.load.text('q25', 'assets/Text/quote/q25.txt');
+          this.load.text('q26', 'assets/Text/quote/q26.txt');
+          this.load.text('q27', 'assets/Text/quote/q27.txt');
+          this.load.text('q28', 'assets/Text/quote/q28.txt');
+          this.load.text('q29', 'assets/Text/quote/q29.txt');
+          this.load.text('q30', 'assets/Text/quote/q30.txt');
+          this.load.text('q31', 'assets/Text/quote/q31.txt');
+          this.load.text('q32', 'assets/Text/quote/q32.txt');
+          this.load.text('q33', 'assets/Text/quote/q33.txt');
+          this.load.text('q34', 'assets/Text/quote/q34.txt');
+          this.load.text('q35', 'assets/Text/quote/q35.txt');
+          this.load.text('q36', 'assets/Text/quote/q36.txt');
+          this.load.text('q37', 'assets/Text/quote/q37.txt');
+          this.load.text('q38', 'assets/Text/quote/q38.txt');
+          this.load.text('q39', 'assets/Text/quote/q39.txt');
+          this.load.text('q40', 'assets/Text/quote/q40.txt');
+        },
+
+        create: function ()
+        {
+          function shuffle(array) {
+              var currentIndex = array.length, temporaryValue, randomIndex;
+
+              // While there remain elements to shuffle...
+              while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+              }
+
+              return array;
+              }
+          var snip = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20', 'q21', 'q22', 'q23', 'q24', 'q25', 'q26', 'q27', 'q28', 'q29', 'q30', 'q31', 'q32', 'q33', 'q34', 'q35', 'q36', 'q37', 'q38', 'q39', 'q40'];
+          shuffle(snip);
+          var rules = this.add.text(45, 45, game.cache.text.get(snip[0]), { fontSize: '36px', fill: '#fff', wordWrap: { width: 750 } });
+          var un = this.add.image(900, 50, 'undo').setScrollFactor(0,0);
+          var bb = this.add.image(900, 150, 'neg').setScrollFactor(0,0);
+          var aa = this.add.image(900, 200, 'aa').setScrollFactor(0,0);
+          //var amis = this.add.image(900, 250, 'mis').setScrollFactor(0,0);
+          /*var p = this.add.image(900, 250, 'alice').setScrollFactor(0,0);
+          var ba = this.add.image(900, 300, 'ba').setScrollFactor(0,0);*/
+          un.setInteractive({ useHandCursor: true  } );
+          un.setScale(1/4);
+          bb.setInteractive({ useHandCursor: true  } );
+          bb.setScale(1/4);
+          aa.setInteractive({ useHandCursor: true  } );
+          aa.setScale(1/4);
+          //amis.setInteractive({ useHandCursor: true  } );
+          //amis.setScale(1/4);
+          /*p.setInteractive({ useHandCursor: true  } );
+          p.setScale(1/4);
+          ba.setInteractive({ useHandCursor: true  } );
+          ba.setScale(1/4);*/
+          un.on('pointerover',function(pointer){
+            un.setScale(1/3);
+          });
+          un.on('pointerout',function(pointer){
+            un.setScale(1/4);
+          });
+          bb.on('pointerover',function(pointer){
+            bb.setScale(1/3);
+          });
+          bb.on('pointerout',function(pointer){
+            bb.setScale(1/4);
+          });
+          aa.on('pointerover',function(pointer){
+            aa.setScale(1/3);
+          });
+          aa.on('pointerout',function(pointer){
+            aa.setScale(1/4);
+          });
+          /*amis.on('pointerover',function(pointer){
+            amis.setScale(1/3);
+          });
+          amis.on('pointerout',function(pointer){
+            amis.setScale(1/4);
+          });
+          /*p.on('pointerover',function(pointer){
+            p.setScale(1/3);
+          });
+          p.on('pointerout',function(pointer){
+            p.setScale(1/4);
+          });*/
+          un.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            this.scene.start('subm');
+            //window.location.href = "vscomp.html";
+          });
+          /*ba.on('pointerover',function(pointer){
+            ba.setScale(1/3);
+          });
+          ba.on('pointerout',function(pointer){
+            ba.setScale(1/4);
+          });*/
+          bb.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            //this.scene.start('p1');
+            window.location.href = "n1.html";
+          });
+          aa.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            //this.scene.start('p1');
+            window.location.href = "emp.html";
+          });
+          /*amis.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            //this.scene.start('p1');
+            window.location.href = "emp.html";
+          });
+          /*p.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            //this.scene.start('p1');
+            window.location.href = "vscomph.html";
+          });
+          ba.on('pointerdown', () => {
+            this.sound.add('click').play();
+            //endm.stop();
+            this.game.sound.stopAll();
+            //this.scene.start('p1');
+            window.location.href = "vscompa.html";
+          });*/
+          }
+        });
     var SubExp = new Phaser.Class({
 
         Extends: Phaser.Scene,
@@ -1790,7 +1981,7 @@ var config = {
     },
     enableDebug: false,
     backgroundColor: '#000000',
-    scene: [ TitleS, Vide, Puzz, Cred, SubM, SubExp, SubMv, SubMa, SubO ]
+    scene: [ TitleS, Vide, Puzz, Cred, SubM, SubExp, SubMv, SubMa, SubO, Pur ]
 };
 var bg;
 var stars;
