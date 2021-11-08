@@ -185,6 +185,7 @@ var TitleS = new Phaser.Class({
         this.load.image('course', 'assets/Text/course.png');
         this.load.image('badge', 'assets/icons/star-medal.png');
         this.load.image('health', 'assets/icons/astroid.png');
+        this.load.image('purple', 'assets/text/purple.png');
         //this.load.image('coop', 'assets/Text/coop.png');
         //this.load.image('3coop', 'assets/Text/3coop.png');
         var i;
@@ -730,8 +731,10 @@ healthGroup = this.physics.add.staticGroup({
       gameObject.y = dragY;
 
     });
+//bill
     //this.add.bitmapText(50, 600, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
     this.add.bitmapText(50, 75, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
+    var purple = this.add.image(50, 600, 'purple').setScrollFactor(0,0);
     var he = 0;
   },
   update: function (time, delta)
