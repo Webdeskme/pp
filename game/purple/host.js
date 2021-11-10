@@ -7,17 +7,21 @@ var P1 = new Phaser.Class({
     },
     preload: function ()
     {
-        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "Service", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WateringHole", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP", "P1S", "P1C", "P2S", "P2C"];
+        var cards = {c1:"b", c2:"b", c3:"b", c4:"b", c5:"b", c6:"b", cn1:"b", cn2:"b", cn3:"b", cn4:"b", cn5:"b", cn6:"b"};
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
         this.load.image('back', 'assets/back/Background.jpg');
         this.load.image('musicOff', 'assets/icons/sound-off.png');
         this.load.image('musicOn', 'assets/icons/sound-on.png');
         this.load.image('full', 'assets/icons/expand.png');
-        this.load.image('shock', 'assets/icons/surprised-skull.png');
-        this.load.image('happy', 'assets/icons/pirate-skull.png');
-        this.load.image('anger', 'assets/icons/blade-bite.png');
+        //this.load.image('shock', 'assets/icons/surprised-skull.png');
+        //this.load.image('happy', 'assets/icons/pirate-skull.png');
+        //this.load.image('anger', 'assets/icons/blade-bite.png');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
-        var i;
+        for (var key in cards) {
+          console.log(key);
+          console.log(cards[key]);
+        }
+        /*var i;
         for (i = 0; i < cards.length; i++) {
           this.load.image(cards[i], 'assets/cards/' + cards[i] + '.png');
         }
@@ -25,7 +29,7 @@ var P1 = new Phaser.Class({
         for (i = 0; i < cards.length; i++) {
           var zzz = cards[i] + 'big';
           this.load.image(zzz, 'assets/out/' + cards[i] + '.png');
-        }
+        }*/
         this.load.audio('click', [
         "assets/Audio/mouseclick.wav"
         ]);
@@ -56,7 +60,7 @@ var P1 = new Phaser.Class({
       this.socket = io('https://on.piratesport.net');
       this.socket.emit('host');
       back = this.add.image(512, 320, 'back');
-      
+
       ///// keyboard /////
 
       var stext = this.add.text(575, 150, 'Type + return to chat.', { fontSize: '24px', fill: '#fff', wordWrap: { width: 400 } });
