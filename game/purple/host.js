@@ -10,9 +10,9 @@ var P1 = new Phaser.Class({
         var cards = {c1:"b", c2:"b", c3:"b", c4:"b", c5:"b", c6:"b", cn1:"b", cn2:"b", cn3:"b", cn4:"b", cn5:"b", cn6:"b"};
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
         this.load.image('back', 'assets/back/Background.jpg');
-        this.load.image('musicOff', 'assets/icons/sound-off.png');
-        this.load.image('musicOn', 'assets/icons/sound-on.png');
-        this.load.image('full', 'assets/icons/expand.png');
+        //this.load.image('musicOff', 'assets/icons/sound-off.png');
+        //this.load.image('musicOn', 'assets/icons/sound-on.png');
+        //this.load.image('full', 'assets/icons/expand.png');
         //this.load.image('shock', 'assets/icons/surprised-skull.png');
         //this.load.image('happy', 'assets/icons/pirate-skull.png');
         //this.load.image('anger', 'assets/icons/blade-bite.png');
@@ -20,6 +20,8 @@ var P1 = new Phaser.Class({
         for (var key in cards) {
           console.log(key);
           console.log(cards[key]);
+          this.load.image(cards[i], 'assets/cards/' + cards[key] + '.png');
+          this.load.image(cards[i], 'assets/cards/' + key + '.png');
         }
         /*var i;
         for (i = 0; i < cards.length; i++) {
