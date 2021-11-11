@@ -20,8 +20,8 @@ var P1 = new Phaser.Class({
         for (var key in cards) {
           console.log(key);
           console.log(cards[key]);
-          this.load.image(cards[i], 'assets/cards/' + cards[key] + '.png');
-          this.load.image(cards[i], 'assets/cards/' + key + '.png');
+          this.load.image(cards[key], 'assets/cards/' + cards[key] + '.png');
+          this.load.image(key, 'assets/cards/' + key + '.png');
         }
         /*var i;
         for (i = 0; i < cards.length; i++) {
