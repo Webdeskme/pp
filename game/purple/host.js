@@ -10,12 +10,12 @@ var P1 = new Phaser.Class({
         var cards = {c1:"b", c2:"b", c3:"b", c4:"b", c5:"b", c6:"b", cn1:"b", cn2:"b", cn3:"b", cn4:"b", cn5:"b", cn6:"b"};
         this.load.bitmapFont('topaz', 'assets/fonts/lato.png', 'assets/fonts/lato.xml');
         this.load.image('back', 'assets/back/Background.jpg');
-        //this.load.image('musicOff', 'assets/icons/sound-off.png');
-        //this.load.image('musicOn', 'assets/icons/sound-on.png');
-        //this.load.image('full', 'assets/icons/expand.png');
-        //this.load.image('shock', 'assets/icons/surprised-skull.png');
-        //this.load.image('happy', 'assets/icons/pirate-skull.png');
-        //this.load.image('anger', 'assets/icons/blade-bite.png');
+        this.load.image('musicOff', 'assets/icons/sound-off.png');
+        this.load.image('musicOn', 'assets/icons/sound-on.png');
+        this.load.image('full', 'assets/icons/expand.png');
+        this.load.image('shock', 'assets/icons/surprised-skull.png');
+        this.load.image('happy', 'assets/icons/pirate-skull.png');
+        this.load.image('anger', 'assets/icons/blade-bite.png');
         this.load.video('rules', 'assets/Video/walkthrough.mp4', 'loadeddata', false, false);
         for (var key in cards) {
           console.log(key);
@@ -60,7 +60,32 @@ var P1 = new Phaser.Class({
     create: function ()
     {
       this.socket = io('https://on.piratesport.net');
-      this.socket.emit('host');
+      this.socket.emit('hosting');
+      this.socket.on('strin', function (strinn) {
+        rtext.setText(strinn);
+      });
+      this.socket.on('emo', function (emo) {
+        if(emo == "happy"){
+          heb.visible = true;
+        }
+        else if(emo == "angry"){
+          aeb.visible = true;
+        }
+        else{
+          seb.visible = true;
+        }
+        setTimeout(() => {
+            if(emo == "happy"){
+              heb.visible = false;
+            }
+            else if(emo == "angry"){
+              aeb.visible = false;
+            }
+            else{
+              seb.visible = false;
+            }
+        }, 3000);
+      });
       back = this.add.image(512, 320, 'back');
 
       ///// keyboard /////
