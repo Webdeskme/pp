@@ -169,7 +169,7 @@ var P1 = new Phaser.Class({
       h.on('pointerdown', () => {
         this.sound.add('click').play();
         this.game.sound.stopAll();
-        window.location.href = "game.html";
+        window.location.href = "../game.html";
       });
 
       ///// keyboard /////
