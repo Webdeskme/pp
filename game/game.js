@@ -1213,7 +1213,7 @@ var SubM = new Phaser.Class({
             //endm.stop();
             this.game.sound.stopAll();
             //this.scene.start('p1');
-            window.location.href = "purple/connect.html";
+            window.location.href = "purple/guest.html";
           });
           /*amis.on('pointerdown', () => {
             this.sound.add('click').play();
