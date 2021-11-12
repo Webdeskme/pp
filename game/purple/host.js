@@ -60,7 +60,7 @@ var P1 = new Phaser.Class({
     create: function ()
     {
       this.socket = io('https://on.piratesport.net');
-      this.socket.emit('hosting');
+      this.socket.emit('host');
       this.socket.on('strin', function (strinn) {
         rtext.setText(strinn);
       });
@@ -87,6 +87,64 @@ var P1 = new Phaser.Class({
         }, 3000);
       });
       back = this.add.image(512, 320, 'back');
+      var serv = this.add.bitmapText(700, 40, 'topaz', 'Awaiting Player', 48);
+      var playerText = this.add.bitmapText(700, 90, 'topaz', 'Player: 1', 48);
+      this.socket.on('host', function (mid) {
+        serv.setText('ID: ' + mid);
+        console.log(mid);
+      });
+      mf = this.add.image(700, 25, 'musicOff').setInteractive({ useHandCursor: true  } );
+      mo = this.add.image(750, 25, 'musicOn').setInteractive({ useHandCursor: true  } );
+      fu = this.add.image(1000, 25, 'full').setInteractive({ useHandCursor: true  } );
+      mu = this.sound.add('music');
+      mu.loop = true;
+      mu.play();
+      mf.setScale(1/8);
+      mo.setScale(1/8);
+      fu.setScale(1/8);
+      fu.on('pointerdown', () => {
+        if (this.scale.isFullscreen)
+          {
+              this.scale.stopFullscreen();
+          }
+          else
+          {
+              this.scale.startFullscreen();
+          }
+      });
+      mo.on('pointerdown', () => {
+        mu.loop = true;
+        mu.play();
+      });
+      mf.on('pointerdown', () => {
+        this.game.sound.stopAll();
+      });
+      r.setInteractive();
+      r.on('pointerdown', () => {
+        this.sound.add('click').play();
+        var rule = this.add.image(512, 320, 'back');
+        var vid = this.add.video(512, 320, 'rules').setInteractive({ useHandCursor: true  } );
+        vid.setScale(1/2);
+       vid.play(true);
+       vid.setPaused(false);
+        var hr = this.add.bitmapText(16, 16, 'topaz', 'Back', 32);
+        hr.setInteractive({ useHandCursor: true  } );
+        hr.on('pointerdown', () => {
+          vid.destroy();
+          vid = null;
+          rule.destroy();
+          rule = null;
+          hr.destroy();
+          hr = null;
+        });
+      });
+      var h = this.add.bitmapText(15, 15, 'topaz', 'Home', 32).setInteractive({ useHandCursor: true  } );
+      h.setInteractive();
+      h.on('pointerdown', () => {
+        this.sound.add('click').play();
+        this.game.sound.stopAll();
+        window.location.href = "game.html";
+      });
 
       ///// keyboard /////
 
