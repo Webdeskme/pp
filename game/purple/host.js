@@ -64,6 +64,31 @@ var P1 = new Phaser.Class({
       this.socket.on('strin', function (strinn) {
         rtext.setText(strinn);
       });
+      this.socket.on('player', function (si1) {
+        aww = "No";
+        serv.setText('You are Player ' + si1);
+        he = th.add.image(250, 150, "happy").setInteractive({ useHandCursor: true  } );
+        he.setScale(1/8);
+        heb = th.add.image(650, 250, "happy").setInteractive({ useHandCursor: true  } );
+        heb.setScale(1/3);
+        heb.visible = false;
+        emo(he, heb, "happy");
+        ae = th.add.image(375, 150, "anger").setInteractive({ useHandCursor: true  } );
+        ae.setScale(1/8);
+        aeb = th.add.image(650, 250, "anger").setInteractive({ useHandCursor: true  } );
+        aeb.setScale(1/3);
+        aeb.visible = false;
+        emo(ae, aeb, "angry");
+        se = th.add.image(500, 150, "shock").setInteractive({ useHandCursor: true  } );
+        se.setScale(1/8);
+        seb = th.add.image(650, 250, "shock").setInteractive({ useHandCursor: true  } );
+        seb.setScale(1/3);
+        seb.visible = false;
+        emo(se, seb, "shock");
+        if(si1 == 1){
+
+        }
+      });
       this.socket.on('emo', function (emo) {
         if(emo == "happy"){
           heb.visible = true;
@@ -89,6 +114,7 @@ var P1 = new Phaser.Class({
       back = this.add.image(512, 320, 'back');
       var serv = this.add.bitmapText(700, 40, 'topaz', 'Awaiting Player', 48);
       var playerText = this.add.bitmapText(700, 90, 'topaz', 'Player: 1', 48);
+      var r = this.add.bitmapText(800, 15, 'topaz', 'Rules', 32);
       this.socket.on('host', function (mid) {
         serv.setText('ID: ' + mid);
         console.log(mid);
