@@ -59,6 +59,7 @@ var P1 = new Phaser.Class({
     },
     create: function ()
     {
+      th = this;
       this.socket = io('https://on.piratesport.net');
       this.socket.emit('host');
       this.socket.on('strin', function (strinn) {
