@@ -936,7 +936,7 @@ var P1 = new Phaser.Class({
                   }
                     if(temp2 == "COM" || temp2 == "ENGINES" || temp2 == "PORT" || temp2 == "Guns" || temp2 == "COM2" || temp2 == "ENGINES2" || temp2 == "PORT2"){
                     game += 1;
-                    if(game > 2){
+                    if(game > 0){
                         th.sound.add('mwin').play();
                         if(localStorage.getItem(localStorageName) == null) {
                             highScore = 40;
