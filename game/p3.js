@@ -1189,7 +1189,7 @@ var P1 = new Phaser.Class({
             return coin;
           }
           // "Service", "WateringHole",
-        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
+        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         var p = ["P1S", "P1S", "P1S", "P1S"];
         var player1 = ["P1S", "P1S", "P1S", "P1S"];
         var player2 = ["P2S", "P2S", "P2S", "P2S"];
@@ -1668,7 +1668,7 @@ var P1 = new Phaser.Class({
         c0 = this.add.image(875, 400, cards[0]).setInteractive({ useHandCursor: true  } );
         hove(c0, this, cards[0] + 'big');
         select(c0, this, cards[0]);
-        var ma = ["COM", "COM2"];
+        /*var ma = ["COM", "COM2"];
         shuffle(ma);
         cc = this.add.image(250, 250, ma[0]).setInteractive({ useHandCursor: true  } );
         hove(cc, this, ma[0] + 'big');
@@ -1686,10 +1686,10 @@ var P1 = new Phaser.Class({
         }
         cp = this.add.image(500, 250, ma[0]).setInteractive({ useHandCursor: true  } );
         hove(cp, this, ma[0] + 'big');
-        select(cp, this, ma[0]);
-        /*cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
+        select(cp, this, ma[0]);*/
+        cg = this.add.image(625, 250, "Guns").setInteractive({ useHandCursor: true  } );
         hove(cg, this, 'Guns' + 'big');
-        select(cg, this, 'Guns');*/
+        select(cg, this, 'Guns');
         p0 = this.add.image(250, 550, p[0]).setInteractive({ useHandCursor: true  } );
         hove(p0, this, p[0] + 'big');
         bselect(p0, this, p[0]);

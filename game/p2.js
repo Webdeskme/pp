@@ -1176,7 +1176,7 @@ var P1 = new Phaser.Class({
             return coin;
           }
           // "Service", "WateringHole",
-        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB", "EMP"];
+        var cards = ["Browser", "Malware", "PrivilegeEsc", "Driver", "CloudStorage", "IMDS", "MFA", "User", "CloudAccount", "CredStuffing", "Kubelet", "WebShell", "FakeInstaller", "OfficeMacro", "ShadowCopy", "Sysmon", "Behavior", "DPAT", "Endpoint", "SIEM", "Sinkhole", "ZeroTrust", "IAM", "SRUM", "MFAB"];
         var p = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
         var player1 = ["P1S", "P1S", "P1S", "P1S", "P1C", "P1C"];
         var player2 = ["P2S", "P2S", "P2S", "P2S", "P2C", "P2C"];
