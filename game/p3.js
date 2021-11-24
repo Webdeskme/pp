@@ -811,7 +811,7 @@ var P1 = new Phaser.Class({
                 }
                 if( aquire == "yes"){
                   aq += 1;
-                  if(por == "PORT2"){
+                  /*if(por == "PORT2"){
                     if(aq > 2){
                       th.sound.add('comp').play();
                       cp.destroy();
@@ -831,7 +831,7 @@ var P1 = new Phaser.Class({
                         window.location.href = "win.html";
                       }
                     }
-                  }
+                  }*/
                   if (typeof big != "undefined" && big != null) {
                     big.destroy();
                     big = null;
