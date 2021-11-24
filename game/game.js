@@ -485,7 +485,7 @@ healthGroup = this.physics.add.staticGroup({
         var j = this.add.image(900, 200, 'aii').setScrollFactor(0,0);
         var k = this.add.image(900, 400, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
-        var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
+        //var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
         var ccc = this.add.image(900, 250, 'course').setScrollFactor(0,0);
         var lu = this.add.image(675, 50, 'levelup').setScrollFactor(0,0);
         var badge1 = this.add.image(50, 550, 'badge').setScrollFactor(0,0);
@@ -524,8 +524,8 @@ healthGroup = this.physics.add.staticGroup({
         o.setScale(1/4);*/
         l.setInteractive({ useHandCursor: true  } );
         l.setScale(2/3);
-        m.setInteractive({ useHandCursor: true  } );
-        m.setScale(1/2);
+        //m.setInteractive({ useHandCursor: true  } );
+        //m.setScale(1/2);
         ccc.on('pointerover',function(pointer){
           ccc.setScale(1/3);
         });
@@ -598,12 +598,12 @@ healthGroup = this.physics.add.staticGroup({
         l.on('pointerout',function(pointer){
           l.setScale(2/3);
         });
-        m.on('pointerover',function(pointer){
+        /*m.on('pointerover',function(pointer){
           m.setScale(1/1);
         });
         m.on('pointerout',function(pointer){
           m.setScale(1/2);
-        });
+        });*/
         d.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
@@ -671,13 +671,13 @@ healthGroup = this.physics.add.staticGroup({
           //this.scene.start('san');
           window.location.href = "index.html";
         });
-        m.on('pointerdown', () => {
+        /*m.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
           //this.scene.start('san');
           window.location.href = "at-Desk/index.html";
-        });
+        });*/
         lu.on('pointerdown', openSANSLink, this);
         ccc.on('pointerdown', openCourseLink, this);
         var localStorageName = "piratesPort";
@@ -734,7 +734,7 @@ healthGroup = this.physics.add.staticGroup({
 //bill
     //this.add.bitmapText(50, 600, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
     this.add.bitmapText(50, 75, 'topaz', '[<- -> TURN] [^ Thrust] [Spacebar Fire]', 32).setScrollFactor(0,0);
-    var purple = this.add.image(100, 620, 'purple').setScrollFactor(0,0).setInteractive({ useHandCursor: true  } );
+    /*var purple = this.add.image(100, 620, 'purple').setScrollFactor(0,0).setInteractive({ useHandCursor: true  } );
     purple.setScale(1/2);
     purple.on('pointerdown', () => {
       this.sound.add('click').play();
@@ -742,7 +742,7 @@ healthGroup = this.physics.add.staticGroup({
       this.game.sound.stopAll();
       this.scene.start('pur');
       //window.location.href = "purple/host.html";
-    });
+    });*/
     var he = 0;
   },
   update: function (time, delta)
