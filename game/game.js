@@ -628,13 +628,13 @@ healthGroup = this.physics.add.staticGroup({
           this.game.sound.stopAll();
           this.scene.start('vide');
         });
-        f.on('pointerdown', () => {
+        /*f.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
           this.game.sound.stopAll();
           //this.scene.start('st');
           window.location.href = "story.html";
-        });
+        });*/
         g.on('pointerdown', () => {
           this.sound.add('click').play();
           //endm.stop();
