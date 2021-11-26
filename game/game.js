@@ -174,18 +174,15 @@ var TitleS = new Phaser.Class({
         this.load.image('title', 'assets/Text/text.png');
         this.load.image('puzzle', 'assets/Text/puzzle.png');
         this.load.image('videol', 'assets/Text/video.png');
-        this.load.image('story', 'assets/Text/story.png');
         this.load.image('credits', 'assets/Text/credits.png');
         this.load.image('sa', 'assets/Text/sans.png');
         this.load.image('aii', 'assets/Text/ai.png');
         this.load.image('cb', 'assets/out/back.png');
         this.load.image('logo', 'assets/Text/logo.png');
-        this.load.image('ca', 'assets/Text/counter.png');
         this.load.image('levelup', 'assets/Text/levelup.png');
         this.load.image('course', 'assets/Text/course.png');
         this.load.image('badge', 'assets/icons/star-medal.png');
         this.load.image('health', 'assets/icons/astroid.png');
-        this.load.image('purple', 'assets/text/purple.png');
         //this.load.image('coop', 'assets/Text/coop.png');
         //this.load.image('3coop', 'assets/Text/3coop.png');
         var i;
@@ -479,14 +476,14 @@ healthGroup = this.physics.add.staticGroup({
         //var n = this.add.image(900, 100, 'coop').setScrollFactor(0,0);
         //var o = this.add.image(900, 150, '3coop').setScrollFactor(0,0);
         var e = this.add.image(900, 100, 'videol').setScrollFactor(0,0);
-        var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
-        var g = this.add.image(900, 300, 'puzzle').setScrollFactor(0,0);
-        var h = this.add.image(900, 350, 'credits').setScrollFactor(0,0);
-        var j = this.add.image(900, 200, 'aii').setScrollFactor(0,0);
-        var k = this.add.image(900, 400, 'sa').setScrollFactor(0,0);
+        //var f = this.add.image(900, 150, 'story').setScrollFactor(0,0);
+        var g = this.add.image(900, 250, 'puzzle').setScrollFactor(0,0);
+        var h = this.add.image(900, 300, 'credits').setScrollFactor(0,0);
+        var j = this.add.image(900, 150, 'aii').setScrollFactor(0,0);
+        var k = this.add.image(900, 350, 'sa').setScrollFactor(0,0);
         var l = this.add.image(275, 50, 'logo').setScrollFactor(0,0);
         //var m = this.add.image(775, 600, 'ca').setScrollFactor(0,0);
-        var ccc = this.add.image(900, 250, 'course').setScrollFactor(0,0);
+        var ccc = this.add.image(900, 200, 'course').setScrollFactor(0,0);
         var lu = this.add.image(675, 50, 'levelup').setScrollFactor(0,0);
         var badge1 = this.add.image(50, 550, 'badge').setScrollFactor(0,0);
         badge1.setScale(1/5);
@@ -1404,7 +1401,7 @@ var SubM = new Phaser.Class({
             //endm.stop();
             this.game.sound.stopAll();
             //this.scene.start('p1');
-            window.location.href = "emp.html";
+            window.location.href = "missions.html";
           });
           /*p.on('pointerdown', () => {
             this.sound.add('click').play();
