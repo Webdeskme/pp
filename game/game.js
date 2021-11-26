@@ -505,8 +505,8 @@ healthGroup = this.physics.add.staticGroup({
         d.setScale(1/4);
         e.setInteractive({ useHandCursor: true  } );
         e.setScale(1/4);
-        f.setInteractive({ useHandCursor: true  } );
-        f.setScale(1/4);
+        //f.setInteractive({ useHandCursor: true  } );
+        //f.setScale(1/4);
         g.setInteractive({ useHandCursor: true  } );
         g.setScale(1/4);
         h.setInteractive({ useHandCursor: true  } );
@@ -559,12 +559,12 @@ healthGroup = this.physics.add.staticGroup({
         o.on('pointerout',function(pointer){
           o.setScale(1/4);
         });*/
-        f.on('pointerover',function(pointer){
+        /*f.on('pointerover',function(pointer){
           f.setScale(1/3);
         });
         f.on('pointerout',function(pointer){
           f.setScale(1/4);
-        });
+        });*/
         g.on('pointerover',function(pointer){
           g.setScale(1/3);
         });
